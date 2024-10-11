@@ -191,8 +191,95 @@ const Contact = () => {
               </div>
             </div>
 
+            <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 md:pt-24 pt-8 mx-1">
+              <div className="space-y-2">
+                <div className="text-2xl font-semibold text-center">
+                  <h1>Book a Demo</h1>
+                </div>
+                <div className="text-gray-700 text-center">
+                  <p>
+                    Get your tailored introduction to Sleeknote or tons of popup
+                    inspiration for your site. Book a free personal demo.
+                  </p>
+                </div>
 
-            
+                <div className="pt-2 flex justify-center items-center">
+                  <a
+                    href="/login"
+                    className="bg-blue-500 hover:bg-blue-800 font-semibold outline-none
+                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                  >
+                    Click Here
+                  </a>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <div className="text-2xl font-semibold text-center">
+                  <h1>Become a Partner</h1>
+                </div>
+                <div className="text-gray-700 text-center">
+                  <p>
+                    Join our Partner Program and earn a 25% recurring
+                    commission. Help your clients achieve their on-site goals .
+                  </p>
+                </div>
+
+                <div className="pt-2 flex justify-center items-center">
+                  <a
+                    href="/login"
+                    className="bg-blue-500 hover:bg-blue-800 font-semibold outline-none
+                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                  >
+                    Click Here
+                  </a>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <div className="text-2xl font-semibold text-center">
+                  <h1>Help Center</h1>
+                </div>
+                <div className="text-gray-700 text-center">
+                  <p>
+                    Get instant answers to common questions and check our
+                    step-by-step product tutorials and help them grow better.
+                  </p>
+                </div>
+
+                <div className="pt-2 flex justify-center items-center">
+                  <a
+                    href="/login"
+                    className="bg-blue-500 hover:bg-blue-800 font-semibold outline-none
+                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                  >
+                    Click Here
+                  </a>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <div className="text-2xl font-semibold text-center">
+                  <h1>Book a Demo</h1>
+                </div>
+                <div className="text-gray-700 text-center">
+                  <p>
+                    Get your tailored introduction to Sleeknote or tons of popup
+                    inspiration for your site. Book a free personal demo.
+                  </p>
+                </div>
+
+                <div className="pt-2 flex justify-center items-center">
+                  <a
+                    href="/login"
+                    className="bg-blue-500 hover:bg-blue-800 font-semibold outline-none
+                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                  >
+                    Click Here
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
