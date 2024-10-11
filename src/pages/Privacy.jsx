@@ -1,9 +1,15 @@
-import React from 'react'
+import Navbar from "../components/Navbar";
+import ScrollToTop from "../components/ScrollToTop";
+import Footer from "../components/Footer";
 
 const Privacy = () => {
   return (
-    <div>Privacy</div>
-  )
-}
+    <div>
+      <Navbar />
+      <ScrollToTop />
+      <Footer />
+    </div>
+  );
+};
 
-export default Privacy
+export default Privacy;

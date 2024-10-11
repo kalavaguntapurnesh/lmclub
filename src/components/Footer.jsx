@@ -5,6 +5,12 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa6";
+import { FaTiktok } from "react-icons/fa";
+import { FaRedditAlien } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaSnapchatGhost } from "react-icons/fa";
+import { FaPinterestP } from "react-icons/fa";
+import Logo from "../assets/LM_Logo.jpeg";
 
 const Footer = () => {
   return (
@@ -380,23 +386,25 @@ const Footer = () => {
         <div className="w-full">
           <div className="w-full px-4 mx-auto max-w-[1400px]">
             <div className="flex md:flex-row flex-col">
-              <div className="w-full lg:text-start text-center">
-                <h1 className="text-2xl">Logo.</h1>
+              <div className="w-full lg:pb-0 pb-8">
+                <div className="flex md:justify-start justify-center">
+                  <img src={Logo} alt="" className="w-12 h-12" />
+                </div>
               </div>
               <div className="w-full">
-                <div className="grid grid-cols-5 gap-4">
-                  <a href="/about" className="flex justify-center items-center">
-                    <FaXTwitter
-                      size={25}
-                      className="cursor-pointer"
-                      color="black"
-                    />
-                  </a>
+                <div className="grid lg:grid-cols-10 grid-cols-5 gap-4">
                   <a
                     href="https://www.linkedin.com/company/laoe-maom/"
                     className="flex justify-center items-center"
                   >
                     <FaLinkedin
+                      size={25}
+                      className="cursor-pointer"
+                      color="black"
+                    />
+                  </a>
+                  <a href="/about" className="flex justify-center items-center">
+                    <FaXTwitter
                       size={25}
                       className="cursor-pointer"
                       color="black"
@@ -423,6 +431,41 @@ const Footer = () => {
                       color="black"
                     />
                   </a>{" "}
+                  <a href="/about" className="flex justify-center items-center">
+                    <FaRedditAlien
+                      size={25}
+                      className="cursor-pointer"
+                      color="black"
+                    />
+                  </a>
+                  <a href="/about" className="flex justify-center items-center">
+                    <FaTiktok
+                      size={25}
+                      className="cursor-pointer"
+                      color="black"
+                    />
+                  </a>
+                  <a href="/about" className="flex justify-center items-center">
+                    <FaYoutube
+                      size={25}
+                      className="cursor-pointer"
+                      color="black"
+                    />
+                  </a>
+                  <a href="/about" className="flex justify-center items-center">
+                    <FaSnapchatGhost
+                      size={25}
+                      className="cursor-pointer"
+                      color="black"
+                    />
+                  </a>
+                  <a href="/about" className="flex justify-center items-center">
+                    <FaPinterestP
+                      size={25}
+                      className="cursor-pointer"
+                      color="black"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -456,7 +499,7 @@ const Footer = () => {
                           href="/login"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Log In to Syndèo
+                          Log In to LMClub
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -496,7 +539,7 @@ const Footer = () => {
                           href="/"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Syndèo Careers
+                          LM Club Careers
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -552,7 +595,7 @@ const Footer = () => {
                           href="/about"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          About Syndèo
+                          About LM Club
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -568,7 +611,7 @@ const Footer = () => {
                           href="/about"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Why Syndèo?
+                          Why LM Club?
                         </a>
                       </li>
                     </ul>
@@ -584,7 +627,7 @@ const Footer = () => {
                           href="/contact"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Booking Page
+                          LM Beehive
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -593,7 +636,7 @@ const Footer = () => {
                           href="/"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Group Calls
+                          LM Broadcast
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -601,7 +644,7 @@ const Footer = () => {
                           href="/"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Sign-up Sheet
+                          Enroll Rewards
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -609,15 +652,16 @@ const Footer = () => {
                           href="/register"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Education
+                          Grow Widget
                         </a>
                       </li>
+
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
                           href="/about"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Recruiting
+                          LM Account
                         </a>
                       </li>
                     </ul>
@@ -625,7 +669,7 @@ const Footer = () => {
 
                   <div className="mb-12 md:mb-0">
                     <h4 className="text-sm leading-5 font-bold tracking-wider uppercase flex md:justify-start justify-center items-center mt-1 text-footerLinks">
-                      Product
+                      Subscriptions
                     </h4>
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
@@ -633,7 +677,7 @@ const Footer = () => {
                           href="/contact"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Booking Page
+                          Gold Plan
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -641,7 +685,7 @@ const Footer = () => {
                           href="/"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Group Calls
+                          Platinum Plan
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -649,7 +693,7 @@ const Footer = () => {
                           href="/"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Sign-up Sheet
+                          Bronze Plan
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -657,7 +701,7 @@ const Footer = () => {
                           href="/register"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Education
+                         Silver Plan
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -665,7 +709,7 @@ const Footer = () => {
                           href="/about"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Recruiting
+                          Free Plan
                         </a>
                       </li>
                     </ul>
@@ -673,7 +717,7 @@ const Footer = () => {
 
                   <div className="mb-12 md:mb-0">
                     <h4 className="text-sm leading-5 font-bold tracking-wider uppercase flex md:justify-start justify-center items-center mt-1 text-footerLinks">
-                      Product
+                      Privacy
                     </h4>
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
@@ -681,7 +725,7 @@ const Footer = () => {
                           href="/contact"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Booking Page
+                          Privacy Policy
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -689,7 +733,7 @@ const Footer = () => {
                           href="/"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Group Calls
+                          Consumer Privacy
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -749,7 +793,9 @@ const Footer = () => {
             </div>
 
             <div className="text-center text-sm pb-6">
-              <p>© Cloud Data Networks Private Limited 2024. All rights reserved</p>
+              <p>
+                © Cloud Data Networks Private Limited 2024. All rights reserved
+              </p>
             </div>
           </div>
         </div>

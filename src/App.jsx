@@ -4,6 +4,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Privacy from "./pages/Privacy";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
 
         <Route path="/register" element={<Register />}></Route>
+
+        <Route path="/privacy-policy" element={<Privacy />}></Route>
       </Routes>
     </BrowserRouter>
   );

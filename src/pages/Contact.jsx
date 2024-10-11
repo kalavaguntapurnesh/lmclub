@@ -50,14 +50,14 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-2">
                   <div className="flex flex-col md:items-start items-center space-y-1">
                     <h1 className="text-lg font-semibold">Head Quarters:</h1>
-                    <h1>11350 McCormick Rd, EP III, Suite 200,</h1>
-                    <h1>Hunt Valley, MD 21031</h1>
+                    <h1>7778 McGinnis Ferry Rd, PMB 162,</h1>
+                    <h1>Suwanee, Georgia 30024, US</h1>
                   </div>
 
                   <div className="flex flex-col md:items-start items-center space-y-1">
                     <h1 className="text-lg font-semibold">Sub Locations:</h1>
-                    <h1>11350 McCormick Rd, EP III, Suite 200,</h1>
-                    <h1>Hunt Valley, MD 21031</h1>
+                    <h1>7778 McGinnis Ferry Rd, PMB 162,</h1>
+                    <h1>Suwanee, Georgia 30024, US</h1>
                   </div>
                 </div>
 
@@ -74,7 +74,7 @@ const Contact = () => {
                   <div className="flex flex-col md:items-start items-center">
                     <h1 className="text-lg font-semibold">Billing Querries:</h1>
                     <h1 className="text-lg font-semibold text-blue-600">
-                      (+1) 404 6767
+                      (+1) 678-200-4524
                     </h1>
                   </div>
                 </div>

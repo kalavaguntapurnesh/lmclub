@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { RiMenu3Fill } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import Logo from "../assets/LM_Logo.jpeg";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,21 +45,12 @@ const NavBar = () => {
             href="/"
             className={` ${isScrolled ? "text-black" : "text-white"}`}
           >
-            Logo
+            <img src={Logo} alt="" className="w-8 h-8" />
           </a>
         </div>
 
         {/* Desktop Nav Links */}
         <ul className="hidden md:flex space-x-8 items-center">
-          <li>
-            <a
-              href="/"
-              className={` ${isScrolled ? "text-black" : "text-white"}`}
-            >
-              Home
-            </a>
-          </li>
-
           {/* About with Dropdown */}
           <li className="relative">
             <button
@@ -67,7 +59,7 @@ const NavBar = () => {
                 isScrolled ? "text-black" : "text-white"
               }`}
             >
-              About
+              Home
               <svg
                 className="w-5 h-5 ml-1"
                 fill="none"
@@ -87,18 +79,18 @@ const NavBar = () => {
             {openDropdown === "about" && (
               <ul className="absolute mt-2 w-48 bg-white shadow-lg rounded-lg py-2">
                 <li className="px-4 py-2 hover:bg-gray-100">
-                  <a href="#about-one" className="block text-gray-800">
-                    About One
+                  <a href="/learn-about-us" className="block text-gray-800">
+                    About Us
                   </a>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-100">
                   <a href="#about-two" className="block text-gray-800">
-                    About Two
+                    Logo Meaning
                   </a>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-100">
                   <a href="#about-three" className="block text-gray-800">
-                    About Three
+                    Leadership
                   </a>
                 </li>
               </ul>
@@ -113,7 +105,7 @@ const NavBar = () => {
                 isScrolled ? "text-black" : "text-white"
               }`}
             >
-              Services
+              Products
               <svg
                 className="w-5 h-5 ml-1"
                 fill="none"
@@ -134,30 +126,136 @@ const NavBar = () => {
               <ul className="absolute mt-2 w-48 bg-white shadow-lg rounded-lg py-2">
                 <li className="px-4 py-2 hover:bg-gray-100">
                   <a href="#service-one" className="block text-gray-800">
-                    Service One
+                    LM Beehive
                   </a>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-100">
                   <a href="#service-two" className="block text-gray-800">
-                    Service Two
+                    LM Broadcast
                   </a>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-100">
                   <a href="#service-three" className="block text-gray-800">
-                    Service Three
+                    Enroll Rewards
+                  </a>
+                </li>
+
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <a href="#service-three" className="block text-gray-800">
+                    Grow Widget
+                  </a>
+                </li>
+
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <a href="#service-three" className="block text-gray-800">
+                    Training & Coaching
+                  </a>
+                </li>
+
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <a href="#service-three" className="block text-gray-800">
+                    LM Account
                   </a>
                 </li>
               </ul>
             )}
           </li>
 
-          <li>
-            <a
-              href="/privacy-policy"
-              className={` ${isScrolled ? "text-black" : "text-white"}`}
+          <li className="relative">
+            <button
+              onClick={() => toggleDropdown("subscription")}
+              className={`flex items-center ${
+                isScrolled ? "text-black" : "text-white"
+              }`}
+            >
+              Subscription
+              <svg
+                className="w-5 h-5 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            {openDropdown === "subscription" && (
+              <ul className="absolute mt-2 w-48 bg-white shadow-lg rounded-lg py-2">
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <a href="#service-one" className="block text-gray-800">
+                    Bronze
+                  </a>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <a href="#service-two" className="block text-gray-800">
+                    Silver
+                  </a>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <a href="#service-three" className="block text-gray-800">
+                    Gold
+                  </a>
+                </li>
+
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <a href="#service-three" className="block text-gray-800">
+                    Platinum
+                  </a>
+                </li>
+
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <a href="#service-three" className="block text-gray-800">
+                    Free
+                  </a>
+                </li>
+              </ul>
+            )}
+          </li>
+
+          <li className="relative">
+            <button
+              onClick={() => toggleDropdown("privacy")}
+              className={`flex items-center ${
+                isScrolled ? "text-black" : "text-white"
+              }`}
             >
               Privacy
-            </a>
+              <svg
+                className="w-5 h-5 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            {openDropdown === "privacy" && (
+              <ul className="absolute mt-2 w-48 bg-white shadow-lg rounded-lg py-2">
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <a href="/privacy-policy" className="block text-gray-800">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  <a href="#service-two" className="block text-gray-800">
+                    Consumer Privacy
+                  </a>
+                </li>
+              </ul>
+            )}
           </li>
 
           <li>
