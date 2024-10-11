@@ -340,18 +340,18 @@ const NavBar = () => {
               {openDropdown === "about" && (
                 <ul className="mt-2 w-48 bg-white shadow-lg rounded-lg py-2">
                   <li className="px-4 py-2 hover:bg-gray-100">
-                    <a href="#about-one" className="block text-gray-800">
-                      About One
+                    <a href="/learn-about-us" className="block text-gray-800">
+                      About Us
                     </a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100">
                     <a href="#about-two" className="block text-gray-800">
-                      About Two
+                      Logo Meaning
                     </a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100">
                     <a href="#about-three" className="block text-gray-800">
-                      About Three
+                      Leadership
                     </a>
                   </li>
                 </ul>
@@ -364,7 +364,7 @@ const NavBar = () => {
                 onClick={() => toggleDropdown("services")}
                 className="text-gray-800 hover:text-blue-600 flex items-center"
               >
-                Services
+                Products
                 <svg
                   className="w-5 h-5 ml-1"
                   fill="none"
@@ -385,17 +385,35 @@ const NavBar = () => {
                 <ul className="mt-2 w-48 bg-white shadow-lg rounded-lg py-2">
                   <li className="px-4 py-2 hover:bg-gray-100">
                     <a href="#service-one" className="block text-gray-800">
-                      Service One
+                      LM Beehive
                     </a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100">
                     <a href="#service-two" className="block text-gray-800">
-                      Service Two
+                      LM Broadcast
                     </a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100">
                     <a href="#service-three" className="block text-gray-800">
-                      Service Three
+                      Enroll Rewards
+                    </a>
+                  </li>
+
+                  <li className="px-4 py-2 hover:bg-gray-100">
+                    <a href="#service-three" className="block text-gray-800">
+                      Grow Widget
+                    </a>
+                  </li>
+
+                  <li className="px-4 py-2 hover:bg-gray-100">
+                    <a href="#service-three" className="block text-gray-800">
+                      Training & Coaching
+                    </a>
+                  </li>
+
+                  <li className="px-4 py-2 hover:bg-gray-100">
+                    <a href="#service-three" className="block text-gray-800">
+                      LM Account
                     </a>
                   </li>
                 </ul>
@@ -414,7 +432,7 @@ const NavBar = () => {
             <li>
               <button
                 onClick={() => {
-                  navigate("/lo");
+                  navigate("/login");
                 }}
                 className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
               >

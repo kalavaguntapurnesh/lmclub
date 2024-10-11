@@ -3,10 +3,10 @@ const Hero = () => {
     <div>
       <section className="h-screen text-black">
         <div className="max-w-[1400px] mx-auto text-center">
-          <div className="mt-40">
-            <div className="max-w-[1400px] m-auto grid md:grid-cols-2 ">
+          <div className="md:mt-40 mt-32">
+            <div className="max-w-[1400px] m-auto grid md:grid-cols-2">
               <div className="flex flex-col gap-4 w-full space-y-2">
-                <div className=" flex items-center lg:justify-start justify-center mt-4 mx-3">
+                <div className=" flex items-center lg:justify-start justify-center mx-3">
                   <h1 className="xl:text-6xl text-[48px] font-bold lg:px-2 xl:leading-[72px] lg:leading-[60px] lg:text-start text-center text-[#3d454d]">
                     Moving, improving, and everything
                     <span className="text-colorFour"> in between.</span>
@@ -49,7 +49,7 @@ const Hero = () => {
                 <img
                   src="https://cdn.porch.com/bootstrap/0web/home-page/hero-cluster@2x.png"
                   alt=""
-                  className="lg:w-10/12 w-11/12 lg:h-120 h-92 lg:mt-[-40px]"
+                  className="lg:w-10/12 w-11/12 lg:h-120 h-92 lg:mt-[-40px] mt-8"
                 />
               </div>
             </div>
