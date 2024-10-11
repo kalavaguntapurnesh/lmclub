@@ -15,7 +15,7 @@ const Register = () => {
           <div className="max-w-[1400px] mx-auto">
             <div className="mt-28">
               <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-                <div className="flex flex-col justify-center px-6 h-full border-2 border-red-500">
+                <div className="flex flex-col justify-center px-6 h-full ">
                   <div className="flex justify-center items-center">
                     <div className="w-full bg-white md:mt-0 xl:p-0 max-w-md">
                       <div className="p-6 space-y-4 sm:p-8">
@@ -25,7 +25,13 @@ const Register = () => {
                         <div className="text-center text-gray-600">
                           <p>
                             Send your first emails in a few minutes. Already
-                            have an account? <a href="/login" className="text-gray-800 underline">Login</a>
+                            have an account?{" "}
+                            <a
+                              href="/login"
+                              className="text-gray-800 underline"
+                            >
+                              Login
+                            </a>
                           </p>
                         </div>
                         <form

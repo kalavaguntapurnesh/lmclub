@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { RiMenu3Fill } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null); // Dropdown state
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile menu state
+  const navigate = useNavigate();
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -151,7 +153,7 @@ const NavBar = () => {
 
           <li>
             <a
-              href="#contact"
+              href="/privacy-policy"
               className={` ${isScrolled ? "text-black" : "text-white"}`}
             >
               Privacy
@@ -160,7 +162,7 @@ const NavBar = () => {
 
           <li>
             <a
-              href="#contact"
+              href="/contact-us"
               className={` ${isScrolled ? "text-black" : "text-white"}`}
             >
               Contact
@@ -209,7 +211,7 @@ const NavBar = () => {
         >
           <ul className="flex flex-col space-y-6 items-center text-lg">
             <li>
-              <a href="#home" className="text-gray-800 hover:text-blue-600">
+              <a href="/" className="text-gray-800 hover:text-blue-600">
                 Home
               </a>
             </li>
@@ -303,13 +305,21 @@ const NavBar = () => {
             </li>
 
             <li>
-              <a href="#contact" className="text-gray-800 hover:text-blue-600">
+              <a
+                href="/contact-us"
+                className="text-gray-800 hover:text-blue-600"
+              >
                 Contact
               </a>
             </li>
 
             <li>
-              <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+              <button
+                onClick={() => {
+                  navigate("/lo");
+                }}
+                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
+              >
                 Login
               </button>
             </li>

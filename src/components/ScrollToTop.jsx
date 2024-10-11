@@ -4,9 +4,9 @@ import { SiWhatsapp } from "react-icons/si";
 import { classNames } from "../components/classNames";
 
 const ScrollToTop = () => {
-  const phoneNumber = "7075495493"; // Replace with your phone number
+  const phoneNumber = "14046627849";
   const message =
-    "Hello MAC Global Services, I need your guidance on abroad education..."; // Pre-filled message
+    "Hello LM Club, I need your guidance on professional technicians..."; // Pre-filled message
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
   )}`;
@@ -47,7 +47,7 @@ const ScrollToTop = () => {
         <SiWhatsapp className="h-6 w-6 text-white mr-2" aria-hidden="true" />
       </a>
       <div className="flex justify-center items-center text-sm">
-        <h1 className=" text-white font-semibold">Whatsapp us!</h1>
+        <h1 className=" text-white font-semibold">Whatsapp Us!</h1>
       </div>
     </a>
   );
