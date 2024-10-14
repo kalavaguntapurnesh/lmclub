@@ -150,6 +150,12 @@ const Consumer_Privacy = () => {
                 </ul>
               </div>
 
+              <div className=" mt-8 flex justify-center items-center">
+                <button class="bg-blue-500 hover:bg-blue-700 transition duration-1000 ease-in-out text-white font-semibold py-2 px-4 rounded">
+                  Manage Cookie Settings
+                </button>
+              </div>
+
               <div className="md:text-4xl text-4xl font-bold  mt-8">
                 <h1>Our Privacy Policy</h1>
               </div>
@@ -435,24 +441,33 @@ const Consumer_Privacy = () => {
                   settle such Dispute by providing written notice to the other
                   party and allowing the receiving party thirty (30) calendar
                   days in which to respond to or settle the Dispute. Notice
-                  shall be sent to us at ATTN: 7778 MCGINNIS FERRY RD PMB 162
-                  SUWANEE, GA 30024 or to you at the address we have on file for
-                  you.
+                  shall be sent to us at ATTN:{" "}
+                  <a
+                    href="https://maps.app.goo.gl/rXE4AURTjR7qdhmc6"
+                    className="underline text-blue-500"
+                  >
+                    7778 MCGINNIS FERRY RD PMB 162 SUWANEE, GA 30024
+                  </a>{" "}
+                  or to you at the address we have on file for you.
                 </p>
                 <p>
                   Both you and the LM Club agree that this dispute resolution
                   procedure is a condition precedent that must be satisfied
                   before initiating any litigation or filing any claim against
-                  the other party. IF ANY DISPUTE CANNOT BE RESOLVED BY THE
-                  ABOVE DISPUTE RESOLUTION PROCEDURE, YOU AGREE THAT THE SOLE
-                  AND EXCLUSIVE JURISDICTION FOR SUCH DISPUTE WILL BE DECIDED BY
-                  BINDING ARBITRATION ON ANY INDIVIDUAL BASIS IN Michigan .
-                  ARBITRATION ON AN INDIVIDUAL BASIS MEANS THAT YOU WILL NOT
-                  HAVE, AND YOU WAIVE THE RIGHT FOR A JUDGE OR JURY TO DECIDE
-                  YOUR CLAIMS, AND THAT YOU MAY NOT PROCEED IN A CLASS OR
-                  CONSOLIDATION CAPACITY. Other rights that you and we would
-                  otherwise have in court will not be available, or will be more
-                  limited in arbitration, including discovery and appeal rights.
+                  the other party.{" "}
+                  <span className="font-medium">
+                    IF ANY DISPUTE CANNOT BE RESOLVED BY THE ABOVE DISPUTE
+                    RESOLUTION PROCEDURE, YOU AGREE THAT THE SOLE AND EXCLUSIVE
+                    JURISDICTION FOR SUCH DISPUTE WILL BE DECIDED BY BINDING
+                    ARBITRATION ON ANY INDIVIDUAL BASIS IN Michigan .
+                    ARBITRATION ON AN INDIVIDUAL BASIS MEANS THAT YOU WILL NOT
+                    HAVE, AND YOU WAIVE THE RIGHT FOR A JUDGE OR JURY TO DECIDE
+                    YOUR CLAIMS, AND THAT YOU MAY NOT PROCEED IN A CLASS OR
+                    CONSOLIDATION CAPACITY.
+                  </span>{" "}
+                  Other rights that you and we would otherwise have in court
+                  will not be available, or will be more limited in arbitration,
+                  including discovery and appeal rights.
                 </p>
                 <p>
                   The arbitrator, and not any federal, state, or local court or
@@ -645,6 +660,12 @@ const Consumer_Privacy = () => {
                   the course of administering employment benefits and claims,
                   but are not collected from customers.
                 </p>
+              </div>
+
+              <div className=" mt-8 flex justify-center items-center">
+                <button class="bg-blue-500 hover:bg-blue-700 transition duration-1000 ease-in-out text-white font-semibold py-2 px-4 rounded">
+                  Manage Cookie Settings
+                </button>
               </div>
             </div>
           </div>

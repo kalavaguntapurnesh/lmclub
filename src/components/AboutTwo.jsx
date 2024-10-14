@@ -188,32 +188,6 @@ const AboutTwo = () => {
           </div>
         </div>
       </div>
-
-      <div className="bg-white mt-8">
-        <div className="relative md:pt-16 md:pb-16">
-          <div className="w-full py-4">
-            <div className="w-full px-4 mx-auto max-w-[1400px] bg-[#f8f8fa] rounded">
-              <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-                <div>
-                  <img
-                    src="https://www.plentific.com/_next/image/?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F233758%2F942x840%2F9fe4333062%2Fframe-427320298.jpg&w=1080&q=75"
-                    alt=""
-                    className="w-84 h-84"
-                  />
-                </div>
-
-                <div>
-                  <img
-                    src="https://www.plentific.com/_next/image/?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F233758%2F768x800%2F095042cf5c%2Frectangle-830874.jpg&w=828&q=75"
-                    alt=""
-                    className="w-84 h-84"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

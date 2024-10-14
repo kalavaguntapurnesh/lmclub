@@ -58,6 +58,15 @@ const Privacy = () => {
                   any applicable state laws when we disclose information about
                   you.
                 </p>
+                <p className="mt-4">
+                  For more information, contact us at{" "}
+                  <a
+                    href="mailto: support@lmclub.com"
+                    className="text-blue-500 underline"
+                  >
+                    support@lmclub.com
+                  </a>
+                </p>
               </div>
 
               <div className="mt-8 font-semibold md:text-2xl text-xl">
@@ -280,6 +289,19 @@ const Privacy = () => {
                     Networks & Marketing Agencies,
                   </li>
                 </ul>
+              </div>
+
+              <div className="text-center md:text-lg text-[#2ba35] font-light mt-6">
+                <p>
+                  For more information on consumer privacy and cookies usage,
+                  <a
+                    href="/consumer-privacy"
+                    className="text-blue-500 underline"
+                  >
+                    click here
+                  </a>
+                  .
+                </p>
               </div>
             </div>
           </div>

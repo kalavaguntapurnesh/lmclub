@@ -64,7 +64,7 @@ const AboutHero = () => {
                   </div>
                 </div>
 
-                <div>
+                <div className="flex justify-center items-center">
                   <div>
                     <img
                       src="https://www.plentific.com/_next/image/?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F233758%2F1224x1024%2F92e7f917c6%2Fgraphic.jpg&w=1920&q=75"
@@ -73,6 +73,43 @@ const AboutHero = () => {
                       height="512"
                       className="rounded"
                     />
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-8">
+                <div className="bg-blue-50 rounded p-8">
+                  <div className="space-y-2 md:text-start text-center md:mx-4">
+                    <div className="md:text-start text-center mt-2 text-orange-500 font-medium">
+                      <h1>Our Mission</h1>
+                    </div>
+                    <div className="md:text-4xl text-3xl font-semibold md:w-3/4">
+                      <h1>Empowering Lives Through Rewards</h1>
+                    </div>
+                    <div className="text-gray-700">
+                      <h1>
+                        At Laoe Maom, we are dedicated to fostering a vibrant
+                        culture that propels our members and businesses to
+                        connect, collaborate, and create opportunities.
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-blue-50 rounded p-8">
+                  <div className="space-y-2 md:text-start text-center md:mx-4">
+                    <div className="md:text-start text-center mt-2 text-orange-500 font-medium">
+                      <h1>Our Vision</h1>
+                    </div>
+                    <div className="md:text-4xl text-3xl font-semibold md:w-3/4">
+                      <h1>Learning for all, everywhere</h1>
+                    </div>
+                    <div className="text-gray-700">
+                      <h1>
+                        At Laoe Maom, we are dedicated to fostering a vibrant
+                        culture that propels our members and businesses to
+                        connect, collaborate, and create opportunities.
+                      </h1>
+                    </div>
                   </div>
                 </div>
               </div>
