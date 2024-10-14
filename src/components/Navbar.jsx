@@ -6,6 +6,11 @@ import Logo from "../assets/LM_Logo.jpeg";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { MdOutlinePrivacyTip } from "react-icons/md";
 import { IoIosMailOpen } from "react-icons/io";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaAngleRight, FaAngleDown } from "react-icons/fa";
 import {
   FiArrowRight,
   FiBarChart2,
@@ -19,6 +24,7 @@ const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null); // Dropdown state
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile menu state
+  const [openDropdownMobile, setOpenDropdownMobile] = useState(null); // Dropdown state for mobile menu
   const navigate = useNavigate();
 
   const handleScroll = () => {
@@ -41,6 +47,10 @@ const NavBar = () => {
     } else {
       setOpenDropdown(dropdown); // open the clicked dropdown
     }
+  };
+
+  const toggleMobileDropdown = (dropdown) => {
+    setOpenDropdownMobile((prev) => (prev === dropdown ? null : dropdown)); // Toggle the dropdown
   };
 
   return (
@@ -78,178 +88,259 @@ const NavBar = () => {
 
         {/* Login Button */}
         <div className="hidden md:flex space-x-4">
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+          <button className="bg-blue-600 text-white px-4 py-2 rounded font-semibold text-sm hover:bg-blue-700 transition duration-300">
             Log In
           </button>
-          <button className="bg-gray-100 text-blue-600 px-4 py-2 rounded hover:bg-gray-200 transition duration-300">
+          <button className="bg-gray-100 text-blue-600 px-4 py-2 rounded text-sm font-semibold hover:bg-gray-200 transition duration-300">
             Sign Up
           </button>
         </div>
 
-        {/* Mobile Menu Icon */}
         <div className="md:hidden">
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
-              <AiOutlineClose className="w-8 h-8 text-gray-800" />
+              <AiOutlineClose className="w-6 h-6 text-gray-800" />
             ) : (
-              <RiMenu3Fill className="w-8 h-8 text-gray-800" />
+              <RiMenu3Fill className="w-6 h-6 text-gray-800" />
             )}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         <div
-          className={`absolute top-0 left-0 w-full bg-white h-screen flex flex-col items-center justify-center transition-transform transform ${
-            isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-          } md:hidden`}
+          className={
+            !isMobileMenuOpen
+              ? "md:hidden fixed left-[-100%] h-[75%] ease-in-out duration-1000 "
+              : "md:hidden fixed left-0 top-0 w-[70%] border-r h-[100%] bg-white dark:bg-[#000300] ease-in-out duration-1000 rounded-b-lg z-10 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+          }
         >
-          <ul className="flex flex-col space-y-6 items-center text-lg">
-            <li>
-              <a href="#home" className="text-gray-800 hover:text-blue-600">
+          <h1 className="w-full text-2xl text-colorFour font-bold m-4 cursor-pointer">
+            LM Club.
+          </h1>
+          <ul className="p-4">
+            <li className="p-4 border-b border-gray-600">
+              <div
+                onClick={() => toggleMobileDropdown("home")}
+                className="flex items-center justify-between cursor-pointer"
+              >
                 Home
-              </a>
+                <FaAngleDown
+                  className={`transition-transform ${
+                    openDropdownMobile === "home" ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+              <AnimatePresence>
+                {openDropdownMobile === "home" && (
+                  <motion.ul
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="pl-4 mt-6 space-y-2"
+                  >
+                    <li className="text-gray-700 ">
+                      <a href="/learn-about-us" className="text-sm">
+                        About Us
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/" className="text-sm">
+                        Logo Meaning
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/" className="text-sm">
+                        Enterprise
+                      </a>
+                    </li>
+                  </motion.ul>
+                )}
+              </AnimatePresence>
             </li>
-
-            {/* About with Dropdown in Mobile */}
-            <li className="relative">
-              <button
-                onClick={() => toggleDropdown("about")}
-                className="text-gray-800 hover:text-blue-600 flex items-center"
+            <li className="p-4 border-b border-gray-600">
+              <div
+                onClick={() => toggleMobileDropdown("products")}
+                className="flex items-center justify-between cursor-pointer"
               >
-                About
-                <svg
-                  className="w-5 h-5 ml-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
-                </svg>
-              </button>
-
-              {openDropdown === "about" && (
-                <ul className="mt-2 w-48 bg-white shadow-lg rounded-lg py-2">
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <a href="#about-one" className="block text-gray-800">
-                      About One
-                    </a>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <a href="#about-two" className="block text-gray-800">
-                      About Two
-                    </a>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <a href="#about-three" className="block text-gray-800">
-                      About Three
-                    </a>
-                  </li>
-                </ul>
-              )}
+                Products
+                <FaAngleDown
+                  className={`transition-transform ${
+                    openDropdownMobile === "products" ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+              <AnimatePresence>
+                {openDropdownMobile === "products" && (
+                  <motion.ul
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="pl-4 mt-6 space-y-2"
+                  >
+                    <li className="text-gray-700">
+                      <a href="/" className="text-sm">
+                        LM Beehive
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/" className="text-sm">
+                        LM Broadcast
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/" className="text-sm">
+                        Enroll Rewards
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/" className="text-sm">
+                        Ecommerce Platform
+                      </a>
+                    </li>
+                  </motion.ul>
+                )}
+              </AnimatePresence>
             </li>
-
-            {/* Services with Dropdown in Mobile */}
-            <li className="relative">
-              <button
-                onClick={() => toggleDropdown("services")}
-                className="text-gray-800 hover:text-blue-600 flex items-center"
+            <li className="p-4 border-b border-gray-600">
+              <div
+                onClick={() => toggleMobileDropdown("subscription")}
+                className="flex items-center justify-between cursor-pointer"
               >
-                Services
-                <svg
-                  className="w-5 h-5 ml-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
-                </svg>
-              </button>
-
-              {openDropdown === "services" && (
-                <ul className="mt-2 w-48 bg-white shadow-lg rounded-lg py-2">
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <a href="#service-one" className="block text-gray-800">
-                      Service One
-                    </a>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <a href="#service-two" className="block text-gray-800">
-                      Service Two
-                    </a>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <a href="#service-three" className="block text-gray-800">
-                      Service Three
-                    </a>
-                  </li>
-                </ul>
-              )}
+                Subscription
+                <FaAngleDown
+                  className={`transition-transform ${
+                    openDropdownMobile === "subscription" ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+              <AnimatePresence>
+                {openDropdownMobile === "subscription" && (
+                  <motion.ul
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="pl-4 mt-6 space-y-2"
+                  >
+                    <li className="text-gray-700">
+                      <a href="/" className="text-sm">
+                        Platinum
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/" className="text-sm">
+                        Gold
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/" className="text-sm">
+                        Silver
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/" className="text-sm">
+                        Bronze
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/" className="text-sm">
+                        Free Tier
+                      </a>
+                    </li>
+                  </motion.ul>
+                )}
+              </AnimatePresence>
             </li>
 
-            <li className="relative">
-              <button
-                onClick={() => toggleDropdown("privacy")}
-                className={`flex items-center ${
-                  isScrolled ? "text-black" : "text-black"
-                }`}
+            <li className="p-4 border-b border-gray-600">
+              <div
+                onClick={() => toggleMobileDropdown("privacy")}
+                className="flex items-center justify-between cursor-pointer"
               >
                 Privacy
-                <svg
-                  className="w-5 h-5 ml-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
-                </svg>
-              </button>
-
-              {openDropdown === "privacy" && (
-                <ul className="absolute mt-2 w-48 bg-white shadow-lg rounded-lg py-2">
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <a href="/privacy-policy" className="block text-gray-800">
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100">
-                    <a href="/consumer-privacy" className="block text-gray-800">
-                      Consumer Privacy
-                    </a>
-                  </li>
-                </ul>
-              )}
+                <FaAngleDown
+                  className={`transition-transform ${
+                    openDropdownMobile === "privacy" ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+              <AnimatePresence>
+                {openDropdownMobile === "privacy" && (
+                  <motion.ul
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="pl-4 mt-6 space-y-2"
+                  >
+                    <li className="text-gray-700">
+                      <a href="/privacy-policy" className="text-sm">
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/consumer-privacy" className="text-sm">
+                        Consumer Policy
+                      </a>
+                    </li>
+                  </motion.ul>
+                )}
+              </AnimatePresence>
             </li>
-
-            <li>
-              <a href="#contact" className="text-gray-800 hover:text-blue-600">
-                Contact
+            <li className="p-4 border-b border-gray-600">
+              <div
+                onClick={() => toggleMobileDropdown("contact")}
+                className="flex items-center justify-between cursor-pointer"
+              >
+                Contact Us
+                <FaAngleDown
+                  className={`transition-transform ${
+                    openDropdownMobile === "contact" ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+              <AnimatePresence>
+                {openDropdownMobile === "contact" && (
+                  <motion.ul
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="pl-4 mt-6 space-y-2"
+                  >
+                    <li className="text-gray-700">
+                      <a href="/privacy-policy" className="text-sm">
+                        Head Quarters
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/consumer-privacy" className="text-sm">
+                        Branch Offices
+                      </a>
+                    </li>
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            </li>
+            <li className="p-4 border-b border-gray-600">
+              <a
+                href="/login"
+                className="flex items-center justify-between cursor-pointer"
+              >
+                Login
               </a>
             </li>
-
-            <li>
-              <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
-                Login
-              </button>
-            </li>
           </ul>
+
+          <div className="px-4">
+            <h1 className="p-4 text-xl font-semibold">Follow us on</h1>
+            <div className="p-4">
+              <div className="grid grid-cols-4">
+                <a href="https://www.linkedin.com/company/laoe-maom/">
+                  <FaLinkedinIn className="w-6 h-6" />
+                </a>
+                <FaXTwitter className="w-6 h-6" />
+                <FaInstagram className="w-6 h-6" />
+                <FaFacebookF className="w-6 h-6" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -402,8 +493,8 @@ const Nub = ({ selected }) => {
 const Products = () => {
   return (
     <div>
-      <div className="flex gap-6">
-        <div>
+      <div className="grid grid-cols-2 gap-4 divide-x divide-neutral-700">
+        <div className="w-1/2">
           <h3 className="mb-2 text-sm font-medium text-white">Premium</h3>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
             Platinum
@@ -418,28 +509,13 @@ const Products = () => {
             Bronze
           </a>
         </div>
-        <div>
+        <div className="w-1/2">
           <h3 className="mb-2 text-sm font-medium text-white">Free</h3>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
             Free Tier
           </a>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
             Rewards
-          </a>
-          <a href="#" className="block text-sm text-neutral-400">
-            Free Trial
-          </a>
-        </div>
-        <div>
-          <h3 className="mb-2 text-sm font-medium text-white">Enterprise</h3>
-          <a href="#" className="mb-1 block text-sm text-neutral-400">
-            Platinum
-          </a>
-          <a href="#" className="mb-1 block text-sm text-neutral-400">
-            Referrals
-          </a>
-          <a href="#" className="block text-sm text-neutral-400">
-            More
           </a>
         </div>
       </div>
@@ -504,7 +580,7 @@ const Homebar = () => {
 const Subscription = () => {
   return (
     <div>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-4 gap-2">
         <a href="#">
           <img
             className="mb-2 h-14 w-full rounded object-cover"
@@ -539,6 +615,20 @@ const Subscription = () => {
           />
           <h4 className="mb-0.5 text-sm font-medium text-white">
             Enroll Rewards
+          </h4>
+          <p className="text-xs text-neutral-400">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
+            quidem eos.
+          </p>
+        </a>
+        <a href="https://ecommerce-green-theta.vercel.app/">
+          <img
+            className="mb-2 h-14 w-full rounded object-cover"
+            src="https://cdn-icons-png.flaticon.com/512/3445/3445817.png"
+            alt="Placeholder image"
+          />
+          <h4 className="mb-0.5 text-sm font-medium text-white">
+            Ecommerce Platform
           </h4>
           <p className="text-xs text-neutral-400">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
