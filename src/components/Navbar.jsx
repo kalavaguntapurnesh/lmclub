@@ -40,14 +40,30 @@ const NavBar = () => {
     >
       <div className="max-w-[1400px] mx-auto flex justify-between items-center px-4">
         {/* Logo */}
-        <div className="text-2xl font-bold">
-          <a href="#">Logo</a>
+         <div className="flex items-center">
+          {/* Logo */}
+          <div
+            className={`h-10 w-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold transition-all duration-300 ease-in-out ${
+              isScrolled ? 'w-10 h-10 rounded-full' : 'w-10 h-10 rounded-full'
+            }`}
+          >
+            LM {/* Replace with your actual logo or an image */}
+          </div>
+
+          {/* Company Name */}
+          <span
+            className={`text-2xl font-bold ml-1 transition-all duration-300 ease-in-out ${
+              isScrolled ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'
+            }`}
+          >
+            Club.
+          </span>
         </div>
 
         {/* Desktop Nav Links */}
         <ul className="hidden md:flex flex-grow justify-center space-x-8 items-center">
           <li>
-            <a href="#home" className="text-gray-800 hover:text-blue-600">
+            <a href="/" className="text-gray-800 hover:text-blue-600">
               Home
             </a>
           </li>
@@ -188,9 +204,12 @@ const NavBar = () => {
         </ul>
 
         {/* Login Button */}
-        <div className="hidden md:block">
+        <div className="hidden md:flex space-x-4">
           <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
-            Login
+            Log In
+          </button>
+          <button className="bg-gray-100 text-blue-600 px-4 py-2 rounded hover:bg-gray-200 transition duration-300">
+            Sign Up
           </button>
         </div>
 
@@ -338,7 +357,7 @@ const NavBar = () => {
                     </a>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-100">
-                    <a href="#service-two" className="block text-gray-800">
+                    <a href="/consumer-privacy" className="block text-gray-800">
                       Consumer Privacy
                     </a>
                   </li>
