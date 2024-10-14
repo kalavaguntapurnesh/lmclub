@@ -60,18 +60,15 @@ const NavBar = () => {
       }`}
     >
       <div className="max-w-[1400px] mx-auto flex justify-between items-center px-4">
-        {/* Logo */}
-        <div className="flex items-center">
-          {/* Logo */}
+        {/* <div className="flex items-center">
           <div
             className={`h-10 w-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold transition-all duration-300 ease-in-out ${
               isScrolled ? "w-10 h-10 rounded-full" : "w-10 h-10 rounded-full"
             }`}
           >
-            LM {/* Replace with your actual logo or an image */}
+            LM
           </div>
 
-          {/* Company Name */}
           <span
             className={`text-2xl font-bold ml-1 transition-all duration-300 ease-in-out ${
               isScrolled ? "opacity-0 w-0 overflow-hidden" : "opacity-100"
@@ -79,7 +76,15 @@ const NavBar = () => {
           >
             Club.
           </span>
+        </div> */}
+
+        <div className="flex items-center">
+          <img src={Logo} alt="" className="w-10 h-10" />
+
         </div>
+
+
+
 
         {/* Desktop Nav Links */}
         <ul className="hidden md:flex flex-grow justify-center space-x-8 items-center">
