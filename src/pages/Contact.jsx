@@ -3,6 +3,10 @@ import us from "../assets/us.svg";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import { useState } from "react";
+import { SiMinutemailer } from "react-icons/si";
+import { FaMicrophone } from "react-icons/fa6";
+import { FaMicrophoneAlt } from "react-icons/fa";
+import { IoChatboxEllipses } from "react-icons/io5";
 
 const Contact = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -37,6 +41,33 @@ const Contact = () => {
                   <div className="w-full ">
                     <div className="flex justify-center items-center">
                       <img src={us} alt="" className=" w-[100%]" />
+                    </div>
+
+                    <div className="flex flex-row mt-6">
+                      <a href="" className="w-[50%] ">
+                        <div className="flex flex-col space-y-2 md:items-start items-center">
+                          <div className="text-xl font-bold text-mainColor">
+                            <h1>Head Quarters:</h1>
+                          </div>
+                          <div>
+                            <p>7778 McGinnis Ferry Rd</p>
+                            <p>PMB 162, Suwanee,</p>
+                            <p>Georgia 30024, US</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="" className="w-[50%]">
+                        <div className="flex flex-col space-y-2 md:items-start items-center">
+                          <div className="text-xl font-bold text-mainColor">
+                            <h1>Branch Offices:</h1>
+                          </div>
+                          <div>
+                            <p>7778 McGinnis Ferry Rd</p>
+                            <p>PMB 162, Suwanee,</p>
+                            <p>Georgia 30024, US</p>
+                          </div>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -117,7 +148,7 @@ const Contact = () => {
 
                   <div className="flex items-center justify-center pt-2">
                     <div className="mb-5 md:w-10/12 w-full">
-                      <button className="hover:shadow-form rounded bg-blue-600 hover:bg-colorFour transition duration-1000 py-2 ease-in-out w-full text-base font-semibold text-white outline-none">
+                      <button className="hover:shadow-form rounded bg-mainColor transition duration-1000 py-2 ease-in-out w-full text-base font-semibold text-white outline-none">
                         Submit
                       </button>
                     </div>
@@ -126,8 +157,40 @@ const Contact = () => {
               </div>
             </div>
 
-            <div>
-              <h1>Be,l</h1>
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-4 pt-8">
+              <a
+                href="mailto:info@laoemaom.com"
+                className="flex flex-col justify-center items-center border-[1px] shadow py-2 rounded md:mx-0 mx-4"
+              >
+                <div>
+                  <SiMinutemailer className="md:w-12 md:h-12 w-8 h-8 text-mainColor" />
+                </div>
+                <div className="pt-2 md:text-xl text-lg font-semibold text-blue-500">
+                  <h1>info@laoemaom.com</h1>
+                </div>
+              </a>
+              <a
+                href="mailto:info@laoemaom.com"
+                className="flex flex-col justify-center items-center border-[1px] shadow py-2 rounded md:mx-0 mx-4"
+              >
+                <div>
+                  <FaMicrophoneAlt className="md:w-12 md:h-12 w-8 h-8 text-mainColor" />
+                </div>
+                <div className="pt-2 md:text-xl text-lg font-semibold text-blue-500">
+                  <h1>(+1) 678-200-4524</h1>
+                </div>
+              </a>
+              <a
+                href="mailto:info@laoemaom.com"
+                className="flex flex-col justify-center items-center border-[1px] shadow py-2 rounded md:mx-0 mx-4"
+              >
+                <div>
+                  <IoChatboxEllipses className="md:w-12 md:h-12 w-8 h-8 text-mainColor" />
+                </div>
+                <div className="pt-2 md:text-xl text-lg font-semibold text-blue-500">
+                  <h1>LM Club Chat</h1>
+                </div>
+              </a>
             </div>
           </div>
         </div>
