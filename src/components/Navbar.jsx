@@ -4,10 +4,13 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/LM_Logo.jpeg";
 import { RiCustomerService2Fill } from "react-icons/ri";
-import { MdOutlinePrivacyTip } from "react-icons/md";
-import { IoIosMailOpen } from "react-icons/io";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
+import { MdComputer, MdOutlinePrivacyTip } from "react-icons/md";
+import {
+  FaBuildingColumns,
+  FaComputerMouse,
+  FaXTwitter,
+} from "react-icons/fa6";
+import { FaGlobeAmericas, FaInstagram, FaMicrophoneAlt } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaAngleRight, FaAngleDown } from "react-icons/fa";
@@ -80,11 +83,7 @@ const NavBar = () => {
 
         <div className="flex items-center">
           <img src={Logo} alt="" className="w-10 h-10" />
-
         </div>
-
-
-
 
         {/* Desktop Nav Links */}
         <ul className="hidden md:flex flex-grow justify-center space-x-8 items-center">
@@ -93,10 +92,20 @@ const NavBar = () => {
 
         {/* Login Button */}
         <div className="hidden md:flex space-x-4">
-          <button className="bg-blue-600 text-white px-4 py-2 rounded font-semibold text-sm hover:bg-blue-700 transition duration-300">
+          <button
+            onClick={() => {
+              navigate("/login");
+            }}
+            className="bg-blue-600 text-white px-4 py-2 rounded font-semibold text-sm hover:bg-blue-700 transition duration-300"
+          >
             Log In
           </button>
-          <button className="bg-gray-100 text-blue-600 px-4 py-2 rounded text-sm font-semibold hover:bg-gray-200 transition duration-300">
+          <button
+            onClick={() => {
+              navigate("/register");
+            }}
+            className="bg-gray-100 text-blue-600 px-4 py-2 rounded text-sm font-semibold hover:bg-gray-200 transition duration-300"
+          >
             Sign Up
           </button>
         </div>
@@ -429,14 +438,14 @@ const Content = ({ selected, dir }) => {
         opacity: 0,
         y: 8,
       }}
-      className="absolute left-0 top-[calc(100%_+_24px)] w-96 rounded-lg border border-neutral-600 bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-800 p-4"
+      className="absolute left-0 top-[calc(100%_+_24px)] w-[100%] bg-white rounded-lg shadow p-4"
     >
       <Bridge />
       <Nub selected={selected} />
 
       {TABS.map((t) => {
         return (
-          <div className="overflow-hidden" key={t.id}>
+          <div className="overflow-hidden " key={t.id}>
             {selected === t.id && (
               <motion.div
                 initial={{
@@ -490,7 +499,7 @@ const Nub = ({ selected }) => {
       }}
       animate={{ left }}
       transition={{ duration: 0.25, ease: "easeInOut" }}
-      className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl border border-neutral-600 bg-neutral-900"
+      className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl bg-neutral-900"
     />
   );
 };
@@ -498,28 +507,28 @@ const Nub = ({ selected }) => {
 const Products = () => {
   return (
     <div>
-      <div className="grid grid-cols-2 gap-4 divide-x divide-neutral-700">
-        <div className="w-1/2">
-          <h3 className="mb-2 text-sm font-medium text-white">Premium</h3>
-          <a href="#" className="mb-1 block text-sm text-neutral-400">
+      <div className="flex flex-row w-[100%] ">
+        <div className="w-[50%] flex flex-col justify-start items-center">
+          <h3 className="mb-2 font-bold text-black">Premium</h3>
+          <a href="/" className="mb-1 block text-sm text-gray-600">
             Platinum
           </a>
-          <a href="#" className="block text-sm text-neutral-400">
+          <a href="/" className="mb-1 block text-sm text-gray-600">
             Gold
           </a>
-          <a href="#" className="block text-sm text-neutral-400 mt-1">
+          <a href="/" className="mb-1 block text-sm text-gray-600">
             Silver
           </a>
-          <a href="#" className="block text-sm text-neutral-400 mt-1">
+          <a href="/" className="block text-sm text-gray-600">
             Bronze
           </a>
         </div>
-        <div className="w-1/2">
-          <h3 className="mb-2 text-sm font-medium text-white">Free</h3>
-          <a href="#" className="mb-1 block text-sm text-neutral-400">
+        <div className="w-[50%] flex flex-col justify-start items-center">
+          <h3 className="mb-2 font-bold text-black">Free</h3>
+          <a href="/" className="mb-1 block text-sm text-gray-600">
             Free Tier
           </a>
-          <a href="#" className="mb-1 block text-sm text-neutral-400">
+          <a href="/" className="mb-1 block text-sm text-gray-600">
             Rewards
           </a>
         </div>
@@ -533,50 +542,31 @@ const Products = () => {
   );
 };
 
-const Privacy = () => {
-  return (
-    <div className="grid grid-cols-2 gap-4 divide-x divide-neutral-700">
-      <a
-        href="/privacy-policy"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <MdOutlinePrivacyTip className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Privacy Policy</span>
-      </a>
-      <a
-        href="/consumer-privacy"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <RiCustomerService2Fill className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Consumer Policy</span>
-      </a>
-    </div>
-  );
-};
-
 const Homebar = () => {
   return (
-    <div className="grid grid-cols-3 gap-4 divide-x divide-neutral-700">
+    <div className="grid grid-cols-3 gap-4 ">
       <a
         href="/learn-about-us"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <FiHome className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">About Us</span>
+        <FiHome className="mb-2 text-xl text-gray-700" />
+        <span className="text-xs font-semibold text-gray-700">About Us</span>
       </a>
       <a
         href="#"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <FiBarChart2 className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Logo Meaning</span>
+        <FiBarChart2 className="mb-2 text-xl text-gray-700" />
+        <span className="text-xs font-semibold text-gray-700">
+          Logo Meaning
+        </span>
       </a>
       <a
         href="/"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <FiPieChart className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Enterprise</span>
+        <FiPieChart className="mb-2 text-xl text-gray-700" />
+        <span className="text-xs font-semibold text-gray-700">Enterprise</span>
       </a>
     </div>
   );
@@ -649,15 +639,78 @@ const Subscription = () => {
   );
 };
 
+const Privacy = () => {
+  return (
+    <div className="grid grid-cols-2 gap-4">
+      <a
+        href="/privacy-policy"
+        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+      >
+        <MdOutlinePrivacyTip className="mb-2 text-xl text-gray-700" />
+        <span className="text-xs font-semibold text-gray-700">
+          Privacy Policy
+        </span>
+      </a>
+      <a
+        href="/consumer-privacy"
+        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+      >
+        <RiCustomerService2Fill className="mb-2 text-xl text-gray-700" />
+        <span className="text-xs font-semibold text-gray-700">
+          Consumer Policy
+        </span>
+      </a>
+    </div>
+  );
+};
+
 const ContactBar = () => {
   return (
-    <div className="grid grid-cols-1 gap-4 divide-x divide-neutral-700">
+    <div className="grid grid-cols-3 gap-4 ">
       <a
         href="/contact-us"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <IoIosMailOpen className="mb-2 text-xl text-indigo-300" />
-        <span className="text-xs">Contact Us</span>
+        <FaGlobeAmericas className="mb-2 text-xl text-gray-700" />
+        <span className="text-xs font-semibold text-gray-700">
+          Head Quarters
+        </span>
+      </a>
+      <a
+        href="/contact-us"
+        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+      >
+        <FaBuildingColumns className="mb-2 text-xl text-gray-700" />
+        <span className="text-xs font-semibold text-gray-700">
+          Branch Offices
+        </span>
+      </a>
+      <a
+        href="/contact-us"
+        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+      >
+        <FaComputerMouse className="mb-2 text-xl text-gray-700" />
+        <span className="text-xs font-semibold text-gray-700">
+          Contact by Email
+        </span>
+      </a>
+      <a
+        href="/contact-us"
+        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+      >
+        <MdComputer className="mb-2 text-xl text-gray-700" />
+        <span className="text-xs font-semibold text-gray-700">
+          Contact by Chat
+        </span>
+      </a>
+      <a
+        href="/contact-us"
+        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+      >
+        <FaMicrophoneAlt className="mb-2 text-xl text-gray-700" />
+        <span className="text-xs font-semibold text-gray-700">
+          Contact by Phone
+        </span>
       </a>
     </div>
   );
