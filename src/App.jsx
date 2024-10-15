@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Privacy from "./pages/Privacy";
 import Consumer_Privacy from "./pages/Consumer_Privacy";
+import LogoMeaning from "./pages/LogoMeaning";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/privacy-policy" element={<Privacy />}></Route>
 
         <Route path="/consumer-privacy" element={<Consumer_Privacy />}></Route>
+        <Route path="/logo-meaning" element={<LogoMeaning />}></Route>
       </Routes>
     </BrowserRouter>
   );

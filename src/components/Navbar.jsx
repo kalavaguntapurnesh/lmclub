@@ -81,9 +81,9 @@ const NavBar = () => {
           </span>
         </div> */}
 
-        <div className="flex items-center">
+        <a href="/" className="flex items-center">
           <img src={Logo} alt="" className="w-10 h-10" />
-        </div>
+        </a>
 
         {/* Desktop Nav Links */}
         <ul className="hidden md:flex flex-grow justify-center space-x-8 items-center">
@@ -159,12 +159,12 @@ const NavBar = () => {
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/" className="text-sm">
+                      <a href="/logo-meaning" className="text-sm">
                         Logo Meaning
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/" className="text-sm">
+                      <a href="/learn-about-us" className="text-sm">
                         Leadership
                       </a>
                     </li>
@@ -571,7 +571,7 @@ const Homebar = () => {
         <span className="text-xs font-semibold text-gray-700">About Us</span>
       </a>
       <a
-        href="#"
+        href="/logo-meaning"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiBarChart2 className="mb-2 text-xl text-mainColor" />
@@ -580,7 +580,7 @@ const Homebar = () => {
         </span>
       </a>
       <a
-        href="/"
+        href="/learn-about-us"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiPieChart className="mb-2 text-xl text-mainColor" />
