@@ -13,7 +13,7 @@ import {
 import { FaGlobeAmericas, FaInstagram, FaMicrophoneAlt } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
-import { FaAngleRight, FaAngleDown } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
 import {
   FiArrowRight,
   FiBarChart2,
@@ -96,7 +96,7 @@ const NavBar = () => {
             onClick={() => {
               navigate("/login");
             }}
-            className="bg-blue-600 text-white px-4 py-2 rounded font-semibold text-sm hover:bg-blue-700 transition duration-300"
+            className="bg-mainColor text-white px-4 py-2 rounded font-medium text-sm hover:bg-blue-700 transition duration-300"
           >
             Log In
           </button>
@@ -104,7 +104,7 @@ const NavBar = () => {
             onClick={() => {
               navigate("/register");
             }}
-            className="bg-gray-100 text-blue-600 px-4 py-2 rounded text-sm font-semibold hover:bg-gray-200 transition duration-300"
+            className="border-[1px] border-gray-500 text-mainColor px-4 py-2 rounded text-sm font-semibold hover:bg-gray-200 transition duration-300"
           >
             Sign Up
           </button>
@@ -136,7 +136,7 @@ const NavBar = () => {
                 onClick={() => toggleMobileDropdown("home")}
                 className="flex items-center justify-between cursor-pointer"
               >
-                Home
+                Company
                 <FaAngleDown
                   className={`transition-transform ${
                     openDropdownMobile === "home" ? "rotate-180" : ""
@@ -408,8 +408,8 @@ const Tab = ({ children, tab, handleSetSelected, selected }) => {
       id={`shift-tab-${tab}`}
       onMouseEnter={() => handleSetSelected(tab)}
       onClick={() => handleSetSelected(tab)}
-      className={`flex items-center gap-1 rounded-full px-3 py-1.5 text-sm transition-colors ${
-        selected === tab ? " bg-neutral-800 text-neutral-100" : "text-black"
+      className={`flex items-center gap-1 rounded-full md:text-sm lg:text-base px-3 py-1.5 transition-colors ${
+        selected === tab ? " bg-mainColor text-neutral-100" : "text-black"
       }`}
     >
       <span>{children}</span>
@@ -499,7 +499,7 @@ const Nub = ({ selected }) => {
       }}
       animate={{ left }}
       transition={{ duration: 0.25, ease: "easeInOut" }}
-      className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl bg-neutral-900"
+      className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl bg-mainColor"
     />
   );
 };
@@ -549,14 +549,14 @@ const Homebar = () => {
         href="/learn-about-us"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <FiHome className="mb-2 text-xl text-gray-700" />
+        <FiHome className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">About Us</span>
       </a>
       <a
         href="#"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <FiBarChart2 className="mb-2 text-xl text-gray-700" />
+        <FiBarChart2 className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">
           Logo Meaning
         </span>
@@ -565,7 +565,7 @@ const Homebar = () => {
         href="/"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <FiPieChart className="mb-2 text-xl text-gray-700" />
+        <FiPieChart className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">Enterprise</span>
       </a>
     </div>
@@ -646,7 +646,7 @@ const Privacy = () => {
         href="/privacy-policy"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <MdOutlinePrivacyTip className="mb-2 text-xl text-gray-700" />
+        <MdOutlinePrivacyTip className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">
           Privacy Policy
         </span>
@@ -655,7 +655,7 @@ const Privacy = () => {
         href="/consumer-privacy"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <RiCustomerService2Fill className="mb-2 text-xl text-gray-700" />
+        <RiCustomerService2Fill className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">
           Consumer Policy
         </span>
@@ -671,7 +671,7 @@ const ContactBar = () => {
         href="/contact-us"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <FaGlobeAmericas className="mb-2 text-xl text-gray-700" />
+        <FaGlobeAmericas className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">
           Head Quarters
         </span>
@@ -680,7 +680,7 @@ const ContactBar = () => {
         href="/contact-us"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <FaBuildingColumns className="mb-2 text-xl text-gray-700" />
+        <FaBuildingColumns className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">
           Branch Offices
         </span>
@@ -689,7 +689,7 @@ const ContactBar = () => {
         href="/contact-us"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <FaComputerMouse className="mb-2 text-xl text-gray-700" />
+        <FaComputerMouse className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">
           Contact by Email
         </span>
@@ -698,7 +698,7 @@ const ContactBar = () => {
         href="/contact-us"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <MdComputer className="mb-2 text-xl text-gray-700" />
+        <MdComputer className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">
           Contact by Chat
         </span>
@@ -707,7 +707,7 @@ const ContactBar = () => {
         href="/contact-us"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <FaMicrophoneAlt className="mb-2 text-xl text-gray-700" />
+        <FaMicrophoneAlt className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">
           Contact by Phone
         </span>
@@ -717,7 +717,7 @@ const ContactBar = () => {
 };
 
 const TABS = [
-  { title: "Home", Component: Homebar },
+  { title: "Company", Component: Homebar },
   {
     title: "Products",
     Component: Subscription,

@@ -77,13 +77,14 @@ const Carousel = () => {
 
   return (
     <div className="bg-white">
-      <div className="relative md:pt-16 pt-80">
+      <div className="relative pt-24">
         <div className="w-full">
           <div className="w-full px-4 mx-auto max-w-[1400px]">
             <div className="space-y-2">
-              <div>
-                <h1 className="uppercase font-bold text-center tracking-wide">
-                  Home Improvement
+              <div className="flex items-center text-center justify-center ">
+                <div className="h-4 w-1 bg-mainColor"></div>
+                <h1 className="ml-2 text-lg font-bold text-mainColor uppercase">
+                  home improvement
                 </h1>
               </div>
 
@@ -109,6 +110,12 @@ const Carousel = () => {
                 ))}
               </div>
             </div>
+
+
+         
+
+
+
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
+import Stack from "../components/Stack";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Navbar />
       <ScrollToTop />
       <Hero />
+      <Stack />
       <Carousel />
       <Final />
       <Footer />
