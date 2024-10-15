@@ -121,6 +121,14 @@ const Stack = () => {
               </div>
             </div>
           </div>
+
+
+          <div className="w-full px-4 mx-auto max-w-[1400px]">
+
+          </div>
+
+
+
         </div>
       </div>
     </div>

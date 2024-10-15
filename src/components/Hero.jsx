@@ -1,3 +1,8 @@
+import { BiCalendarCheck, BiLaptop } from "react-icons/bi";
+import { CgLock } from "react-icons/cg";
+import { CiClock1 } from "react-icons/ci";
+import { PiEarThin } from "react-icons/pi";
+
 const Hero = () => {
   return (
     <div>
@@ -57,6 +62,59 @@ const Hero = () => {
                   alt=""
                   className="lg:w-10/12 w-11/12 lg:h-120 h-92 lg:mt-[-40px] mt-8"
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-[#f8f9fa] mt-8">
+          <div className="max-w-[1400px] mx-auto pt-8 pb-8">
+            <div className="text-center text-gray-600">
+              <h1 className="uppercase font-semibold">
+                Trusted by hundred plus countries.
+              </h1>
+            </div>
+
+            <div className="grid md:grid-cols-4 grid-cols-2 pt-4">
+              <div className=" flex flex-col justify-center items-center">
+                <div className="my-2">
+                  <PiEarThin className="w-8 h-8 text-blue-600" />
+                </div>
+                <div className="my-2 w-full">
+                  <h1 className="text-gray-600 font-semibold w-full text-center">
+                    Worldwide Access Availablity
+                  </h1>
+                </div>
+              </div>
+              <div className=" flex flex-col justify-center items-center">
+                <div className="my-2">
+                  <CiClock1 className="w-8 h-8 text-blue-600" />
+                </div>
+                <div className="my-2 w-full">
+                  <h1 className="text-gray-600  font-semibold w-full text-center">
+                    Scalable Timing Facility
+                  </h1>
+                </div>
+              </div>
+              <div className=" flex flex-col justify-center items-center">
+                <div className="my-2">
+                  <BiCalendarCheck className="w-8 h-8 text-blue-600" />
+                </div>
+                <div className="my-2 w-full">
+                  <h1 className="text-gray-600  font-semibold w-full text-center">
+                    Simple Navigation Procedure
+                  </h1>
+                </div>
+              </div>
+              <div className=" flex flex-col justify-center items-center">
+                <div className="my-2">
+                  <BiLaptop className="w-8 h-8 text-blue-600" />
+                </div>
+                <div className="my-2 w-full">
+                  <h1 className="text-gray-600 font-semibold w-full text-center">
+                    Complete Online Approach
+                  </h1>
+                </div>
               </div>
             </div>
           </div>

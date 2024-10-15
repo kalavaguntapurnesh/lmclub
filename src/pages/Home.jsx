@@ -13,7 +13,7 @@ const Home = () => {
       <ScrollToTop />
       <Hero />
       <Stack />
-      <Carousel />
+      {/* <Carousel /> */}
       <Final />
       <Footer />
     </div>
