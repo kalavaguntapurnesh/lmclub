@@ -534,7 +534,7 @@ const Products = () => {
         </div>
       </div>
 
-      <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300">
+      <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-mainColor">
         <span>View more</span>
         <FiArrowRight />
       </button>
@@ -582,10 +582,10 @@ const Subscription = () => {
             src="https://lmclub.club/wp-content/uploads/2024/09/Picture2-300x300.png"
             alt="Placeholder image"
           />
-          <h4 className="mb-0.5 text-sm font-medium text-white">LM Beehive</h4>
+          <h4 className="mb-0.5 text-sm font-medium text-black">LM Beehive</h4>
           <p className="text-xs text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
-            quidem eos.
+            Coupons, information and opportunities from local restaurants hotel,
+            retailers.
           </p>
         </a>
         <a href="#">
@@ -594,12 +594,12 @@ const Subscription = () => {
             src="https://lmclub.club/wp-content/uploads/2024/09/Picture1-300x300.png"
             alt="Placeholder image"
           />
-          <h4 className="mb-0.5 text-sm font-medium text-white">
+          <h4 className="mb-0.5 text-sm font-medium text-black">
             LM Broadcast
           </h4>
           <p className="text-xs text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
-            quidem eos.
+            Advertise local businesses on your social media and we will pay you
+            a percentage of the revenue earned.
           </p>
         </a>
         <a href="#">
@@ -608,12 +608,12 @@ const Subscription = () => {
             src="https://lmclub.club/wp-content/uploads/2024/09/Picture3-300x300.png"
             alt="Placeholder image"
           />
-          <h4 className="mb-0.5 text-sm font-medium text-white">
+          <h4 className="mb-0.5 text-sm font-medium text-black">
             Enroll Rewards
           </h4>
           <p className="text-xs text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
-            quidem eos.
+            Activate GROW & ENROLL to earn rewards for helping our community to
+            expand.
           </p>
         </a>
         <a href="https://ecommerce-green-theta.vercel.app/">
@@ -622,16 +622,16 @@ const Subscription = () => {
             src="https://cdn-icons-png.flaticon.com/512/3445/3445817.png"
             alt="Placeholder image"
           />
-          <h4 className="mb-0.5 text-sm font-medium text-white">
+          <h4 className="mb-0.5 text-sm font-medium text-black">
             Ecommerce Platform
           </h4>
           <p className="text-xs text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo
-            quidem eos.
+            Ecommerce platform is the place where you can find customized
+            jerseys.
           </p>
         </a>
       </div>
-      <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-indigo-300">
+      <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-mainColor">
         <span>View more</span>
         <FiArrowRight />
       </button>
