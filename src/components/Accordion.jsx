@@ -14,7 +14,7 @@ const Accordion = ({ title, answer }) => {
         className="flex justify-between w-full"
       >
         <div className=" flex justify-start w-full items-center">
-          <span className="font-normal text-gray-700 tracking-normal px-4">{title}</span>
+          <span className="font-normal text-gray-700 tracking-normal">{title}</span>
         </div>
         <div className="px-4 py-1">
           {accordionOpen ? (
@@ -31,8 +31,8 @@ const Accordion = ({ title, answer }) => {
             : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden md:mx-0 mx-1">
-          <span className="px-4 text-lg">{answer}</span>
+        <div className="overflow-hidden md:mx-0 mx-1 text-start">
+          <span className=" text-lg text-gray-700">{answer}</span>
         </div> 
       </div>
     </div>

@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
+import Final from "../components/Final";
 
 const About = () => {
   return (
@@ -12,6 +13,7 @@ const About = () => {
       <ScrollToTop />
       <AboutHero />
       <AboutTwo />
+      <Final />
       <Footer />
     </div>
   );

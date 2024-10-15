@@ -96,7 +96,7 @@ const NavBar = () => {
             onClick={() => {
               navigate("/login");
             }}
-            className="bg-mainColor text-white px-4 py-2 rounded font-medium text-sm hover:bg-blue-700 transition duration-300"
+            className="bg-mainColor text-white px-4 py-2 rounded font-medium text-sm hover:bg-green-800 transition duration-300"
           >
             Log In
           </button>
@@ -104,7 +104,7 @@ const NavBar = () => {
             onClick={() => {
               navigate("/register");
             }}
-            className="border-[1px] border-gray-500 text-mainColor px-4 py-2 rounded text-sm font-semibold hover:bg-gray-200 transition duration-300"
+            className="border-[1px] border-mainColor text-mainColor px-4 py-2 rounded text-sm font-semibold hover:bg-gray-200 transition duration-300"
           >
             Sign Up
           </button>

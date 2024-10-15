@@ -5,7 +5,7 @@ export default {
     extend: {
       container: {},
       colors: {
-        mainColor: "rgb(21 94 117)",
+        mainColor: "rgb(22 163 74)",
       },
     },
   },
