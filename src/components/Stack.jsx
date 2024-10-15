@@ -1,8 +1,8 @@
 import discord from "../assets/discord.svg";
-import hooks from "../assets/hooks.svg";
+import hooks from "../assets/linkedin.svg";
 import phone from "../assets/phone.svg";
 import slack from "../assets/slack.svg";
-import sms from "../assets/sms.svg";
+import sms from "../assets/twitter.svg";
 import teams from "../assets/teams.svg";
 import zapier from "../assets/zapier.svg";
 import whatsapp from "../assets/whatsapp.svg";
@@ -102,7 +102,7 @@ const Stack = () => {
                     <img src={evernote} alt="" className="w-8 h-8" />
                   </a>
                 </div>
-                <div className="flex justify-center items-center">
+                <div className="md:flex justify-center items-center hidden">
                   <a
                     href="/learn-about-us"
                     className="w-20 h-20 rounded bg-[#f8f9fa] flex justify-center items-center"
@@ -110,7 +110,7 @@ const Stack = () => {
                     <img src={discord} alt="" className="w-8 h-8" />
                   </a>
                 </div>
-                <div className="md:flex justify-center items-center hidden">
+                <div className="flex justify-center items-center">
                   <a
                     href="/learn-about-us"
                     className="w-20 h-20 rounded bg-[#f8f9fa] flex justify-center items-center"

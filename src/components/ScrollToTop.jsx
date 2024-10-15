@@ -11,12 +11,12 @@ const ScrollToTop = () => {
     message
   )}`;
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const toggleVisibility = () => {
     if (window.pageYOffset > 120) {
       setIsVisible(true);
     } else {
-      setIsVisible(false);
+      setIsVisible(true);
     }
   };
 

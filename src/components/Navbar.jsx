@@ -127,8 +127,8 @@ const NavBar = () => {
               : "md:hidden fixed left-0 top-0 w-[70%] border-r h-[100%] bg-white ease-in-out duration-1000 rounded-b-lg z-10 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
           }
         >
-          <h1 className="w-full text-2xl text-colorFour font-bold m-4 cursor-pointer">
-            LM Club.
+          <h1 className="w-full text-2xl text-mainColor font-bold m-4 cursor-pointer">
+            LM <span className="text-black">Club.</span>
           </h1>
           <ul className="p-4">
             <li className="p-4 border-b border-gray-600">
@@ -139,7 +139,9 @@ const NavBar = () => {
                 Company
                 <FaAngleDown
                   className={`transition-transform ${
-                    openDropdownMobile === "home" ? "rotate-180" : ""
+                    openDropdownMobile === "home"
+                      ? "rotate-180 text-mainColor"
+                      : ""
                   }`}
                 />
               </div>
@@ -163,7 +165,7 @@ const NavBar = () => {
                     </li>
                     <li className="text-gray-700">
                       <a href="/" className="text-sm">
-                        Enterprise
+                        Leadership
                       </a>
                     </li>
                   </motion.ul>
@@ -178,7 +180,9 @@ const NavBar = () => {
                 Products
                 <FaAngleDown
                   className={`transition-transform ${
-                    openDropdownMobile === "products" ? "rotate-180" : ""
+                    openDropdownMobile === "products"
+                      ? "rotate-180 text-mainColor"
+                      : ""
                   }`}
                 />
               </div>
@@ -222,7 +226,9 @@ const NavBar = () => {
                 Subscription
                 <FaAngleDown
                   className={`transition-transform ${
-                    openDropdownMobile === "subscription" ? "rotate-180" : ""
+                    openDropdownMobile === "subscription"
+                      ? "rotate-180 text-mainColor"
+                      : ""
                   }`}
                 />
               </div>
@@ -272,7 +278,9 @@ const NavBar = () => {
                 Privacy
                 <FaAngleDown
                   className={`transition-transform ${
-                    openDropdownMobile === "privacy" ? "rotate-180" : ""
+                    openDropdownMobile === "privacy"
+                      ? "rotate-180 text-mainColor"
+                      : ""
                   }`}
                 />
               </div>
@@ -306,7 +314,9 @@ const NavBar = () => {
                 Contact Us
                 <FaAngleDown
                   className={`transition-transform ${
-                    openDropdownMobile === "contact" ? "rotate-180" : ""
+                    openDropdownMobile === "contact"
+                      ? "rotate-180 text-mainColor"
+                      : ""
                   }`}
                 />
               </div>
@@ -347,11 +357,19 @@ const NavBar = () => {
             <div className="p-4">
               <div className="grid grid-cols-4">
                 <a href="https://www.linkedin.com/company/laoe-maom/">
-                  <FaLinkedinIn className="w-6 h-6" />
+                  <FaLinkedinIn className="w-6 h-6 text-black duration-1000 hover:text-mainColor ease-in-out" />
                 </a>
-                <FaXTwitter className="w-6 h-6" />
-                <FaInstagram className="w-6 h-6" />
-                <FaFacebookF className="w-6 h-6" />
+                <a href="">
+                  <FaXTwitter className="w-6 h-6 text-black duration-1000 hover:text-mainColor ease-in-out" />
+                </a>
+                <a href="">
+                  {" "}
+                  <FaInstagram className="w-6 h-6 text-black duration-1000 hover:text-mainColor ease-in-out" />
+                </a>
+                <a href="">
+                  {" "}
+                  <FaFacebookF className="w-6 h-6 text-black duration-1000 hover:text-mainColor ease-in-out" />
+                </a>
               </div>
             </div>
           </div>

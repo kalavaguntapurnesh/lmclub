@@ -30,13 +30,13 @@ const FAQ = () => {
                   </div>
 
                   <div className="lg:mt-20 mt-8 flex md:justify-start justify-center">
-                    <button
-                      onClick={() => navigate("/contact-us")}
+                    <a
+                      href="/contact-us"
                       class="bg-white flex items-center space-x-1 text-mainColor border-[1px] border-mainColor py-2 px-4 rounded"
                     >
                       <span>Learn More</span>
                       <IoShareOutline size={20} />
-                    </button>
+                    </a>
                   </div>
                 </div>
 
