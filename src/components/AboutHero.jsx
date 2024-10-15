@@ -1,6 +1,19 @@
 import Founder from "../assets/Founder.jpeg";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const AboutHero = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <div>
       <div className="mt-28">
@@ -123,7 +136,10 @@ const AboutHero = () => {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-20">
+              <div
+                className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-20"
+                id="about_founder"
+              >
                 <div className="flex justify-center items-center">
                   <div className="w-full">
                     <img

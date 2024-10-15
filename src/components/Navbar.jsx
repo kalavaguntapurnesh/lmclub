@@ -164,7 +164,7 @@ const NavBar = () => {
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/learn-about-us" className="text-sm">
+                      <a href="/learn-about-us#about_founder" className="text-sm">
                         Leadership
                       </a>
                     </li>
@@ -580,7 +580,7 @@ const Homebar = () => {
         </span>
       </a>
       <a
-        href="/learn-about-us"
+        href="/learn-about-us#about_founder"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiPieChart className="mb-2 text-xl text-mainColor" />
