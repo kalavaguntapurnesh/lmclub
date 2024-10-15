@@ -31,21 +31,24 @@ const AboutTwo = () => {
                       </div>
                       <div class="flex justify-center items-center">
                         <h1 class="text-3xl text-colorTwo font-bold">
-                          Individuals
+                          Reward Collaboration
                         </h1>
                       </div>
 
                       <div class="flex justify-center items-center text-gray-600 text-center">
                         <p>
-                          Keep your calendar in order and book meetings with
-                          clients and teammates faster.
+                          Recognize member initiatives with businesses both
+                          locally and globally with incentives.
                         </p>
                       </div>
 
                       <div className="flex justify-center">
-                        <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full">
+                        <a
+                          href="/contact-us"
+                          class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
+                        >
                           View Features
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -63,20 +66,25 @@ const AboutTwo = () => {
                       </div>
 
                       <div class="flex justify-center items-center">
-                        <h1 class=" text-3xl text-colorTwo font-bold">Teams</h1>
+                        <h1 class=" text-3xl text-colorTwo font-bold">
+                          Build Global Community
+                        </h1>
                       </div>
 
                       <div class="flex justify-center items-center text-gray-600 text-center">
                         <p>
-                          Add teammates to invites and booking pages and use
-                          shared calendars.
+                          Establish a global presence that encourages networking
+                          and mutual benefits.
                         </p>
                       </div>
 
                       <div className="flex justify-center">
-                        <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 text-colorFour font-semibold py-2 px-4 rounded-full">
+                        <a
+                          href="/contact-us"
+                          class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
+                        >
                           View Features
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -95,28 +103,31 @@ const AboutTwo = () => {
 
                       <div class="flex justify-center items-center">
                         <h1 class=" text-3xl text-colorTwo font-bold">
-                          Enterprise
+                          Foster Social Bonds
                         </h1>
                       </div>
 
                       <div class="flex justify-center items-center text-gray-600 text-center">
                         <p>
-                          Manage your entire organization’s scheduling needs
-                          securely.
+                          Develop a nurturing environment that fosters enduring
+                          friendships and a robust social network.
                         </p>
                       </div>
 
                       <div className="flex justify-center">
-                        <button class="border-[1px] border-colorFour hover:bg-colorFour hover:text-white transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full">
+                        <a
+                          href="/contact-us"
+                          class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
+                        >
                           View Features
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </a>
               </div>
 
-              <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 pt-8">
+              <div class=" lg:grid-cols-2 grid-cols-1 gap-6 pt-8 hidden">
                 <div class="flex md:justify-start justify-center w-full">
                   <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
                     <div class="space-y-6">

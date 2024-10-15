@@ -329,12 +329,12 @@ const NavBar = () => {
                     className="pl-4 mt-6 space-y-2"
                   >
                     <li className="text-gray-700">
-                      <a href="/privacy-policy" className="text-sm">
+                      <a href="/contact-us" className="text-sm">
                         Head Quarters
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/consumer-privacy" className="text-sm">
+                      <a href="/contact-us" className="text-sm">
                         Branch Offices
                       </a>
                     </li>

@@ -12,7 +12,7 @@ const AboutHero = () => {
                   <div className="flex items-center md:justify-start justify-center ">
                     <div className="h-4 w-1 bg-mainColor"></div>
                     <h1 className="ml-2 text-lg font-bold text-mainColor uppercase">
-                      how it started
+                      About LM Club
                     </h1>
                   </div>
 
@@ -33,35 +33,35 @@ const AboutHero = () => {
 
                   <div className="grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-2">
                     <div className="bg-[#f8f9fa] rounded flex flex-col justify-center items-center p-4">
-                      <div className="text-4xl font-semibold">
+                      <div className="text-4xl font-semibold hidden">
                         <h1>3.5</h1>
                       </div>
-                      <div className="text-gray-700">
-                        <p>Years of Experience</p>
+                      <div className="text-gray-700 font-semibold">
+                        <p>World wide Accessibility</p>
                       </div>
                     </div>
                     <div className="bg-[#f8f9fa] rounded flex flex-col justify-center items-center p-4">
-                      <div className="text-4xl font-semibold">
+                      <div className="text-4xl font-semibold hidden">
                         <h1>830+</h1>
                       </div>
-                      <div className="text-gray-700">
-                        <p>Positive Responses</p>
+                      <div className="text-gray-700 font-semibold">
+                        <p>Promote Entrepreneurship</p>
                       </div>
                     </div>
                     <div className="bg-[#f8f9fa] rounded flex flex-col justify-center items-center p-4">
-                      <div className="text-4xl font-semibold">
+                      <div className="text-4xl font-semibold hidden">
                         <h1>23</h1>
                       </div>
-                      <div className="text-gray-700">
-                        <p>Project Challenges</p>
+                      <div className="text-gray-700 font-semibold">
+                        <p>Expand the Horizons</p>
                       </div>
                     </div>
                     <div className="bg-[#f8f9fa] rounded flex flex-col justify-center items-center p-4">
-                      <div className="text-4xl font-semibold">
+                      <div className="text-4xl font-semibold hidden">
                         <h1>100K</h1>
                       </div>
-                      <div className="text-gray-700">
-                        <p>Trusted Customers</p>
+                      <div className="text-gray-700 font-semibold">
+                        <p>Engage the Members</p>
                       </div>
                     </div>
                   </div>

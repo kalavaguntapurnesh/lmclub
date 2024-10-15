@@ -72,14 +72,14 @@ const Hero = () => {
             <div className="flex items-center text-center justify-center ">
               <div className="h-4 w-1 bg-gray-600"></div>
               <h1 className="ml-2 text-lg font-bold text-gray-600 uppercase">
-                Trusted by hundred plus countries
+                Trusted by hundreds of people
               </h1>
             </div>
 
             <div className="grid md:grid-cols-4 grid-cols-2 pt-4">
               <div className=" flex flex-col justify-center items-center">
                 <div className="my-2">
-                  <PiEarThin className="w-8 h-8 text-blue-600" />
+                  <PiEarThin className="w-8 h-8 text-mainColor" />
                 </div>
                 <div className="my-2 w-full">
                   <h1 className="text-gray-600 font-semibold w-full text-center">
@@ -89,17 +89,17 @@ const Hero = () => {
               </div>
               <div className=" flex flex-col justify-center items-center">
                 <div className="my-2">
-                  <CiClock1 className="w-8 h-8 text-blue-600" />
+                  <CiClock1 className="w-8 h-8 text-mainColor" />
                 </div>
                 <div className="my-2 w-full">
                   <h1 className="text-gray-600  font-semibold w-full text-center">
-                    Scalable Timing Facility
+                    Enriching supportive culture
                   </h1>
                 </div>
               </div>
               <div className=" flex flex-col justify-center items-center">
                 <div className="my-2">
-                  <BiCalendarCheck className="w-8 h-8 text-blue-600" />
+                  <BiCalendarCheck className="w-8 h-8 text-mainColor" />
                 </div>
                 <div className="my-2 w-full">
                   <h1 className="text-gray-600  font-semibold w-full text-center">
@@ -109,7 +109,7 @@ const Hero = () => {
               </div>
               <div className=" flex flex-col justify-center items-center">
                 <div className="my-2">
-                  <BiLaptop className="w-8 h-8 text-blue-600" />
+                  <BiLaptop className="w-8 h-8 text-mainColor" />
                 </div>
                 <div className="my-2 w-full">
                   <h1 className="text-gray-600 font-semibold w-full text-center">

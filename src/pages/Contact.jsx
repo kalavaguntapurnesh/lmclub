@@ -165,7 +165,7 @@ const Contact = () => {
                 <div>
                   <SiMinutemailer className="md:w-12 md:h-12 w-8 h-8 text-mainColor" />
                 </div>
-                <div className="pt-2 md:text-xl text-lg font-semibold text-blue-500">
+                <div className="pt-2 md:text-xl font-semibold text-black">
                   <h1>info@laoemaom.com</h1>
                 </div>
               </a>
@@ -176,7 +176,7 @@ const Contact = () => {
                 <div>
                   <FaMicrophoneAlt className="md:w-12 md:h-12 w-8 h-8 text-mainColor" />
                 </div>
-                <div className="pt-2 md:text-xl text-lg font-semibold text-blue-500">
+                <div className="pt-2 md:text-xl font-semibold text-black">
                   <h1>(+1) 678-200-4524</h1>
                 </div>
               </a>
@@ -187,7 +187,7 @@ const Contact = () => {
                 <div>
                   <IoChatboxEllipses className="md:w-12 md:h-12 w-8 h-8 text-mainColor" />
                 </div>
-                <div className="pt-2 md:text-xl text-lg font-semibold text-blue-500">
+                <div className="pt-2 md:text-xl font-semibold text-black">
                   <h1>LM Club Chat</h1>
                 </div>
               </a>

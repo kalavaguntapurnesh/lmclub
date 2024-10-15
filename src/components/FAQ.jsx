@@ -87,7 +87,7 @@ const FAQ = () => {
                       What we offer
                     </a>
                     <a
-                      href="/login"
+                      href="/contact-us"
                       className="bg-white outline-none
                       rounded hover:shadow-form transition border-[1px] border-mainColor duration-1000 ease-in-out md:text-base text-sm text-mainColor px-8 md:py-3 py-2 text-center ml-2"
                     >

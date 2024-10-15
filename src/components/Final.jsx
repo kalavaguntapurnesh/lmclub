@@ -20,9 +20,9 @@ const Final = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <button class="border-[1px] bg-[#001E2B] border-[#001E2B] hover:bg-[#001E2B] hover:text-white transition duration-1000 text-white py-3 px-6 rounded-full">
+                  <a href="/register" class="border-[1px] bg-mainColor transition duration-1000 text-white py-3 px-6 rounded">
                     Create your free account now
-                  </button>
+                  </a>
                 </div>
 
                 <div class="flex justify-center items-center text-black text-center max-w-lg mx-auto">
