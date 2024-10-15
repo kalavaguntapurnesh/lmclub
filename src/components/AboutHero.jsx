@@ -1,3 +1,5 @@
+import Founder from "../assets/Founder.jpeg";
+
 const AboutHero = () => {
   return (
     <div>
@@ -88,7 +90,7 @@ const AboutHero = () => {
                       </h1>
                     </div>
                     <div className="md:text-4xl text-3xl font-semibold md:w-3/4">
-                      <h1>Empowering Lives Through Rewards</h1>
+                      <h1>A realm of exceptional networking</h1>
                     </div>
                     <div className="text-gray-700">
                       <h1>
@@ -108,7 +110,7 @@ const AboutHero = () => {
                       </h1>
                     </div>
                     <div className="md:text-4xl text-3xl font-semibold md:w-3/4">
-                      <h1>Learning for all, everywhere</h1>
+                      <h1>Enhanced collaboration & mutual benefit</h1>
                     </div>
                     <div className="text-gray-700">
                       <h1>
@@ -117,6 +119,55 @@ const AboutHero = () => {
                         connect, collaborate, and create opportunities.
                       </h1>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-20">
+                <div className="flex justify-center items-center">
+                  <div className="w-full">
+                    <img
+                      src={Founder}
+                      alt=""
+                      height="400"
+                      className="rounded md:w-[70%] w-full"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col space-y-6 w-full md:justify-center">
+                  <div className="flex items-center md:justify-start justify-center ">
+                    <div className="h-4 w-1 bg-mainColor"></div>
+                    <h1 className="ml-2 text-lg font-bold text-mainColor uppercase">
+                      About the founder
+                    </h1>
+                  </div>
+
+                  <div className="md:text-5xl text-4xl md:text-start text-center font-semibold">
+                    <h1>Rickardo Anderson</h1>
+                  </div>
+
+                  <div className="text-lg text-[#2b2a35] md:text-start text-center">
+                    <p>
+                      My mission, as the founder, is clear: to forge the premier
+                      networking club that supports our members and businesses
+                      efficiently and effectively. We strive to streamline
+                      success, minimizing time expenditure and maximizing
+                      achievements. Join us to transcend barriers and unlock a
+                      realm of exceptional networking and opportunities! To
+                      expand our vibrant community to 2.5 billion members
+                      worldwide, creating a network of opportunities and shared
+                      success.
+                    </p>
+                  </div>
+
+                  <div className="pt-6 flex md:justify-start justify-center">
+                    <a
+                      href="/contact-us"
+                      className="bg-mainColor font-semibold outline-none
+                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-3 text-center"
+                    >
+                      Contact Us
+                    </a>
                   </div>
                 </div>
               </div>

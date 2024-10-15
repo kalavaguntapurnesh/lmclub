@@ -42,7 +42,7 @@ const Hero = () => {
                   <a
                     href="/login"
                     className="bg-mainColor font-semibold outline-none
-                      rounded-3xl hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
                   >
                     What we offer
                   </a>
