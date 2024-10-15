@@ -566,7 +566,7 @@ const Homebar = () => {
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiPieChart className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">Enterprise</span>
+        <span className="text-xs font-semibold text-gray-700">Leadership</span>
       </a>
     </div>
   );
@@ -717,7 +717,7 @@ const ContactBar = () => {
 };
 
 const TABS = [
-  { title: "Company", Component: Homebar },
+  { title: "Home", Component: Homebar },
   {
     title: "Products",
     Component: Subscription,

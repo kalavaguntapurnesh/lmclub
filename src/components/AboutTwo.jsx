@@ -1,12 +1,21 @@
 const AboutTwo = () => {
   return (
     <div>
-      <div className="bg-[#061421] mt-8">
-        <div className="relative md:pt-16 md:pb-16">
-          <div className="w-full py-4">
+      <div className="bg-[#f8f9fa]">
+        <div className="relative md:pt-32 md:pb-32 pt-20 pb-12">
+          <div className="w-full">
             <div className="w-full px-4 mx-auto max-w-[1400px]">
-              <div className="text-white text-center">
-                <h1 className=" text-4xl">One team, five core values.</h1>
+              <div className="flex items-center text-center justify-center ">
+                <div className="h-4 w-1 bg-mainColor"></div>
+                <h1 className="ml-2 text-lg font-bold text-mainColor uppercase">
+                  Our spectacular strength
+                </h1>
+              </div>
+
+              <div className="mx-auto max-w-[1000px] text-center mt-4">
+                <h1 className="text-4xl font-semibold text-[#3d454d]">
+                  One team, fire core values.
+                </h1>
               </div>
 
               <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 pt-8">
