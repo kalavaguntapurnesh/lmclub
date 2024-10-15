@@ -41,7 +41,7 @@ const AppDesc = () => {
                           </div>
 
                           <div className="flex items-center md:justify-start justify-center mt-8">
-                            <h1 className="text-3xl font-semibold underline">
+                            <h1 className="text-3xl font-medium underline">
                               Autopilot for Unit Testing
                             </h1>
                           </div>
@@ -79,7 +79,7 @@ const AppDesc = () => {
                           </div>
 
                           <div className="flex items-center md:justify-start justify-center mt-8">
-                            <h1 className="text-3xl font-semibold underline">
+                            <h1 className="text-3xl font-medium underline">
                               Autopilot for Unit Testing
                             </h1>
                           </div>
@@ -117,7 +117,7 @@ const AppDesc = () => {
                           </div>
 
                           <div className="flex items-center md:justify-start justify-center mt-8">
-                            <h1 className="text-3xl font-semibold underline">
+                            <h1 className="text-3xl font-medium underline">
                               Autopilot for Unit Testing
                             </h1>
                           </div>
@@ -154,7 +154,7 @@ const AppDesc = () => {
                           </div>
 
                           <div className="flex items-center md:justify-start justify-center mt-8">
-                            <h1 className="text-3xl font-semibold underline">
+                            <h1 className="text-3xl font-medium underline">
                               Autopilot for Unit Testing
                             </h1>
                           </div>
