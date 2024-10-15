@@ -1,3 +1,4 @@
+import AppDesc from "../components/AppDesc";
 import Carousel from "../components/Carousel";
 import Final from "../components/Final";
 import Footer from "../components/Footer";
@@ -12,6 +13,7 @@ const Home = () => {
       <Navbar />
       <ScrollToTop />
       <Hero />
+      <AppDesc />
       <Stack />
       {/* <Carousel /> */}
       <Final />

@@ -69,9 +69,10 @@ const Hero = () => {
 
         <div className="bg-[#f8f9fa] mt-8">
           <div className="max-w-[1400px] mx-auto pt-8 pb-8">
-            <div className="text-center text-gray-600">
-              <h1 className="uppercase font-semibold">
-                Trusted by hundred plus countries.
+            <div className="flex items-center text-center justify-center ">
+              <div className="h-4 w-1 bg-gray-600"></div>
+              <h1 className="ml-2 text-lg font-bold text-gray-600 uppercase">
+                Trusted by hundred plus countries
               </h1>
             </div>
 
