@@ -1,8 +1,11 @@
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
+import RedeemModal from "../components/RedeemModal";
+import { useState } from "react";
 
 const Rewards = () => {
+  const [showModal, setShowModal] = useState(false);
   const services = [
     {
       id: 1,
@@ -69,6 +72,14 @@ const Rewards = () => {
     },
   ];
 
+  const handleRedeemClick = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div>
       <Navbar />
@@ -80,9 +91,8 @@ const Rewards = () => {
               <div className=" mt-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4">
                   {services.map((service, index) => (
-                    <a
+                    <div
                       key={index}
-                      href=""
                       class="flex md:justify-start justify-center"
                     >
                       <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
@@ -106,16 +116,16 @@ const Rewards = () => {
                           </div>
 
                           <div className="flex justify-center">
-                            <a
-                              href="/contact-us"
-                              class="border-[1px] border-mainColor text-white bg-mainColor transition duration-1000 font-medium text-colorFour py-2 px-8 rounded"
+                            <button
+                              onClick={handleRedeemClick}
+                              class="hover:border-[1px] hover:border-mainColor hover:text-mainColor hover:bg-white text-white bg-mainColor transition duration-500 text-colorFour py-2 px-8 rounded"
                             >
                               Redeem Now
-                            </a>
+                            </button>
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -123,6 +133,7 @@ const Rewards = () => {
           </div>
         </div>
       </div>
+      <RedeemModal showModal={showModal} onClose={closeModal} />
       <Footer />
     </div>
   );
