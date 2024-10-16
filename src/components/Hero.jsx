@@ -8,7 +8,7 @@ const Hero = () => {
     <div>
       <section className="text-black">
         <div className="max-w-[1400px] mx-auto text-center">
-          <div className="md:mt-40 mt-32">
+          <div className="md:mt-40 mt-28">
             <div className="max-w-[1400px] m-auto grid lg:grid-cols-2 lg:mx-4">
               <div className="flex flex-col gap-4 w-full space-y-2">
                 <div className="flex items-center lg:justify-start justify-center ">

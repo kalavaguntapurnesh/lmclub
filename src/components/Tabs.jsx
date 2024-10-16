@@ -12,7 +12,7 @@ const Tabs = ({ children }) => {
     <div className="bg-white">
       <div className="relative md:pt-12 pt-8 pb-8">
         <div className="w-full">
-          <div className="w-full px-4 mx-auto max-w-[1400px]">
+          <div className="w-full px-2 mx-auto max-w-[1400px]">
             <div className="justify-center w-full ">
               <div className="w-full max-w-[14000px] mx-auto space-y-4 ">
                 <div className="flex ">
@@ -21,8 +21,8 @@ const Tabs = ({ children }) => {
                       key={child.props.label}
                       className={`${
                         activeTab === child.props.label
-                          ? "text-white bg-mainColor lg:p-3 lg:ml-1 ml-2 md:text-base text-sm rounded"
-                          : "bg-gray-100 lg:ml-1 ml-2 md:text-base text-sm rounded"
+                          ? "text-white bg-mainColor lg:p-3 lg:ml-1 ml-1 md:text-base text-sm rounded"
+                          : "bg-gray-100 lg:ml-1 ml-1 md:text-base text-sm rounded"
                       } flex-1 py-2`}
                       onClick={(e) => handleClick(e, child.props.label)}
                     >

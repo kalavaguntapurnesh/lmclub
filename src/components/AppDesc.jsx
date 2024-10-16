@@ -187,7 +187,7 @@ const AppDesc = () => {
                     label="Creating Exciting Rewards"
                     className="text-sm px-1"
                   >
-                    <div className="py-4">
+                    <div className="py-4 ">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col px-2">
                           <div className=" md:text-start text-center">
