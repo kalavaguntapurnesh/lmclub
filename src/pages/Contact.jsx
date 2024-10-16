@@ -39,9 +39,12 @@ const Contact = () => {
               <div className="flex flex-col space-y-4">
                 <div className="pt-6">
                   <div className="w-full ">
-                    <div className="flex justify-center items-center">
+                    <a
+                      href="https://www.bing.com/maps?where=7778%20McGinnis%20Ferry%20Rd%2C%20PMB%20162%2C%20Suwanee%2C%20Georgia%2030024%2C%20US"
+                      className="flex justify-center items-center"
+                    >
                       <img src={us} alt="" className=" w-[100%]" />
-                    </div>
+                    </a>
 
                     <div className="flex flex-row mt-6">
                       <a href="" className="w-[50%] ">
