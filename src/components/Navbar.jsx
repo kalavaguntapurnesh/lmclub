@@ -205,7 +205,7 @@ const NavBar = () => {
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/" className="text-sm">
+                      <a href="/enroll-rewards" className="text-sm">
                         Enroll Rewards
                       </a>
                     </li>
@@ -620,7 +620,7 @@ const Subscription = () => {
             a percentage of the revenue earned.
           </p>
         </a>
-        <a href="#">
+        <a href="/enroll-rewards">
           <img
             className="mb-2 h-14 w-full rounded object-cover"
             src="https://lmclub.club/wp-content/uploads/2024/09/Picture3-300x300.png"
