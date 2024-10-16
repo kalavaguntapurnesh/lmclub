@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import { useState } from "react";
 import { SiMinutemailer } from "react-icons/si";
-import { FaMicrophone } from "react-icons/fa6";
-import { FaMicrophoneAlt } from "react-icons/fa";
+import { FaLocationDot, FaMicrophone } from "react-icons/fa6";
+import { FaMicrophoneAlt, FaRocketchat } from "react-icons/fa";
 import { IoChatboxEllipses } from "react-icons/io5";
 
 const Contact = () => {
@@ -23,7 +23,7 @@ const Contact = () => {
         <div className="max-w-[1400px] mx-auto">
           <div className="mt-28 pb-16">
             <div className="space-y-2">
-              <div className="md:text-4xl text-3xl font-semibold text-black text-center">
+              <div className="md:text-4xl text-3xl md:font-bold font-semibold text-black text-center">
                 <h1>Let's Start a Conservation</h1>
               </div>
 
@@ -46,29 +46,39 @@ const Contact = () => {
                       <img src={us} alt="" className=" w-[100%]" />
                     </a>
 
-                    <div className="flex flex-row mt-6">
+                    <div className="flex flex-row mt-6 mb-8">
                       <a href="" className="w-[50%] ">
-                        <div className="flex flex-col space-y-2 md:items-start items-center">
-                          <div className="text-xl font-bold text-mainColor">
-                            <h1>Head Quarters:</h1>
-                          </div>
-                          <div>
-                            <p>7778 McGinnis Ferry Rd</p>
-                            <p>PMB 162, Suwanee,</p>
-                            <p>Georgia 30024, US</p>
-                          </div>
+                        <div className="flex flex-col space-y-2 items-center">
+                          <p className="text-start md:text-2xl text-xl font-semibold text-black">
+                            <span className="text-mainColor">Head</span>{" "}
+                            Quarters:
+                          </p>
+                          <p className="md:text-xl text-[#6B7280]">
+                            7778 McGinnis Ferry Rd
+                          </p>
+                          <p className="md:text-xl text-[#6B7280]">
+                            PMB 162, Suwanee,
+                          </p>
+                          <p className="md:text-xl text-[#6B7280]">
+                            Georgia 30024, US
+                          </p>
                         </div>
                       </a>
-                      <a href="" className="w-[50%]">
-                        <div className="flex flex-col space-y-2 md:items-start items-center">
-                          <div className="text-xl font-bold text-mainColor">
-                            <h1>Branch Offices:</h1>
-                          </div>
-                          <div>
-                            <p>7778 McGinnis Ferry Rd</p>
-                            <p>PMB 162, Suwanee,</p>
-                            <p>Georgia 30024, US</p>
-                          </div>
+                      <a href="" className="w-[50%] ">
+                        <div className="flex flex-col space-y-2 items-center">
+                          <p className="text-start md:text-2xl text-xl font-semibold text-black">
+                            <span className="text-mainColor">Branch</span>{" "}
+                            Offices:
+                          </p>
+                          <p className="md:text-xl text-[#6B7280]">
+                            7778 McGinnis Ferry Rd
+                          </p>
+                          <p className="md:text-xl text-[#6B7280]">
+                            PMB 162, Suwanee,
+                          </p>
+                          <p className="md:text-xl text-[#6B7280]">
+                            Georgia 30024, US
+                          </p>
                         </div>
                       </a>
                     </div>
@@ -160,38 +170,103 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-3 grid-cols-1 gap-4 pt-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 pt-8 md:px-2 lg:px-1 px-4">
               <a
                 href="mailto:info@laoemaom.com"
-                className="flex flex-col justify-center items-center border-[1px] shadow py-2 rounded md:mx-0 mx-4"
+                class="flex md:justify-start justify-center"
               >
-                <div>
-                  <SiMinutemailer className="md:w-12 md:h-12 w-8 h-8 text-mainColor" />
-                </div>
-                <div className="pt-2 md:text-xl font-semibold text-black">
-                  <h1>info@laoemaom.com</h1>
+                <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+                  <div class="space-y-4">
+                    <div className="flex justify-center items-centerF">
+                      <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
+                        <FaRocketchat size={24} className="text-mainColor" />
+                      </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                      <h1 class="text-2xl text-colorTwo font-bold">
+                        Chat to Support
+                      </h1>
+                    </div>
+
+                    <div class="flex justify-center items-center text-gray-600 text-center font-medium">
+                      <p>Speak to our friendly team.</p>
+                    </div>
+
+                    <div className="flex justify-center">
+                      <a
+                        href="/contact-us"
+                        class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
+                      >
+                        Continue Chat
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </a>
+
               <a
                 href="mailto:info@laoemaom.com"
-                className="flex flex-col justify-center items-center border-[1px] shadow py-2 rounded md:mx-0 mx-4"
+                class="flex md:justify-start justify-center"
               >
-                <div>
-                  <FaMicrophoneAlt className="md:w-12 md:h-12 w-8 h-8 text-mainColor" />
-                </div>
-                <div className="pt-2 md:text-xl font-semibold text-black">
-                  <h1>(+1) 678-200-4524</h1>
+                <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+                  <div class="space-y-4">
+                    <div className="flex justify-center items-centerF">
+                      <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
+                        <FaMicrophoneAlt size={24} className="text-mainColor" />
+                      </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                      <h1 class="text-2xl text-colorTwo font-bold">
+                        Call us Now
+                      </h1>
+                    </div>
+
+                    <div class="flex justify-center items-center text-gray-600 text-center font-medium">
+                      <p>Phone: (+1) 678-200-4524</p>
+                    </div>
+
+                    <div className="flex justify-center">
+                      <a
+                        href="/contact-us"
+                        class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
+                      >
+                        Make a Call Now
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </a>
+
               <a
                 href="mailto:info@laoemaom.com"
-                className="flex flex-col justify-center items-center border-[1px] shadow py-2 rounded md:mx-0 mx-4"
+                class="flex md:justify-start justify-center"
               >
-                <div>
-                  <IoChatboxEllipses className="md:w-12 md:h-12 w-8 h-8 text-mainColor" />
-                </div>
-                <div className="pt-2 md:text-xl font-semibold text-black">
-                  <h1>LM Club Chat</h1>
+                <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+                  <div class="space-y-4">
+                    <div className="flex justify-center items-centerF">
+                      <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
+                        <FaLocationDot size={24} className="text-mainColor" />
+                      </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                      <h1 class="text-2xl text-colorTwo font-bold">
+                        Visit us Directly
+                      </h1>
+                    </div>
+
+                    <div class="flex justify-center items-center text-gray-600 text-center font-medium">
+                      <p>Visit our office HQ</p>
+                    </div>
+
+                    <div className="flex justify-center">
+                      <a
+                        href="https://www.bing.com/maps?where=7778%20McGinnis%20Ferry%20Rd%2C%20PMB%20162%2C%20Suwanee%2C%20Georgia%2030024%2C%20US"
+                        class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
+                      >
+                        Get Directions
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </a>
             </div>
