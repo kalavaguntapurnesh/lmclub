@@ -32,7 +32,7 @@ const LogoMeaning = () => {
                     </h1>
                   </div>
 
-                  <div className="md:text-5xl text-4xl md:text-start text-center font-bold">
+                  <div className="md:text-5xl text-4xl md:text-start text-center md:font-semibold font-bold">
                     <h1>
                       Laoe Maom (LAOE MAOM): Least Amount of Effort, Most Amount
                       of Money

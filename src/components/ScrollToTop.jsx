@@ -4,7 +4,7 @@ import { SiWhatsapp } from "react-icons/si";
 import { classNames } from "../components/classNames";
 
 const ScrollToTop = () => {
-  const phoneNumber = "14046627849";
+  const phoneNumber = "14042773220";
   const message =
     "Hello LM Club, I need your guidance on professional technicians..."; // Pre-filled message
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(

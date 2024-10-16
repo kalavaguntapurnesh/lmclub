@@ -2,15 +2,25 @@ import React from "react";
 import Accordion from "../components/Accordion";
 import { IoShareOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import Lottie from "lottie-react";
-import Globe from "../assets/Globe.json";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const FAQ = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   return (
     <div>
-      <div className="bg-[#f8f9fa]">
+      <div id="faquestions" className="bg-[#f8f9fa]">
         <div className="relative md:pt-32 md:pb-32 pt-20 pb-12">
           <div className="w-full ">
             <div className="w-full px-4 mx-auto max-w-[1400px] ">
@@ -72,7 +82,8 @@ const FAQ = () => {
                 <div className="space-y-6 flex flex-col">
                   <div className="mt-4 md:text-start text-center">
                     <h1 className="md:text-5xl text-3xl font-semibold text-black">
-                      Ready to turn your development <span className="text-mainColor">innovation?</span>
+                      Ready to turn your development{" "}
+                      <span className="text-mainColor">innovation?</span>
                     </h1>
                   </div>
                   <div className="mt-4 md:text-start text-center text-gray-700">

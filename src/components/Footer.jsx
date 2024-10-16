@@ -110,7 +110,7 @@ const Footer = () => {
                     <div className="flex items-center md:justify-start justify-center">
                       <div className="h-4 w-1 bg-mainColor"></div>
                       <h4 className="ml-2 text-sm leading-5 font-bold tracking-wider uppercase flex md:justify-start justify-center items-start mt-1 text-footerLinks">
-                        Services
+                        Quick Links
                       </h4>
                     </div>
                     <ul className="pl-0 mt-4 space-y-3 list-none">
@@ -119,39 +119,39 @@ const Footer = () => {
                           href="/"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Customer Success
+                          Our Products
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/"
+                          href="https://www.linkedin.com/company/laoe-maom/"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Popular Blogs
+                          LinkedIn Page
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/login"
+                          href="/#faquestions"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Log In to LMClub
+                          FA Questions
                         </a>
                       </li>
-                      <li className=" flex items-start md:justify-start justify-center">
+                      {/* <li className=" flex items-start md:justify-start justify-center">
                         <a
                           href="/"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Appointment Booking
                         </a>
-                      </li>
+                      </li> */}
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
                           href="/privacy"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Developer Policy
+                          Testimonials
                         </a>
                       </li>
                     </ul>
@@ -161,13 +161,13 @@ const Footer = () => {
                     <div className="flex items-center md:justify-start justify-center">
                       <div className="h-4 w-1 bg-mainColor"></div>
                       <h4 className="ml-2 text-sm leading-5 font-bold tracking-wider uppercase flex md:justify-start justify-center items-start mt-1 text-footerLinks">
-                        Connect
+                        Support
                       </h4>
                     </div>
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/contact"
+                          href="mailto:info@laoemaom.com"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Help Center
@@ -175,34 +175,34 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/"
+                          href="https://maps.app.goo.gl/G9qoFoUF2K1MPmv8A"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          LM Club Careers
+                          Location Map
                         </a>
                       </li>
-                      <li className=" flex items-start md:justify-start justify-center">
+                      {/* <li className=" flex items-start md:justify-start justify-center">
                         <a
                           href="/"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Become Partner
                         </a>
-                      </li>
+                      </li> */}
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/register"
+                          href="/contact-us"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Sign Up Here
+                          Live Chat
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/about"
+                          href="/"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Team & Company
+                          Refund Policy
                         </a>
                       </li>
                     </ul>
@@ -216,17 +216,17 @@ const Footer = () => {
                       </h4>
                     </div>
                     <ul className="pl-0 mt-4 space-y-3 list-none">
-                      <li className=" flex items-start md:justify-start justify-center">
+                      {/* <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/privacy"
+                          href="/privacy-policy"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Terms & Conditions
                         </a>
-                      </li>
+                      </li> */}
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/privacy"
+                          href="/privacy-policy"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Privacy Policy
@@ -234,7 +234,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/about"
+                          href="/learn-about-us"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           About LM Club
@@ -242,18 +242,18 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/contact"
+                          href="/learn-about-us#about_founder"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Contact Us
+                          Leadership
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/about"
+                          href="/logo-meaning"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Why LM Club?
+                          Logo Meaning
                         </a>
                       </li>
                     </ul>
@@ -263,7 +263,7 @@ const Footer = () => {
                     <div className="flex items-center md:justify-start justify-center">
                       <div className="h-4 w-1 bg-mainColor"></div>
                       <h4 className="ml-2 text-sm leading-5 font-bold tracking-wider uppercase flex md:justify-start justify-center items-start mt-1 text-footerLinks">
-                        product
+                        products
                       </h4>
                     </div>
                     <ul className="pl-0 mt-4 space-y-3 list-none">
@@ -301,14 +301,14 @@ const Footer = () => {
                         </a>
                       </li>
 
-                      <li className=" flex items-start md:justify-start justify-center">
+                      {/* <li className=" flex items-start md:justify-start justify-center">
                         <a
                           href="/about"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           LM Account
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
 
@@ -352,14 +352,14 @@ const Footer = () => {
                           Silver Plan
                         </a>
                       </li>
-                      <li className=" flex items-start md:justify-start justify-center">
+                      {/* <li className=" flex items-start md:justify-start justify-center">
                         <a
                           href="/about"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Free Plan
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
 
@@ -367,13 +367,13 @@ const Footer = () => {
                     <div className="flex items-center md:justify-start justify-center">
                       <div className="h-4 w-1 bg-mainColor"></div>
                       <h4 className="ml-2 text-sm leading-5 font-bold tracking-wider uppercase flex md:justify-start justify-center items-start mt-1 text-footerLinks">
-                        Privacy
+                        Legal
                       </h4>
                     </div>
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/contact"
+                          href="/privacy-policy"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Privacy Policy
@@ -381,7 +381,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/"
+                          href="/consumer-privacy"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Consumer Privacy
@@ -389,28 +389,28 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/"
+                          href="/consumer-privacy"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Sign-up Sheet
+                          Cookie Consent
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/register"
+                          href="/privacy-policy"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
-                          Education
+                          Terms & Conditions
                         </a>
                       </li>
-                      <li className=" flex items-start md:justify-start justify-center">
+                      {/* <li className=" flex items-start md:justify-start justify-center">
                         <a
                           href="/about"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Recruiting
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -427,7 +427,7 @@ const Footer = () => {
               </div>
 
               <div className="text-[14px] leading-6 flex md:justify-start justify-center">
-                <h1>Privacy</h1>
+                <h1>User Privacy</h1>
               </div>
 
               <div className="text-[14px] leading-6 flex md:justify-start justify-center">
