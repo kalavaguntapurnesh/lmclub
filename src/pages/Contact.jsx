@@ -157,7 +157,7 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-center pt-2">
+                  <div className="flex items-center justify-center pt-2 md:mx-0 mx-8">
                     <div className="mb-5 md:w-10/12 w-full">
                       <button className="hover:shadow-form rounded bg-mainColor transition duration-1000 py-2 ease-in-out w-full text-base font-semibold text-white outline-none">
                         Submit

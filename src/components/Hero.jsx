@@ -33,7 +33,7 @@ const Hero = () => {
                   </p>
                 </div>
 
-                <div className="flex items-center lg:justify-start justify-center">
+                <div className="md:flex items-center lg:justify-start justify-center hidden">
                   <a
                     href="/products"
                     className="bg-mainColor font-semibold outline-none
@@ -41,13 +41,16 @@ const Hero = () => {
                   >
                     What we offer
                   </a>
-                  {/* <a
-                    href="/login"
-                    className="bg-colorFour hover:bg-[#14a800] font-semibold outline-none
-                      rounded-3xl hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center ml-2"
+                </div>
+
+                <div className="mx-8">
+                  <a
+                    href="/products"
+                    className="bg-mainColor hover:bg-white hover:text-mainColor hover:border-[1px] hover:border-mainColor font-semibold outline-none md:hidden block
+                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 py-2 text-center"
                   >
-                    Contact With us
-                  </a> */}
+                    What we offer
+                  </a>
                 </div>
               </div>
 

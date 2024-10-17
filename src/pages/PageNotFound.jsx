@@ -1,8 +1,9 @@
-import React from "react";
+import Navbar from "../components/Navbar";
 
 const PageNotFound = () => {
   return (
     <section class="bg-white h-screen ">
+      <Navbar />
       <div class="py-8 mx-auto max-w-[1400px] lg:py-16 h-[100%] ">
         <div class="flex flex-col justify-center items-center h-[100%]">
           <h1 class="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-primary-600 dark:text-primary-500">
