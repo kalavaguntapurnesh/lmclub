@@ -1,8 +1,17 @@
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
+import {
+  FaBuilding,
+  FaCookieBite,
+  FaDatabase,
+  FaLocationDot,
+} from "react-icons/fa6";
+import { FaMicrophoneAlt, FaRocketchat } from "react-icons/fa";
 
 const Privacy = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <Navbar />
@@ -67,6 +76,15 @@ const Privacy = () => {
                     support@lmclub.com
                   </a>
                 </p>
+              </div>
+
+              <div className=" mt-8 flex justify-center items-center">
+                <button
+                  onClick={() => navigate("/consumer-privacy")}
+                  class="bg-mainColor transition duration-1000 ease-in-out text-white shadow py-2 px-4 rounded"
+                >
+                  View Full Privacy Notice
+                </button>
               </div>
 
               <div className="mt-8 font-semibold text-xl">
@@ -291,7 +309,7 @@ const Privacy = () => {
                 </ul>
               </div>
 
-              <div className="text-center text-[#2ba35] font-light mt-6">
+              {/* <div className="text-center text-[#2ba35] font-light mt-6">
                 <p>
                   For more information on consumer privacy and cookies usage,
                   <a
@@ -302,6 +320,101 @@ const Privacy = () => {
                   </a>
                   .
                 </p>
+              </div> */}
+
+              <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 pt-8 md:px-2 lg:px-1 px-4">
+                <a
+                  href="mailto:info@laoemaom.com"
+                  class="flex md:justify-start justify-center"
+                >
+                  <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+                    <div class="space-y-4">
+                      <div className="flex justify-center items-center">
+                        <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
+                          <FaDatabase size={24} className="text-mainColor" />
+                        </div>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <h1 class="text-lg font-bold text-center">Requests</h1>
+                      </div>
+
+                      <div class="flex justify-center items-center text-gray-700 text-center font-medium">
+                        <p>Make a data request</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="mailto:info@laoemaom.com"
+                  class="flex md:justify-start justify-center"
+                >
+                  <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+                    <div class="space-y-4">
+                      <div className="flex justify-center items-center">
+                        <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
+                          <FaCookieBite size={24} className="text-mainColor" />
+                        </div>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <h1 class="text-lg font-bold text-center">
+                          Cookie Policy
+                        </h1>
+                      </div>
+
+                      <div class="flex justify-center items-center text-gray-600 text-center font-medium">
+                        <p>Read our cookie policy</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="/"
+                  class="flex md:justify-start justify-center"
+                >
+                  <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+                    <div class="space-y-4">
+                      <div className="flex justify-center items-center">
+                        <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
+                          <FaBuilding size={24} className="text-mainColor" />
+                        </div>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <h1 class="text-lg font-bold text-center">
+                          Who we are
+                        </h1>
+                      </div>
+
+                      <div class="flex justify-center items-center text-gray-600 text-center font-medium">
+                        <p>Learn more about us</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="mailto:info@laoemaom.com"
+                  class="flex md:justify-start justify-center"
+                >
+                  <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+                    <div class="space-y-4">
+                      <div className="flex justify-center items-center">
+                        <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
+                          <FaRocketchat size={24} className="text-mainColor" />
+                        </div>
+                      </div>
+                      <div class="flex justify-center items-center">
+                        <h1 class="text-lg font-bold text-center">
+                          Chat to Support
+                        </h1>
+                      </div>
+
+                      <div class="flex justify-center items-center text-gray-600 text-center font-medium">
+                        <p>Speak to our friendly team.</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
