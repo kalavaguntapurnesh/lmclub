@@ -175,7 +175,7 @@ const Contact = () => {
               >
                 <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                   <div class="space-y-4">
-                    <div className="flex justify-center items-centerF">
+                    <div className="flex justify-center items-center">
                       <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
                         <FaRocketchat size={24} className="text-mainColor" />
                       </div>
@@ -208,7 +208,7 @@ const Contact = () => {
               >
                 <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                   <div class="space-y-4">
-                    <div className="flex justify-center items-centerF">
+                    <div className="flex justify-center items-center">
                       <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
                         <FaMicrophoneAlt size={24} className="text-mainColor" />
                       </div>
@@ -241,7 +241,7 @@ const Contact = () => {
               >
                 <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                   <div class="space-y-4">
-                    <div className="flex justify-center items-centerF">
+                    <div className="flex justify-center items-center">
                       <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
                         <FaLocationDot size={24} className="text-mainColor" />
                       </div>

@@ -1,6 +1,7 @@
 import { BiCalendarCheck, BiLaptop } from "react-icons/bi";
 import { CgLock } from "react-icons/cg";
 import { CiClock1 } from "react-icons/ci";
+import { FaRocketchat } from "react-icons/fa";
 import { PiEarThin } from "react-icons/pi";
 
 const Hero = () => {
@@ -66,7 +67,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-
+        {/* 
         <div className="bg-[#f8f9fa] mt-8">
           <div className="max-w-[1400px] mx-auto pt-8 pb-8">
             <div className="flex items-center text-center justify-center ">
@@ -119,7 +120,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </div>
   );
