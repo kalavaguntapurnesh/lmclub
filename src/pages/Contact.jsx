@@ -3,10 +3,8 @@ import us from "../assets/us.svg";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import { useState } from "react";
-import { SiMinutemailer } from "react-icons/si";
-import { FaLocationDot, FaMicrophone } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
 import { FaMicrophoneAlt, FaRocketchat } from "react-icons/fa";
-import { IoChatboxEllipses } from "react-icons/io5";
 
 const Contact = () => {
   const [isChecked, setIsChecked] = useState(false);

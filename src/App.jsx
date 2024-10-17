@@ -9,6 +9,7 @@ import Consumer_Privacy from "./pages/Consumer_Privacy";
 import Enroll_Rewards from "./pages/Enroll_Rewards";
 import Rewards from "./pages/Rewards";
 import PageNotFound from "./pages/PageNotFound";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/enroll-rewards" element={<Enroll_Rewards />}></Route>
         <Route path="/rewards" element={<Rewards />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
+        <Route path="/products" element={<Products />}></Route>
       </Routes>
     </BrowserRouter>
   );
