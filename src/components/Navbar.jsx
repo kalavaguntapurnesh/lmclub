@@ -588,7 +588,7 @@ const Products = () => {
           </h4>
         </a>
       </div>
-      <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-mainColor">
+      <button className="ml-auto mt-4 flex items-center font-semibold gap-1 text-sm text-mainColor">
         <span>View more</span>
         <FiArrowRight />
       </button>
@@ -685,7 +685,7 @@ const Subscription = () => {
           </p>
         </a>
       </div>
-      <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-mainColor">
+      <button className="ml-auto mt-4 flex items-center font-semibold gap-1 text-sm text-mainColor">
         <span>View more</span>
         <FiArrowRight />
       </button>
