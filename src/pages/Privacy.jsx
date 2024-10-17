@@ -16,7 +16,7 @@ const Privacy = () => {
                 <h1>Privacy Policy</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-8 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-8">
                 <p>Last Updated: October 10, 2024 (Version 0.0.1)</p>
                 <p>
                   This privacy policy informs you about LM Club's data
@@ -24,11 +24,11 @@ const Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>1. General Information regarding Privacy Policy</h1>
               </div>
 
-              <div className="md:text-lg text-[#2ba35] font-light">
+              <div className=" text-[#2ba35] font-light">
                 <p className="mt-4">
                   The Laoe Maom Group LLC – Corporate and each of our
                   subsidiaries and affiliated entities under common ownership
@@ -69,7 +69,7 @@ const Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>
                   2. Categories of Personal Information Collected in the
                   preceding 12 months
@@ -77,7 +77,7 @@ const Privacy = () => {
               </div>
 
               <div className="md:mx-8 mx-6 mt-4">
-                <ul className="list-disc space-y-2 md:text-lg text-[#2ba35] font-light">
+                <ul className="list-disc space-y-2 text-[#2ba35] font-light">
                   <li>
                     Audio/Video/Visual such as photographs, recorded calls,
                     voicemails, and video.
@@ -132,7 +132,7 @@ const Privacy = () => {
                 </ul>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>
                   3. Categories of Sources from which the Personal Information
                   is Collected
@@ -140,7 +140,7 @@ const Privacy = () => {
               </div>
 
               <div className="md:mx-8 mx-6 mt-4">
-                <ul className="list-disc space-y-2 md:text-lg text-[#2ba35] font-light">
+                <ul className="list-disc space-y-2 text-[#2ba35] font-light">
                   <li>
                     Advertising Networks & Agencies such as digital advertising
                     companies and other marketing firms.
@@ -166,7 +166,7 @@ const Privacy = () => {
                 </ul>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold  text-xl">
                 <h1>
                   4. Business or Commercial Purposes for which the Personal
                   Information was Collected or Sold
@@ -174,7 +174,7 @@ const Privacy = () => {
               </div>
 
               <div className="md:mx-8 mx-6 mt-4">
-                <ul className="list-disc space-y-2 md:text-lg text-[#2ba35] font-light">
+                <ul className="list-disc space-y-2  text-[#2ba35] font-light">
                   <li>
                     Advertising & Marketing to send advertisements and marketing
                     material via physical and electronic mail relating to
@@ -219,12 +219,12 @@ const Privacy = () => {
                 </ul>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>5. Disclosure of Personal Data to Third Parties</h1>
               </div>
 
               <div className="md:mx-8 mx-6 mt-4">
-                <ul className="list-disc space-y-2 md:text-lg text-[#2ba35] font-light">
+                <ul className="list-disc space-y-2 text-[#2ba35] font-light">
                   <li>
                     Audio/Video/Visual such as photographs, recorded calls,
                     voicemails, and video.
@@ -291,7 +291,7 @@ const Privacy = () => {
                 </ul>
               </div>
 
-              <div className="text-center md:text-lg text-[#2ba35] font-light mt-6">
+              <div className="text-center text-[#2ba35] font-light mt-6">
                 <p>
                   For more information on consumer privacy and cookies usage,
                   <a

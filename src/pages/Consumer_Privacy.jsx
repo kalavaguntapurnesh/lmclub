@@ -15,7 +15,7 @@ const Consumer_Privacy = () => {
                 <h1>Consumer Privacy</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-8 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-8 ">
                 <p>
                   The purpose of this Notice of Collection is to provide
                   consumers with information about the categories of personal
@@ -24,14 +24,14 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold  text-xl">
                 <h1>
                   1. We may collect the following categories of “personal data”:
                 </h1>
               </div>
 
               <div className="md:mx-8 mx-6 mt-4">
-                <ul className="list-disc space-y-2 md:text-lg text-[#2ba35] font-light">
+                <ul className="list-disc space-y-2 text-[#2ba35] font-light">
                   <li>
                     Audio/Video/Visual such as photographs, recorded calls,
                     voicemails, and video.
@@ -86,7 +86,7 @@ const Consumer_Privacy = () => {
                 </ul>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold  text-xl">
                 <h1>
                   2. We use the categories of personal information listed above
                   for one or more of the following “business purposes”:
@@ -94,7 +94,7 @@ const Consumer_Privacy = () => {
               </div>
 
               <div className="md:mx-8 mx-6 mt-4">
-                <ul className="list-disc space-y-2 md:text-lg text-[#2ba35] font-light">
+                <ul className="list-disc space-y-2 text-[#2ba35] font-light">
                   <li>
                     Advertising & Marketing to send advertisements and marketing
                     material via physical and electronic mail relating to
@@ -160,7 +160,7 @@ const Consumer_Privacy = () => {
                 <h1>Our Privacy Policy</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-8 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-8">
                 <p>
                   The purpose of this Privacy Policy is to provide consumers
                   with a comprehensive description of our dealership’s online
@@ -183,22 +183,22 @@ const Consumer_Privacy = () => {
                 <h1>Other Important Privacy Disclosures</h1>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>Child Privacy Protection Policy</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4 ">
                 <p>
                   View our privacy policy as it relates to the collection of
                   data of children under the age of 13.
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>Children Under 13 years of Age</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4 ">
                 <p>
                   Our Sites and Services are not intended for children under
                   thirteen (13) years of age. Dealership does not knowingly
@@ -215,7 +215,7 @@ const Consumer_Privacy = () => {
                 <h1>CA residents Policy</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4 ">
                 <p>
                   The purpose of this California Privacy Policy is to provide
                   consumers with a comprehensive description of our LM Club’s
@@ -240,11 +240,11 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>Consent and Notifications of Revisions</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   By accessing or using our Sites and/or Services, you consent
                   to this Privacy Policy. If you do not agree with this Privacy
@@ -271,11 +271,11 @@ const Consumer_Privacy = () => {
                 <h1>Cookies Use Policy</h1>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>Use of Cookies and Similar Technologies</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   We use cookies and other similar technologies (e.g. web
                   beacons, pixels, or local storage) to deliver content specific
@@ -293,11 +293,11 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>First Party Cookies</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4 ">
                 <p>
                   Many first-party cookies are necessary to facilitate essential
                   website functions and enable you to navigate our Sites and use
@@ -314,11 +314,11 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>Third Party Cookies</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   Third-party cookies refer to any cookie that shares or enables
                   the sharing of information to an entity other than our own
@@ -337,7 +337,7 @@ const Consumer_Privacy = () => {
               </div>
 
               <div className="md:mx-8 mx-6 mt-4">
-                <ul className="list-disc space-y-2 md:text-lg text-[#2ba35] font-light">
+                <ul className="list-disc space-y-2 text-[#2ba35] font-light">
                   <li>
                     Cookies used to track consumers in order to serve ads to the
                     consumer on other websites (e.g. retargeting ads that might
@@ -370,7 +370,7 @@ const Consumer_Privacy = () => {
                 </ul>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   Some web browsers offer settings that allow you to choose
                   whether cookies are set by the websites that you visit. These
@@ -426,11 +426,11 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>Dispute Resolution and Arbitration Agreement</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   By using the Services, except where prohibited by law, you and
                   LM Club agree that if there is any controversy, claim, action,
@@ -479,11 +479,11 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>Collection of Anonymous Information</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   We also collect anonymous, aggregate information (IP address
                   or domain name) from all visitors to our Sites. The anonymous
@@ -500,14 +500,14 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>
                   How we respond to "DO-NOT-Track Signals & Global Privacy
                   Controls"
                 </h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   A “do-not-track” signal is a privacy preference feature in
                   some web browsers that tells a website that a user does not
@@ -530,11 +530,11 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>Third Party Links</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   This Privacy Policy applies only to our Sites and Services,
                   and information collected for us or by us through various
@@ -549,11 +549,11 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>Security</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   We implement reasonable security measures to ensure the
                   security of your personal information. However, no data
@@ -581,11 +581,11 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>Business Transfers and Related Activities</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   We may share or transfer your information in the course of any
                   direct or indirect reorganization process such as, but not
@@ -600,11 +600,11 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>Other Arbitration Agreements</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   In the event of a conflict between this arbitration agreement
                   and any other arbitration agreement between you and the LM
@@ -616,11 +616,11 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>Venue and Choice of Law</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   This Privacy Policy has been made in, and shall be construed
                   in accordance with the laws of Michigan without giving effect
@@ -632,11 +632,11 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
+              <div className="mt-8 font-semibold text-xl">
                 <h1>California Privacy Policy</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 md:text-lg">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
                 <p>
                   The purpose of this California Privacy Policy is to provide
                   consumers with a comprehensive description of our LM Club’s
