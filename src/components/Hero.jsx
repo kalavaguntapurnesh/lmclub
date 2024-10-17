@@ -1,9 +1,3 @@
-import { BiCalendarCheck, BiLaptop } from "react-icons/bi";
-import { CgLock } from "react-icons/cg";
-import { CiClock1 } from "react-icons/ci";
-import { FaRocketchat } from "react-icons/fa";
-import { PiEarThin } from "react-icons/pi";
-
 const Hero = () => {
   return (
     <div>
@@ -41,7 +35,7 @@ const Hero = () => {
 
                 <div className="flex items-center lg:justify-start justify-center">
                   <a
-                    href="/login"
+                    href="/products"
                     className="bg-mainColor font-semibold outline-none
                       rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
                   >

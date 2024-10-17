@@ -67,7 +67,7 @@ const Products = () => {
                 </div>
               </div>
 
-              <div className="md:grid grid-cols-1 md:grid-cols-3 items-center text-center gap-4 pt-12 pb-12 hidden">
+              <div className="md:grid grid-cols-1 md:grid-cols-3 items-center text-center gap-4 pt-20 pb-12 hidden">
                 <div className="md:border-b-0 md:border-r-2 border-b-0 border-mainColor pb-2 md:pb-0 md:pr-4 w-full">
                   <div className="flex flex-row items-center justify-center">
                     <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-full">
