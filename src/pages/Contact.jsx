@@ -183,7 +183,7 @@ const Contact = () => {
                       </div>
                     </div>
                     <div class="flex justify-center items-center">
-                      <h1 class="text-2xl text-colorTwo font-bold">
+                      <h1 class="text-2xl text-colorTwo font-bold text-center">
                         Chat to Support
                       </h1>
                     </div>
@@ -216,7 +216,7 @@ const Contact = () => {
                       </div>
                     </div>
                     <div class="flex justify-center items-center">
-                      <h1 class="text-2xl text-colorTwo font-bold">
+                      <h1 class="text-2xl text-colorTwo font-bold text-center">
                         Call us Now
                       </h1>
                     </div>
@@ -249,7 +249,7 @@ const Contact = () => {
                       </div>
                     </div>
                     <div class="flex justify-center items-center">
-                      <h1 class="text-2xl text-colorTwo font-bold">
+                      <h1 class="text-2xl text-colorTwo font-bold text-center">
                         Visit us Directly
                       </h1>
                     </div>

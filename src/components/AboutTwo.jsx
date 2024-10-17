@@ -1,211 +1,124 @@
+import Founder from "../assets/Founder.jpeg";
+
 const AboutTwo = () => {
   return (
     <div>
-      <div className="bg-[#f8f9fa]">
-        <div className="relative md:pt-32 md:pb-32 pt-20 pb-12">
+      <div className="lg:pt-28 pt-20" id="about_founder">
+        <div className="relative">
           <div className="w-full">
-            <div className="w-full px-4 mx-auto max-w-[1400px]">
-              <div className="flex items-center text-center justify-center ">
-                <div className="h-4 w-1 bg-mainColor"></div>
-                <h1 className="ml-2 text-lg font-bold text-mainColor uppercase">
-                  Our spectacular strength
-                </h1>
-              </div>
-
-              <div className="mx-auto max-w-[1000px] text-center mt-4">
-                <h1 className="text-4xl font-semibold text-[#3d454d]">
-                  One team, fire core values.
-                </h1>
-              </div>
-
-              <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 pt-8">
-                <a href="" class="flex md:justify-start justify-center">
-                  <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
-                    <div class="space-y-4">
-                      <div class="flex justify-center items-center">
-                        <img
-                          src="https://images.ctfassets.net/p24lh3qexxeo/4T0cBbXXIQ3CRWIaQlGxBD/0879f3b9df1ef3a4cd13bdcf910344e5/Frame_4104_2x.png?w=1080&h=1094&q=80&fm=webp"
-                          alt=""
-                          class="w-20 h-20"
-                        />
-                      </div>
-                      <div class="flex justify-center items-center">
-                        <h1 class="text-3xl text-colorTwo font-bold">
-                          Reward Collaboration
-                        </h1>
-                      </div>
-
-                      <div class="flex justify-center items-center text-gray-600 text-center">
-                        <p>
-                          Recognize member initiatives with businesses both
-                          locally and globally with incentives.
-                        </p>
-                      </div>
-
-                      <div className="flex justify-center">
-                        <a
-                          href="/contact-us"
-                          class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
-                        >
-                          View Features
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="" class="flex md:justify-start justify-center">
-                  <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
-                    <div class="space-y-4">
-                      <div class="flex justify-center items-center">
-                        <img
-                          src="https://images.ctfassets.net/p24lh3qexxeo/4YzizdfYjYbQzK1UqnWXeN/20ae4c6430d4d3fce733b638c280750b/Frame_4103_2x.png?w=1080&h=1094&q=80&fm=webp"
-                          alt=""
-                          class="w-20 h-20"
-                        />
-                      </div>
-
-                      <div class="flex justify-center items-center">
-                        <h1 class=" text-3xl text-colorTwo font-bold">
-                          Build Global Community
-                        </h1>
-                      </div>
-
-                      <div class="flex justify-center items-center text-gray-600 text-center">
-                        <p>
-                          Establish a global presence that encourages networking
-                          and mutual benefits.
-                        </p>
-                      </div>
-
-                      <div className="flex justify-center">
-                        <a
-                          href="/contact-us"
-                          class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
-                        >
-                          View Features
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="" class="flex md:justify-start justify-center">
-                  <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
-                    <div class="space-y-4">
-                      <div class="flex justify-center items-center">
-                        <img
-                          src="https://images.ctfassets.net/p24lh3qexxeo/4IqbCNJne6WmRSe7XdEM7w/6d1fc73b3d5fc612bdb484a64598a7c7/Frame_4102_2x.png?w=1078&h=1094&q=80&fm=webp"
-                          alt=""
-                          class="w-20 h-20"
-                        />
-                      </div>
-
-                      <div class="flex justify-center items-center">
-                        <h1 class=" text-3xl text-colorTwo font-bold">
-                          Foster Social Bonds
-                        </h1>
-                      </div>
-
-                      <div class="flex justify-center items-center text-gray-600 text-center">
-                        <p>
-                          Develop a nurturing environment that fosters enduring
-                          friendships and a robust social network.
-                        </p>
-                      </div>
-
-                      <div className="flex justify-center">
-                        <a
-                          href="/contact-us"
-                          class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
-                        >
-                          View Features
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div class=" lg:grid-cols-2 grid-cols-1 gap-6 pt-8 hidden">
-                <div class="flex md:justify-start justify-center w-full">
-                  <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-                    <div class="space-y-6">
-                      <div class="flex lg:justify-start justify-center items-center">
-                        <img
-                          src="https://uptimerobot.com/assets/images/monitor-icons/ssl-monitoring.svg"
-                          alt=""
-                          class="w-20 h-20"
-                        />
-                      </div>
-                      <div class="flex lg:justify-start justify-center items-center">
-                        <h1 class="text-2xl font-bold">Website monitoring</h1>
-                      </div>
-
-                      <div class="flex lg:justify-start justify-center items-center lg:text-start text-center text-gray-600 text-lg">
-                        <p>
-                          Is the email service still UP? How about the critical
-                          database server? Let's check! Monitor any specific
-                          service running on any port.
-                        </p>
-                      </div>
-
-                      <div class="flex lg:justify-start justify-center">
-                        <a
-                          href="/contact"
-                          class="relative inline-flex items-center justify-center py-3 px-20 overflow-hidden font-semibold text-brand shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-1000 ease-out bg-white hover:bg-brand rounded-3xl group"
-                        >
-                          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-colorOne duration-300 -translate-x-full group-hover:translate-x-0 ease-in-out"></span>
-                          <span class="absolute flex items-center justify-center w-full h-full font-bold hover:text-white duration-1000 transition ease-in-out">
-                            Website monitoring
-                          </span>
-                          <span class="relative invisible">Button Text</span>
-                        </a>
-                      </div>
-                    </div>
+            <div className="w-full px-4 mx-auto max-w-[1400px] pb-12">
+              <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+                <div className="flex justify-center items-center">
+                  <div className="w-full">
+                    <img
+                      src={Founder}
+                      alt=""
+                      height="400"
+                      className="rounded md:w-[70%] w-full"
+                    />
                   </div>
                 </div>
+                <div className="flex flex-col space-y-6 w-full md:justify-center">
+                  <div className="flex items-center md:justify-start justify-center ">
+                    <div className="h-4 w-1 bg-mainColor"></div>
+                    <h1 className="ml-2 text-lg font-bold text-mainColor uppercase">
+                      About the founder
+                    </h1>
+                  </div>
 
-                <div class="flex md:justify-start justify-center">
-                  <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-                    <div class="space-y-6">
-                      <div class="flex lg:justify-start justify-center items-center">
-                        <img
-                          src="https://uptimerobot.com/assets/images/monitor-icons/cron-job-monitoring.svg"
-                          alt=""
-                          class="w-20 h-20"
-                        />
-                      </div>
-                      <div class="flex lg:justify-start justify-center items-center">
-                        <h1 class="text-2xl font-bold">Cron job monitoring</h1>
-                      </div>
+                  <div className="lg:text-5xl text-4xl md:text-start text-center font-semibold">
+                    <h1>Rickardo Anderson</h1>
+                  </div>
 
-                      <div class="flex lg:justify-start justify-center items-center lg:text-start text-center text-gray-600 text-lg">
-                        <p>
-                          Is the email service still UP? How about the critical
-                          database server? Let's check! Monitor any specific
-                          service running on any port.
-                        </p>
-                      </div>
+                  <div className="md:text-lg text-[#2b2a35] md:text-start text-center">
+                    <p>
+                      My mission, as the founder, is clear: to forge the premier
+                      networking club that supports our members and businesses
+                      efficiently and effectively. We strive to streamline
+                      success, minimizing time expenditure and maximizing
+                      achievements. Join us to transcend barriers and unlock a
+                      realm of exceptional networking and opportunities! To
+                      expand our vibrant community to 2.5 billion members
+                      worldwide, creating a network of opportunities and shared
+                      success.
+                    </p>
+                  </div>
 
-                      <div class="flex lg:justify-start justify-center">
-                        <a
-                          href="/contact"
-                          class="relative inline-flex items-center justify-center py-3 px-20 overflow-hidden font-semibold hover:bg-brand text-brand shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-1000 ease-out bg-white rounded-3xl group"
-                        >
-                          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-colorOne duration-300 -translate-x-full group-hover:translate-x-0 ease-in-out"></span>
-                          <span class="absolute flex items-center justify-center w-full h-full font-bold hover:text-white duration-1000 transition ease-in-out">
-                            Cron Job Monitoring
-                          </span>
-                          <span class="relative invisible">Button Text</span>
-                        </a>
-                      </div>
-                    </div>
+                  <div className="pt-6 flex md:justify-start justify-center">
+                    <a
+                      href="/contact-us"
+                      className="bg-mainColor font-semibold outline-none
+                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-3 text-center"
+                    >
+                      Contact Us
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          {/* 
+      <div className="bg-white border-2 border-red-500">
+        <div className="relative md:pt-32 md:pb-32 pt-20 pb-12">
+          <div className="w-full">
+            <div className="w-full px-4 mx-auto max-w-[1400px]">
+              <div className="flex max-w-5xl mx-auto gap-8 group">
+                <div className="bg-white/10 duration-1000 cursor-pointer group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 p-8 rounded-xl mix-blend-luminosity ">
+                  <img
+                    src="http://localhost:5173/src/assets/Founder.jpeg"
+                    alt=""
+                    className="h-20 mx-auto "
+                  />
+                  <h4 className="uppercase text-xl font-bold">John Doe</h4>
+                  <p className="text-sm leading-7 my-3  font-light opacity-50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquam culpa libero perspiciatis recusandae laudantium
+                    asperiores provident nam beatae dolores adipisci dolore vel
+                    sapiente itaque, sit et quasi. Eos, libero odio.
+                  </p>
+                  <button className="bg-violet-500 py-2.5 px-8 rounded-full">
+                    Get In Touch
+                  </button>
+                </div>
+                <div className="bg-white/10 duration-1000 cursor-pointer group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 p-8 rounded-xl mix-blend-luminosity ">
+                  <img
+                    src="http://localhost:5173/src/assets/Founder.jpeg"
+                    alt=""
+                    className="h-20 mx-auto "
+                  />
+                  <h4 className="uppercase text-xl font-bold">John Doe</h4>
+                  <p className="text-sm leading-7 my-3  font-light opacity-50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquam culpa libero perspiciatis recusandae laudantium
+                    asperiores provident nam beatae dolores adipisci dolore vel
+                    sapiente itaque, sit et quasi. Eos, libero odio.
+                  </p>
+                  <button className="bg-violet-500 py-2.5 px-8 rounded-full">
+                    Get In Touch
+                  </button>
+                </div>
+                <div className="bg-white/10 duration-1000 cursor-pointer group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 p-8 rounded-xl mix-blend-luminosity ">
+                  <img
+                    src="http://localhost:5173/src/assets/Founder.jpeg"
+                    alt=""
+                    className="h-20 mx-auto "
+                  />
+                  <h4 className="uppercase text-xl font-bold">John Doe</h4>
+                  <p className="text-sm leading-7 my-3  font-light opacity-50">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquam culpa libero perspiciatis recusandae laudantium
+                    asperiores provident nam beatae dolores adipisci dolore vel
+                    sapiente itaque, sit et quasi. Eos, libero odio.
+                  </p>
+                  <button className="bg-violet-500 py-2.5 px-8 rounded-full">
+                    Get In Touch
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
         </div>
       </div>
     </div>

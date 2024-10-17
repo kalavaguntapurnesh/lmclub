@@ -159,7 +159,10 @@ const NavBar = () => {
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/logo-meaning" className="text-sm">
+                      <a
+                        href="/learn-about-us#logo_meaning"
+                        className="text-sm"
+                      >
                         Logo Meaning
                       </a>
                     </li>
@@ -574,7 +577,7 @@ const Homebar = () => {
         <span className="text-xs font-semibold text-gray-700">About Us</span>
       </a>
       <a
-        href="/logo-meaning"
+        href="/learn-about-us#logo_meaning"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
         <FiBarChart2 className="mb-2 text-xl text-mainColor" />

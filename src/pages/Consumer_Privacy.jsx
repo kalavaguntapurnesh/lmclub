@@ -151,7 +151,7 @@ const Consumer_Privacy = () => {
               </div>
 
               <div className=" mt-8 flex justify-center items-center">
-                <button class="bg-blue-500 hover:bg-blue-700 transition duration-1000 ease-in-out text-white font-semibold py-2 px-4 rounded">
+                <button class="bg-mainColor transition duration-1000 ease-in-out text-white font-medium py-2 px-4 rounded">
                   Manage Cookie Settings
                 </button>
               </div>
@@ -663,7 +663,7 @@ const Consumer_Privacy = () => {
               </div>
 
               <div className=" mt-8 flex justify-center items-center">
-                <button class="bg-blue-500 hover:bg-blue-700 transition duration-1000 ease-in-out text-white font-semibold py-2 px-4 rounded">
+                <button class="bg-mainColor transition duration-1000 ease-in-out text-white font-medium py-2 px-4 rounded">
                   Manage Cookie Settings
                 </button>
               </div>
