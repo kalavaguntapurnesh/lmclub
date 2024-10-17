@@ -22,6 +22,11 @@ import {
   FiPieChart,
 } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
+import platinum from "../assets/platinum.png";
+import silver from "../assets/silver-medal.png";
+import bronze from "../assets/badge.png";
+import gold from "../assets/medal.png";
+import free from "../assets/free.png";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -531,33 +536,58 @@ const Nub = ({ selected }) => {
 const Products = () => {
   return (
     <div>
-      <div className="flex flex-row w-[100%] ">
-        <div className="w-[50%] flex flex-col justify-start items-center">
-          <h3 className="mb-2 font-bold text-black">Premium</h3>
-          <a href="/" className="mb-1 block text-sm text-gray-600">
+      <div className="grid grid-cols-5 gap-2">
+        <a href="#">
+          <img
+            className="mb-2 h-14 w-full rounded object-cover"
+            src={platinum}
+            alt="Placeholder image"
+          />
+          <h4 className="mb-0.5 mt-1 text-sm font-semibold text-black text-center">
             Platinum
-          </a>
-          <a href="/" className="mb-1 block text-sm text-gray-600">
+          </h4>
+        </a>
+        <a href="#">
+          <img
+            className="mb-2 h-14 w-full rounded object-cover"
+            src={gold}
+            alt="Placeholder image"
+          />
+          <h4 className="mb-0.5 mt-1 text-sm font-medium text-center text-black">
             Gold
-          </a>
-          <a href="/" className="mb-1 block text-sm text-gray-600">
+          </h4>
+        </a>
+        <a href="/enroll-rewards">
+          <img
+            className="mb-2 h-14 w-full rounded object-cover"
+            src={silver}
+            alt="Placeholder image"
+          />
+          <h4 className="mb-0.5 mt-1 text-sm font-medium text-center text-black">
             Silver
-          </a>
-          <a href="/" className="block text-sm text-gray-600">
+          </h4>
+        </a>
+        <a href="https://ecommerce-green-theta.vercel.app/">
+          <img
+            className="mb-2 h-14 w-full rounded object-cover"
+            src={bronze}
+            alt="Placeholder image"
+          />
+          <h4 className="mb-0.5 mt-1 text-center text-sm font-medium text-black">
             Bronze
-          </a>
-        </div>
-        <div className="w-[50%] flex flex-col justify-start items-center">
-          <h3 className="mb-2 font-bold text-black">Free</h3>
-          <a href="/" className="mb-1 block text-sm text-gray-600">
-            Free Tier
-          </a>
-          <a href="/" className="mb-1 block text-sm text-gray-600">
-            Rewards
-          </a>
-        </div>
+          </h4>
+        </a>
+        <a href="https://ecommerce-green-theta.vercel.app/">
+          <img
+            className="mb-2 h-14 w-full rounded object-cover"
+            src={free}
+            alt="Placeholder image"
+          />
+          <h4 className="mb-0.5 mt-1 font-medium text-black text-center">
+            Free
+          </h4>
+        </a>
       </div>
-
       <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-mainColor">
         <span>View more</span>
         <FiArrowRight />
