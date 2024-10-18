@@ -22,11 +22,8 @@ import {
   FiPieChart,
 } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
-import platinum from "../assets/platinum.png";
-import silver from "../assets/silver-medal.png";
-import bronze from "../assets/badge.png";
-import gold from "../assets/medal.png";
 import free from "../assets/free.png";
+import premium from "../assets/premium.png";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -533,62 +530,46 @@ const Nub = ({ selected }) => {
   );
 };
 
-const Products = () => {
+const Blog = () => {
   return (
     <div>
-      <div className="grid grid-cols-5 gap-2">
-        <a href="#">
-          <img
-            className="mb-2 h-14 w-full rounded object-cover"
-            src={platinum}
-            alt="Placeholder image"
-          />
-          <h4 className="mb-0.5 mt-1 text-sm font-semibold text-black text-center">
-            Platinum
+      <div className="grid grid-cols-2 gap-2">
+        <a href="/" className="w-full border-[1px] p-2 rounded">
+          <div className="flex justify-center items-center">
+            <img
+              className="mb-2 h-16 w-16 rounded "
+              src={premium}
+              alt="Placeholder image"
+            />
+          </div>
+          <h4 className="mb-0.5 text-sm font-medium text-center">
+            Premium Subscription
           </h4>
+          <ul className="space-y-1 text-sm text-neutral-600 flex justify-center items-center flex-col">
+            <li>Platinum</li>
+            <li>Gold</li>
+            <li>Silver</li>
+            <li>Bronze</li>
+          </ul>
         </a>
-        <a href="#">
-          <img
-            className="mb-2 h-14 w-full rounded object-cover"
-            src={gold}
-            alt="Placeholder image"
-          />
-          <h4 className="mb-0.5 mt-1 text-sm font-medium text-center text-black">
-            Gold
+        <a href="/" className="w-full border-[1px] p-2 rounded">
+          <div className="flex justify-center items-center">
+            <img
+              className="mb-2 h-16 w-16 rounded "
+              src={free}
+              alt="Placeholder image"
+            />
+          </div>
+          <h4 className="mb-0.5 text-sm font-medium text-center">
+            Free Subscription
           </h4>
-        </a>
-        <a href="/enroll-rewards">
-          <img
-            className="mb-2 h-14 w-full rounded object-cover"
-            src={silver}
-            alt="Placeholder image"
-          />
-          <h4 className="mb-0.5 mt-1 text-sm font-medium text-center text-black">
-            Silver
-          </h4>
-        </a>
-        <a href="https://ecommerce-green-theta.vercel.app/">
-          <img
-            className="mb-2 h-14 w-full rounded object-cover"
-            src={bronze}
-            alt="Placeholder image"
-          />
-          <h4 className="mb-0.5 mt-1 text-center text-sm font-medium text-black">
-            Bronze
-          </h4>
-        </a>
-        <a href="https://ecommerce-green-theta.vercel.app/">
-          <img
-            className="mb-2 h-14 w-full rounded object-cover"
-            src={free}
-            alt="Placeholder image"
-          />
-          <h4 className="mb-0.5 mt-1 font-medium text-black text-center">
-            Free
-          </h4>
+          <ul className="space-y-1 text-sm flex justify-center items-center flex-col text-neutral-600">
+            <li>Free Tier</li>
+            <li>Rewards Engage</li>
+          </ul>
         </a>
       </div>
-      <button className="ml-auto mt-4 flex items-center font-semibold gap-1 text-sm text-mainColor">
+      <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-mainColor font-semibold">
         <span>View more</span>
         <FiArrowRight />
       </button>
@@ -778,7 +759,7 @@ const TABS = [
   },
   {
     title: "Subscription",
-    Component: Products,
+    Component: Blog,
   },
 
   {
