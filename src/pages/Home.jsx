@@ -16,7 +16,7 @@ const Home = () => {
       <AppDesc />
       <Stack />
       {/* <Carousel /> */}
-      <FAQ />
+      {/* <FAQ /> */}
       <Footer />
     </div>
   );

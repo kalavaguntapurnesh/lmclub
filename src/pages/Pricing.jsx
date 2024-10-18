@@ -1,8 +1,21 @@
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import Accordion from "../components/Accordion";
 
 const Pricing = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <div>
       <Navbar />
@@ -27,7 +40,10 @@ const Pricing = () => {
               <section className="bg-white ">
                 <div className="py-8 px-4 lg:py-16 lg:px-6">
                   <div className=" grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
-                    <div className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-100 shadow">
+                    <div
+                      id="pricing_bronze"
+                      className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-300 shadow"
+                    >
                       <h3 className="mb-4 text-2xl font-bold text-[#CD7F32]">
                         Bronze
                       </h3>
@@ -135,7 +151,10 @@ const Pricing = () => {
                       </a>
                     </div>
 
-                    <div className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-100 shadow">
+                    <div
+                      id="pricing_silver"
+                      className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-300 shadow"
+                    >
                       <h3 className="mb-4 text-2xl font-bold text-[#C0C0C0]">
                         Silver
                       </h3>
@@ -243,7 +262,10 @@ const Pricing = () => {
                       </a>
                     </div>
 
-                    <div className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-100 shadow">
+                    <div
+                      id="pricing_gold"
+                      className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-300 shadow"
+                    >
                       <h3 className="mb-4 text-2xl font-bold text-[#FFD700]">
                         Gold
                       </h3>
@@ -354,7 +376,10 @@ const Pricing = () => {
                       </a>
                     </div>
 
-                    <div className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-100 shadow">
+                    <div
+                      id="pricing_platinum"
+                      className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-300 shadow"
+                    >
                       <h3 className="mb-4 text-2xl font-bold text-[#E5E4E2]">
                         Platinum
                       </h3>
@@ -467,6 +492,33 @@ const Pricing = () => {
                   </div>
                 </div>
               </section>
+
+              <div className="pt-12 pb-12">
+                <div className="space-y-2">
+                  <div className="md:text-4xl text-3xl font-bold text-black text-center">
+                    <h1>Frequently Asked Questions</h1>
+                  </div>
+                </div>
+
+                <div className="max-w-[1000px] mx-auto pt-12 ">
+                  <Accordion
+                    title="As a new member, what are my membership options?"
+                    answer="When you're logged into your LM Club account and book a pre-priced project, your 20% discount is automatically applied at checkout. If you're not logged in and are booking a fixed price project, you will be prompted to log in with your email at checkout."
+                  />
+                  <Accordion
+                    title="How do I cancel my Silver or Gold or Platinum membership?"
+                    answer="You can cancel your paid Silver or Gold membership anytime. Simply log in to your LM Club account, go to the Manage My Account page, and click Cancel Auto-Renew."
+                  />
+                  <Accordion
+                    title="How do I know I can trust the reviews I read on LM Club?"
+                    answer="We take several precautions to ensure that reviews come from real customers — including a combination of proprietary behind-the-scenes technology and good old-fashioned human investigations."
+                  />
+                  <Accordion
+                    title="How can a customer contact us for immediate guidance?"
+                    answer="You can contact us through mail on support@lmclub.com or go to the Contact page for further information. And we are always ready to help."
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

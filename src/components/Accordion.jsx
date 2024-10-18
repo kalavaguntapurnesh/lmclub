@@ -1,26 +1,27 @@
 import { useState } from "react";
-import { LuPlus } from "react-icons/lu";
-import { LuMinus } from "react-icons/lu";
+import { FaAngleDown, FaAngleRight } from "react-icons/fa6";
 
 const Accordion = ({ title, answer }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <div className="py-6 border-b-[1px] pt-2 text-lg">
+    <div className="py-6 md:border-b-[0px] border-b-[1px] md:mt-2 md:bg-[#f8f9fa] rounded md:pt-0 pt-2 text-lg">
       <button
         onClick={() => {
           setAccordionOpen(!accordionOpen);
         }}
         className="flex justify-between w-full"
       >
-        <div className=" flex justify-start w-full items-center">
-          <span className="font-normal text-gray-700 tracking-normal">{title}</span>
+        <div className=" flex justify-start w-full md:pl-8 md:pt-4">
+          <span className="font-medium text-gray-700 tracking-normal">
+            {title}
+          </span>
         </div>
-        <div className="px-4 py-1">
+        <div className="px-4 py-1 md:pt-6">
           {accordionOpen ? (
-            <LuMinus color="red" />
+            <FaAngleDown color="red" />
           ) : (
-            <LuPlus color="[#00684A]" />
+            <FaAngleRight className="text-gray-700" />
           )}
         </div>
       </button>
@@ -31,9 +32,9 @@ const Accordion = ({ title, answer }) => {
             : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden md:mx-0 mx-1 text-start">
-          <span className=" text-lg text-gray-700">{answer}</span>
-        </div> 
+        <div className="overflow-hidden md:mx-0 mx-1 md:text-start text-center md:pl-8">
+          <span className="text-lg text-gray-700">{answer}</span>
+        </div>
       </div>
     </div>
   );
