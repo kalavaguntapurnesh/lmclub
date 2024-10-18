@@ -23,13 +23,13 @@ import {
 } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import free from "../assets/free.png";
-import premium from "../assets/premium.png";
+import premium from "../assets/money.png";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null); // Dropdown state
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile menu state
-  const [openDropdownMobile, setOpenDropdownMobile] = useState(null); // Dropdown state for mobile menu
+  const [openDropdown, setOpenDropdown] = useState(null); 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdownMobile, setOpenDropdownMobile] = useState(null); 
   const navigate = useNavigate();
 
   const handleScroll = () => {
@@ -249,22 +249,22 @@ const NavBar = () => {
                     className="pl-4 mt-6 space-y-2"
                   >
                     <li className="text-gray-700">
-                      <a href="/pricing" className="text-sm">
+                      <a href="/pricing#pricing_platinum" className="text-sm">
                         Platinum
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/pricing" className="text-sm">
+                      <a href="/pricing#pricing_gold" className="text-sm">
                         Gold
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/pricing" className="text-sm">
+                      <a href="/pricing#pricing_silver" className="text-sm">
                         Silver
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/pricing" className="text-sm">
+                      <a href="/pricing#pricing_bronze" className="text-sm">
                         Bronze
                       </a>
                     </li>
