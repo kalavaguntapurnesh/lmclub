@@ -18,7 +18,7 @@ const Testimonial = () => {
         "Lorem ipsum dolor sit amet consectetur,adipisicing elit. Neque quam at reprehenderit, cumque delectus maiores possimus quibusdam ",
     },
     {
-      name: "Marcel Bordon",
+      name: "Aaron Zander",
       imageLink:
         "https://screencloud.com/_next/static/media/marcel-bordon.dd451a32.webp",
       designation: "Working at Two",
@@ -26,7 +26,7 @@ const Testimonial = () => {
         "Lorem ipsum dolor sit amet consectetur,adipisicing elit. Neque quam at reprehenderit, cumque delectus maiores possimus quibusdam ",
     },
     {
-      name: "Marcel Bordon",
+      name: "Michael Fasbender",
       imageLink:
         "https://screencloud.com/_next/static/media/aaron-zander.74f76098.webp",
       designation: "Working at Three",
@@ -34,7 +34,7 @@ const Testimonial = () => {
         "Lorem ipsum dolor sit amet consectetur,adipisicing elit. Neque quam at reprehenderit, cumque delectus maiores possimus quibusdam ",
     },
     {
-      name: "Marcel Bordon",
+      name: "Tulsa Fast",
       imageLink:
         "https://screencloud.com/_next/static/media/sharon-winning.cb6ceb06.webp",
       designation: "Working at Four",
@@ -42,7 +42,7 @@ const Testimonial = () => {
         "Lorem ipsum dolor sit amet consectetur,adipisicing elit. Neque quam at reprehenderit, cumque delectus maiores possimus quibusdam ",
     },
     {
-      name: "Marcel Bordon",
+      name: "Leaney Dawson",
       imageLink:
         "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
       designation: "Working at Five",
@@ -50,7 +50,7 @@ const Testimonial = () => {
         "Lorem ipsum dolor sit amet consectetur,adipisicing elit. Neque quam at reprehenderit, cumque delectus maiores possimus quibusdam ",
     },
     {
-      name: "Marcel Bordon",
+      name: "Myrcella Stark",
       imageLink:
         "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
       designation: "Working at Six",
@@ -115,7 +115,7 @@ const Testimonial = () => {
                   <div class="bg-white border-[1px] rounded-lg overflow-visible">
                     <div class="relative -mt-10 flex justify-center">
                       <img
-                        class="rounded-full shadow-md h-24 w-24 object-cover "
+                        class="rounded-full shadow-md h-20 w-20 object-cover "
                         src={item.imageLink}
                         alt="Profile"
                       />
