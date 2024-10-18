@@ -3,10 +3,82 @@ import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { useState } from "react";
 import Accordion from "../components/Accordion";
 
 const Pricing = () => {
   const location = useLocation();
+  const [isYearly, setYearly] = useState(false);
+
+  const handleToggle = () => {
+    setYearly((prev) => !prev);
+  };
+
+  const monthlyPlans = [
+    {
+      name: "Bronze",
+      description: "Best option for personal use & for your next project.",
+      price: 10,
+      points: [
+        "Individual configuration",
+        "No setup, or hidden fees",
+        "Team size: 1 developer",
+        "Premium support: 6 months",
+        "Free updates: 6 months",
+      ],
+    },
+    {
+      name: "Silver",
+      description: "Best option for personal use & for your next project.",
+      price: 20,
+      points: [
+        "Individual configuration",
+        "No setup, or hidden fees",
+        "Team size: 1 developer",
+        "Premium support: 6 months",
+        "Free updates: 6 months",
+      ],
+    },
+    {
+      name: "Gold",
+      description: "Best option for personal use & for your next project.",
+      price: 35,
+      points: [
+        "Individual configuration",
+        "No setup, or hidden fees",
+        "Team size: 1 developer",
+        "Premium support: 6 months",
+        "Free updates: 6 months",
+      ],
+    },
+    {
+      name: "Platinum",
+      description: "Best option for personal use & for your next project.",
+      price: 40,
+      points: [
+        "Individual configuration",
+        "No setup, or hidden fees",
+        "Team size: 1 developer",
+        "Premium support: 6 months",
+        "Free updates: 6 months",
+      ],
+    },
+  ];
+
+  const getButtonColor = (planName) => {
+    switch (planName) {
+      case "Bronze":
+        return "text-[#CD7F32]";
+      case "Silver":
+        return "text-gray-600";
+      case "Gold":
+        return "text-[#FFD700]";
+      case "Platinum":
+        return "text-[#E5E4E2]";
+      default:
+        return "text-red-500";
+    }
+  };
 
   useEffect(() => {
     if (location.hash) {
@@ -37,458 +109,99 @@ const Pricing = () => {
                 </div>
               </div>
 
+              <div className="text-center my-6">
+                <div className="flex items-center justify-center gap-4">
+                  {/* Monthly Text */}
+                  <span
+                    className={`font-semibold ${
+                      !isYearly ? "text-mainColor" : "text-gray-500"
+                    }`}
+                  >
+                    Monthly
+                  </span>
+
+                  {/* Toggle Button */}
+                  <div
+                    className={`relative w-16 h-8 bg-gray-300 rounded-full p-1 cursor-pointer flex items-center ${
+                      isYearly ? "bg-green-500" : "bg-gray-300"
+                    }`}
+                    onClick={handleToggle}
+                  >
+                    {/* Toggle Slider */}
+                    <div
+                      className={`w-6 h-6 bg-white rounded-full shadow-md transform duration-300 ease-in-out ${
+                        isYearly ? "translate-x-8" : "translate-x-0"
+                      }`}
+                    ></div>
+                  </div>
+
+                  {/* Yearly Text */}
+                  <span
+                    className={`font-semibold ${
+                      isYearly ? "text-mainColor" : "text-gray-500"
+                    }`}
+                  >
+                    Yearly
+                  </span>
+                </div>
+              </div>
+
               <section className="bg-white ">
                 <div className="py-8 px-4 lg:py-16 lg:px-6">
                   <div className=" grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
-                    <div
-                      id="pricing_bronze"
-                      className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-300 shadow"
-                    >
-                      <h3 className="mb-4 text-2xl font-bold text-[#CD7F32]">
-                        Bronze
-                      </h3>
-                      <p className="font-light text-gray-500 sm:text-lg">
-                        Best option for personal use & for your next project.
-                      </p>
-                      <div className="flex justify-center items-baseline my-8">
-                        <span className="mr-2 text-5xl font-extrabold">
-                          $10
-                        </span>
-                        <span className="text-gray-500 ">/month</span>
-                      </div>
-
-                      <ul role="list" className="mb-8 space-y-4 text-left">
-                        <li class="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>Individual configuration</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>No setup, or hidden fees</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Team size:{" "}
-                            <span className="font-semibold">1 developer</span>
-                          </span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Premium support:{" "}
-                            <span class="font-semibold">6 months</span>
-                          </span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Free updates:{" "}
-                            <span class="font-semibold">6 months</span>
-                          </span>
-                        </li>
-                      </ul>
-                      <a
-                        href="/login"
-                        class="text-white bg-mainColor font-medium rounded text-sm px-5 py-2.5 text-center "
+                    {monthlyPlans.map((plan) => (
+                      <div
+                        id="pricing_bronze"
+                        key={plan.name}
+                        className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-300 shadow"
                       >
-                        Get started
-                      </a>
-                    </div>
+                        <h3
+                          // className="mb-4 text-2xl font-extrabold text-[#CD7F32]"
+                          className={`mb-4 text-2xl font-extrabold ${getButtonColor(
+                            plan.name
+                          )}`}
+                        >
+                          {plan.name}
+                        </h3>
+                        <p className="font-light text-gray-500 sm:text-lg">
+                          {plan.description}
+                        </p>
+                        <div className="flex justify-center items-baseline my-8">
+                          <span className="mr-2 text-5xl font-extrabold">
+                            ${isYearly ? plan.price * 12 : plan.price}
+                          </span>
+                          <span className="text-gray-500 ">
+                            /{isYearly ? "year" : "month"}
+                          </span>
+                        </div>
 
-                    <div
-                      id="pricing_silver"
-                      className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-300 shadow"
-                    >
-                      <h3 className="mb-4 text-2xl font-bold text-[#C0C0C0]">
-                        Silver
-                      </h3>
-                      <p className="font-light text-gray-500 sm:text-lg">
-                        Relevant for multiple users, extended & premium support.
-                      </p>
-                      <div className="flex justify-center items-baseline my-8">
-                        <span className="mr-2 text-5xl font-extrabold">
-                          $20
-                        </span>
-                        <span className="text-gray-500">/month</span>
+                        <ul role="list" className="mb-8 space-y-4 text-left">
+                          {plan.points.map((point, index) => (
+                            <li class="flex items-center space-x-3">
+                              <svg
+                                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <a
+                          href="/login"
+                          class="text-white bg-mainColor font-medium rounded text-sm px-5 py-2.5 text-center "
+                        >
+                          Get started
+                        </a>
                       </div>
-
-                      <ul role="list" className="mb-8 space-y-4 text-left">
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>Individual configuration</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>No setup, or hidden fees</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Team size:{" "}
-                            <span className="font-semibold">10 developers</span>
-                          </span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Premium support:{" "}
-                            <span className="font-semibold">24 months</span>
-                          </span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Free updates:{" "}
-                            <span className="font-semibold">24 months</span>
-                          </span>
-                        </li>
-                      </ul>
-                      <a
-                        href="/login"
-                        className="text-white bg-mainColor font-medium rounded text-sm px-5 py-2.5 text-center "
-                      >
-                        Get started
-                      </a>
-                    </div>
-
-                    <div
-                      id="pricing_gold"
-                      className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-300 shadow"
-                    >
-                      <h3 className="mb-4 text-2xl font-bold text-[#FFD700]">
-                        Gold
-                      </h3>
-                      <p className="font-light text-gray-500 sm:text-lg">
-                        Best for large scale uses and extended redistribution
-                        rights.
-                      </p>
-                      <div className="flex justify-center items-baseline my-8">
-                        <span className="mr-2 text-5xl font-extrabold">
-                          $35
-                        </span>
-                        <span className="text-gray-500 ">/month</span>
-                      </div>
-
-                      <ul role="list" className="mb-8 space-y-4 text-left">
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>Individual configuration</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>No setup, or hidden fees</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Team size:{" "}
-                            <span className="font-semibold">
-                              100+ developers
-                            </span>
-                          </span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Premium support:{" "}
-                            <span className="font-semibold">36 months</span>
-                          </span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Free updates:{" "}
-                            <span className="font-semibold">36 months</span>
-                          </span>
-                        </li>
-                      </ul>
-                      <a
-                        href="/login"
-                        className="text-white bg-mainColor font-medium rounded text-sm px-5 py-2.5 text-center"
-                      >
-                        Get started
-                      </a>
-                    </div>
-
-                    <div
-                      id="pricing_platinum"
-                      className="flex flex-col text-center p-4 text-gray-900 bg-white rounded border border-gray-300 shadow"
-                    >
-                      <h3 className="mb-4 text-2xl font-bold text-[#E5E4E2]">
-                        Platinum
-                      </h3>
-                      <p className="font-light text-gray-500 sm:text-lg ">
-                        Best for large scale uses and extended redistribution
-                        rights.
-                      </p>
-                      <div className="flex justify-center items-baseline my-8">
-                        <span className="mr-2 text-5xl font-extrabold">
-                          $40
-                        </span>
-                        <span className="text-gray-500">/month</span>
-                      </div>
-
-                      <ul role="list" className="mb-8 space-y-4 text-left">
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>Individual configuration</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>No setup, or hidden fees</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Team size:{" "}
-                            <span className="font-semibold">
-                              100+ developers
-                            </span>
-                          </span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Premium support:{" "}
-                            <span className="font-semibold">36 months</span>
-                          </span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Free updates:{" "}
-                            <span className="font-semibold">36 months</span>
-                          </span>
-                        </li>
-                      </ul>
-                      <a
-                        href="/login"
-                        className="text-white bg-mainColor font-medium rounded text-sm px-5 py-2.5 text-center"
-                      >
-                        Get started
-                      </a>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </section>
