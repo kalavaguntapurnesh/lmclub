@@ -81,7 +81,7 @@ const Privacy = () => {
               <div className=" mt-8 flex justify-center items-center">
                 <button
                   onClick={() => navigate("/consumer-privacy")}
-                  class="bg-mainColor transition duration-1000 ease-in-out text-white shadow py-2 px-4 rounded"
+                  class="bg-mainColor transition font-medium duration-1000 ease-in-out text-white shadow py-2 px-4 rounded"
                 >
                   View Full Privacy Notice
                 </button>

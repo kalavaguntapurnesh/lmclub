@@ -170,7 +170,7 @@ const AboutHero = () => {
                   <div className="pt-6 flex md:justify-start justify-center">
                     <a
                       href="/learn-about-us"
-                      className="bg-mainColor font-semibold outline-none
+                      className="bg-mainColor font-medium outline-none
                       rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-3 text-center"
                     >
                       Learn More

@@ -8,6 +8,7 @@ import zapier from "../assets/zapier.svg";
 import whatsapp from "../assets/whatsapp.svg";
 import telegram from "../assets/telegram.svg";
 import evernote from "../assets/evernote.svg";
+import { FaArrowRight } from "react-icons/fa";
 
 const Stack = () => {
   return (
@@ -41,83 +42,140 @@ const Stack = () => {
                 <div className="flex justify-center items-center">
                   <a
                     href="/learn-about-us"
-                    className="w-20 h-20 rounded bg-[#f8f9fa] flex justify-center items-center"
+                    className="w-24 md:w-28 md:h-28 h-24 rounded bg-[#f8f9fa] flex justify-center items-center"
                   >
-                    <img src={whatsapp} alt="" className="w-8 h-8" />
+                    <img
+                      src={whatsapp}
+                      alt=""
+                      className="w-10 h-10 md:w-12 md:h-12"
+                    />
                   </a>
                 </div>
                 <div className="flex justify-center items-center">
                   <a
                     href="/learn-about-us"
-                    className="w-20 h-20 rounded bg-[#f8f9fa] flex justify-center items-center"
+                    className="w-24 md:w-28 md:h-28 h-24 rounded bg-[#f8f9fa] flex justify-center items-center"
                   >
-                    <img src={slack} alt="" className="w-8 h-8" />
+                    <img
+                      src={slack}
+                      alt=""
+                      className="w-10 h-10 md:w-12 md:h-12"
+                    />
                   </a>
                 </div>
                 <div className="flex justify-center items-center">
                   <a
                     href="/learn-about-us"
-                    className="w-20 h-20 rounded bg-[#f8f9fa] flex justify-center items-center"
+                    className="w-24 md:w-28 md:h-28 h-24 rounded bg-[#f8f9fa] flex justify-center items-center"
                   >
-                    <img src={telegram} alt="" className="w-8 h-8" />
+                    <img
+                      src={telegram}
+                      alt=""
+                      className="w-10 h-10 md:w-12 md:h-12"
+                    />
                   </a>
                 </div>
                 <div className="flex justify-center items-center">
                   <a
                     href="/learn-about-us"
-                    className="w-20 h-20 rounded bg-[#f8f9fa] flex justify-center items-center"
+                    className="w-24 md:w-28 md:h-28 h-24 rounded bg-[#f8f9fa] flex justify-center items-center"
                   >
-                    <img src={zapier} alt="" className="w-8 h-8" />
+                    <img
+                      src={zapier}
+                      alt=""
+                      className="w-10 h-10 md:w-12 md:h-12"
+                    />
                   </a>
                 </div>
                 <div className="flex justify-center items-center">
                   <a
                     href="/learn-about-us"
-                    className="w-20 h-20 rounded bg-[#f8f9fa] flex justify-center items-center"
+                    className="w-24 md:w-28 md:h-28 h-24 rounded bg-[#f8f9fa] flex justify-center items-center"
                   >
-                    <img src={sms} alt="" className="w-8 h-8" />
+                    <img
+                      src={sms}
+                      alt=""
+                      className="w-10 h-10 md:w-12 md:h-12"
+                    />
                   </a>
                 </div>
                 <div className="flex justify-center items-center">
                   <a
                     href="/learn-about-us"
-                    className="w-20 h-20 rounded bg-[#f8f9fa] flex justify-center items-center"
+                    className="w-24 md:w-28 md:h-28 h-24 rounded bg-[#f8f9fa] flex justify-center items-center"
                   >
-                    <img src={phone} alt="" className="w-8 h-8" />
+                    <img
+                      src={phone}
+                      alt=""
+                      className="w-10 h-10 md:w-12 md:h-12"
+                    />
                   </a>
                 </div>
                 <div className="flex justify-center items-center">
                   <a
                     href="/learn-about-us"
-                    className="w-20 h-20 rounded bg-[#f8f9fa] flex justify-center items-center"
+                    className="w-24 md:w-28 md:h-28 h-24 rounded bg-[#f8f9fa] flex justify-center items-center"
                   >
-                    <img src={teams} alt="" className="w-8 h-8" />
+                    <img
+                      src={teams}
+                      alt=""
+                      className="w-10 h-10 md:w-12 md:h-12"
+                    />
                   </a>
                 </div>
                 <div className="flex justify-center items-center">
                   <a
                     href="/learn-about-us"
-                    className="w-20 h-20 rounded bg-[#f8f9fa] flex justify-center items-center"
+                    className="w-24 md:w-28 md:h-28 h-24 rounded bg-[#f8f9fa] flex justify-center items-center"
                   >
-                    <img src={evernote} alt="" className="w-8 h-8" />
+                    <img
+                      src={evernote}
+                      alt=""
+                      className="w-10 h-10 md:w-12 md:h-12"
+                    />
                   </a>
                 </div>
                 <div className="md:flex justify-center items-center hidden">
                   <a
                     href="/learn-about-us"
-                    className="w-20 h-20 rounded bg-[#f8f9fa] flex justify-center items-center"
+                    className="w-24 md:w-28 md:h-28 h-24 rounded bg-[#f8f9fa] flex justify-center items-center"
                   >
-                    <img src={discord} alt="" className="w-8 h-8" />
+                    <img
+                      src={discord}
+                      alt=""
+                      className="w-10 h-10 md:w-12 md:h-12"
+                    />
                   </a>
                 </div>
                 <div className="flex justify-center items-center">
                   <a
                     href="/learn-about-us"
-                    className="w-20 h-20 rounded bg-[#f8f9fa] flex justify-center items-center"
+                    className="w-24 md:w-28 md:h-28 h-24 rounded bg-[#f8f9fa] flex justify-center items-center"
                   >
-                    <img src={hooks} alt="" className="w-8 h-8" />
+                    <img
+                      src={hooks}
+                      alt=""
+                      className="w-10 h-10 md:w-12 md:h-12"
+                    />
                   </a>
                 </div>
+              </div>
+
+              <div className="flex items-center justify-center pt-8">
+                <a
+                  href="/rewards"
+                  className="bg-mainColor outline-none
+                      rounded hover:shadow-form transition font-medium duration-1000 ease-in-out md:text-base text-sm text-white px-8 py-3 text-center"
+                >
+                  Free Trial
+                </a>
+                <a
+                  href="/login"
+                  className="outline-none 
+                      rounded border-[1px] border-mainColor transition duration-1000 ease-in-out md:text-base text-sm text-mainColor px-8 py-3 text-center ml-2"
+                >
+                  Learn More
+                </a>
               </div>
             </div>
           </div>
