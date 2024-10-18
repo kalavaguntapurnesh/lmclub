@@ -6,12 +6,12 @@ import {
   FaBuilding,
   FaCookieBite,
   FaDatabase,
-  FaLocationDot,
+  FaFlagUsa,
 } from "react-icons/fa6";
-import { FaMicrophoneAlt, FaRocketchat } from "react-icons/fa";
 
 const Privacy = () => {
   const navigate = useNavigate();
+
   return (
     <div>
       <Navbar />
@@ -21,7 +21,7 @@ const Privacy = () => {
         <div className="relative">
           <div className="w-full">
             <div className="w-full px-4 mx-auto max-w-[1400px] pb-12 md:text-start text-center">
-              <div className="md:text-4xl text-4xl font-bold  ">
+              <div className=" text-4xl font-bold  ">
                 <h1>Privacy Policy</h1>
               </div>
 
@@ -323,10 +323,7 @@ const Privacy = () => {
               </div> */}
 
               <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 pt-8 md:px-2 lg:px-1 px-4">
-                <a
-                  href="mailto:info@laoemaom.com"
-                  class="flex md:justify-start justify-center"
-                >
+                <a href="" class="flex md:justify-start justify-center">
                   <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                     <div class="space-y-4">
                       <div className="flex justify-center items-center">
@@ -346,7 +343,7 @@ const Privacy = () => {
                 </a>
 
                 <a
-                  href="mailto:info@laoemaom.com"
+                  href="/consumer-privacy#cookie-use-policy"
                   class="flex md:justify-start justify-center"
                 >
                   <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
@@ -368,10 +365,7 @@ const Privacy = () => {
                     </div>
                   </div>
                 </a>
-                <a
-                  href="/"
-                  class="flex md:justify-start justify-center"
-                >
+                <a href="/" class="flex md:justify-start justify-center">
                   <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                     <div class="space-y-4">
                       <div className="flex justify-center items-center">
@@ -393,24 +387,24 @@ const Privacy = () => {
                 </a>
 
                 <a
-                  href="mailto:info@laoemaom.com"
+                  href="/consumer-privacy#california_resident_policy"
                   class="flex md:justify-start justify-center"
                 >
                   <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                     <div class="space-y-4">
                       <div className="flex justify-center items-center">
                         <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
-                          <FaRocketchat size={24} className="text-mainColor" />
+                          <FaFlagUsa size={24} className="text-mainColor" />
                         </div>
                       </div>
                       <div class="flex justify-center items-center">
                         <h1 class="text-lg font-bold text-center">
-                          Chat to Support
+                          California Notices
                         </h1>
                       </div>
 
                       <div class="flex justify-center items-center text-gray-600 text-center font-medium">
-                        <p>Speak to our friendly team.</p>
+                        <p>Read California Notices.</p>
                       </div>
                     </div>
                   </div>
