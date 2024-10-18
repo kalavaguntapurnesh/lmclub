@@ -12,12 +12,12 @@ const Accordion = ({ title, answer }) => {
         }}
         className="flex justify-between w-full"
       >
-        <div className=" flex justify-start w-full md:pl-8 md:pt-4">
+        <div className=" flex justify-start w-full md:pl-8 md:pt-4 pt-2">
           <span className="font-medium text-gray-700 tracking-normal">
             {title}
           </span>
         </div>
-        <div className="px-4 py-1 md:pt-6">
+        <div className="px-4 pt-3 md:pt-6">
           {accordionOpen ? (
             <FaAngleDown color="red" />
           ) : (
