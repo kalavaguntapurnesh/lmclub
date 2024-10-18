@@ -249,27 +249,27 @@ const NavBar = () => {
                     className="pl-4 mt-6 space-y-2"
                   >
                     <li className="text-gray-700">
-                      <a href="/" className="text-sm">
+                      <a href="/pricing" className="text-sm">
                         Platinum
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/" className="text-sm">
+                      <a href="/pricing" className="text-sm">
                         Gold
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/" className="text-sm">
+                      <a href="/pricing" className="text-sm">
                         Silver
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/" className="text-sm">
+                      <a href="/pricing" className="text-sm">
                         Bronze
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/" className="text-sm">
+                      <a href="/pricing" className="text-sm">
                         Free Tier
                       </a>
                     </li>
@@ -534,7 +534,7 @@ const Blog = () => {
   return (
     <div>
       <div className="grid grid-cols-2 gap-2">
-        <a href="/" className="w-full border-[1px] p-2 rounded">
+        <a href="/pricing" className="w-full border-[1px] p-2 rounded">
           <div className="flex justify-center items-center">
             <img
               className="mb-2 h-16 w-16 rounded "
@@ -552,7 +552,7 @@ const Blog = () => {
             <li>Bronze</li>
           </ul>
         </a>
-        <a href="/" className="w-full border-[1px] p-2 rounded">
+        <a href="/pricing" className="w-full border-[1px] p-2 rounded">
           <div className="flex justify-center items-center">
             <img
               className="mb-2 h-16 w-16 rounded "

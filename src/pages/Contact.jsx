@@ -21,7 +21,7 @@ const Contact = () => {
         <div className="max-w-[1400px] mx-auto">
           <div className="mt-28 pb-16">
             <div className="space-y-2">
-              <div className="md:text-4xl text-3xl md:font-bold font-semibold text-black text-center">
+              <div className="md:text-4xl text-3xl font-bold text-black text-center">
                 <h1>Let's Start a Conservation</h1>
               </div>
 
