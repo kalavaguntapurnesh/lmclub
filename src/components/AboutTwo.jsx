@@ -1,4 +1,6 @@
+import { FaLinkedin } from "react-icons/fa";
 import Founder from "../assets/Founder.jpeg";
+import { FaLinkedinIn } from "react-icons/fa6";
 
 const AboutTwo = () => {
   return (
@@ -44,13 +46,14 @@ const AboutTwo = () => {
                     </p>
                   </div>
 
-                  <div className="pt-6 flex md:justify-start justify-center">
+                  <div className="md:pt-6 pt-2 flex md:justify-start justify-center">
                     <a
-                      href="/contact-us"
-                      className="bg-mainColor font-semibold outline-none
-                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-3 text-center"
+                      href="https://www.linkedin.com/in/rickardo-anderson-a8964a220/"
+                      className="bg-mainColor outline-none
+                      rounded hover:shadow-form font-medium flex items-center transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-3 text-center"
                     >
-                      Contact Us
+                      <FaLinkedinIn size={16} />
+                      <span className="ml-1">LinkedIn Profile</span>
                     </a>
                   </div>
                 </div>

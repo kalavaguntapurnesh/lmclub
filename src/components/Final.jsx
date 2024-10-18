@@ -20,7 +20,7 @@ const Final = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <a href="/register" class="border-[1px] bg-mainColor transition duration-1000 text-white py-3 px-6 rounded">
+                  <a href="/register" class="border-[1px] bg-mainColor transition font-medium duration-1000 text-white py-3 px-6 rounded">
                     Create your free account now
                   </a>
                 </div>

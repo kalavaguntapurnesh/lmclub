@@ -106,7 +106,7 @@ const NavBar = () => {
             onClick={() => {
               navigate("/register");
             }}
-            className="border-[1px] border-mainColor text-mainColor hover:text-white hover:bg-mainColor px-4 py-2 rounded text-sm font-semibold transition duration-500"
+            className="border-[1px] border-mainColor text-mainColor hover:text-white hover:bg-mainColor px-4 py-2 rounded text-sm font-medium transition duration-500"
           >
             Sign Up
           </button>
