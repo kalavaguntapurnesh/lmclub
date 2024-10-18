@@ -1,8 +1,20 @@
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Consumer_Privacy = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <div>
       <Navbar />
@@ -211,35 +223,6 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold md:text-2xl text-xl">
-                <h1>CA residents Policy</h1>
-              </div>
-
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 ">
-                <p>
-                  The purpose of this California Privacy Policy is to provide
-                  consumers with a comprehensive description of our LM Club’s
-                  online and offline practices regarding the collecting, use,
-                  disclosure, and sale of personal information and of the rights
-                  of consumers regarding their personal information under the
-                  CCPA.
-                </p>
-                <p>
-                  The tables below describe how we collect, use, and disclose
-                  California consumers’ personal information based on
-                  definitions laid out in the CCPA. Please note that because the
-                  categories of personal information collected and shared
-                  largely depends on how a consumer has interacted with our
-                  dealership, not all of the items listed in the tables below
-                  will be relevant to you. For example, we generally only
-                  collect veteran status when a consumer qualifies for a
-                  military rebate. Similarly, certain pieces of information,
-                  such as health and medical information, are only collected in
-                  the course of administering employment benefits and claims,
-                  but are not collected from customers.
-                </p>
-              </div>
-
               <div className="mt-8 font-semibold text-xl">
                 <h1>Consent and Notifications of Revisions</h1>
               </div>
@@ -267,163 +250,167 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="md:text-4xl text-4xl font-bold  mt-8">
-                <h1>Cookies Use Policy</h1>
-              </div>
+              <div id="cookie-use-policy" className="pt-8">
+                <div className="md:text-4xl text-4xl font-bold pt-8">
+                  <h1>Cookies Use Policy</h1>
+                </div>
 
-              <div className="mt-8 font-semibold text-xl">
-                <h1>Use of Cookies and Similar Technologies</h1>
-              </div>
+                <div className="mt-8 font-semibold text-xl">
+                  <h1>Use of Cookies and Similar Technologies</h1>
+                </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
-                <p>
-                  We use cookies and other similar technologies (e.g. web
-                  beacons, pixels, or local storage) to deliver content specific
-                  to your interests, track your website activity, help our Sites
-                  remember you, enhance your online experience with us, and
-                  provide you with information you’re most likely to need.
-                  Cookies are small pieces of text used to store information on
-                  web browsers between visits. Cookies and any technology that
-                  serves a similar purpose as a cookie in the context of
-                  tracking, identifying, or building consumer profiles are
-                  included in our use of the term “cookie” for the purpose of
-                  this Privacy Policy. We, our service providers, or third-party
-                  advertising companies may use “first-party cookies” or
-                  “third-party cookies” as described below.
-                </p>
-              </div>
+                <div className="space-y-2 text-[#2b2a35] font-light mt-4">
+                  <p>
+                    We use cookies and other similar technologies (e.g. web
+                    beacons, pixels, or local storage) to deliver content
+                    specific to your interests, track your website activity,
+                    help our Sites remember you, enhance your online experience
+                    with us, and provide you with information you’re most likely
+                    to need. Cookies are small pieces of text used to store
+                    information on web browsers between visits. Cookies and any
+                    technology that serves a similar purpose as a cookie in the
+                    context of tracking, identifying, or building consumer
+                    profiles are included in our use of the term “cookie” for
+                    the purpose of this Privacy Policy. We, our service
+                    providers, or third-party advertising companies may use
+                    “first-party cookies” or “third-party cookies” as described
+                    below.
+                  </p>
+                </div>
 
-              <div className="mt-8 font-semibold text-xl">
-                <h1>First Party Cookies</h1>
-              </div>
+                <div className="mt-8 font-semibold text-xl">
+                  <h1>First Party Cookies</h1>
+                </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4 ">
-                <p>
-                  Many first-party cookies are necessary to facilitate essential
-                  website functions and enable you to navigate our Sites and use
-                  its features, such as remembering a consumer’s shopping cart
-                  or chat session across pages or multiple visits. Also,
-                  first-party cookies are used to improve the functionality of
-                  the Site (such as tracking errors) and may be used to improve
-                  the ability to market or advertise to our consumers strictly
-                  on our own Sites, such as building consumer interest profiles
-                  to improve the recommended products consumers see on our own
-                  Sites. By default, our Sites do not support an inherent
-                  mechanism to allow users to opt-out of these first-party
-                  cookies.
-                </p>
-              </div>
+                <div className="space-y-2 text-[#2b2a35] font-light mt-4 ">
+                  <p>
+                    Many first-party cookies are necessary to facilitate
+                    essential website functions and enable you to navigate our
+                    Sites and use its features, such as remembering a consumer’s
+                    shopping cart or chat session across pages or multiple
+                    visits. Also, first-party cookies are used to improve the
+                    functionality of the Site (such as tracking errors) and may
+                    be used to improve the ability to market or advertise to our
+                    consumers strictly on our own Sites, such as building
+                    consumer interest profiles to improve the recommended
+                    products consumers see on our own Sites. By default, our
+                    Sites do not support an inherent mechanism to allow users to
+                    opt-out of these first-party cookies.
+                  </p>
+                </div>
 
-              <div className="mt-8 font-semibold text-xl">
-                <h1>Third Party Cookies</h1>
-              </div>
+                <div className="mt-8 font-semibold text-xl">
+                  <h1>Third Party Cookies</h1>
+                </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
-                <p>
-                  Third-party cookies refer to any cookie that shares or enables
-                  the sharing of information to an entity other than our own
-                  Sites. For example, some cookies used with third-party
-                  analytics providers will use a first-party domain but still
-                  share the collected information with the third-party provider.
-                  Our users can opt-out of certain third-party cookies by making
-                  the appropriate selection on our cookie banner that appears
-                  upon first visiting our Sites, using a browser or plug-in that
-                  supports Global Privacy Control (GPC), by submitting an
-                  opt-out request (see our Privacy Policy for more info), or as
-                  otherwise described in this Privacy Policy. We allow
-                  California residents to opt-out of the following types of
-                  third-party cookies:
-                </p>
-              </div>
+                <div className="space-y-2 text-[#2b2a35] font-light mt-4">
+                  <p>
+                    Third-party cookies refer to any cookie that shares or
+                    enables the sharing of information to an entity other than
+                    our own Sites. For example, some cookies used with
+                    third-party analytics providers will use a first-party
+                    domain but still share the collected information with the
+                    third-party provider. Our users can opt-out of certain
+                    third-party cookies by making the appropriate selection on
+                    our cookie banner that appears upon first visiting our
+                    Sites, using a browser or plug-in that supports Global
+                    Privacy Control (GPC), by submitting an opt-out request (see
+                    our Privacy Policy for more info), or as otherwise described
+                    in this Privacy Policy. We allow California residents to
+                    opt-out of the following types of third-party cookies:
+                  </p>
+                </div>
 
-              <div className="md:mx-8 mx-6 mt-4">
-                <ul className="list-disc space-y-2 text-[#2ba35] font-light">
-                  <li>
-                    Cookies used to track consumers in order to serve ads to the
-                    consumer on other websites (e.g. retargeting ads that might
-                    appear on a search engine or social media that redirect you
-                    to our Sites).
-                  </li>
-                  <li>
-                    Cookies used to build consumer profiles to improve the
-                    overall ability to advertise to an individual or group of
-                    consumers across multiple Sites.
-                  </li>
-                  <li>
-                    Cookies used to track individual consumers to improve the
-                    ads they are served from a variety of advertisers (which may
-                    include the Dealership).
-                  </li>
-                  <li>
-                    Cookies used by our service providers or third-party
-                    advertising companies to perform an essential function
-                    solely on our own Sites. For example, they may use a cookie
-                    to remember a consumer’s chat session across pages or visits
-                    so that the customer service representative responding to
-                    the chat is aware of the previous questions asked by the
-                    specific consumer.
-                  </li>
-                  <li>
-                    Cookies used by our service providers to perform analytics
-                    solely for our own Sites.
-                  </li>
-                </ul>
-              </div>
+                <div className="md:mx-8 mx-6 mt-4">
+                  <ul className="list-disc space-y-2 text-[#2ba35] font-light">
+                    <li>
+                      Cookies used to track consumers in order to serve ads to
+                      the consumer on other websites (e.g. retargeting ads that
+                      might appear on a search engine or social media that
+                      redirect you to our Sites).
+                    </li>
+                    <li>
+                      Cookies used to build consumer profiles to improve the
+                      overall ability to advertise to an individual or group of
+                      consumers across multiple Sites.
+                    </li>
+                    <li>
+                      Cookies used to track individual consumers to improve the
+                      ads they are served from a variety of advertisers (which
+                      may include the Dealership).
+                    </li>
+                    <li>
+                      Cookies used by our service providers or third-party
+                      advertising companies to perform an essential function
+                      solely on our own Sites. For example, they may use a
+                      cookie to remember a consumer’s chat session across pages
+                      or visits so that the customer service representative
+                      responding to the chat is aware of the previous questions
+                      asked by the specific consumer.
+                    </li>
+                    <li>
+                      Cookies used by our service providers to perform analytics
+                      solely for our own Sites.
+                    </li>
+                  </ul>
+                </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
-                <p>
-                  Some web browsers offer settings that allow you to choose
-                  whether cookies are set by the websites that you visit. These
-                  controls vary by browser, but may allow you to disable all
-                  cookies, disable cookies for individual websites, or notify
-                  you whenever a cookie is set. Please note that if you disable
-                  cookies, you may still use our website, but your ability to
-                  use some features or areas of the Site may be limited. Our
-                  Sites may use products, such as Google Analytics, to measure
-                  how you interact with our Sites and to improve your user
-                  experience. For more information on Google Analytics, its
-                  privacy practices, and opt-out mechanisms, please visit the
-                  Google Analytics Security and Privacy Principles page at{" "}
-                  <a
-                    href="https://support.google.com/analytics/answer/6004245?hl=en"
-                    className="underline text-blue-500"
-                  >
-                    https://support.google.com/analytics/answer/6004245?hl=en
-                  </a>
-                  . For Google’s privacy policy and instructions on opting-out
-                  of Google Analytics, please visit{" "}
-                  <a
-                    href="“https://tools.google.com/dlpage/gaoptout"
-                    className="underline text-blue-500"
-                  >
-                    https://tools.google.com/dlpage/gaoptout
-                  </a>{" "}
-                  The Network Advertising Initiative also offers a means to
-                  opt-out of a number of advertising cookies. To learn more,
-                  please visit www.networkadvertising.org. Note that opting-out
-                  does not mean you will no longer receive online advertising.
-                  It means that the company or companies from which you
-                  opted-out will no longer deliver ads tailored to your
-                  preferences and usage patterns.
-                </p>
+                <div className="space-y-2 text-[#2b2a35] font-light mt-4">
+                  <p>
+                    Some web browsers offer settings that allow you to choose
+                    whether cookies are set by the websites that you visit.
+                    These controls vary by browser, but may allow you to disable
+                    all cookies, disable cookies for individual websites, or
+                    notify you whenever a cookie is set. Please note that if you
+                    disable cookies, you may still use our website, but your
+                    ability to use some features or areas of the Site may be
+                    limited. Our Sites may use products, such as Google
+                    Analytics, to measure how you interact with our Sites and to
+                    improve your user experience. For more information on Google
+                    Analytics, its privacy practices, and opt-out mechanisms,
+                    please visit the Google Analytics Security and Privacy
+                    Principles page at{" "}
+                    <a
+                      href="https://support.google.com/analytics/answer/6004245?hl=en"
+                      className="underline text-blue-500"
+                    >
+                      https://support.google.com/analytics/answer/6004245?hl=en
+                    </a>
+                    . For Google’s privacy policy and instructions on opting-out
+                    of Google Analytics, please visit{" "}
+                    <a
+                      href="“https://tools.google.com/dlpage/gaoptout"
+                      className="underline text-blue-500"
+                    >
+                      https://tools.google.com/dlpage/gaoptout
+                    </a>{" "}
+                    The Network Advertising Initiative also offers a means to
+                    opt-out of a number of advertising cookies. To learn more,
+                    please visit www.networkadvertising.org. Note that
+                    opting-out does not mean you will no longer receive online
+                    advertising. It means that the company or companies from
+                    which you opted-out will no longer deliver ads tailored to
+                    your preferences and usage patterns.
+                  </p>
 
-                <p>
-                  Note that this site’s cookie banner and privacy settings will
-                  only opt you out of the future tracking and sharing by cookies
-                  that are deployed by our Sites. In order to manage the
-                  information sharing and advertising cookies not deployed by
-                  our Sites (e.g., other third-party companies’ cookies that are
-                  already tracking you), you may want to consider using one of
-                  the consumer choice tools created under self-regulation
-                  programs, such as the US-based{" "}
-                  <a
-                    href="https://optout.aboutads.info/?c=2&lang=EN"
-                    className="text-blue-500 underline"
-                  >
-                    https://optout.aboutads.info/?c=2&lang=EN
-                  </a>{" "}
-                  choices page.
-                </p>
+                  <p>
+                    Note that this site’s cookie banner and privacy settings
+                    will only opt you out of the future tracking and sharing by
+                    cookies that are deployed by our Sites. In order to manage
+                    the information sharing and advertising cookies not deployed
+                    by our Sites (e.g., other third-party companies’ cookies
+                    that are already tracking you), you may want to consider
+                    using one of the consumer choice tools created under
+                    self-regulation programs, such as the US-based{" "}
+                    <a
+                      href="https://optout.aboutads.info/?c=2&lang=EN"
+                      className="text-blue-500 underline"
+                    >
+                      https://optout.aboutads.info/?c=2&lang=EN
+                    </a>{" "}
+                    choices page.
+                  </p>
+                </div>
               </div>
 
               <div className="mt-8 font-semibold text-xl">
@@ -632,34 +619,64 @@ const Consumer_Privacy = () => {
                 </p>
               </div>
 
-              <div className="mt-8 font-semibold text-xl">
-                <h1>California Privacy Policy</h1>
-              </div>
+              <div id="california_resident_policy" className="pt-8">
+                <div className="mt-8 font-bold text-4xl pt-8">
+                  <h1>CA residents Policy</h1>
+                </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-4">
-                <p>
-                  The purpose of this California Privacy Policy is to provide
-                  consumers with a comprehensive description of our LM Club’s
-                  online and offline practices regarding the collecting, use,
-                  disclosure, and sale of personal information and of the rights
-                  of consumers regarding their personal information under the
-                  CCPA.
-                </p>
+                <div className="space-y-2 text-[#2b2a35] font-light mt-4 ">
+                  <p>
+                    The purpose of this California Privacy Policy is to provide
+                    consumers with a comprehensive description of our LM Club’s
+                    online and offline practices regarding the collecting, use,
+                    disclosure, and sale of personal information and of the
+                    rights of consumers regarding their personal information
+                    under the CCPA.
+                  </p>
+                  <p>
+                    The tables below describe how we collect, use, and disclose
+                    California consumers’ personal information based on
+                    definitions laid out in the CCPA. Please note that because
+                    the categories of personal information collected and shared
+                    largely depends on how a consumer has interacted with our
+                    dealership, not all of the items listed in the tables below
+                    will be relevant to you. For example, we generally only
+                    collect veteran status when a consumer qualifies for a
+                    military rebate. Similarly, certain pieces of information,
+                    such as health and medical information, are only collected
+                    in the course of administering employment benefits and
+                    claims, but are not collected from customers.
+                  </p>
+                </div>
+                <div className="mt-8 font-semibold text-xl">
+                  <h1>California Privacy Policy</h1>
+                </div>
 
-                <p>
-                  The tables below describe how we collect, use, and disclose
-                  California consumers’ personal information based on
-                  definitions laid out in the CCPA. Please note that because the
-                  categories of personal information collected and shared
-                  largely depends on how a consumer has interacted with our
-                  dealership, not all of the items listed in the tables below
-                  will be relevant to you. For example, we generally only
-                  collect veteran status when a consumer qualifies for a
-                  military rebate. Similarly, certain pieces of information,
-                  such as health and medical information, are only collected in
-                  the course of administering employment benefits and claims,
-                  but are not collected from customers.
-                </p>
+                <div className="space-y-2 text-[#2b2a35] font-light mt-4">
+                  <p>
+                    The purpose of this California Privacy Policy is to provide
+                    consumers with a comprehensive description of our LM Club’s
+                    online and offline practices regarding the collecting, use,
+                    disclosure, and sale of personal information and of the
+                    rights of consumers regarding their personal information
+                    under the CCPA.
+                  </p>
+
+                  <p>
+                    The tables below describe how we collect, use, and disclose
+                    California consumers’ personal information based on
+                    definitions laid out in the CCPA. Please note that because
+                    the categories of personal information collected and shared
+                    largely depends on how a consumer has interacted with our
+                    dealership, not all of the items listed in the tables below
+                    will be relevant to you. For example, we generally only
+                    collect veteran status when a consumer qualifies for a
+                    military rebate. Similarly, certain pieces of information,
+                    such as health and medical information, are only collected
+                    in the course of administering employment benefits and
+                    claims, but are not collected from customers.
+                  </p>
+                </div>
               </div>
 
               <div className=" mt-8 flex justify-center items-center">
