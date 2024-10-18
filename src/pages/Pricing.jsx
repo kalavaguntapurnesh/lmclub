@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 import Accordion from "../components/Accordion";
+import Testimonial from "./../components/Testimonial";
 
 const Pricing = () => {
   const location = useLocation();
@@ -236,6 +237,8 @@ const Pricing = () => {
           </div>
         </div>
       </div>
+
+      <Testimonial />
 
       <Footer />
     </div>

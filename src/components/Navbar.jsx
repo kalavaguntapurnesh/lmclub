@@ -27,9 +27,9 @@ import premium from "../assets/money.png";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null); 
+  const [openDropdown, setOpenDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openDropdownMobile, setOpenDropdownMobile] = useState(null); 
+  const [openDropdownMobile, setOpenDropdownMobile] = useState(null);
   const navigate = useNavigate();
 
   const handleScroll = () => {
