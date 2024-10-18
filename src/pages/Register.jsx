@@ -2,10 +2,27 @@ import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
 import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [verified, setVerified] = useState(false);
+
+  const handleCaptcha = (value) => {
+    console.log("Captcha value:", value);
+    setVerified(true); // This will be true once reCAPTCHA is successfully completed
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (verified) {
+      // Proceed with form submission
+      console.log("Form submitted!");
+    } else {
+      alert("Please complete the CAPTCHA!");
+    }
+  };
 
   return (
     <div>
@@ -85,6 +102,12 @@ const Register = () => {
                             </span> */}
                             </div>
                           </div>
+                          <div className="w-[100%] flex justify-center items-center">
+                            <ReCAPTCHA
+                              sitekey="6LchMmUqAAAAANKg1dNzYDXJnCMf-L6TjRsUVAfG"
+                              onChange={handleCaptcha}
+                            />
+                          </div>
                           <div className="flex items-center justify-between">
                             <div className="flex items-start">
                               <div className="flex items-center h-5">
@@ -114,7 +137,7 @@ const Register = () => {
                           </div>
                           <button
                             type="submit"
-                            className="w-full text-white bg-[#061421] text-base hover:bg-colorFour transition ease-in-out duration-1000 focus:outline-none font-semibold rounded-lg px-5 py-2.5 text-center cursor-pointer"
+                            className="w-full text-white bg-mainColor text-base transition ease-in-out duration-1000 focus:outline-none font-semibold rounded px-5 py-2.5 text-center cursor-pointer"
                           >
                             Create an account
                           </button>

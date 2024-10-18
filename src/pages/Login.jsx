@@ -2,10 +2,26 @@ import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
 import { useState } from "react";
-
+import ReCAPTCHA from "react-google-recaptcha";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [verified, setVerified] = useState(false);
+
+  const handleCaptcha = (value) => {
+    console.log("Captcha value:", value);
+    setVerified(true); // This will be true once reCAPTCHA is successfully completed
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (verified) {
+      // Proceed with form submission
+      console.log("Form submitted!");
+    } else {
+      alert("Please complete the CAPTCHA!");
+    }
+  };
 
   return (
     <div>
@@ -71,6 +87,12 @@ const Login = () => {
                               ></Icon>
                             </span> */}
                           </div>
+                        </div>
+                        <div className="w-[100%] flex justify-center items-center">
+                          <ReCAPTCHA
+                            sitekey="6LchMmUqAAAAANKg1dNzYDXJnCMf-L6TjRsUVAfG"
+                            onChange={handleCaptcha}
+                          />
                         </div>
                         <div className="flex items-center justify-between">
                           <div className="flex items-start">
