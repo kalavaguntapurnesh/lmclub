@@ -10,6 +10,7 @@ import Enroll_Rewards from "./pages/Enroll_Rewards";
 import Rewards from "./pages/Rewards";
 import PageNotFound from "./pages/PageNotFound";
 import Products from "./pages/Products";
+import Pricing from "./pages/Pricing";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/rewards" element={<Rewards />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
         <Route path="/products" element={<Products />}></Route>
+        <Route path="/pricing" element={<Pricing />}></Route>
       </Routes>
     </BrowserRouter>
   );
