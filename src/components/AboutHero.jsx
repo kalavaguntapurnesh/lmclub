@@ -167,11 +167,11 @@ const AboutHero = () => {
                     </p>
                   </div>
 
-                  <div className="pt-6 flex md:justify-start justify-center">
+                  <div className="pt-6 pb-4 flex md:justify-start justify-center">
                     <a
                       href="/learn-about-us"
                       className="bg-mainColor font-medium outline-none
-                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-3 text-center"
+                      rounded-full hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-3 text-center"
                     >
                       Learn More
                     </a>
@@ -229,7 +229,7 @@ const AboutHero = () => {
                         <div className="flex justify-center">
                           <a
                             href="/contact-us"
-                            class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
+                            class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full"
                           >
                             View Features
                           </a>
@@ -265,7 +265,7 @@ const AboutHero = () => {
                         <div className="flex justify-center">
                           <a
                             href="/contact-us"
-                            class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
+                            class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full"
                           >
                             View Features
                           </a>
@@ -301,7 +301,7 @@ const AboutHero = () => {
                         <div className="flex justify-center">
                           <a
                             href="/contact-us"
-                            class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
+                            class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full"
                           >
                             View Features
                           </a>

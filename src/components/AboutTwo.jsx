@@ -50,7 +50,7 @@ const AboutTwo = () => {
                     <a
                       href="https://www.linkedin.com/in/rickardo-anderson-a8964a220/"
                       className="bg-mainColor outline-none
-                      rounded hover:shadow-form font-medium flex items-center transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-3 text-center"
+                      rounded-full hover:shadow-form font-medium flex items-center transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-3 text-center"
                     >
                       <FaLinkedinIn size={16} />
                       <span className="ml-1">LinkedIn Profile</span>

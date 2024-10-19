@@ -6,6 +6,8 @@ export default {
       container: {},
       colors: {
         mainColor: "rgb(22 163 74)",
+        headingColor: "#19191B",
+        sideHeading: "#474749",
       },
     },
   },

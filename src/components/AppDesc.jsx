@@ -13,12 +13,12 @@ const AppDesc = () => {
               </h1>
             </div>
             <div className="mx-auto max-w-[1200px] text-center mt-4">
-              <h1 className="text-4xl font-semibold text-[#3d454d]">
+              <h1 className="text-4xl font-semibold text-headingColor">
                 Best Products available at LM Club
               </h1>
             </div>
 
-            <div className="mx-auto max-w-[1200px] text-center mt-4">
+            <div className="mx-auto max-w-[1200px] text-sideHeading text-center mt-4">
               <p>
                 At Laoe Maom, we are dedicated to fostering a vibrant culture
                 that propels our members and businesses to connect, collaborate,

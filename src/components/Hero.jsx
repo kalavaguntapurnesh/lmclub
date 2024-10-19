@@ -13,7 +13,7 @@ const Hero = () => {
                   </h1>
                 </div>
                 <div className=" flex items-center lg:justify-start justify-center ">
-                  <h1 className="xl:text-6xl text-[48px] font-bold  xl:leading-[72px] lg:leading-[60px] lg:text-start text-center text-[#3d454d]">
+                  <h1 className="xl:text-6xl text-[48px] font-bold  xl:leading-[72px] lg:leading-[60px] lg:text-start text-center text-headingColor">
                     Moving, improving, and everything
                     <span className="text-colorFour"> in between.</span>
                   </h1>
@@ -26,7 +26,7 @@ const Hero = () => {
                 </div>
 
                 <div className="flex items-center lg:justify-start justify-center ">
-                  <p className="lg:text-lg text-[16px] text-gray-600  lg:text-start text-center">
+                  <p className="lg:text-lg text-[16px] text-sideHeading  lg:text-start text-center">
                     LM Club connects you with home service providers to help
                     simplify the process of moving, improving, repairing and
                     everything in between around your home.
@@ -37,7 +37,7 @@ const Hero = () => {
                   <a
                     href="/products"
                     className="bg-mainColor font-medium outline-none
-                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                      rounded-full hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
                   >
                     What we offer
                   </a>
@@ -47,7 +47,7 @@ const Hero = () => {
                   <a
                     href="/products"
                     className="bg-mainColor hover:bg-white hover:text-mainColor hover:border-[1px] hover:border-mainColor font-medium outline-none md:hidden block
-                      rounded hover:shadow-form transition duration-1000 ease-in-out text-base text-white px-8 py-2.5 text-center"
+                      rounded-full hover:shadow-form transition duration-1000 ease-in-out text-base text-white px-8 py-2.5 text-center"
                   >
                     What we offer
                   </a>

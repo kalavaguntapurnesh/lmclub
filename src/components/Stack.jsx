@@ -24,12 +24,12 @@ const Stack = () => {
             </div>
 
             <div className="mx-auto max-w-[1000px] text-center mt-4">
-              <h1 className="text-4xl font-semibold text-[#3d454d]">
+              <h1 className="text-4xl font-semibold text-headingColor">
                 Connect everything through notifications.
               </h1>
             </div>
 
-            <div className="mx-auto max-w-[1000px] text-center mt-4">
+            <div className="mx-auto max-w-[1000px] text-sideHeading text-center mt-4">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
                 sed quaerat culpa nihil! Molestias reiciendis culpa,
@@ -165,14 +165,14 @@ const Stack = () => {
                 <a
                   href="/rewards"
                   className="bg-mainColor outline-none
-                      rounded hover:shadow-form transition font-medium duration-1000 ease-in-out md:text-base text-sm text-white px-8 py-3 text-center"
+                      rounded-full hover:shadow-form transition font-medium duration-1000 ease-in-out md:text-base text-sm text-white px-8 py-3 text-center"
                 >
                   Free Trial
                 </a>
                 <a
                   href="/login"
                   className="outline-none 
-                      rounded border-[1px] border-mainColor transition duration-1000 ease-in-out md:text-base text-sm text-mainColor px-8 py-3 text-center ml-2"
+                      rounded-full border-[1px] border-mainColor transition duration-1000 ease-in-out md:text-base text-sm text-mainColor px-8 py-3 text-center ml-2"
                 >
                   Learn More
                 </a>
