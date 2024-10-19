@@ -47,34 +47,34 @@ const Contact = () => {
                     <div className="flex flex-row mt-6 mb-8">
                       <a href="" className="w-[50%] ">
                         <div className="flex flex-col space-y-2 items-center">
-                          <p className="text-start md:text-2xl text-xl font-semibold text-black">
+                          <p className="text-start text-xl font-bold text-black">
                             <span className="text-mainColor">Head</span>{" "}
                             Quarters:
                           </p>
-                          <p className="md:text-xl text-[#6B7280]">
+                          <p className="text-lg text-[#6B7280]">
                             7778 McGinnis Ferry Rd
                           </p>
-                          <p className="md:text-xl text-[#6B7280]">
+                          <p className="text-lg text-[#6B7280]">
                             PMB 162, Suwanee,
                           </p>
-                          <p className="md:text-xl text-[#6B7280]">
+                          <p className="text-lg text-[#6B7280]">
                             Georgia 30024, US
                           </p>
                         </div>
                       </a>
                       <a href="" className="w-[50%] ">
                         <div className="flex flex-col space-y-2 items-center">
-                          <p className="text-start md:text-2xl text-xl font-semibold text-black">
+                          <p className="text-start text-xl font-semibold text-black">
                             <span className="text-mainColor">Branch</span>{" "}
                             Offices:
                           </p>
-                          <p className="md:text-xl text-[#6B7280]">
+                          <p className="text-lg text-[#6B7280]">
                             7778 McGinnis Ferry Rd
                           </p>
-                          <p className="md:text-xl text-[#6B7280]">
+                          <p className="text-lg text-[#6B7280]">
                             PMB 162, Suwanee,
                           </p>
-                          <p className="md:text-xl text-[#6B7280]">
+                          <p className="text-lg text-[#6B7280]">
                             Georgia 30024, US
                           </p>
                         </div>
