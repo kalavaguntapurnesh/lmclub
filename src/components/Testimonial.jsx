@@ -71,12 +71,12 @@ const Testimonial = () => {
               </h1>
             </div>
             <div className="mx-auto max-w-[1200px] text-center mt-4">
-              <h1 className="text-4xl font-semibold text-[#3d454d]">
+              <h1 className="text-4xl font-semibold text-headingColor">
                 Real stories, real results
               </h1>
             </div>
 
-            <div className="mx-auto max-w-[1200px] text-center mt-4">
+            <div className="mx-auto max-w-[1200px] text-sideHeading text-center mt-4">
               <p>
                 Laoe Maom embodies progress and adaptability, responding
                 dynamically to the evolving relationships and interests in our

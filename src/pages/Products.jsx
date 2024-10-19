@@ -12,58 +12,47 @@ const Products = () => {
       {" "}
       <Navbar />
       <ScrollToTop />
-      <div className="mt-28">
+      <div className="mt-28 md:mt-36">
         <div className="relative">
           <div className="w-full">
             <div className="w-full px-4 mx-auto max-w-[1400px] pb-8">
-              <div className="max-w-[1400px] m-auto grid lg:grid-cols-2 lg:mx-4 gap-6">
-                <div className="flex flex-col gap-4 w-full space-y-2">
-                  <div className="flex items-center lg:justify-start justify-center ">
-                    <div className="h-4 w-1 bg-mainColor"></div>
-                    <h1 className="ml-2 text-lg font-bold text-mainColor uppercase">
-                      The best Widget for you
-                    </h1>
-                  </div>
-                  <div className=" flex items-center lg:justify-start justify-center ">
-                    <h1 className="xl:text-5xl text-4xl font-bold text-[#3d454d] lg:text-start text-center">
-                      Pathway to a global connectivity products.
-                    </h1>
-                  </div>
-
-                  <div className="flex items-center lg:justify-start justify-center ">
-                    <p className="lg:text-lg text-[16px] text-gray-600  lg:text-start text-center">
-                      Welcome to Laoe Maom – The Global Membership Club Where
-                      Businesses and Members Connect. Experience Powerful
-                      Networking and Exceptional Rewards!
-                    </p>
-                  </div>
-
-                  <div className="flex items-center lg:justify-start justify-center">
-                    <a
-                      href="/rewards"
-                      className="bg-mainColor outline-none
-                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
-                    >
-                      Get for Free
-                    </a>
-                    <a
-                      href="/login"
-                      className="outline-none 
-                      rounded flex items-center hover:border-[1px] hover:border-mainColor transition duration-1000 ease-in-out md:text-base text-sm text-mainColor px-8 md:py-3 py-2 text-center ml-2"
-                    >
-                      <span className="mr-1">Learn More</span>
-                      <FaArrowRight size={20} />
-                    </a>
-                  </div>
+              <div className="flex flex-col gap-4 w-full space-y-2 justify-center text-center">
+                <div className="flex items-center justify-center max-w-[1000px] mx-auto">
+                  <div className="h-4 w-1 bg-mainColor"></div>
+                  <h1 className="ml-2 text-lg font-bold text-mainColor uppercase">
+                    The best Widget for you
+                  </h1>
+                </div>
+                <div className="flex items-center justify-center max-w-[1000px] mx-auto">
+                  <h1 className="lg:text-6xl text-4xl font-bold text-headingColor text-center">
+                    Pathway to a global connectivity products.
+                  </h1>
                 </div>
 
-                <div className="flex justify-center lg:justify-center items-start ">
-                  <img
-                    src="https://lmclub.club/wp-content/uploads/elementor/thumbs/Picture3-e1725876734355-qtulrs9nmbuowyoblvsof0hhew4tb67qo0bx2rt3gw.png"
-                    alt=""
-                    height="400"
-                    className="rounded md:w-[50%] w-[60%]"
-                  />
+                <div className="flex items-center justify-center max-w-[1000px] mx-auto">
+                  <p className="lg:text-lg text-[16px] text-sideHeading text-center">
+                    Welcome to Laoe Maom – The Global Membership Club Where
+                    Businesses and Members Connect. Experience Powerful
+                    Networking and Exceptional Rewards!
+                  </p>
+                </div>
+
+                <div className="flex items-center justify-center max-w-[1000px] mx-auto">
+                  <a
+                    href="/rewards"
+                    className="bg-mainColor outline-none
+                      rounded-full hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                  >
+                    Get for Free
+                  </a>
+                  <a
+                    href="/login"
+                    className="outline-none 
+                      rounded-full flex items-center hover:border-[1px] hover:border-mainColor transition duration-1000 ease-in-out md:text-base text-sm text-mainColor px-8 md:py-3 py-2 text-center ml-2"
+                  >
+                    <span className="mr-1">Learn More</span>
+                    <FaArrowRight size={20} />
+                  </a>
                 </div>
               </div>
 

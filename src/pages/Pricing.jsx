@@ -98,12 +98,12 @@ const Pricing = () => {
           <div className="w-full">
             <div className="w-full px-4 mx-auto max-w-[1400px] pb-8">
               <div className="space-y-2">
-                <div className="md:text-4xl text-3xl font-bold text-black text-center">
+                <div className="md:text-4xl text-3xl font-bold text-headingColor text-center">
                   <h1>Find your perfect plan</h1>
                 </div>
 
                 <div className="text-center">
-                  <p className="text-gray-800">
+                  <p className="text-sideHeading">
                     No matter which level you choose, you’re instantly connected
                     to a powerful network group and the rewards are AMAZING!
                   </p>
@@ -197,7 +197,7 @@ const Pricing = () => {
                         </ul>
                         <a
                           href="/login"
-                          class="text-white bg-mainColor font-medium rounded text-sm px-5 py-2.5 text-center "
+                          class="text-white bg-mainColor font-medium rounded-full text-sm px-5 py-2.5 text-center "
                         >
                           Get started
                         </a>
@@ -209,7 +209,7 @@ const Pricing = () => {
 
               <div className="pt-12 pb-12">
                 <div className="space-y-2">
-                  <div className="md:text-4xl text-3xl font-bold text-black text-center">
+                  <div className="md:text-4xl text-3xl font-bold text-headingColor text-center">
                     <h1>Frequently Asked Questions</h1>
                   </div>
                 </div>

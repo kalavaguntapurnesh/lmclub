@@ -21,12 +21,12 @@ const Contact = () => {
         <div className="max-w-[1400px] mx-auto">
           <div className="mt-28 pb-16">
             <div className="space-y-2">
-              <div className="md:text-4xl text-3xl font-bold text-black text-center">
+              <div className="md:text-4xl text-3xl font-bold text-headingColor text-center">
                 <h1>Let's Start a Conservation</h1>
               </div>
 
               <div className="text-center">
-                <p className="text-gray-800">
+                <p className="text-sideHeading">
                   We’re here to help and answer any questions you might have. We
                   look forward to hearing from you!
                 </p>
@@ -51,13 +51,13 @@ const Contact = () => {
                             <span className="text-mainColor">Head</span>{" "}
                             Quarters:
                           </p>
-                          <p className="text-lg text-[#6B7280]">
+                          <p className="text-lg text-sideHeading">
                             7778 McGinnis Ferry Rd
                           </p>
-                          <p className="text-lg text-[#6B7280]">
+                          <p className="text-lg text-sideHeading">
                             PMB 162, Suwanee,
                           </p>
-                          <p className="text-lg text-[#6B7280]">
+                          <p className="text-lg text-sideHeading">
                             Georgia 30024, US
                           </p>
                         </div>
@@ -68,13 +68,13 @@ const Contact = () => {
                             <span className="text-mainColor">Branch</span>{" "}
                             Offices:
                           </p>
-                          <p className="text-lg text-[#6B7280]">
+                          <p className="text-lg text-sideHeading">
                             7778 McGinnis Ferry Rd
                           </p>
-                          <p className="text-lg text-[#6B7280]">
+                          <p className="text-lg text-sideHeading">
                             PMB 162, Suwanee,
                           </p>
-                          <p className="text-lg text-[#6B7280]">
+                          <p className="text-lg text-sideHeading">
                             Georgia 30024, US
                           </p>
                         </div>
@@ -159,7 +159,7 @@ const Contact = () => {
 
                   <div className="flex items-center justify-center pt-2 md:mx-0 mx-8">
                     <div className="mb-5 md:w-10/12 w-full">
-                      <button className="hover:shadow-form rounded bg-mainColor transition duration-1000 md:py-2 py-2.5 ease-in-out w-full text-base font-medium text-white outline-none">
+                      <button className="hover:shadow-form rounded-full bg-mainColor transition duration-1000 md:py-2 py-2.5 ease-in-out w-full text-base font-medium text-white outline-none">
                         Submit
                       </button>
                     </div>
@@ -181,19 +181,19 @@ const Contact = () => {
                       </div>
                     </div>
                     <div class="flex justify-center items-center">
-                      <h1 class="text-2xl text-colorTwo font-bold text-center">
+                      <h1 class="text-2xl text-headingColor font-bold text-center">
                         Chat to Support
                       </h1>
                     </div>
 
-                    <div class="flex justify-center items-center text-gray-600 text-center font-medium">
+                    <div class="flex justify-center items-center text-sideHeading text-center font-medium">
                       <p>Speak to our friendly team.</p>
                     </div>
 
                     <div className="flex justify-center">
                       <a
                         href="/contact-us"
-                        class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
+                        class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold py-2 px-4 rounded-full"
                       >
                         Continue Chat
                       </a>
@@ -214,19 +214,19 @@ const Contact = () => {
                       </div>
                     </div>
                     <div class="flex justify-center items-center">
-                      <h1 class="text-2xl text-colorTwo font-bold text-center">
+                      <h1 class="text-2xl text-headingColor font-bold text-center">
                         Call us Now
                       </h1>
                     </div>
 
-                    <div class="flex justify-center items-center text-gray-600 text-center font-medium">
+                    <div class="flex justify-center items-center text-sideHeading text-center font-medium">
                       <p>Phone: (+1) 678-200-4524</p>
                     </div>
 
                     <div className="flex justify-center">
                       <a
                         href="/contact-us"
-                        class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
+                        class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full"
                       >
                         Make a Call Now
                       </a>
@@ -247,19 +247,19 @@ const Contact = () => {
                       </div>
                     </div>
                     <div class="flex justify-center items-center">
-                      <h1 class="text-2xl text-colorTwo font-bold text-center">
+                      <h1 class="text-2xl text-headingColor font-bold text-center">
                         Visit us Directly
                       </h1>
                     </div>
 
-                    <div class="flex justify-center items-center text-gray-600 text-center font-medium">
+                    <div class="flex justify-center items-center text-sideHeading text-center font-medium">
                       <p>Visit our office HQ</p>
                     </div>
 
                     <div className="flex justify-center">
                       <a
                         href="https://www.bing.com/maps?where=7778%20McGinnis%20Ferry%20Rd%2C%20PMB%20162%2C%20Suwanee%2C%20Georgia%2030024%2C%20US"
-                        class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded"
+                        class="border-[1px] border-mainColor text-mainColor transition duration-1000 font-semibold text-colorFour py-2 px-4 rounded-full"
                       >
                         Get Directions
                       </a>
