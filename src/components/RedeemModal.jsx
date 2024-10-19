@@ -18,7 +18,7 @@ const RedeemModal = ({ showModal, onClose }) => {
         <h2 className="text-2xl font-semibold text-center mb-4">
           <span className="text-mainColor">Claim</span> Your Reward Now
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="md:space-y-4 space-y-3">
           <div>
             <label htmlFor="name" className="block mb-2 text-sm font-semibold ">
               Full Name
@@ -63,14 +63,14 @@ const RedeemModal = ({ showModal, onClose }) => {
           <div className="flex justify-between items-center">
             <button
               type="button"
-              className="bg-gray-500 text-white px-6 py-2 rounded"
+              className="bg-gray-500 text-white px-6 py-2 font-medium rounded-full"
               onClick={onClose}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="bg-mainColor text-white px-6 py-2 rounded"
+              className="bg-mainColor text-white px-6 py-2 font-medium rounded-full"
             >
               Submit
             </button>

@@ -192,7 +192,7 @@ const AppDesc = () => {
                             <a
                               href="/login"
                               className="bg-mainColor outline-none
-                              rounded over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                              rounded-full font-medium over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
                             >
                               What we offer
                             </a>
@@ -232,7 +232,7 @@ const AppDesc = () => {
                             <a
                               href="/login"
                               className="bg-mainColor outline-none
-                      rounded over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                      rounded-full font-medium over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
                             >
                               Learn More
                             </a>
@@ -269,7 +269,7 @@ const AppDesc = () => {
                             <a
                               href="/login"
                               className="bg-mainColor outline-none
-                      rounded over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                      rounded-full font-medium over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
                             >
                               Our Vision
                             </a>
@@ -310,7 +310,7 @@ const AppDesc = () => {
                             <a
                               href="/login"
                               className="bg-mainColor outline-none
-                      rounded over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                      rounded-full font-medium over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
                             >
                               Contact us
                             </a>
@@ -334,7 +334,7 @@ const AppDesc = () => {
                 <Tabs>
                   <Tab
                     label="Creating Exciting Rewards"
-                    className="text-sm px-1"
+                    className="text-xs px-1"
                   >
                     <div className="py-4 ">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
@@ -357,7 +357,7 @@ const AppDesc = () => {
                             <a
                               href="/login"
                               className="bg-mainColor outline-none
-                              rounded over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                              rounded-full over:shadow-form transition font-medium duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
                             >
                               What we offer
                             </a>
@@ -376,7 +376,7 @@ const AppDesc = () => {
                   </Tab>
                   <Tab
                     label="Experience Powerful Networking"
-                    className="text-sm px-1"
+                    className="text-xs px-1"
                   >
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
@@ -397,7 +397,7 @@ const AppDesc = () => {
                             <a
                               href="/login"
                               className="bg-mainColor outline-none
-                      rounded over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                              rounded-full over:shadow-form transition font-medium duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
                             >
                               Learn More
                             </a>
@@ -414,7 +414,7 @@ const AppDesc = () => {
                       </div>
                     </div>
                   </Tab>
-                  <Tab label="Global Membership Club" className="text-sm px-1">
+                  <Tab label="Global Membership Club" className="text-xs px-1">
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col px-2">
@@ -434,7 +434,7 @@ const AppDesc = () => {
                             <a
                               href="/login"
                               className="bg-mainColor outline-none
-                      rounded over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                              rounded-full over:shadow-form transition font-medium duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
                             >
                               Our Vision
                             </a>
