@@ -137,7 +137,7 @@ const Register = () => {
                           </div>
                           <button
                             type="submit"
-                            className="w-full text-white bg-mainColor text-base transition ease-in-out duration-1000 focus:outline-none font-semibold rounded px-5 py-2.5 text-center cursor-pointer"
+                            className="w-full text-white bg-mainColor text-base transition ease-in-out duration-1000 focus:outline-none font-medium rounded px-5 py-2.5 text-center cursor-pointer"
                           >
                             Create an account
                           </button>

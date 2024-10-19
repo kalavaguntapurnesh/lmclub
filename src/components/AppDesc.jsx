@@ -163,14 +163,14 @@ const AppDesc = () => {
                 </h1>
               </div>
               <div className="mx-auto max-w-[1200px] text-center mt-4">
-                <h1 className="text-4xl font-semibold text-[#3d454d]">
+                <h1 className="text-4xl font-semibold text-headingColor">
                   The organic platform for better rewards
                 </h1>
               </div>
 
               <div className="lg:block hidden">
                 <Tabs>
-                  <Tab label="Creating Exciting Rewards" className="text-sm">
+                  <Tab label="Creating Exciting Rewards" className="text-sm text-sideHeading">
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col pl-8">
@@ -211,7 +211,7 @@ const AppDesc = () => {
                   </Tab>
                   <Tab
                     label="Experience Powerful Networking"
-                    className="text-sm"
+                className="text-sm text-sideHeading"
                   >
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
@@ -249,7 +249,7 @@ const AppDesc = () => {
                       </div>
                     </div>
                   </Tab>
-                  <Tab label="Global Membership Club" className="text-sm">
+                  <Tab label="Global Membership Club" className="text-sm text-sideHeading">
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col pl-8">
@@ -287,7 +287,7 @@ const AppDesc = () => {
                     </div>
                   </Tab>
 
-                  <Tab label="Building Global Community" className="text-sm">
+                  <Tab label="Building Global Community" className="text-sm text-sideHeading">
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col pl-8">
@@ -334,7 +334,7 @@ const AppDesc = () => {
                 <Tabs>
                   <Tab
                     label="Creating Exciting Rewards"
-                    className="text-xs px-1"
+                    className="text-xs px-1 text-sideHeading"
                   >
                     <div className="py-4 ">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
@@ -376,7 +376,7 @@ const AppDesc = () => {
                   </Tab>
                   <Tab
                     label="Experience Powerful Networking"
-                    className="text-xs px-1"
+                    className="text-xs px-1 text-sideHeading"
                   >
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
@@ -414,7 +414,7 @@ const AppDesc = () => {
                       </div>
                     </div>
                   </Tab>
-                  <Tab label="Global Membership Club" className="text-xs px-1">
+                  <Tab label="Cultivate Thriving Culture" className="text-xs px-1 text-sideHeading">
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col px-2">
@@ -468,12 +468,12 @@ const AppDesc = () => {
                 </h1>
               </div>
               <div className="mx-auto max-w-[1200px] text-center mt-4">
-                <h1 className="text-4xl font-semibold text-[#3d454d]">
+                <h1 className="text-4xl font-semibold text-headingColor">
                   Empowering Connections, Cultivating Success
                 </h1>
               </div>
 
-              <div className="mx-auto max-w-[1200px] text-center mt-4">
+              <div className="mx-auto max-w-[1200px] text-center mt-4 text-sideHeading">
                 <p>
                   At Laoe Maom, we are dedicated to fostering a vibrant culture
                   that propels our members and businesses to connect,
