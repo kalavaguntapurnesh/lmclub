@@ -1,4 +1,4 @@
-import React from "react";
+import Logo from "../assets/LM_Logo.jpeg";
 
 const RedeemModal = ({ showModal, onClose }) => {
   if (!showModal) return null;
@@ -11,15 +11,16 @@ const RedeemModal = ({ showModal, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
       <div className="bg-white rounded-lg p-8 max-w-md mx-auto w-full">
+        <a href="/" className="flex justify-center items-center mb-4">
+          <img src={Logo} alt="" className="w-12 h-12" />
+        </a>
+
         <h2 className="text-2xl font-semibold text-center mb-4">
           <span className="text-mainColor">Claim</span> Your Reward Now
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label
-              htmlFor="name"
-              className="block mb-2 text-sm font-semibold "
-            >
+            <label htmlFor="name" className="block mb-2 text-sm font-semibold ">
               Full Name
             </label>
             <input

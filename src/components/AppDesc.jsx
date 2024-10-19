@@ -30,7 +30,7 @@ const AppDesc = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 pt-8 md:px-2 lg:px-1 px-4">
               <a
-                href="mailto:info@laoemaom.com"
+                href="/products"
                 class="flex md:justify-start justify-center hover:shadow-xl duration-1000 ease-in-out transition-all"
               >
                 <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
@@ -71,7 +71,7 @@ const AppDesc = () => {
               </a>
 
               <a
-                href="mailto:info@laoemaom.com"
+                href="/products"
                 class="flex md:justify-start justify-center hover:shadow-xl duration-1000 ease-in-out transition-all"
               >
                 <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
@@ -110,7 +110,7 @@ const AppDesc = () => {
                 </div>
               </a>
               <a
-                href="/enroll-rewards"
+                href="/products"
                 class="flex md:justify-start justify-center hover:shadow-xl duration-1000 ease-in-out transition-all"
               >
                 <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
