@@ -98,7 +98,7 @@ const Rewards = () => {
                       <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                         <div class="space-y-4">
                           <div class="flex justify-center items-center">
-                            <p className="text-xl text-gray-600 font-medium">
+                            <p className="text-xl text-sideHeading font-medium">
                               {service.enroll}
                             </p>
                           </div>
@@ -110,7 +110,7 @@ const Rewards = () => {
                             />
                           </div>
                           <div class="flex justify-center items-center">
-                            <h1 class="text-2xl text-black font-semibold">
+                            <h1 class="text-2xl text-headingColor font-semibold">
                               {service.heading}
                             </h1>
                           </div>
@@ -118,7 +118,7 @@ const Rewards = () => {
                           <div className="flex justify-center">
                             <button
                               onClick={handleRedeemClick}
-                              class="hover:border-[1px] hover:border-mainColor hover:text-mainColor hover:bg-white text-white bg-mainColor transition duration-500 text-colorFour py-2 px-8 rounded"
+                              class="hover:border-[1px] hover:border-mainColor hover:text-mainColor font-medium hover:bg-white text-white bg-mainColor transition duration-500 text-colorFour py-2 px-8 rounded-full"
                             >
                               Redeem Now
                             </button>
