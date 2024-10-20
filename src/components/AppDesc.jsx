@@ -1,4 +1,5 @@
 import { Tabs, Tab } from "../components/Tabs";
+import success from "../assets/success.svg";
 
 const AppDesc = () => {
   return (
@@ -170,7 +171,10 @@ const AppDesc = () => {
 
               <div className="lg:block hidden">
                 <Tabs>
-                  <Tab label="Creating Exciting Rewards" className="text-sm text-sideHeading">
+                  <Tab
+                    label="Creating Exciting Rewards"
+                    className="text-sm text-sideHeading"
+                  >
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col pl-8">
@@ -184,21 +188,36 @@ const AppDesc = () => {
                           </div>
                           <div className="mt-4 md:text-start text-center text-gray-700">
                             <p>
-                              Try and see the magic of the LM Club in action.
+                              Empower your rewards to deliver smarter care with
+                              a seamless, intuitive app build for efficiency.
                             </p>
                           </div>
 
-                          <div className="flex items-center lg:justify-start justify-center">
-                            <a
-                              href="/login"
-                              className="bg-mainColor outline-none
-                              rounded-full font-medium over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
-                            >
-                              What we offer
-                            </a>
+                          <div className="flex flex-col space-y-2 text-headingColor text-lg">
+                            <div className="flex flex-row items-center">
+                              <img src={success} alt="" className="w-4 h-4" />
+                              <p className="ml-2">
+                                Membership Club Where Businesses and Members
+                                Connect.
+                              </p>
+                            </div>
+                            <div className="flex flex-row items-center">
+                              <img src={success} alt="" className="w-4 h-4" />
+                              <p className="ml-2">
+                                Establish a global presence that encourages
+                                networking and mutual benefits.
+                              </p>
+                            </div>
+                            <div className="flex flex-row items-center">
+                              <img src={success} alt="" className="w-4 h-4" />
+                              <p className="ml-2">
+                                Develop a nurturing environment that fosters
+                                enduring friendships and a robust social
+                                network.
+                              </p>
+                            </div>
                           </div>
                         </div>
-
                         <div className="w-[100%] flex justify-center items-center">
                           <img
                             src="https://images.ctfassets.net/p24lh3qexxeo/2iOltnu3emEY83ey9618YO/a7e53877ad5929b2a669666429011335/image.png?w=1080&h=952&q=80&fm=webp"
@@ -211,7 +230,7 @@ const AppDesc = () => {
                   </Tab>
                   <Tab
                     label="Experience Powerful Networking"
-                className="text-sm text-sideHeading"
+                    className="text-sm text-sideHeading"
                   >
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
@@ -228,14 +247,29 @@ const AppDesc = () => {
                             </p>
                           </div>
 
-                          <div className="flex items-center lg:justify-start justify-center">
-                            <a
-                              href="/login"
-                              className="bg-mainColor outline-none
-                      rounded-full font-medium over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
-                            >
-                              Learn More
-                            </a>
+                          <div className="flex flex-col space-y-2 text-headingColor text-lg">
+                            <div className="flex flex-row items-center">
+                              <img src={success} alt="" className="w-4 h-4" />
+                              <p className="ml-2">
+                                Membership Club Where Businesses and Members
+                                Connect.
+                              </p>
+                            </div>
+                            <div className="flex flex-row items-center">
+                              <img src={success} alt="" className="w-4 h-4" />
+                              <p className="ml-2">
+                                Establish a global presence that encourages
+                                networking and mutual benefits.
+                              </p>
+                            </div>
+                            <div className="flex flex-row items-center">
+                              <img src={success} alt="" className="w-4 h-4" />
+                              <p className="ml-2">
+                                Develop a nurturing environment that fosters
+                                enduring friendships and a robust social
+                                network.
+                              </p>
+                            </div>
                           </div>
                         </div>
 
@@ -249,7 +283,10 @@ const AppDesc = () => {
                       </div>
                     </div>
                   </Tab>
-                  <Tab label="Global Membership Club" className="text-sm text-sideHeading">
+                  <Tab
+                    label="Global Membership Club"
+                    className="text-sm text-sideHeading"
+                  >
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col pl-8">
@@ -265,61 +302,35 @@ const AppDesc = () => {
                             </p>
                           </div>
 
-                          <div className="flex items-center lg:justify-start justify-center">
-                            <a
-                              href="/login"
-                              className="bg-mainColor outline-none
-                      rounded-full font-medium over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
-                            >
-                              Our Vision
-                            </a>
+                          <div className="flex flex-col space-y-2 text-headingColor text-lg">
+                            <div className="flex flex-row items-center">
+                              <img src={success} alt="" className="w-4 h-4" />
+                              <p className="ml-2">
+                                Membership Club Where Businesses and Members
+                                Connect.
+                              </p>
+                            </div>
+                            <div className="flex flex-row items-center">
+                              <img src={success} alt="" className="w-4 h-4" />
+                              <p className="ml-2">
+                                Establish a global presence that encourages
+                                networking and mutual benefits.
+                              </p>
+                            </div>
+                            <div className="flex flex-row items-center">
+                              <img src={success} alt="" className="w-4 h-4" />
+                              <p className="ml-2">
+                                Develop a nurturing environment that fosters
+                                enduring friendships and a robust social
+                                network.
+                              </p>
+                            </div>
                           </div>
                         </div>
 
                         <div className="w-[100%] flex justify-center items-center">
                           <img
                             src="https://images.ctfassets.net/p24lh3qexxeo/6GB7eepDnAGDK7P1feKYcA/4dd44c41342bfccc884a3558b66d70a5/image.png?w=1081&h=952&q=80&fm=webp"
-                            alt=""
-                            className="h-80 rounded w-[80%]"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </Tab>
-
-                  <Tab label="Building Global Community" className="text-sm text-sideHeading">
-                    <div className="py-4">
-                      <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-                        <div className="space-y-6 flex flex-col pl-8">
-                          <div className=" md:text-start text-center">
-                            <h1 className="lg:text-4xl text-3xl font-semibold text-black">
-                              Connectivity for all,
-                              <span className="text-mainColor">
-                                {" "}
-                                everywhere
-                              </span>
-                            </h1>
-                          </div>
-                          <div className="mt-4 md:text-start text-center text-gray-700">
-                            <p>
-                              Try and see the magic of the LM Club in action.
-                            </p>
-                          </div>
-
-                          <div className="flex items-center lg:justify-start justify-center">
-                            <a
-                              href="/login"
-                              className="bg-mainColor outline-none
-                      rounded-full font-medium over:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
-                            >
-                              Contact us
-                            </a>
-                          </div>
-                        </div>
-
-                        <div className="w-[100%] flex justify-center items-center">
-                          <img
-                            src="https://images.ctfassets.net/p24lh3qexxeo/Kn30UgsRK5RXRHbHVOeXc/ce4bbf7bf746ff6ebf7f7c465fadca9a/image.png?w=1081&h=952&q=80&fm=webp"
                             alt=""
                             className="h-80 rounded w-[80%]"
                           />
@@ -349,7 +360,8 @@ const AppDesc = () => {
                           </div>
                           <div className="mt-4 md:text-start text-center text-gray-700">
                             <p>
-                              Try and see the magic of the LM Club in action.
+                              Empower your rewards to deliver smarter care with
+                              a seamless, intuitive app build for efficiency.
                             </p>
                           </div>
 
@@ -414,7 +426,10 @@ const AppDesc = () => {
                       </div>
                     </div>
                   </Tab>
-                  <Tab label="Cultivate Thriving Culture" className="text-xs px-1 text-sideHeading">
+                  <Tab
+                    label="Cultivate Thriving Culture"
+                    className="text-xs px-1 text-sideHeading"
+                  >
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col px-2">
