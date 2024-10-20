@@ -15,14 +15,14 @@ const Tabs = ({ children }) => {
           <div className="w-full px-2 mx-auto max-w-[1400px]">
             <div className="justify-center w-full ">
               <div className="w-full max-w-[14000px] mx-auto space-y-4 ">
-                <div className="flex ">
+                <div className="flex">
                   {children.map((child) => (
                     <button
                       key={child.props.label}
                       className={`${
                         activeTab === child.props.label
-                          ? "text-white bg-mainColor lg:p-3 lg:ml-1 ml-1 md:text-base text-sm rounded"
-                          : "bg-gray-100 lg:ml-1 ml-1 md:text-base text-sm rounded"
+                          ? "text-white bg-green-500 lg:p-3.5 mx-1 md:text-base text-sm rounded"
+                          : "bg-gray-100 md:text-base text-sm rounded mx-1 lg:p-3.5"
                       } flex-1 py-2`}
                       onClick={(e) => handleClick(e, child.props.label)}
                     >
