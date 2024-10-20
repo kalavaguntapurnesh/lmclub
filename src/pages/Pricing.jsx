@@ -207,7 +207,7 @@ const Pricing = () => {
                 </div>
               </section>
 
-              <div className="pt-12 pb-12">
+              <div className="pt-12 pb-12" id="faq">
                 <div className="space-y-2">
                   <div className="md:text-4xl text-3xl font-bold text-headingColor text-center">
                     <h1>Frequently Asked Questions</h1>

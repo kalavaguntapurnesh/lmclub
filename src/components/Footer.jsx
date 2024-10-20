@@ -116,7 +116,7 @@ const Footer = () => {
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/"
+                          href="/products"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Our Products
@@ -132,7 +132,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/#faquestions"
+                          href="/pricing#faq"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           FA Questions
@@ -148,7 +148,7 @@ const Footer = () => {
                       </li> */}
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/privacy"
+                          href="/pricing#testimonial"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Testimonials
@@ -250,7 +250,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/logo-meaning"
+                          href="/learn-about-us#logo_meaning"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Logo Meaning
@@ -269,7 +269,7 @@ const Footer = () => {
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/contact"
+                          href="/products"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           LM Beehive
@@ -278,7 +278,7 @@ const Footer = () => {
                       <li className=" flex items-start md:justify-start justify-center">
                         {" "}
                         <a
-                          href="/"
+                          href="/products"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           LM Broadcast
@@ -286,7 +286,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/enroll-rewards"
+                          href="/products"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Enroll Rewards
@@ -294,7 +294,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/register"
+                          href="/products"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Grow Widget
@@ -322,7 +322,7 @@ const Footer = () => {
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/contact"
+                          href="/pricing"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Gold Plan
@@ -330,7 +330,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/"
+                          href="/pricing"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Platinum Plan
@@ -338,7 +338,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/"
+                          href="/pricing"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Bronze Plan
@@ -346,7 +346,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/register"
+                          href="/pricing"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Silver Plan
@@ -389,7 +389,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/consumer-privacy"
+                          href="/consumer-privacy#cookie-use-policy"
                           className="no-underline text-[14px] leading-6 text-footerLinks hover:text-gray-600 transition duration-1000 ease-in-out"
                         >
                           Cookie Consent
