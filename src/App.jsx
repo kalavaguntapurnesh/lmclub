@@ -11,6 +11,7 @@ import Rewards from "./pages/Rewards";
 import PageNotFound from "./pages/PageNotFound";
 import Products from "./pages/Products";
 import Pricing from "./pages/Pricing";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
 
         <Route path="/register" element={<Register />}></Route>
+        <Route path="/register" element={<TermsAndConditions />}></Route>
 
         <Route path="/privacy-policy" element={<Privacy />}></Route>
 
