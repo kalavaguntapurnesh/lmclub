@@ -20,7 +20,7 @@ const Enroll_Rewards = () => {
                     </h1>
                   </div>
                   <div className=" flex items-center lg:justify-start justify-center ">
-                    <h1 className="xl:text-5xl text-4xl font-bold text-headingColor ">
+                    <h1 className="xl:text-5xl text-4xl font-bold text-headingColor lg:text-start text-center">
                       Activate Grow & Enroll
                     </h1>
                   </div>
@@ -34,20 +34,24 @@ const Enroll_Rewards = () => {
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="flex flex-col space-y-2 md:items-start items-center">
+                    <div className="flex flex-col space-y-2 lg:items-start items-center">
                       <div className="xl:text-5xl text-4xl  md:font-bold font-extrabold text-headingColor">
-                        <h1>100%</h1>
+                        <h1 className="lg:text-start text-center">100%</h1>
                       </div>
                       <div className="text-sideHeading">
-                        <p>Increase in progress tracking</p>
+                        <p className="lg:text-start text-center">
+                          Increase in connectivity
+                        </p>
                       </div>
                     </div>
-                    <div className="flex flex-col space-y-2 md:items-start items-center">
+                    <div className="flex flex-col space-y-2 lg:items-start items-center">
                       <div className="xl:text-5xl text-4xl md:font-bold font-extrabold text-headingColor">
-                        <h1>10X</h1>
+                        <h1 className="lg:text-start text-center">10X</h1>
                       </div>
                       <div className="text-sideHeading">
-                        <p>Increase in Productivity</p>
+                        <p className="lg:text-start text-center">
+                          Increase in Productivity
+                        </p>
                       </div>
                     </div>
                   </div>

@@ -207,7 +207,7 @@ const AboutHero = () => {
                 </div>
 
                 <div className="mx-auto max-w-[1000px] text-center mt-4">
-                  <h1 className="text-4xl font-semibold text-headingColor">
+                  <h1 className="text-4xl font-bold text-headingColor">
                     One team, fire core values.
                   </h1>
                 </div>
