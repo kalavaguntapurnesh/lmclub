@@ -21,11 +21,11 @@ const Privacy = () => {
         <div className="relative">
           <div className="w-full">
             <div className="w-full px-4 mx-auto max-w-[1400px] pb-12 md:text-start text-center">
-              <div className=" text-4xl font-bold  ">
-                <h1>Privacy Policy</h1>
+              <div className=" text-4xl font-bold text-center">
+                <h1>LM Club Privacy Statement</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-8">
+              <div className="space-y-2 text-[#2b2a35] font-light mt-8 text-center">
                 <p>Last Updated: October 10, 2024 (Version 0.0.1)</p>
                 <p>
                   This privacy policy informs you about LM Club's data

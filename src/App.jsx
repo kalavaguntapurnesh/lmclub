@@ -12,6 +12,7 @@ import PageNotFound from "./pages/PageNotFound";
 import Products from "./pages/Products";
 import Pricing from "./pages/Pricing";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="*" element={<PageNotFound />}></Route>
         <Route path="/products" element={<Products />}></Route>
         <Route path="/pricing" element={<Pricing />}></Route>
+        <Route path="/dashboard" element={<Dashboard />}></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -20,26 +20,55 @@ const Enroll_Rewards = () => {
                     </h1>
                   </div>
                   <div className=" flex items-center lg:justify-start justify-center ">
-                    <h1 className="xl:text-5xl text-4xl font-bold text-[#3d454d] ">
+                    <h1 className="xl:text-5xl text-4xl font-bold text-headingColor ">
                       Activate Grow & Enroll
                     </h1>
                   </div>
 
                   <div className="flex items-center lg:justify-start justify-center ">
-                    <p className="lg:text-lg text-[16px] text-gray-600  lg:text-start text-center">
+                    <p className="lg:text-lg text-[16px] text-sideHeading  lg:text-start text-center">
                       Enroll earn rewards for helping our community to expand. T
                       & C apply. And you’re instantly connected to a powerful
                       network group and the rewards are AMAZING!
                     </p>
                   </div>
 
-                  <div className="flex items-center lg:justify-start justify-center">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="flex flex-col space-y-2 md:items-start items-center">
+                      <div className="xl:text-5xl text-4xl  md:font-bold font-extrabold text-headingColor">
+                        <h1>100%</h1>
+                      </div>
+                      <div className="text-sideHeading">
+                        <p>Increase in progress tracking</p>
+                      </div>
+                    </div>
+                    <div className="flex flex-col space-y-2 md:items-start items-center">
+                      <div className="xl:text-5xl text-4xl md:font-bold font-extrabold text-headingColor">
+                        <h1>10X</h1>
+                      </div>
+                      <div className="text-sideHeading">
+                        <p>Increase in Productivity</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:flex items-center lg:justify-start justify-center hidden">
                     <a
-                      href="/rewards"
-                      className="bg-mainColor font-semibold outline-none
-                      rounded hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                      href="/products"
+                      className="bg-mainColor font-medium outline-none
+                      rounded-full hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
                     >
-                      View Rewards
+                      Start your trail now
+                    </a>
+                  </div>
+
+                  <div className="mx-8">
+                    <a
+                      href="/products"
+                      className="bg-mainColor hover:bg-white hover:text-mainColor hover:border-[1px] hover:border-mainColor font-medium outline-none md:hidden block
+                      rounded-full hover:shadow-form transition duration-1000 ease-in-out text-base text-white px-8 py-2.5 text-center"
+                    >
+                      Start your trail now
                     </a>
                   </div>
                 </div>
