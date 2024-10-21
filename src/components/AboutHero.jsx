@@ -29,11 +29,11 @@ const AboutHero = () => {
                     </h1>
                   </div>
 
-                  <div className="lg:text-5xl text-4xl md:text-start text-center font-semibold">
+                  <div className="lg:text-5xl text-4xl md:text-start text-center font-bold text-headingColor">
                     <h1>Empowering Connections, Cultivating Success</h1>
                   </div>
 
-                  <div className="md:text-lg text-base text-[#2b2a35] md:text-start text-center">
+                  <div className="md:text-lg text-base text-sideHeading md:text-start text-center">
                     <p>
                       At Laoe Maom, we are dedicated to fostering a vibrant
                       culture that propels our members and businesses to
@@ -49,7 +49,7 @@ const AboutHero = () => {
                       <div className="text-4xl font-semibold hidden">
                         <h1>3.5</h1>
                       </div>
-                      <div className="text-gray-700 font-semibold">
+                      <div className="text-sideHeading font-semibold">
                         <p>World wide Accessibility</p>
                       </div>
                     </div>
@@ -57,7 +57,7 @@ const AboutHero = () => {
                       <div className="text-4xl font-semibold hidden">
                         <h1>830+</h1>
                       </div>
-                      <div className="text-gray-700 font-semibold">
+                      <div className="text-sideHeading font-semibold">
                         <p>Promote Entrepreneurship</p>
                       </div>
                     </div>
@@ -65,7 +65,7 @@ const AboutHero = () => {
                       <div className="text-4xl font-semibold hidden">
                         <h1>23</h1>
                       </div>
-                      <div className="text-gray-700 font-semibold">
+                      <div className="text-sideHeading font-semibold">
                         <p>Expand the Horizons</p>
                       </div>
                     </div>
@@ -73,7 +73,7 @@ const AboutHero = () => {
                       <div className="text-4xl font-semibold hidden">
                         <h1>100K</h1>
                       </div>
-                      <div className="text-gray-700 font-semibold">
+                      <div className="text-sideHeading font-semibold">
                         <p>Engage the Members</p>
                       </div>
                     </div>
@@ -102,10 +102,10 @@ const AboutHero = () => {
                         Our Mission
                       </h1>
                     </div>
-                    <div className="md:text-4xl text-3xl font-semibold md:w-3/4">
+                    <div className="md:text-4xl text-3xl font-bold text-headingColor md:w-3/4">
                       <h1>A realm of exceptional networking</h1>
                     </div>
-                    <div className="text-gray-700">
+                    <div className="text-sideHeading">
                       <h1>
                         At Laoe Maom, we are dedicated to fostering a vibrant
                         culture that propels our members and businesses to
@@ -122,10 +122,10 @@ const AboutHero = () => {
                         Our Vision
                       </h1>
                     </div>
-                    <div className="md:text-4xl text-3xl font-semibold md:w-3/4">
+                    <div className="md:text-4xl text-3xl font-bold text-headingColor md:w-3/4">
                       <h1>Enhanced collaboration & mutual benefit</h1>
                     </div>
-                    <div className="text-gray-700">
+                    <div className="text-sideHeading">
                       <h1>
                         At Laoe Maom, we are dedicated to fostering a vibrant
                         culture that propels our members and businesses to
@@ -148,14 +148,14 @@ const AboutHero = () => {
                     </h1>
                   </div>
 
-                  <div className="lg:text-5xl text-4xl md:text-start text-center md:font-semibold font-bold">
+                  <div className="lg:text-5xl text-4xl md:text-start text-center md:font-bold text-headingColor font-bold">
                     <h1>
                       Laoe Maom (LAOE MAOM): Least Amount of Effort, Most Amount
                       of Money
                     </h1>
                   </div>
 
-                  <div className="lg:text-lg text-[#2b2a35] md:text-start text-center">
+                  <div className="lg:text-lg text-sideHeading md:text-start text-center">
                     <p>
                       Laoe Maom embodies progress and adaptability, responding
                       dynamically to the evolving relationships and interests in
@@ -167,11 +167,21 @@ const AboutHero = () => {
                     </p>
                   </div>
 
-                  <div className="pt-6 pb-4 flex md:justify-start justify-center">
+                  <div className="md:flex items-center lg:justify-start justify-center hidden">
                     <a
-                      href="/learn-about-us"
+                      href="/products"
                       className="bg-mainColor font-medium outline-none
-                      rounded-full hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-3 text-center"
+                      rounded-full hover:shadow-form transition duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                    >
+                      Learn More
+                    </a>
+                  </div>
+
+                  <div className="mx-8">
+                    <a
+                      href="/products"
+                      className="bg-mainColor hover:bg-white hover:text-mainColor hover:border-[1px] hover:border-mainColor font-medium outline-none md:hidden block
+                      rounded-full hover:shadow-form transition duration-1000 ease-in-out text-base text-white px-8 py-2.5 text-center"
                     >
                       Learn More
                     </a>
@@ -197,7 +207,7 @@ const AboutHero = () => {
                 </div>
 
                 <div className="mx-auto max-w-[1000px] text-center mt-4">
-                  <h1 className="text-4xl font-semibold text-[#3d454d]">
+                  <h1 className="text-4xl font-semibold text-headingColor">
                     One team, fire core values.
                   </h1>
                 </div>

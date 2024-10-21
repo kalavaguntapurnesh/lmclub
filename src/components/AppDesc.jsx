@@ -193,7 +193,7 @@ const AppDesc = () => {
                             </p>
                           </div>
 
-                          <div className="flex flex-col space-y-2 text-headingColor text-lg">
+                          <div className="flex flex-col space-y-3 text-headingColor text-lg">
                             <div className="flex flex-row items-center">
                               <img src={success} alt="" className="w-4 h-4" />
                               <p className="ml-2">
@@ -247,7 +247,7 @@ const AppDesc = () => {
                             </p>
                           </div>
 
-                          <div className="flex flex-col space-y-2 text-headingColor text-lg">
+                          <div className="flex flex-col space-y-3 text-headingColor text-lg">
                             <div className="flex flex-row items-center">
                               <img src={success} alt="" className="w-4 h-4" />
                               <p className="ml-2">
@@ -302,7 +302,7 @@ const AppDesc = () => {
                             </p>
                           </div>
 
-                          <div className="flex flex-col space-y-2 text-headingColor text-lg">
+                          <div className="flex flex-col space-y-3 text-headingColor text-lg">
                             <div className="flex flex-row items-center">
                               <img src={success} alt="" className="w-4 h-4" />
                               <p className="ml-2">

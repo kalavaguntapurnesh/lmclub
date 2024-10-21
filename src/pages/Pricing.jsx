@@ -148,7 +148,7 @@ const Pricing = () => {
               </div>
 
               <section className="bg-white ">
-                <div className="py-8 px-4 lg:py-16 lg:px-6">
+                <div className="py-8 px-4 lg:px-6">
                   <div className=" grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
                     {monthlyPlans.map((plan) => (
                       <div
@@ -197,7 +197,7 @@ const Pricing = () => {
                         </ul>
                         <a
                           href="/login"
-                          class="text-white bg-mainColor font-medium rounded-full text-sm px-5 py-2.5 text-center "
+                          class="text-white bg-mainColor font-medium rounded-full text-sm px-5 py-2.5 my-3 text-center "
                         >
                           Get started
                         </a>
