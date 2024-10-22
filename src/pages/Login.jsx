@@ -27,10 +27,10 @@ const Login = () => {
     <div>
       <Navbar />
       <div>
-        <section className="md:h-screen text-black md:py-0 py-8">
+        <section className=" text-black md:py-0 py-8">
           <div className="max-w-[1400px] mx-auto">
             <div className="mt-28">
-              <div className="flex flex-col justify-center px-6 h-full">
+              <div className="flex flex-col justify-center px-6 pb-8">
                 <div className="flex justify-center items-center">
                   <div className="w-full bg-white rounded-lg shadow md:mt-0 xl:p-0 max-w-md">
                     <div className="p-6 space-y-4 sm:p-8">
