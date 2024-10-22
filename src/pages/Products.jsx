@@ -281,7 +281,8 @@ const Products = () => {
                     <div className="flex flex-row items-center">
                       <img src={success} alt="" className="w-4 h-4" />
                       <p className="ml-2">
-                        Establish a global presence that encourages networking.
+                        Establish a global presenc
+                        e that encourages networking.
                       </p>
                     </div>
                     <div className="flex flex-row items-center">
