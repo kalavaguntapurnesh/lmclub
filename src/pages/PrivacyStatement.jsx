@@ -456,7 +456,7 @@ const PrivacyStatement = () => {
                   <select
                     value={selectedHeading}
                     onChange={handleSelectChange}
-                    className="w-full mb-4 lg:p-2 p-4 border border-gray-300 rounded"
+                    className="w-full mb-4 p-2 border border-gray-300 rounded"
                   >
                     <option value="0" className="text-center">
                       {" "}
@@ -659,13 +659,28 @@ const PrivacyStatement = () => {
                   {selectedHeading === 4 && (
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold text-gray-800">
-                        Reasons we share personal data
+                      Collection of data from children
                       </h3>
                       <p className="text-gray-700">
-                        Sed hendrerit, ligula id ultricies vulputate, elit est
-                        laoreet libero, ut faucibus ligula nisi eget orci. Duis
-                        luctus lectus sed neque interdum, vel tincidunt dui
-                        suscipit. Integer cursus arcu sed felis vehicula.
+                        Microsoft has integrated Copilot into many products and
+                        services, and each one is created and deployed in
+                        alignment with our critical security, compliance and
+                        privacy policies and processes. To help people
+                        understand the capabilities of these new AI solutions
+                        and ensure transparency in our approach, Microsoft has
+                        published a variety of resources to provide more
+                        information about our approach to privacy and AI for our
+                        consumer and commercial and public sector customers.
+                      </p>
+                      <p className="text-gray-700">
+                        Comprehensive and transparent documentation and
+                        information helps organisations understand how our AI
+                        tools work and the choices our customers can make that
+                        influence system performance and behaviour. Customers
+                        can find more information about Microsoft Copilots in
+                        our documentation, adoption resources, new Copilot Lab
+                        resource page, and through the Azure OpenAI Service
+                        documentation, quickstarts and API reference guides.
                       </p>
                       <button className="bg-mainColor text-white px-6 py-2 rounded-full">
                         Contact Us
@@ -675,13 +690,19 @@ const PrivacyStatement = () => {
                   {selectedHeading === 5 && (
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold text-gray-800">
-                        Collection of data from children
+                        Products provided by organisation – notice to end users
                       </h3>
                       <p className="text-gray-700">
-                        Sed hendrerit, ligula id ultricies vulputate, elit est
-                        laoreet libero, ut faucibus ligula nisi eget orci. Duis
-                        luctus lectus sed neque interdum, vel tincidunt dui
-                        suscipit. Integer cursus arcu sed felis vehicula.
+                        In addition to our internal practices, Microsoft
+                        supports global regulatory initiatives to ensure that AI
+                        is developed and used in responsible, privacy-protecting
+                        and ethical ways. In the United States, Microsoft has
+                        confirmed support for the Voluntary AI Commitments from
+                        the White House and supports the legislative efforts and
+                        vision in Europe, the UK and other jurisdictions as they
+                        work to develop risk-based frameworks that ensure people
+                        can realise the promises of AI responsibly and in ways
+                        that respect fundamental rights.
                       </p>
                       <button className="bg-mainColor text-white px-6 py-2 rounded-full">
                         Contact Us
@@ -691,13 +712,40 @@ const PrivacyStatement = () => {
                   {selectedHeading === 6 && (
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold text-gray-800">
-                        Products provided by organisation – notice to end users
+                        Other important privacy information
                       </h3>
                       <p className="text-gray-700">
-                        Sed hendrerit, ligula id ultricies vulputate, elit est
-                        laoreet libero, ut faucibus ligula nisi eget orci. Duis
-                        luctus lectus sed neque interdum, vel tincidunt dui
-                        suscipit. Integer cursus arcu sed felis vehicula.
+                        As our customers continue to expand their use of our AI
+                        solutions, we will continue to develop our solutions in
+                        alignment with our ethical principles, corporate
+                        policies, and voluntary commitments to promote safe,
+                        secure, and transparent AI. A core aspect of our efforts
+                        is our adherence to our Responsible AI Standard, which
+                        outlines specific requirements for how we develop and
+                        deploy AI systems. The standard guides our internal
+                        teams by transforming our AI principles – of fairness,
+                        reliability and safety, privacy and security,
+                        inclusiveness, transparency and accountability – into
+                        concrete engineering practises.
+                      </p>
+                      <p className="text-gray-700">
+                        We are committed to protecting privacy by providing
+                        products, information, and controls that allow you to
+                        choose how your data is collected and used. From
+                        products built with privacy by design to transparent
+                        information and user controls, our goal is to empower
+                        individuals and our customers to make informed choices
+                        about their data.
+                      </p>
+                      <p className="text-gray-700">
+                        As part of our commitment to privacy and transparency,
+                        the Microsoft Privacy Report is published to share the
+                        latest information on what personal data we collect, how
+                        it may be used, and how you can manage and control your
+                        information. The report also summarises key developments
+                        and trends in global privacy and how they could affect
+                        Microsoft, our customers and the global regulatory
+                        environment.
                       </p>
                       <button className="bg-mainColor text-white px-6 py-2 rounded-full">
                         Contact Us
@@ -707,13 +755,34 @@ const PrivacyStatement = () => {
                   {selectedHeading === 7 && (
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold text-gray-800">
-                        Other important privacy information
+                        Cookies and similar technologies
                       </h3>
                       <p className="text-gray-700">
-                        Sed hendrerit, ligula id ultricies vulputate, elit est
-                        laoreet libero, ut faucibus ligula nisi eget orci. Duis
-                        luctus lectus sed neque interdum, vel tincidunt dui
-                        suscipit. Integer cursus arcu sed felis vehicula.
+                        At LM Club, we value, protect, and defend your privacy.
+                        Our approach is built on our long-standing privacy
+                        principles of user control, transparency, security,
+                        defending data from third party access, and using
+                        personal data in ways that provide meaningful benefit to
+                        you.
+                      </p>
+                      <p className="text-gray-700">
+                        We are committed to protecting privacy by providing
+                        products, information, and controls that allow you to
+                        choose how your data is collected and used. From
+                        products built with privacy by design to transparent
+                        information and user controls, our goal is to empower
+                        individuals and our customers to make informed choices
+                        about their data.
+                      </p>
+                      <p className="text-gray-700">
+                        As part of our commitment to privacy and transparency,
+                        the Microsoft Privacy Report is published to share the
+                        latest information on what personal data we collect, how
+                        it may be used, and how you can manage and control your
+                        information. The report also summarises key developments
+                        and trends in global privacy and how they could affect
+                        Microsoft, our customers and the global regulatory
+                        environment.
                       </p>
                       <button className="bg-mainColor text-white px-6 py-2 rounded-full">
                         Contact Us
