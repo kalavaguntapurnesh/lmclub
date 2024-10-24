@@ -26,7 +26,7 @@ const PrivacyReport = () => {
     <div>
       {" "}
       <Navbar />
-      <div className="mt-20">
+      <div className="mt-28">
         <div className="relative">
           <div className="w-full">
             <div className="w-full px-4 mx-auto max-w-[1400px] pb-12 md:text-start text-center space-y-6">
@@ -35,7 +35,7 @@ const PrivacyReport = () => {
               </div>
 
               <div className="space-y-2 text-[#2b2a35] font-light mt-8 text-center">
-                <p>Published: April 2024</p>
+                <p>Last Updated: October 10, 2024 (Version 0.0.1)</p>
               </div>
 
               <div className="my-4">
@@ -46,34 +46,34 @@ const PrivacyReport = () => {
                 />
               </div>
 
-              <div className="container mx-auto p-4">
+              <div className=" mx-auto p-4">
                 {/* Desktop View: Two Columns */}
                 <div className="hidden md:grid grid-cols-3 gap-8">
                   {/* Left side: Headings */}
                   <div className="space-y-4 col-span-1">
                     <h2
                       onClick={() => scrollToSection(0)}
-                      className={`text-lg cursor-pointer text-blue-500`}
+                      className={`text-lg cursor-pointer text-blue-600 hover:text-headingColor ease-in-out duration-1000`}
                     >
                       Driving AI innovation while protecting privacy
                     </h2>
                     <h2
                       onClick={() => scrollToSection(1)}
-                      className={`text-lg cursor-pointer text-blue-500`}
+                      className={`text-lg cursor-pointer text-blue-600 hover:text-headingColor ease-in-out duration-1000`}
                     >
                       Privacy tools and resources. Learn how to control your
                       data
                     </h2>
                     <h2
                       onClick={() => scrollToSection(2)}
-                      className={`text-lg cursor-pointer text-blue-500`}
+                      className={`text-lg cursor-pointer text-blue-600 hover:text-headingColor ease-in-out duration-1000`}
                     >
                       Privacy by design. Understanding required and optional
                       data
                     </h2>
                     <h2
                       onClick={() => scrollToSection(3)}
-                      className={`text-lg cursor-pointer text-blue-500`}
+                      className={`text-lg cursor-pointer text-blue-600 hover:text-headingColor ease-in-out duration-1000`}
                     >
                       Privacy in a changing world
                     </h2>
@@ -82,6 +82,9 @@ const PrivacyReport = () => {
                   {/* Right side: Display all data */}
                   <div className="space-y-16 col-span-2">
                     <div ref={sectionRefs[0]} className="space-y-4">
+                      <h3 className="text-2xl font-bold text-gray-800">
+                        Driving AI innovation while protecting privacy
+                      </h3>
                       <p className="text-gray-700">
                         At LM Club, we value, protect, and defend your privacy.
                         Our approach is built on our long-standing privacy
@@ -109,13 +112,14 @@ const PrivacyReport = () => {
                         Microsoft, our customers and the global regulatory
                         environment.
                       </p>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                      <button className="bg-mainColor text-white font-medium px-6 py-2 rounded-full">
                         Modify Privacy Policy
                       </button>
                     </div>
                     <div ref={sectionRefs[1]} className="space-y-4">
                       <h3 className="text-2xl font-bold text-gray-800">
-                        Driving AI innovation while protecting privacy
+                        Privacy tools and resources. Learn how to control your
+                        data
                       </h3>
                       <p className="text-gray-700 my-2">
                         Microsoft remains committed to driving responsible AI
@@ -211,14 +215,14 @@ const PrivacyReport = () => {
                           data privacy, transparency, and trust.
                         </p>
                       </p>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                        Modify Privacy Policy
+                      <button className="bg-mainColor text-white px-6 font-medium py-2 rounded-full">
+                        Accept Cookies
                       </button>
                     </div>
                     <div ref={sectionRefs[2]} className="space-y-4">
                       <h3 className="text-2xl font-bold text-gray-800">
-                        Privacy tools and resources. Learn how to control your
-                        data.
+                        Privacy by design. Understanding required and optional
+                        data
                       </h3>
                       <p className="text-gray-700 my-2">
                         We provide tools to help you control your personal data
@@ -311,14 +315,13 @@ const PrivacyReport = () => {
                         essential that organisations have effective tools in
                         place to manage their security scope.
                       </p>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                        Modify Privacy Policy
+                      <button className="bg-mainColor text-white px-6 font-medium py-2 rounded-full">
+                        Know More
                       </button>
                     </div>
                     <div ref={sectionRefs[3]} className="space-y-4">
                       <h3 className="text-2xl font-bold text-gray-800">
-                        Privacy tools and resources. Learn how to control your
-                        data.
+                        Privacy in a changing world
                       </h3>
                       <p className="text-gray-700 my-2">
                         We provide tools to help you control your personal data
@@ -413,7 +416,7 @@ const PrivacyReport = () => {
                         place to manage their security scope.
                       </p>
 
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                      <button className="bg-mainColor text-white px-6 font-medium py-2 rounded-full">
                         Contact Us
                       </button>
                     </div>
@@ -427,19 +430,21 @@ const PrivacyReport = () => {
                     onChange={handleSelectChange}
                     className="w-full mb-4 p-2 border border-gray-300 rounded"
                   >
-                    <option value="0">
+                    <option value="0" className="text-center">
                       {" "}
                       Driving AI innovation while protecting privacy
                     </option>
-                    <option value="1">
+                    <option value="1" className="text-center">
                       Privacy tools and resources. Learn how to control your
                       data
                     </option>
-                    <option value="2">
+                    <option value="2" className="text-center">
                       Privacy by design. Understanding required and optional
                       data
                     </option>
-                    <option value="3">Privacy in a changing world</option>
+                    <option value="3" className="text-center">
+                      Privacy in a changing world
+                    </option>
                   </select>
 
                   {/* Display only the selected content in mobile view */}
@@ -467,16 +472,16 @@ const PrivacyReport = () => {
                       </p>
                       <p className="text-gray-700">
                         As part of our commitment to privacy and transparency,
-                        the Microsoft Privacy Report is published to share the
+                        the LM Club Privacy Report is published to share the
                         latest information on what personal data we collect, how
                         it may be used, and how you can manage and control your
                         information. The report also summarises key developments
                         and trends in global privacy and how they could affect
-                        Microsoft, our customers and the global regulatory
+                        LM Club, our customers and the global regulatory
                         environment.
                       </p>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                        Learn Fuck
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
+                        Learn More
                       </button>
                     </div>
                   )}
@@ -501,11 +506,11 @@ const PrivacyReport = () => {
                       </p>
                       <p className="text-gray-700 my-2">
                         {" "}
-                        For data that is collected by Copilot in Bing, including
-                        through user queries and prompts, the Microsoft privacy
-                        dashboard provides authenticated (signed in) users with
-                        tools to exercise their data subject rights, including
-                        by providing user with the ability to view, export and
+                        For data that is collected, including through user
+                        queries and prompts, the LM Club privacy dashboard
+                        provides authenticated (signed in) users with tools to
+                        exercise their data subject rights, including by
+                        providing user with the ability to view, export and
                         delete stored conversation history. We continue to
                         listen to feedback on how users want to manage their
                         Copilot and search experience, including through
@@ -514,7 +519,7 @@ const PrivacyReport = () => {
                         showing active engagement and use globally.
                       </p>
                       <p className="text-gray-700 my-2">
-                        For our young users, Microsoft offers an immersive
+                        For our young users, LM Club offers an immersive
                         game-based learning adventure, Privacy Prodigy, for
                         students aged 7-18. In this Minecraft game, players take
                         on the challenge of protecting their data as they
@@ -527,57 +532,34 @@ const PrivacyReport = () => {
                         Privacy prodigy is available for free in our Minecraft
                         Education portal and in the Minecraft Marketplace.
                       </p>
+
                       <p className="text-gray-700 my-2">
-                        For our commercial and public sector customers,
-                        Microsoft has a variety of enterprise-grade solutions
-                        and services that help our customers control, protect,
-                        and defend their data. For example, with the EU Data
-                        Boundary, Microsoft provides enhanced residency
-                        capabilities for processing and storing commercial and
-                        public sector customers’ personal data within the
-                        European Union.
+                        {" "}
+                        With the LM Club Purview and LM Club offerings,
+                        organisations can understand and govern their data
+                        estates and sensitive information. Purview capabilities
+                        include Adaptive Protection, which uses machine learning
+                        to understand how users are interacting with data and
+                        assign risk levels. LM Club Purview can then adapt by
+                        adjusting Data Loss Prevention (DLP) controls in
+                        response to a detected risk. LM Club is an advanced
+                        solution complementing Purview, tailored for effective
+                        data estate governance and handling of sensitive
+                        information using advanced automation capabilities.
                       </p>
                       <p className="text-gray-700 my-2">
                         {" "}
-                        With the Microsoft Purview and Microsoft Priva
-                        offerings, organisations can understand and govern their
-                        data estates and sensitive information. Purview
-                        capabilities include Adaptive Protection, which uses
-                        machine learning to understand how users are interacting
-                        with data and assign risk levels. Microsoft Purview can
-                        then adapt by adjusting Data Loss Prevention (DLP)
-                        controls in response to a detected risk. Microsoft Priva
-                        is an advanced solution complementing Purview, tailored
-                        for effective data estate governance and handling of
-                        sensitive information using advanced automation
-                        capabilities.
+                        In October 2024, we announced new solutions to help
+                        customers modernise their privacy programme. The
+                        expansion of LM Club brings automated capabilities to
+                        help organisations meet adapting privacy requirements
+                        and further enables organisations to automate the
+                        management, definition and tracking of privacy
+                        operations. Learn more about how the suite of Priva
+                        solutions has expanded here.
                       </p>
-                      <p className="text-gray-700 my-2">
-                        {" "}
-                        In April 2024, we announced new solutions in Priva to
-                        help customers modernise their privacy programme. The
-                        expansion of Microsoft Priva brings automated
-                        capabilities to help organisations meet adapting privacy
-                        requirements and further enables organisations to
-                        automate the management, definition and tracking of
-                        privacy operations. Learn more about how the suite of
-                        Priva solutions has expanded here.
-                      </p>
-                      <p className="text-gray-700 my-2">
-                        {" "}
-                        Microsoft Entra is a cloud-based service that provides
-                        identity, data and collaboration solutions for
-                        enterprises and organisations. Microsoft has recently
-                        introduced a range of new security tools and features
-                        for the Microsoft Entra product family, aimed at helping
-                        organisations improve their security and data protection
-                        posture. With the ever-increasing sophistication of
-                        cyber-attacks, the increasing use of cloud-based
-                        services and the proliferation of mobile devices, it is
-                        essential that organisations have effective tools in
-                        place to manage their security scope.
-                      </p>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full ">
                         Get Started
                       </button>
                     </div>
@@ -589,12 +571,60 @@ const PrivacyReport = () => {
                         data
                       </h3>
                       <p className="text-gray-700">
-                        Sed hendrerit, ligula id ultricies vulputate, elit est
-                        laoreet libero, ut faucibus ligula nisi eget orci. Duis
-                        luctus lectus sed neque interdum, vel tincidunt dui
-                        suscipit. Integer cursus arcu sed felis vehicula.
+                        With the LM Club Purview and LM Club Priva offerings,
+                        organisations can understand and govern their data
+                        estates and sensitive information. Purview capabilities
+                        include Adaptive Protection, which uses machine learning
+                        to understand how users are interacting with data and
+                        assign risk levels. LM Club Purview can then adapt by
+                        adjusting Data Loss Prevention (DLP) controls in
+                        response to a detected risk. Microsoft Priva is an
+                        advanced solution complementing Purview, tailored for
+                        effective data estate governance and handling of
+                        sensitive information using advanced automation
+                        capabilities.
                       </p>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                      <p className="text-gray-700">
+                        {" "}
+                        For our commercial and public sector customers, LM Club
+                        has a variety of enterprise-grade solutions and services
+                        that help our customers control, protect, and defend
+                        their data. For example, with the EU Data Boundary, LM
+                        Club provides enhanced residency capabilities for
+                        processing and storing commercial and public sector
+                        customers’ personal data within the United States of
+                        America.
+                      </p>
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
+                        Contact Us
+                      </button>
+                    </div>
+                  )}
+                  {selectedHeading === 3 && (
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-gray-800">
+                        Privacy in a changing world
+                      </h3>
+                      <p className="text-gray-700">
+                        As part of our commitment to privacy and transparency,
+                        the Microsoft Privacy Report is published to share the
+                        latest information on what personal data we collect, how
+                        it may be used, and how you can manage and control your
+                        information. The report also summarises key developments
+                        and trends in global privacy and how they could affect
+                        Microsoft, our customers and the global regulatory
+                        environment.
+                      </p>
+                      <p className="text-gray-700">
+                        We are committed to protecting privacy by providing
+                        products, information, and controls that allow you to
+                        choose how your data is collected and used. From
+                        products built with privacy by design to transparent
+                        information and user controls, our goal is to empower
+                        individuals and our customers to make informed choices
+                        about their data.
+                      </p>
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
                         Contact Us
                       </button>
                     </div>

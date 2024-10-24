@@ -315,12 +315,12 @@ const NavBar = () => {
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/consumer-privacy" className="text-sm">
+                      <a href="/privacy-report" className="text-sm">
                         Privacy Report
                       </a>
                     </li>
                     <li className="text-gray-700">
-                      <a href="/consumer-privacy" className="text-sm">
+                      <a href="/privacy-statement" className="text-sm">
                        Privacy Statement
                       </a>
                     </li>

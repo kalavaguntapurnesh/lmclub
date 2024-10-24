@@ -26,21 +26,21 @@ const PrivacyStatement = () => {
     <div>
       {" "}
       <Navbar />
-      <div className="mt-20">
+      <div className="mt-28">
         <div className="relative">
           <div className="w-full">
             <div className="w-full px-4 mx-auto max-w-[1400px] pb-12 md:text-start text-center space-y-6">
-              <div className=" text-4xl font-bold text-center">
+              <div className=" text-4xl font-bold text-center text-headingColor">
                 <h1>LM Club Privacy Statement</h1>
               </div>
 
-              <div className="space-y-2 text-[#2b2a35] font-light mt-8 text-center">
-                <p>Published: April 2024</p>
+              <div className="space-y-2 text-sideHeading font-light mt-8 text-center">
+                <p>Last Updated: October 10, 2024 (Version 0.0.1)</p>
               </div>
 
-              <div className="mx-auto max-w-[1000px] text-center">
+              <div className="mx-auto max-w-[1000px] text-center text-sideHeading">
                 <p>
-                  You may notice a new look. In August 2024, we updated our
+                  You may notice a new look. In October 2024, we updated our
                   Privacy at LM Club websites with a modern design built on a
                   more secure platform. You can now find the LM Club Privacy
                   Statement at lmclub.com/privacy. And, as always, any
@@ -56,54 +56,54 @@ const PrivacyStatement = () => {
                   <div className="space-y-4 col-span-1">
                     <h2
                       onClick={() => scrollToSection(0)}
-                      className={`text-lg cursor-pointer text-blue-500`}
+                      className={`text-lg cursor-pointer text-blue-600`}
                     >
                       Personal data we collect
                     </h2>
                     <h2
                       onClick={() => scrollToSection(1)}
-                      className={`text-lg cursor-pointer text-blue-500`}
+                      className={`text-lg cursor-pointer text-blue-600`}
                     >
                       How we use personal data
                     </h2>
                     <h2
                       onClick={() => scrollToSection(2)}
-                      className={`text-lg cursor-pointer text-blue-500`}
+                      className={`text-lg cursor-pointer text-blue-600`}
                     >
                       Reasons we share personal data
                     </h2>
                     <h2
                       onClick={() => scrollToSection(3)}
-                      className={`text-lg cursor-pointer text-blue-500`}
+                      className={`text-lg cursor-pointer text-blue-600`}
                     >
                       How to access and control your personal data
                     </h2>
 
                     <h2
-                      onClick={() => scrollToSection(3)}
-                      className={`text-lg cursor-pointer text-blue-500`}
+                      onClick={() => scrollToSection(4)}
+                      className={`text-lg cursor-pointer text-blue-600`}
                     >
                       Cookies and similar technologies
                     </h2>
 
                     <h2
-                      onClick={() => scrollToSection(3)}
-                      className={`text-lg cursor-pointer text-blue-500`}
+                      onClick={() => scrollToSection(5)}
+                      className={`text-lg cursor-pointer text-blue-600`}
                     >
                       Products provided by your organisation – notice to end
                       users
                     </h2>
 
                     <h2
-                      onClick={() => scrollToSection(3)}
-                      className={`text-lg cursor-pointer text-blue-500`}
+                      onClick={() => scrollToSection(6)}
+                      className={`text-lg cursor-pointer text-blue-600`}
                     >
                       Collection of data from children
                     </h2>
 
                     <h2
-                      onClick={() => scrollToSection(3)}
-                      className={`text-lg cursor-pointer text-blue-500`}
+                      onClick={() => scrollToSection(7)}
+                      className={`text-lg cursor-pointer text-blue-600`}
                     >
                       Other important privacy information
                     </h2>
@@ -112,6 +112,9 @@ const PrivacyStatement = () => {
                   {/* Right side: Display all data */}
                   <div className="space-y-16 col-span-2">
                     <div ref={sectionRefs[0]} className="space-y-4">
+                      <h3 className="text-2xl font-bold text-gray-800">
+                        Personal data we collect
+                      </h3>
                       <p className="text-gray-700">
                         At LM Club, we value, protect, and defend your privacy.
                         Our approach is built on our long-standing privacy
@@ -139,13 +142,13 @@ const PrivacyStatement = () => {
                         Microsoft, our customers and the global regulatory
                         environment.
                       </p>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
                         Modify Privacy Policy
                       </button>
                     </div>
                     <div ref={sectionRefs[1]} className="space-y-4">
-                      <h3 className="text-2xl font-bold text-gray-800">
-                        Driving AI innovation while protecting privacy
+                      <h3 className="text-2xl font-bold text-headingColor">
+                        How we use personal data
                       </h3>
                       <p className="text-gray-700 my-2">
                         Microsoft remains committed to driving responsible AI
@@ -241,14 +244,13 @@ const PrivacyStatement = () => {
                           data privacy, transparency, and trust.
                         </p>
                       </p>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                        Modify Privacy Policy
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
+                        Get Started
                       </button>
                     </div>
-                    <div ref={sectionRefs[2]} className="space-y-4">
-                      <h3 className="text-2xl font-bold text-gray-800">
-                        Privacy tools and resources. Learn how to control your
-                        data.
+                    <div ref={sectionRefs[2]} classNamFe="space-y-4">
+                      <h3 className="text-2xl font-bold text-headingColor">
+                        Reasons we share personal data
                       </h3>
                       <p className="text-gray-700 my-2">
                         We provide tools to help you control your personal data
@@ -341,14 +343,13 @@ const PrivacyStatement = () => {
                         essential that organisations have effective tools in
                         place to manage their security scope.
                       </p>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                        Modify Privacy Policy
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
+                        Learn More
                       </button>
                     </div>
                     <div ref={sectionRefs[3]} className="space-y-4">
                       <h3 className="text-2xl font-bold text-gray-800">
-                        Privacy tools and resources. Learn how to control your
-                        data.
+                        How to access and control your personal data
                       </h3>
                       <p className="text-gray-700 my-2">
                         We provide tools to help you control your personal data
@@ -443,7 +444,7 @@ const PrivacyStatement = () => {
                         place to manage their security scope.
                       </p>
 
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
                         Contact Us
                       </button>
                     </div>
@@ -457,26 +458,38 @@ const PrivacyStatement = () => {
                     onChange={handleSelectChange}
                     className="w-full mb-4 p-2 border border-gray-300 rounded"
                   >
-                    <option value="0">
+                    <option value="0" className="text-center">
                       {" "}
-                      Driving AI innovation while protecting privacy
+                      Personal data we collect
                     </option>
-                    <option value="1">
-                      Privacy tools and resources. Learn how to control your
-                      data
+                    <option value="1" className="text-center">
+                      How we use personal data
                     </option>
-                    <option value="2">
-                      Privacy by design. Understanding required and optional
-                      data
+                    <option value="2" className="text-center">
+                      Reasons we share personal data
                     </option>
-                    <option value="3">Privacy in a changing world</option>
+                    <option value="3" className="text-center">
+                      How to access and control your personal data
+                    </option>
+                    <option value="4" className="text-center">
+                      Collection of data from children
+                    </option>
+                    <option value="5" className="text-center">
+                      Products provided by organisation – notice to end users
+                    </option>
+                    <option value="6" className="text-center">
+                      Other important privacy information
+                    </option>
+                    <option value="7" className="text-center">
+                      Cookies and similar technologies
+                    </option>
                   </select>
 
                   {/* Display only the selected content in mobile view */}
                   {selectedHeading === 0 && (
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold text-gray-800">
-                        Driving AI innovation while protecting privacy
+                        Personal data we collect
                       </h3>
                       <p className="text-gray-700">
                         At LM Club, we value, protect, and defend your privacy.
@@ -505,16 +518,15 @@ const PrivacyStatement = () => {
                         Microsoft, our customers and the global regulatory
                         environment.
                       </p>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                        Learn Fuck
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
+                        Learn More
                       </button>
                     </div>
                   )}
                   {selectedHeading === 1 && (
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold text-gray-800">
-                        Privacy tools and resources. Learn how to control your
-                        data
+                        How we use personal data
                       </h3>
                       <p className="text-gray-700 my-2">
                         We provide tools to help you control your personal data
@@ -607,7 +619,7 @@ const PrivacyStatement = () => {
                         essential that organisations have effective tools in
                         place to manage their security scope.
                       </p>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
                         Get Started
                       </button>
                     </div>
@@ -615,8 +627,7 @@ const PrivacyStatement = () => {
                   {selectedHeading === 2 && (
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold text-gray-800">
-                        Privacy by design. Understanding required and optional
-                        data
+                        Reasons we share personal data
                       </h3>
                       <p className="text-gray-700">
                         Sed hendrerit, ligula id ultricies vulputate, elit est
@@ -624,7 +635,87 @@ const PrivacyStatement = () => {
                         luctus lectus sed neque interdum, vel tincidunt dui
                         suscipit. Integer cursus arcu sed felis vehicula.
                       </p>
-                      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
+                        Contact Us
+                      </button>
+                    </div>
+                  )}
+                  {selectedHeading === 3 && (
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-gray-800">
+                        How to access and control your personal data
+                      </h3>
+                      <p className="text-gray-700">
+                        Sed hendrerit, ligula id ultricies vulputate, elit est
+                        laoreet libero, ut faucibus ligula nisi eget orci. Duis
+                        luctus lectus sed neque interdum, vel tincidunt dui
+                        suscipit. Integer cursus arcu sed felis vehicula.
+                      </p>
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
+                        Contact Us
+                      </button>
+                    </div>
+                  )}
+                  {selectedHeading === 4 && (
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-gray-800">
+                        Reasons we share personal data
+                      </h3>
+                      <p className="text-gray-700">
+                        Sed hendrerit, ligula id ultricies vulputate, elit est
+                        laoreet libero, ut faucibus ligula nisi eget orci. Duis
+                        luctus lectus sed neque interdum, vel tincidunt dui
+                        suscipit. Integer cursus arcu sed felis vehicula.
+                      </p>
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
+                        Contact Us
+                      </button>
+                    </div>
+                  )}
+                  {selectedHeading === 5 && (
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-gray-800">
+                        Collection of data from children
+                      </h3>
+                      <p className="text-gray-700">
+                        Sed hendrerit, ligula id ultricies vulputate, elit est
+                        laoreet libero, ut faucibus ligula nisi eget orci. Duis
+                        luctus lectus sed neque interdum, vel tincidunt dui
+                        suscipit. Integer cursus arcu sed felis vehicula.
+                      </p>
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
+                        Contact Us
+                      </button>
+                    </div>
+                  )}
+                  {selectedHeading === 6 && (
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-gray-800">
+                        Products provided by organisation – notice to end users
+                      </h3>
+                      <p className="text-gray-700">
+                        Sed hendrerit, ligula id ultricies vulputate, elit est
+                        laoreet libero, ut faucibus ligula nisi eget orci. Duis
+                        luctus lectus sed neque interdum, vel tincidunt dui
+                        suscipit. Integer cursus arcu sed felis vehicula.
+                      </p>
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
+                        Contact Us
+                      </button>
+                    </div>
+                  )}
+                  {selectedHeading === 7 && (
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-gray-800">
+                        Other important privacy information
+                      </h3>
+                      <p className="text-gray-700">
+                        Sed hendrerit, ligula id ultricies vulputate, elit est
+                        laoreet libero, ut faucibus ligula nisi eget orci. Duis
+                        luctus lectus sed neque interdum, vel tincidunt dui
+                        suscipit. Integer cursus arcu sed felis vehicula.
+                      </p>
+                      <button className="bg-mainColor text-white px-6 py-2 rounded-full">
                         Contact Us
                       </button>
                     </div>
