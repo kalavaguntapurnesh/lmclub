@@ -21,9 +21,9 @@ const Tabs = ({ children }) => {
                       key={child.props.label}
                       className={`${
                         activeTab === child.props.label
-                          ? "text-white bg-green-500 lg:p-3.5 mx-1 md:text-base text-sm lg:rounded-full rounded"
-                          : "bg-gray-100 md:text-base text-sm mx-1 lg:p-3.5 lg:rounded-full rounded"
-                      } flex-1 py-2`}
+                          ? "text-white bg-green-600 lg:p-3.5 mx-1 md:text-base text-sm lg:rounded-full rounded-full"
+                          : "bg-gray-100 md:text-base text-sm mx-1 lg:p-3.5 lg:rounded-full rounded-full"
+                      } flex-1 lg:py-3 py-4`}
                       onClick={(e) => handleClick(e, child.props.label)}
                     >
                       {child.props.label}
