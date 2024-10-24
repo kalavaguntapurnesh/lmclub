@@ -13,6 +13,8 @@ import Products from "./pages/Products";
 import Pricing from "./pages/Pricing";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Dashboard from "./pages/Dashboard";
+import PrivacyStatement from "./pages/PrivacyStatement";
+import PrivacyReport from "./pages/PrivacyReport";
 
 function App() {
   return (
@@ -32,6 +34,9 @@ function App() {
         <Route path="/privacy-policy" element={<Privacy />}></Route>
 
         <Route path="/consumer-privacy" element={<Consumer_Privacy />}></Route>
+        <Route path="/privacy-statement" element={<PrivacyStatement />}></Route>
+        <Route path="/privacy-report" element={<PrivacyReport />}></Route>
+
         <Route path="/enroll-rewards" element={<Enroll_Rewards />}></Route>
         <Route path="/rewards" element={<Rewards />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
