@@ -8,6 +8,7 @@ import { MdComputer, MdOutlinePrivacyTip } from "react-icons/md";
 import {
   FaBuildingColumns,
   FaComputerMouse,
+  FaUsers,
   FaXTwitter,
 } from "react-icons/fa6";
 import { FaGlobeAmericas, FaInstagram, FaMicrophoneAlt } from "react-icons/fa";
@@ -24,6 +25,7 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import free from "../assets/free.png";
 import premium from "../assets/money.png";
+import { SiAdguard, SiSecurityscorecard } from "react-icons/si";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -310,6 +312,16 @@ const NavBar = () => {
                     <li className="text-gray-700">
                       <a href="/consumer-privacy" className="text-sm">
                         Consumer Policy
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/consumer-privacy" className="text-sm">
+                        Privacy Report
+                      </a>
+                    </li>
+                    <li className="text-gray-700">
+                      <a href="/consumer-privacy" className="text-sm">
+                       Privacy Statement
                       </a>
                     </li>
                   </motion.ul>
@@ -678,12 +690,12 @@ const Subscription = () => {
 
 const Privacy = () => {
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-4 gap-4">
       <a
         href="/privacy-policy"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <MdOutlinePrivacyTip className="mb-2 text-xl text-mainColor" />
+        <RiCustomerService2Fill className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">
           Privacy Policy
         </span>
@@ -692,9 +704,27 @@ const Privacy = () => {
         href="/consumer-privacy"
         className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
       >
-        <RiCustomerService2Fill className="mb-2 text-xl text-mainColor" />
+        <FaUsers className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">
           Consumer Policy
+        </span>
+      </a>
+      <a
+        href="/privacy-report"
+        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+      >
+        <SiAdguard className="mb-2 text-xl text-mainColor" />
+        <span className="text-xs font-semibold text-gray-700">
+          Privacy Report
+        </span>
+      </a>
+      <a
+        href="/privacy-statement"
+        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+      >
+        <SiSecurityscorecard className="mb-2 text-xl text-mainColor" />
+        <span className="text-xs font-semibold text-gray-700">
+          Privacy Report
         </span>
       </a>
     </div>
