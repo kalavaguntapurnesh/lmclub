@@ -3,8 +3,12 @@ import us from "../assets/us.svg";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import { useState } from "react";
-import { FaLocationDot } from "react-icons/fa6";
-import { FaMicrophoneAlt, FaRocketchat } from "react-icons/fa";
+import { FaBlenderPhone, FaBuilding, FaHandshake } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 
 const Contact = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -30,6 +34,45 @@ const Contact = () => {
                   We’re here to help and answer any questions you might have. We
                   look forward to hearing from you!
                 </p>
+              </div>
+            </div>
+
+            <div className="max-w-[600px] mx-auto my-6">
+              <div className="grid grid-cols-5 gap-4">
+                <a
+                  href="https://www.linkedin.com/company/laoe-maom/"
+                  className="flex justify-center items-center"
+                >
+                  <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
+                    <FaLinkedin size={24} className="text-mainColor" />
+                  </div>
+                </a>
+                <a
+                  href="https://www.facebook.com/people/Laoe-Maom/100063772398711/"
+                  className="flex justify-center items-center"
+                >
+                  <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
+                    <FaFacebook size={24} className="text-mainColor" />
+                  </div>
+                </a>
+
+                <a href="" className="flex justify-center items-center">
+                  <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
+                    <FaXTwitter size={24} className="text-mainColor" />
+                  </div>
+                </a>
+
+                <a href="" className="flex justify-center items-center">
+                  <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
+                    <FaInstagram size={24} className="text-mainColor" />
+                  </div>
+                </a>
+
+                <a href="" className="flex justify-center items-center">
+                  <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
+                    <FaTiktok size={24} className="text-mainColor" />
+                  </div>
+                </a>
               </div>
             </div>
 
@@ -176,8 +219,8 @@ const Contact = () => {
                 <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                   <div class="space-y-4">
                     <div className="flex justify-center items-center">
-                      <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
-                        <FaRocketchat size={24} className="text-mainColor" />
+                      <div className="flex justify-center items-center w-16 h-16 border-2 border-green-100 bg-green-100 rounded-full">
+                        <FaHandshake size={32} className="text-mainColor" />
                       </div>
                     </div>
                     <div class="flex justify-center items-center">
@@ -209,8 +252,8 @@ const Contact = () => {
                 <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                   <div class="space-y-4">
                     <div className="flex justify-center items-center">
-                      <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
-                        <FaMicrophoneAlt size={24} className="text-mainColor" />
+                      <div className="flex justify-center items-center w-16 h-16 border-2 border-green-100 bg-green-100 rounded-full">
+                        <FaBlenderPhone size={32} className="text-mainColor" />
                       </div>
                     </div>
                     <div class="flex justify-center items-center">
@@ -242,8 +285,8 @@ const Contact = () => {
                 <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                   <div class="space-y-4">
                     <div className="flex justify-center items-center">
-                      <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-lg">
-                        <FaLocationDot size={24} className="text-mainColor" />
+                      <div className="flex justify-center items-center w-16 h-16 border-2 border-green-100 bg-green-100 rounded-full">
+                        <FaBuilding size={32} className="text-mainColor" />
                       </div>
                     </div>
                     <div class="flex justify-center items-center">

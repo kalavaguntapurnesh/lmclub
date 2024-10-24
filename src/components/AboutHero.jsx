@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Logo from "../assets/LM_Logo.jpeg";
-
+import { FaGlobe, FaHandshake, FaMedal } from "react-icons/fa";
 const AboutHero = () => {
   const location = useLocation();
 
@@ -216,12 +216,10 @@ const AboutHero = () => {
                   <a href="" class="flex md:justify-start justify-center">
                     <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                       <div class="space-y-4">
-                        <div class="flex justify-center items-center">
-                          <img
-                            src="https://images.ctfassets.net/p24lh3qexxeo/4T0cBbXXIQ3CRWIaQlGxBD/0879f3b9df1ef3a4cd13bdcf910344e5/Frame_4104_2x.png?w=1080&h=1094&q=80&fm=webp"
-                            alt=""
-                            class="w-20 h-20"
-                          />
+                        <div className="flex justify-center items-center">
+                          <div className="flex justify-center items-center w-20 h-20 border-2 border-green-50 bg-green-50 rounded-full">
+                            <FaHandshake size={36} className="text-mainColor" />
+                          </div>
                         </div>
                         <div class="flex justify-center items-center">
                           <h1 class="text-3xl text-colorTwo font-bold text-center">
@@ -251,12 +249,10 @@ const AboutHero = () => {
                   <a href="" class="flex md:justify-start justify-center">
                     <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                       <div class="space-y-4">
-                        <div class="flex justify-center items-center">
-                          <img
-                            src="https://images.ctfassets.net/p24lh3qexxeo/4YzizdfYjYbQzK1UqnWXeN/20ae4c6430d4d3fce733b638c280750b/Frame_4103_2x.png?w=1080&h=1094&q=80&fm=webp"
-                            alt=""
-                            class="w-20 h-20"
-                          />
+                        <div className="flex justify-center items-center">
+                          <div className="flex justify-center items-center w-20 h-20 border-2 border-green-50 bg-green-50 rounded-full">
+                            <FaMedal size={36} className="text-mainColor" />
+                          </div>
                         </div>
 
                         <div class="flex justify-center items-center">
@@ -287,12 +283,10 @@ const AboutHero = () => {
                   <a href="" class="flex md:justify-start justify-center">
                     <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                       <div class="space-y-4">
-                        <div class="flex justify-center items-center">
-                          <img
-                            src="https://images.ctfassets.net/p24lh3qexxeo/4IqbCNJne6WmRSe7XdEM7w/6d1fc73b3d5fc612bdb484a64598a7c7/Frame_4102_2x.png?w=1078&h=1094&q=80&fm=webp"
-                            alt=""
-                            class="w-20 h-20"
-                          />
+                        <div className="flex justify-center items-center">
+                          <div className="flex justify-center items-center w-20 h-20 border-2 border-green-50 bg-green-50 rounded-full">
+                            <FaGlobe size={36} className="text-mainColor" />
+                          </div>
                         </div>
 
                         <div class="flex justify-center items-center">
