@@ -84,7 +84,7 @@ const NavBar = () => {
         </div> */}
 
         <a href="/" className="flex items-center">
-          <img src={Logo} alt="" className="w-10 h-10" />
+          <img src={Logo} alt="" className="w-12 h-12" />
         </a>
 
         {/* Desktop Nav Links */}
