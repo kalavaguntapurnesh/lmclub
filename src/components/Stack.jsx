@@ -35,29 +35,29 @@ const Stack = () => {
                     </h1>
                   </div>
 
-                  <div className="flex flex-col space-y-3 text-headingColor text-lg pt-6">
+                  <div className="flex flex-col space-y-3 text-headingColor text-lg pt-6 md:mx-0 mx-2">
                     <div className="flex flex-row items-center">
                       <img src={success} alt="" className="w-4 h-4" />
-                      <p className="ml-2">
+                      <p className="ml-4">
                         Membership Club Where Businesses and Members Connect.
                       </p>
                     </div>
                     <div className="flex flex-row items-center">
                       <img src={success} alt="" className="w-4 h-4" />
-                      <p className="ml-2">
+                      <p className="ml-4">
                         Establish a global presenc e that encourages networking.
                       </p>
                     </div>
                     <div className="flex flex-row items-center">
                       <img src={success} alt="" className="w-4 h-4" />
-                      <p className="ml-2">
+                      <p className="ml-4">
                         Develop a nurturing environment that fosters enduring
                         friendships.
                       </p>
                     </div>
                     <div className="flex flex-row items-center">
                       <img src={success} alt="" className="w-4 h-4" />
-                      <p className="ml-2">
+                      <p className="ml-4">
                         Membership Club Where Businesses and Members Connect.
                       </p>
                     </div>
@@ -115,7 +115,7 @@ const Stack = () => {
 
                   <a
                     href="mailto:info@laoemaom.com"
-                    class="md:flex md:justify-start justify-center hidden"
+                    class="md:flex md:justify-start justify-center "
                   >
                     <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
                       <div class="space-y-4">
