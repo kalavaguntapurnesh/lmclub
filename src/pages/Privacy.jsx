@@ -534,8 +534,7 @@ const Privacy = () => {
                       <div class="flex justify-center items-center text-gray-600 text-center">
                         <p>
                           Learn how to find your privacy settings and other
-                          related information in Microsoft products and
-                          services.
+                          related information in LM Club products and services.
                         </p>
                       </div>
 
@@ -590,14 +589,13 @@ const Privacy = () => {
               </div>
 
               <div className=" text-4xl font-semibold text-center pt-12">
-                <h1>Learn more about privacy at Microsoft</h1>
+                <h1>Learn more about privacy at LM Club</h1>
               </div>
 
               <div className=" text-sideHeading text-center">
                 <p>
-                  Learn more about Privacy at Microsoft and how we put our
-                  privacy principles into practise in the following links and
-                  resources.
+                  Learn more about Privacy at LM Club and how we put our privacy
+                  principles into practise in the following links and resources.
                 </p>
               </div>
 
@@ -608,10 +606,10 @@ const Privacy = () => {
               <div className=" text-sideHeading mt-4">
                 <p>
                   Privacy for young people is a page where young users can learn
-                  about and understand Microsoft’s privacy practises and how to
-                  use our products in a way that protects their privacy. This
-                  page also highlights topics that may be helpful for parents
-                  and guardians.
+                  about and understand LM Club privacy practises and how to use
+                  our products in a way that protects their privacy. This page
+                  also highlights topics that may be helpful for parents and
+                  guardians.
                 </p>
               </div>
 
@@ -621,9 +619,9 @@ const Privacy = () => {
 
               <div className=" text-sideHeading mt-4">
                 <p>
-                  The privacy report includes new developments in privacy at
-                  Microsoft. Find the latest information on what personal data
-                  we collect, how it may be used, and how you can manage and
+                  The privacy report includes new developments in privacy at LM
+                  Club. Find the latest information on what personal data we
+                  collect, how it may be used, and how you can manage and
                   control your data.
                 </p>
               </div>
@@ -634,19 +632,19 @@ const Privacy = () => {
 
               <div className=" text-sideHeading mt-4">
                 <p>
-                  Do you have a question about Microsoft privacy? We explain how
+                  Do you have a question about LM Club privacy? We explain how
                   customers can export or delete personal data and more in the
                   Privacy FAQs.
                 </p>
               </div>
 
               <div className=" text-2xl text-blue-600 font-semibold underline pt-8">
-                <h1>Microsoft Corporate Social Responsibility</h1>
+                <h1>LM Club Corporate Social Responsibility</h1>
               </div>
 
               <div className=" text-sideHeading mt-4">
                 <p>
-                  Learn more about how Microsoft approaches building a more
+                  Learn more about how LM Club approaches building a more
                   inclusive, equitable, sustainable, and trusted future for
                   everyone, and how technology can and must benefit the future
                   of humanity and our planet.
@@ -670,8 +668,8 @@ const Privacy = () => {
 
               <div className=" text-sideHeading mt-4 text-center">
                 <p>
-                  Check out the latest articles, blog posts, and news from
-                  Microsoft about protecting your privacy at home and at work.
+                  Check out the latest articles, blog posts, and news from LM
+                  Club about protecting your privacy at home and at work.
                 </p>
               </div>
 
@@ -700,7 +698,7 @@ const Privacy = () => {
                         <p>
                           This whitepaper offers practical support for public
                           sector organisations as they consider generative AI
-                          services such as Copilot for Microsoft 365 and Azure
+                          services such as Copilot for LM Club 365 and Azure
                           OpenAI Service.
                         </p>
                       </div>
@@ -739,9 +737,9 @@ const Privacy = () => {
 
                       <div class="flex justify-center items-center text-gray-600 text-center">
                         <p>
-                          Learn more about Microsoft’s commitment to protecting
-                          the data of our commercial and public sector customers
-                          and how our approach to AI is built on a foundation of
+                          Learn more about LM Club commitment to protecting the
+                          data of our commercial and public sector customers and
+                          how our approach to AI is built on a foundation of
                           privacy across all our AI products and solutions.
                         </p>
                       </div>
@@ -781,8 +779,8 @@ const Privacy = () => {
 
                       <div class="flex justify-center items-center text-gray-600 text-center">
                         <p>
-                          Discover how Microsoft’s privacy commitments apply to
-                          AI and how Microsoft empowers customers to use new AI
+                          Discover how LM Club privacy commitments apply to AI
+                          and how LM Club empowers customers to use new AI
                           technologies while advancing trust and protecting
                           privacy.
                         </p>
@@ -821,10 +819,10 @@ const Privacy = () => {
 
                       <div class="flex justify-center items-center text-gray-600 text-center">
                         <p>
-                          Microsoft’s EU Data Boundary enables customers to
-                          store and process their data within the EU. Read about
-                          the latest enhancements and new features building on
-                          prior progress.
+                          LM Club EU Data Boundary enables customers to store
+                          and process their data within the EU. Read about the
+                          latest enhancements and new features building on prior
+                          progress.
                         </p>
                       </div>
                     </div>

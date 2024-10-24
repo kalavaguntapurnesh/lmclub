@@ -724,7 +724,7 @@ const Privacy = () => {
       >
         <SiSecurityscorecard className="mb-2 text-xl text-mainColor" />
         <span className="text-xs font-semibold text-gray-700">
-          Privacy Report
+          Privacy Statement
         </span>
       </a>
     </div>
