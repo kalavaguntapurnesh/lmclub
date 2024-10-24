@@ -177,7 +177,7 @@ const Stack = () => {
             </div>
 
             <div className="mx-auto max-w-[1000px] text-center mt-4">
-              <h1 className="text-4xl font-semibold text-headingColor">
+              <h1 className="text-4xl font-bold text-headingColor">
                 Connect everything through notifications.
               </h1>
             </div>

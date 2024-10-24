@@ -71,7 +71,7 @@ const Testimonial = () => {
               </h1>
             </div>
             <div className="mx-auto max-w-[1200px] text-center mt-4">
-              <h1 className="text-4xl font-semibold text-headingColor">
+              <h1 className="text-4xl font-bold text-headingColor">
                 Real stories, real results
               </h1>
             </div>

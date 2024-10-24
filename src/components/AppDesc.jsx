@@ -14,7 +14,7 @@ const AppDesc = () => {
               </h1>
             </div>
             <div className="mx-auto max-w-[1200px] text-center mt-4">
-              <h1 className="text-4xl font-semibold text-headingColor">
+              <h1 className="text-4xl font-bold text-headingColor">
                 Best Products available at LM Club
               </h1>
             </div>
@@ -164,7 +164,7 @@ const AppDesc = () => {
                 </h1>
               </div>
               <div className="mx-auto max-w-[1200px] text-center mt-4">
-                <h1 className="text-4xl font-semibold text-headingColor">
+                <h1 className="text-4xl font-bold text-headingColor">
                   The organic platform for better rewards
                 </h1>
               </div>
@@ -483,7 +483,7 @@ const AppDesc = () => {
                 </h1>
               </div>
               <div className="mx-auto max-w-[1200px] text-center mt-4">
-                <h1 className="text-4xl font-semibold text-headingColor">
+                <h1 className="text-4xl font-bold text-headingColor">
                   Empowering Connections, Cultivating Success
                 </h1>
               </div>
