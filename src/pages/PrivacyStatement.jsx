@@ -456,7 +456,7 @@ const PrivacyStatement = () => {
                   <select
                     value={selectedHeading}
                     onChange={handleSelectChange}
-                    className="w-full mb-4 p-2 border border-gray-300 rounded"
+                    className="w-full mb-4 lg:p-2 p-4 border border-gray-300 rounded"
                   >
                     <option value="0" className="text-center">
                       {" "}
