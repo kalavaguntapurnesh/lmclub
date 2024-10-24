@@ -193,24 +193,24 @@ const AppDesc = () => {
                             </p>
                           </div>
 
-                          <div className="flex flex-col space-y-3 text-headingColor text-lg">
+                          <div className="flex flex-col space-y-3 text-sideHeading text-lg">
                             <div className="flex flex-row items-center">
                               <img src={success} alt="" className="w-4 h-4" />
-                              <p className="ml-2">
+                              <p className="ml-4">
                                 Membership Club Where Businesses and Members
                                 Connect.
                               </p>
                             </div>
                             <div className="flex flex-row items-center">
                               <img src={success} alt="" className="w-4 h-4" />
-                              <p className="ml-2">
+                              <p className="ml-4">
                                 Establish a global presence that encourages
                                 networking and mutual benefits.
                               </p>
                             </div>
                             <div className="flex flex-row items-center">
                               <img src={success} alt="" className="w-4 h-4" />
-                              <p className="ml-2">
+                              <p className="ml-4">
                                 Develop a nurturing environment that fosters
                                 enduring friendships and a robust social
                                 network.
@@ -247,24 +247,24 @@ const AppDesc = () => {
                             </p>
                           </div>
 
-                          <div className="flex flex-col space-y-3 text-headingColor text-lg">
+                          <div className="flex flex-col space-y-3 text-sideHeading text-lg">
                             <div className="flex flex-row items-center">
                               <img src={success} alt="" className="w-4 h-4" />
-                              <p className="ml-2">
+                              <p className="ml-4">
                                 Membership Club Where Businesses and Members
                                 Connect.
                               </p>
                             </div>
                             <div className="flex flex-row items-center">
                               <img src={success} alt="" className="w-4 h-4" />
-                              <p className="ml-2">
+                              <p className="ml-4">
                                 Establish a global presence that encourages
                                 networking and mutual benefits.
                               </p>
                             </div>
                             <div className="flex flex-row items-center">
                               <img src={success} alt="" className="w-4 h-4" />
-                              <p className="ml-2">
+                              <p className="ml-4">
                                 Develop a nurturing environment that fosters
                                 enduring friendships and a robust social
                                 network.
@@ -302,24 +302,24 @@ const AppDesc = () => {
                             </p>
                           </div>
 
-                          <div className="flex flex-col space-y-3 text-headingColor text-lg">
+                          <div className="flex flex-col space-y-3 text-sideHeading text-lg">
                             <div className="flex flex-row items-center">
                               <img src={success} alt="" className="w-4 h-4" />
-                              <p className="ml-2">
+                              <p className="ml-4">
                                 Membership Club Where Businesses and Members
                                 Connect.
                               </p>
                             </div>
                             <div className="flex flex-row items-center">
                               <img src={success} alt="" className="w-4 h-4" />
-                              <p className="ml-2">
+                              <p className="ml-4">
                                 Establish a global presence that encourages
                                 networking and mutual benefits.
                               </p>
                             </div>
                             <div className="flex flex-row items-center">
                               <img src={success} alt="" className="w-4 h-4" />
-                              <p className="ml-2">
+                              <p className="ml-4">
                                 Develop a nurturing environment that fosters
                                 enduring friendships and a robust social
                                 network.
@@ -345,7 +345,7 @@ const AppDesc = () => {
                 <Tabs>
                   <Tab
                     label="Creating Exciting Rewards"
-                    className="text-xs px-1 text-sideHeading"
+                    className=" px-1 text-sideHeading"
                   >
                     <div className="py-4 ">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
@@ -387,8 +387,8 @@ const AppDesc = () => {
                     </div>
                   </Tab>
                   <Tab
-                    label="Experience Powerful Networking"
-                    className="text-xs px-1 text-sideHeading"
+                    label="Drive Business Growth"
+                    className=" px-1 text-sideHeading"
                   >
                     <div className="py-4">
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
@@ -426,7 +426,7 @@ const AppDesc = () => {
                       </div>
                     </div>
                   </Tab>
-                  <Tab
+                  {/* <Tab
                     label="Cultivate Thriving Culture"
                     className="text-xs px-1 text-sideHeading"
                   >
@@ -465,7 +465,7 @@ const AppDesc = () => {
                         </div>
                       </div>
                     </div>
-                  </Tab>
+                  </Tab> */}
                 </Tabs>
               </div>
             </div>
