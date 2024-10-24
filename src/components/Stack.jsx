@@ -8,11 +8,164 @@ import zapier from "../assets/zapier.svg";
 import whatsapp from "../assets/whatsapp.svg";
 import telegram from "../assets/telegram.svg";
 import evernote from "../assets/evernote.svg";
-import { FaArrowRight } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa6";
+import { ImPower } from "react-icons/im";
+import { IoBarChart } from "react-icons/io5";
+import success from "../assets/success.svg";
+import { GoGoal } from "react-icons/go";
 
 const Stack = () => {
   return (
     <div className="bg-white">
+      <div className="bg-white ">
+        <div className="relative pt-20 pb-12">
+          <div className="w-full">
+            <div className="w-full px-4 mx-auto max-w-[1400px]">
+              <div className="max-w-[1400px] m-auto grid lg:grid-cols-2 lg:mx-4 gap-6">
+                <div className="flex flex-col gap-4 w-full space-y-2 ">
+                  <div className="flex items-center lg:justify-start justify-center ">
+                    <div className="h-4 w-1 bg-mainColor"></div>
+                    <h1 className="ml-2 text-lg font-bold text-mainColor uppercase">
+                      Features of our products
+                    </h1>
+                  </div>
+                  <div className=" flex items-center lg:justify-start justify-center ">
+                    <h1 className="xl:text-5xl text-4xl font-bold text-headingColor lg:text-start text-center">
+                      Explores the powerful features of our Products
+                    </h1>
+                  </div>
+
+                  <div className="flex flex-col space-y-3 text-headingColor text-lg pt-6">
+                    <div className="flex flex-row items-center">
+                      <img src={success} alt="" className="w-4 h-4" />
+                      <p className="ml-2">
+                        Membership Club Where Businesses and Members Connect.
+                      </p>
+                    </div>
+                    <div className="flex flex-row items-center">
+                      <img src={success} alt="" className="w-4 h-4" />
+                      <p className="ml-2">
+                        Establish a global presenc e that encourages networking.
+                      </p>
+                    </div>
+                    <div className="flex flex-row items-center">
+                      <img src={success} alt="" className="w-4 h-4" />
+                      <p className="ml-2">
+                        Develop a nurturing environment that fosters enduring
+                        friendships.
+                      </p>
+                    </div>
+                    <div className="flex flex-row items-center">
+                      <img src={success} alt="" className="w-4 h-4" />
+                      <p className="ml-2">
+                        Membership Club Where Businesses and Members Connect.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className=" grid md:grid-cols-2 grid-cols-1 gap-4">
+                  <a
+                    href="mailto:info@laoemaom.com"
+                    class="flex md:justify-start justify-center"
+                  >
+                    <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+                      <div class="space-y-4">
+                        <div className="flex justify-center items-center">
+                          <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-full">
+                            <ImPower size={24} className="text-mainColor" />
+                          </div>
+                        </div>
+                        <div class="flex justify-center items-center">
+                          <h1 class="text-2xl text-headingColor font-bold text-center">
+                            Empower Connections
+                          </h1>
+                        </div>
+
+                        <div class="flex justify-center items-center text-sideHeading text-center font-medium">
+                          <p>Access a vast list of valuable resources.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:info@laoemaom.com"
+                    class="flex md:justify-start justify-center"
+                  >
+                    <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+                      <div class="space-y-4">
+                        <div className="flex justify-center items-center">
+                          <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-full">
+                            <IoBarChart size={24} className="text-mainColor" />
+                          </div>
+                        </div>
+                        <div class="flex justify-center items-center">
+                          <h1 class="text-2xl text-headingColor font-bold text-center">
+                            Reward Collaborations
+                          </h1>
+                        </div>
+
+                        <div class="flex justify-center items-center text-sideHeading text-center font-medium">
+                          <p>Access a vast list of valuable resources.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:info@laoemaom.com"
+                    class="md:flex md:justify-start justify-center hidden"
+                  >
+                    <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+                      <div class="space-y-4">
+                        <div className="flex justify-center items-center">
+                          <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-full">
+                            <FaUsers size={24} className="text-mainColor" />
+                          </div>
+                        </div>
+                        <div class="flex justify-center items-center">
+                          <h1 class="text-2xl text-headingColor font-bold text-center">
+                            Global Community
+                          </h1>
+                        </div>
+
+                        <div class="flex justify-center items-center text-sideHeading text-center font-medium">
+                          <p>Access a vast list of valuable resources.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:info@laoemaom.com"
+                    class="md:flex hidden md:justify-start justify-center"
+                  >
+                    <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
+                      <div class="space-y-4">
+                        <div className="flex justify-center items-center">
+                          <div className="flex justify-center items-center w-12 h-12 border-2 border-green-100 bg-green-100 rounded-full">
+                            <GoGoal size={24} className="text-mainColor" />
+                          </div>
+                        </div>
+                        <div class="flex justify-center items-center">
+                          <h1 class="text-2xl text-headingColor font-bold text-center">
+                            Cultivating Success
+                          </h1>
+                        </div>
+
+                        <div class="flex justify-center items-center text-sideHeading text-center font-medium">
+                          <p>Access a vast list of valuable resources.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="relative pt-20 pb-12">
         <div className="w-full">
           <div className="w-full px-4 mx-auto max-w-[1400px]">
