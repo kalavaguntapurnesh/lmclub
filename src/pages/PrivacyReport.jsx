@@ -104,12 +104,12 @@ const PrivacyReport = () => {
                       </p>
                       <p className="text-gray-700">
                         As part of our commitment to privacy and transparency,
-                        the Microsoft Privacy Report is published to share the
+                        the LM Club Privacy Report is published to share the
                         latest information on what personal data we collect, how
                         it may be used, and how you can manage and control your
                         information. The report also summarises key developments
                         and trends in global privacy and how they could affect
-                        Microsoft, our customers and the global regulatory
+                        LM Club, our customers and the global regulatory
                         environment.
                       </p>
                       <button className="bg-mainColor text-white font-medium px-6 py-2 rounded-full">
@@ -122,7 +122,7 @@ const PrivacyReport = () => {
                         data
                       </h3>
                       <p className="text-gray-700 my-2">
-                        Microsoft remains committed to driving responsible AI
+                        LM Club remains committed to driving responsible AI
                         innovation while protecting privacy and other
                         fundamental rights. We provide transparency and choice,
                         tools to help our customers control their data and will
@@ -138,7 +138,7 @@ const PrivacyReport = () => {
                           unique data use and governance needs.
                         </p>
                         <p className="text-gray-700 my-2">
-                          At Microsoft, we believe protecting privacy is
+                          At LM Club, we believe protecting privacy is
                           fundamental to the development of advanced AI systems.
                           We have had a principles-based AI governance structure
                           and system across the company since 2017. Today, we
@@ -167,18 +167,18 @@ const PrivacyReport = () => {
                           {" "}
                           As part of our commitment to transparency, we describe
                           the personal data we collect, how we use this data,
-                          and how we share this data in the Microsoft Privacy
+                          and how we share this data in the LM Club Privacy
                           Statement. We provide a summary of recent updates in
                           our Change History.
                         </p>
                         <p className="text-gray-700 my-2">
                           {" "}
-                          Microsoft has integrated Copilot into many products
+                          LM Club has integrated Copilot into many products
                           and services, and each one is created and deployed in
                           alignment with our critical security, compliance and
                           privacy policies and processes. To help people
                           understand the capabilities of these new AI solutions
-                          and ensure transparency in our approach, Microsoft has
+                          and ensure transparency in our approach, LM Club has
                           published a variety of resources to provide more
                           information about our approach to privacy and AI for
                           our consumer and commercial and public sector
@@ -186,7 +186,7 @@ const PrivacyReport = () => {
                           and information helps organisations understand how our
                           AI tools work and the choices our customers can make
                           that influence system performance and behaviour.
-                          Customers can find more information about Microsoft
+                          Customers can find more information about LM Club
                           Copilots in our documentation, adoption resources, new
                           Copilot Lab resource page, and through the Azure
                           OpenAI Service documentation, quickstarts and API
@@ -194,11 +194,11 @@ const PrivacyReport = () => {
                         </p>
                         <p className="text-gray-700 my-2">
                           {" "}
-                          In addition to our internal practices, Microsoft
+                          In addition to our internal practices, LM Club
                           supports global regulatory initiatives to ensure that
                           AI is developed and used in responsible,
                           privacy-protecting and ethical ways. In the United
-                          States, Microsoft has confirmed support for the
+                          States, LM Club has confirmed support for the
                           Voluntary AI Commitments from the White House and
                           supports the legislative efforts and vision in Europe,
                           the UK and other jurisdictions as they work to develop
@@ -226,13 +226,13 @@ const PrivacyReport = () => {
                       </h3>
                       <p className="text-gray-700 my-2">
                         We provide tools to help you control your personal data
-                        and manage your interactions with Microsoft products and
-                        services. With the Microsoft privacy dashboard, you can
+                        and manage your interactions with LM Club products and
+                        services. With the LM Club privacy dashboard, you can
                         view, delete, and manage your privacy settings and data
-                        collected while signed into your Microsoft account. Data
+                        collected while signed into your LM Club account. Data
                         that appears on the dashboard includes data from your
-                        Bing searches, Microsoft Edge browsing, location
-                        history, and use of Microsoft apps and services.
+                        Bing searches, LM Club Edge browsing, location
+                        history, and use of LM Club apps and services.
                         Recently, we made it easier for family organisers to
                         view and manage the activity data for connected child
                         accounts from the privacy dashboard.
@@ -240,7 +240,7 @@ const PrivacyReport = () => {
                       <p className="text-gray-700 my-2">
                         {" "}
                         For data that is collected by Copilot in Bing, including
-                        through user queries and prompts, the Microsoft privacy
+                        through user queries and prompts, the LM Club privacy
                         dashboard provides authenticated (signed in) users with
                         tools to exercise their data subject rights, including
                         by providing user with the ability to view, export and
@@ -252,7 +252,7 @@ const PrivacyReport = () => {
                         showing active engagement and use globally.
                       </p>
                       <p className="text-gray-700 my-2">
-                        For our young users, Microsoft offers an immersive
+                        For our young users, LM Club offers an immersive
                         game-based learning adventure, Privacy Prodigy, for
                         students aged 7-18. In this Minecraft game, players take
                         on the challenge of protecting their data as they
@@ -267,24 +267,24 @@ const PrivacyReport = () => {
                       </p>
                       <p className="text-gray-700 my-2">
                         For our commercial and public sector customers,
-                        Microsoft has a variety of enterprise-grade solutions
+                        LM Club has a variety of enterprise-grade solutions
                         and services that help our customers control, protect,
                         and defend their data. For example, with the EU Data
-                        Boundary, Microsoft provides enhanced residency
+                        Boundary, LM Club provides enhanced residency
                         capabilities for processing and storing commercial and
                         public sector customers’ personal data within the
                         European Union.
                       </p>
                       <p className="text-gray-700 my-2">
                         {" "}
-                        With the Microsoft Purview and Microsoft Priva
+                        With the LM Club Purview and LM Club Priva
                         offerings, organisations can understand and govern their
                         data estates and sensitive information. Purview
                         capabilities include Adaptive Protection, which uses
                         machine learning to understand how users are interacting
-                        with data and assign risk levels. Microsoft Purview can
+                        with data and assign risk levels. LM Club Purview can
                         then adapt by adjusting Data Loss Prevention (DLP)
-                        controls in response to a detected risk. Microsoft Priva
+                        controls in response to a detected risk. LM Club Priva
                         is an advanced solution complementing Purview, tailored
                         for effective data estate governance and handling of
                         sensitive information using advanced automation
@@ -294,7 +294,7 @@ const PrivacyReport = () => {
                         {" "}
                         In April 2024, we announced new solutions in Priva to
                         help customers modernise their privacy programme. The
-                        expansion of Microsoft Priva brings automated
+                        expansion of LM Club Priva brings automated
                         capabilities to help organisations meet adapting privacy
                         requirements and further enables organisations to
                         automate the management, definition and tracking of
@@ -303,11 +303,11 @@ const PrivacyReport = () => {
                       </p>
                       <p className="text-gray-700 my-2">
                         {" "}
-                        Microsoft Entra is a cloud-based service that provides
+                        LM Club Entra is a cloud-based service that provides
                         identity, data and collaboration solutions for
-                        enterprises and organisations. Microsoft has recently
+                        enterprises and organisations. LM Club has recently
                         introduced a range of new security tools and features
-                        for the Microsoft Entra product family, aimed at helping
+                        for the LM Club Entra product family, aimed at helping
                         organisations improve their security and data protection
                         posture. With the ever-increasing sophistication of
                         cyber-attacks, the increasing use of cloud-based
@@ -325,13 +325,13 @@ const PrivacyReport = () => {
                       </h3>
                       <p className="text-gray-700 my-2">
                         We provide tools to help you control your personal data
-                        and manage your interactions with Microsoft products and
-                        services. With the Microsoft privacy dashboard, you can
+                        and manage your interactions with LM Club products and
+                        services. With the LM Club privacy dashboard, you can
                         view, delete, and manage your privacy settings and data
-                        collected while signed into your Microsoft account. Data
+                        collected while signed into your LM Club account. Data
                         that appears on the dashboard includes data from your
-                        Bing searches, Microsoft Edge browsing, location
-                        history, and use of Microsoft apps and services.
+                        Bing searches, LM Club Edge browsing, location
+                        history, and use of LM Club apps and services.
                         Recently, we made it easier for family organisers to
                         view and manage the activity data for connected child
                         accounts from the privacy dashboard.
@@ -339,7 +339,7 @@ const PrivacyReport = () => {
                       <p className="text-gray-700 my-2">
                         {" "}
                         For data that is collected by Copilot in Bing, incluing
-                        through user queries and prompts, the Microsoft privacy
+                        through user queries and prompts, the LM Club privacy
                         dashboard provides authenticated (signed in) users with
                         tools to exercise their data subject rights, including
                         by providing user with the ability to view, export and
@@ -352,7 +352,7 @@ const PrivacyReport = () => {
                       </p>
                       <p className="text-gray-700 my-2">
                         {" "}
-                        For our young users, Microsoft offers an immersive
+                        For our young users, LM Club offers an immersive
                         game-based learning adventure, Privacy Prodigy, for
                         students aged 7-18. In this Minecraft game, players take
                         on the challenge of protecting their data as they
@@ -368,24 +368,24 @@ const PrivacyReport = () => {
                       <p className="text-gray-700 my-2">
                         {" "}
                         For our commercial and public sector customers,
-                        Microsoft has a variety of enterprise-grade solutions
+                        LM Club has a variety of enterprise-grade solutions
                         and services that help our customers control, protect,
                         and defend their data. For example, with the EU Data
-                        Boundary, Microsoft provides enhanced residency
+                        Boundary, LM Club provides enhanced residency
                         capabilities for processing and storing commercial and
                         public sector customers’ personal data within the
                         European Union.
                       </p>
                       <p className="text-gray-700 my-2">
                         {" "}
-                        With the Microsoft Purview and Microsoft Priva
+                        With the LM Club Purview and LM Club Priva
                         offerings, organisations can understand and govern their
                         data estates and sensitive information. Purview
                         capabilities include Adaptive Protection, which uses
                         machine learning to understand how users are interacting
-                        with data and assign risk levels. Microsoft Purview can
+                        with data and assign risk levels. LM Club Purview can
                         then adapt by adjusting Data Loss Prevention (DLP)
-                        controls in response to a detected risk. Microsoft Priva
+                        controls in response to a detected risk. LM Club Priva
                         is an advanced solution complementing Purview, tailored
                         for effective data estate governance and handling of
                         sensitive information using advanced automation
@@ -394,7 +394,7 @@ const PrivacyReport = () => {
                       <p className="text-gray-700 my-2">
                         In April 2024, we announced new solutions in Priva to
                         help customers modernise their privacy programme. The
-                        expansion of Microsoft Priva brings automated
+                        expansion of LM Club Priva brings automated
                         capabilities to help organisations meet adapting privacy
                         requirements and further enables organisations to
                         automate the management, definition and tracking of
@@ -403,11 +403,11 @@ const PrivacyReport = () => {
                       </p>
                       <p className="text-gray-700 my-2">
                         {" "}
-                        Microsoft Entra is a cloud-based service that provides
+                        LM Club Entra is a cloud-based service that provides
                         identity, data and collaboration solutions for
-                        enterprises and organisations. Microsoft has recently
+                        enterprises and organisations. LM Club has recently
                         introduced a range of new security tools and features
-                        for the Microsoft Entra product family, aimed at helping
+                        for the LM Club Entra product family, aimed at helping
                         organisations improve their security and data protection
                         posture. With the ever-increasing sophistication of
                         cyber-attacks, the increasing use of cloud-based
@@ -493,13 +493,13 @@ const PrivacyReport = () => {
                       </h3>
                       <p className="text-gray-700 my-2">
                         We provide tools to help you control your personal data
-                        and manage your interactions with Microsoft products and
-                        services. With the Microsoft privacy dashboard, you can
+                        and manage your interactions with LM Club products and
+                        services. With the LM Club privacy dashboard, you can
                         view, delete, and manage your privacy settings and data
-                        collected while signed into your Microsoft account. Data
+                        collected while signed into your LM Club account. Data
                         that appears on the dashboard includes data from your
-                        Bing searches, Microsoft Edge browsing, location
-                        history, and use of Microsoft apps and services.
+                        Bing searches, LM Club Edge browsing, location
+                        history, and use of LM Club apps and services.
                         Recently, we made it easier for family organisers to
                         view and manage the activity data for connected child
                         accounts from the privacy dashboard.
@@ -578,7 +578,7 @@ const PrivacyReport = () => {
                         to understand how users are interacting with data and
                         assign risk levels. LM Club Purview can then adapt by
                         adjusting Data Loss Prevention (DLP) controls in
-                        response to a detected risk. Microsoft Priva is an
+                        response to a detected risk. LM Club Priva is an
                         advanced solution complementing Purview, tailored for
                         effective data estate governance and handling of
                         sensitive information using advanced automation
@@ -607,12 +607,12 @@ const PrivacyReport = () => {
                       </h3>
                       <p className="text-gray-700">
                         As part of our commitment to privacy and transparency,
-                        the Microsoft Privacy Report is published to share the
+                        the LM Club Privacy Report is published to share the
                         latest information on what personal data we collect, how
                         it may be used, and how you can manage and control your
                         information. The report also summarises key developments
                         and trends in global privacy and how they could affect
-                        Microsoft, our customers and the global regulatory
+                        LM Club, our customers and the global regulatory
                         environment.
                       </p>
                       <p className="text-gray-700">
