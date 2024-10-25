@@ -179,7 +179,7 @@ const AppDesc = () => {
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col pl-8">
                           <div className=" md:text-start text-center">
-                            <h1 className="lg:text-4xl text-3xl font-semibold text-black">
+                            <h1 className="lg:text-4xl text-3xl font-bold text-black">
                               Ready to turn your development{" "}
                               <span className="text-mainColor">
                                 innovation?
@@ -236,7 +236,7 @@ const AppDesc = () => {
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col pl-8">
                           <div className=" md:text-start text-center">
-                            <h1 className="lg:text-4xl text-3xl font-semibold text-black">
+                            <h1 className="lg:text-4xl text-3xl font-bold text-black">
                               Empowering Connections, Cultivating
                               <span className="text-mainColor"> Success</span>
                             </h1>
@@ -291,7 +291,7 @@ const AppDesc = () => {
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col pl-8">
                           <div className=" md:text-start text-center">
-                            <h1 className="lg:text-4xl text-3xl font-semibold text-black">
+                            <h1 className="lg:text-4xl text-3xl font-bold text-black">
                               Empowering Lives Through
                               <span className="text-mainColor"> Rewards</span>
                             </h1>
