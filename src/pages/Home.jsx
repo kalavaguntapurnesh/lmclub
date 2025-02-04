@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import Stack from "../components/Stack";
+import Banner from "../components/Banner";
 import Testimonial from "../components/Testimonial";
 
 const Home = () => {
@@ -17,8 +18,7 @@ const Home = () => {
       <AppDesc />
       <Stack />
       <Testimonial />
-      {/* <Carousel /> */}
-      {/* <FAQ /> */}
+      <Banner/>
       <Footer />
     </div>
   );

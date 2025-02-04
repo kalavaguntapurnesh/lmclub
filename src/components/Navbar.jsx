@@ -99,6 +99,7 @@ const NavBar = () => {
           <button
             onClick={() => {
               navigate("/login");
+              scrollTo(0, 0);
             }}
             className="bg-mainColor hover:text-mainColor hover:border-[1px] hover:border-mainColor text-white lg:px-6 md:px-4 py-2 rounded-full font-medium text-sm hover:bg-white transition duration-500"
           >
@@ -107,6 +108,7 @@ const NavBar = () => {
           <button
             onClick={() => {
               navigate("/register");
+              scrollTo(0, 0);
             }}
             className="border-[1px] border-mainColor text-mainColor hover:text-white hover:bg-mainColor lg:px-6 md:px-4 py-2 rounded-full text-sm font-medium transition duration-500"
           >
@@ -321,7 +323,7 @@ const NavBar = () => {
                     </li>
                     <li className="text-gray-700">
                       <a href="/privacy-statement" className="text-sm">
-                       Privacy Statement
+                        Privacy Statement
                       </a>
                     </li>
                   </motion.ul>

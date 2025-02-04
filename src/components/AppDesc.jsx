@@ -179,7 +179,7 @@ const AppDesc = () => {
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col pl-8">
                           <div className=" md:text-start text-center">
-                            <h1 className="lg:text-4xl text-3xl font-bold text-black">
+                            <h1 className="lg:text-4xl text-3xl font-semibold text-black">
                               Ready to turn your development{" "}
                               <span className="text-mainColor">
                                 innovation?
@@ -236,7 +236,7 @@ const AppDesc = () => {
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col pl-8">
                           <div className=" md:text-start text-center">
-                            <h1 className="lg:text-4xl text-3xl font-bold text-black">
+                            <h1 className="lg:text-4xl text-3xl font-semibold text-black">
                               Empowering Connections, Cultivating
                               <span className="text-mainColor"> Success</span>
                             </h1>
@@ -291,7 +291,7 @@ const AppDesc = () => {
                       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="space-y-6 flex flex-col pl-8">
                           <div className=" md:text-start text-center">
-                            <h1 className="lg:text-4xl text-3xl font-bold text-black">
+                            <h1 className="lg:text-4xl text-3xl font-semibold text-black">
                               Empowering Lives Through
                               <span className="text-mainColor"> Rewards</span>
                             </h1>
@@ -426,6 +426,46 @@ const AppDesc = () => {
                       </div>
                     </div>
                   </Tab>
+                  {/* <Tab
+                    label="Cultivate Thriving Culture"
+                    className="text-xs px-1 text-sideHeading"
+                  >
+                    <div className="py-4">
+                      <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+                        <div className="space-y-6 flex flex-col px-2">
+                          <div className=" md:text-start text-center">
+                            <h1 className="lg:text-4xl text-3xl font-semibold text-black">
+                              Empowering Lives Through
+                              <span className="text-mainColor"> Rewards</span>
+                            </h1>
+                          </div>
+                          <div className="mt-4 md:text-start text-center text-gray-700">
+                            <p>
+                              Try and see the magic of the LM Club in action.
+                            </p>
+                          </div>
+
+                          <div className="flex items-center lg:justify-start justify-center">
+                            <a
+                              href="/login"
+                              className="bg-mainColor outline-none
+                              rounded-full over:shadow-form transition font-medium duration-1000 ease-in-out md:text-base text-sm text-white px-8 md:py-3 py-2 text-center"
+                            >
+                              Our Vision
+                            </a>
+                          </div>
+                        </div>
+
+                        <div className="w-[100%] flex justify-center items-center">
+                          <img
+                            src="https://images.ctfassets.net/p24lh3qexxeo/6GB7eepDnAGDK7P1feKYcA/4dd44c41342bfccc884a3558b66d70a5/image.png?w=1081&h=952&q=80&fm=webp"
+                            alt=""
+                            className="h-80 rounded w-[90%]"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </Tab> */}
                 </Tabs>
               </div>
             </div>
@@ -461,7 +501,7 @@ const AppDesc = () => {
 
               <div className="mx-auto max-w-[1200px] ">
                 <div class="grid md:grid-cols-2 grid-cols-1 gap-6 pt-8">
-                  <div class="w-full bg-[#f8f9fa] border border-gray-200 rounded-lg shadow  ">
+                  <div class="w-full bg-[#f8f9fa] border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700">
                     <div className="flex flex-col">
                       <div className="grid grid-cols-4 w-[100%] border-b-[1px] border-stone-200">
                         <div className="lg:col-span-2 col-span-4 p-4">
@@ -474,7 +514,7 @@ const AppDesc = () => {
                             </div>
 
                             <div className="flex md:justify-start justify-center md:mt-8 mt-4">
-                              <h1 className="md:text-3xl text-2xl font-bold md:text-start text-center">
+                              <h1 className="md:text-3xl text-2xl md:font-semibold font-bold md:text-start text-center">
                                 Activate Grow & Enroll
                               </h1>
                             </div>
@@ -499,7 +539,7 @@ const AppDesc = () => {
                     </div>
                   </div>
 
-                  <div class="w-full bg-[#f8f9fa] border border-gray-200 rounded-lg shadow ">
+                  <div class="w-full bg-[#f8f9fa] border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700">
                     <div className="flex flex-col">
                       <div className="grid grid-cols-4 w-[100%] border-b-[1px] border-green-200">
                         <div className="lg:col-span-2 col-span-4 p-4">
@@ -511,7 +551,7 @@ const AppDesc = () => {
                               </h1>
                             </div>
                             <div className="flex md:justify-start justify-center md:mt-8 mt-4">
-                              <h1 className="md:text-3xl text-2xl font-bold md:text-start text-center">
+                              <h1 className="md:text-3xl text-2xl md:font-semibold font-bold md:text-start text-center">
                                 Streamline Success Rate
                               </h1>
                             </div>
@@ -536,7 +576,7 @@ const AppDesc = () => {
                     </div>
                   </div>
 
-                  <div class="w-full bg-slate-50 border border-gray-200 rounded-lg shadow ">
+                  <div class="w-full bg-slate-50 border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700">
                     <div className="flex flex-col">
                       <div className="grid grid-cols-4 w-[100%] border-b-[1px] border-slate-200">
                         <div className="lg:col-span-2 col-span-4 p-4">
@@ -549,7 +589,7 @@ const AppDesc = () => {
                             </div>
 
                             <div className="flex md:justify-start justify-center md:mt-8 mt-4">
-                              <h1 className="md:text-3xl text-2xl font-bold md:text-start text-center">
+                              <h1 className="md:text-3xl text-2xl md:font-semibold font-bold md:text-start text-center">
                                 Enhanced Mutual Collaboration
                               </h1>
                             </div>
@@ -573,7 +613,7 @@ const AppDesc = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="w-full bg-slate-50 border border-gray-200 rounded-lg shadow ">
+                  <div class="w-full bg-slate-50 border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700">
                     <div className="flex flex-col">
                       <div className="grid grid-cols-4 w-[100%] border-b-[1px] border-slate-200">
                         <div className="lg:col-span-2 col-span-4 p-4">
@@ -586,7 +626,7 @@ const AppDesc = () => {
                             </div>
 
                             <div className="flex md:justify-start justify-center md:mt-8 mt-4">
-                              <h1 className="md:text-3xl text-2xl font-bold md:text-start text-center">
+                              <h1 className="md:text-3xl text-2xl md:font-semibold font-bold md:text-start text-center">
                                 Promote Entrepreneurship
                               </h1>
                             </div>
