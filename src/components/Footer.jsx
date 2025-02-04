@@ -163,7 +163,7 @@ const Footer = () => {
                           href="/about-us"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          LM Network Widget
+                          Network Widget
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -171,7 +171,7 @@ const Footer = () => {
                           href="/contact-cdn#global_presence"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          LM Beehive Widget
+                          Beehive Widget
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -179,7 +179,7 @@ const Footer = () => {
                           href="/our-vision"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          LM Broadcast Widget
+                          Broadcast Widget
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -187,7 +187,7 @@ const Footer = () => {
                           href="/about-us"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          LM EStore Widget
+                          EStore Widget
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -195,7 +195,7 @@ const Footer = () => {
                           href="/privacy-policy"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          LM Grow Widget
+                          Grow Widget
                         </a>
                       </li>
                     </ul>
@@ -298,7 +298,7 @@ const Footer = () => {
                           href="https://x.com/CloudDataNet"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Acceptable Use Policy 
+                          Acceptable Use Policy
                         </a>
                       </li>
                     </ul>

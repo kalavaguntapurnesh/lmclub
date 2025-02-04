@@ -95,25 +95,17 @@ const NavBar = () => {
         </ul>
 
         {/* Login Button */}
-        <div className="hidden md:flex space-x-4">
-          <button
-            onClick={() => {
-              navigate("/login");
-              scrollTo(0, 0);
-            }}
-            className="bg-mainColor hover:text-mainColor hover:border-[1px] hover:border-mainColor text-white lg:px-6 md:px-4 py-2 rounded-full font-medium text-sm hover:bg-white transition duration-500"
+        <div className="hidden lg:flex space-x-4">
+          <a
+            href="/login"
+            className={`border-[1px] border-green-500 font-semibold text-green-500 relative lg:px-[28px] md:px-4 py-2 bg-trumpOne  text-sm overflow-hidden transition-all rounded-full ${
+              isScrolled
+                ? "border-green-500 font-semibold text-green-500"
+                : "font-semibold text-green-500"
+            }`}
           >
-            Log In
-          </button>
-          <button
-            onClick={() => {
-              navigate("/register");
-              scrollTo(0, 0);
-            }}
-            className="border-[1px] border-mainColor text-mainColor hover:text-white hover:bg-mainColor lg:px-6 md:px-4 py-2 rounded-full text-sm font-medium transition duration-500"
-          >
-            Sign Up
-          </button>
+            <span className="relative z-10">Join Now</span>
+          </a>
         </div>
 
         <div className="md:hidden">

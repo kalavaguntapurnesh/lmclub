@@ -8,19 +8,21 @@ import ScrollToTop from "../components/ScrollToTop";
 import Stack from "../components/Stack";
 import Banner from "../components/Banner";
 import Testimonial from "../components/Testimonial";
+import MainLayout from "./../components/MainLayout";
+import HomeProducts from "../components/HomeProducts";
 
 const Home = () => {
   return (
-    <div>
-      <Navbar />
+    <>
+      <MainLayout />
       <ScrollToTop />
-      <Hero />
+      <HomeProducts />
       <AppDesc />
-      <Stack />
+      {/* <Stack /> */}
       <Testimonial />
-      <Banner/>
+      <Banner />
       <Footer />
-    </div>
+    </>
   );
 };
 
