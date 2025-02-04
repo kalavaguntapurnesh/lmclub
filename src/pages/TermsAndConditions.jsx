@@ -1,7 +1,14 @@
-import React from "react";
+import Footer from "../components/Footer";
+import NavBar from "../components/Navbar";
 
 const TermsAndConditions = () => {
-  return <div>Terms&Conditions</div>;
+  return (
+    <>
+      <NavBar />
+
+      <Footer />
+    </>
+  );
 };
 
 export default TermsAndConditions;

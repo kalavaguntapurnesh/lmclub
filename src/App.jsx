@@ -32,6 +32,10 @@ function App() {
         <Route path="/register" element={<TermsAndConditions />}></Route>
 
         <Route path="/privacy-policy" element={<Privacy />}></Route>
+        <Route
+          path="/terms-and-conditions"
+          element={<TermsAndConditions />}
+        ></Route>
 
         <Route path="/consumer-privacy" element={<Consumer_Privacy />}></Route>
         <Route path="/privacy-statement" element={<PrivacyStatement />}></Route>

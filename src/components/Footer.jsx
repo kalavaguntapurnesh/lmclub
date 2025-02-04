@@ -114,6 +114,15 @@ const Footer = () => {
                           About LM Club
                         </a>
                       </li>
+
+                      <li className=" flex items-start md:justify-start justify-center">
+                        <a
+                          href="/learn-about-us#global_presence"
+                          className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
+                        >
+                          Our Leadership
+                        </a>
+                      </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
                           href="/ecommerce&web"
@@ -122,6 +131,7 @@ const Footer = () => {
                           Membership Plans
                         </a>
                       </li>
+
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
                           href="/custom-software"
@@ -137,15 +147,6 @@ const Footer = () => {
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Terms & Conditions
-                        </a>
-                      </li>
-
-                      <li className=" flex items-start md:justify-start justify-center">
-                        <a
-                          href="/application-management"
-                          className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
-                        >
-                          LM Club E-Store
                         </a>
                       </li>
                     </ul>

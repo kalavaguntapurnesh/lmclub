@@ -491,7 +491,7 @@ const Tabs = () => {
   return (
     <div
       onMouseLeave={() => handleSetSelected(null)}
-      className={`relative flex h-fit gap-2 backdrop-blur-md py-[6px] px-[20px] rounded-full text-gray-50  bg-white/20 ${
+      className={`relative flex h-fit gap-2 backdrop-blur-md py-[6px] px-[20px] rounded-full  bg-white/20 ${
         isScrolled ? "text-[#1A1A1A]" : "text-gray-50"
       }`}
     >
@@ -631,16 +631,16 @@ const Nub = ({ selected }) => {
   );
 };
 
-const Blog = () => {
+const WidgetsBar = () => {
   return (
     <div className="grid grid-cols-2 gap-4 p-4 ">
       <a
         href="/application-management"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-trumpTwo font-medium">Application Management</h1>
+        <h1 className="text-[#1a1a1a] font-medium">Network</h1>
         <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
+          Activate Network today to connect with like-minded individuals
         </p>
       </a>
 
@@ -648,11 +648,10 @@ const Blog = () => {
         href="/ecommerce&web"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-trumpTwo font-medium">
-          E-Commerce & Web Development
-        </h1>
+        <h1 className="text-[#1a1a1a] font-medium">Beehive</h1>
         <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
+          Unlock the BEEHIVE. It will allow us to text / email great deals,
+          coupons,
         </p>
       </a>
 
@@ -660,11 +659,9 @@ const Blog = () => {
         href="/custom-software"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-trumpTwo font-medium">
-          Custom Software Development
-        </h1>
+        <h1 className="text-[#1a1a1a] font-medium">Broadcast</h1>
         <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
+          Activate BROADCAST to advertise local businesses on your social media
         </p>
       </a>
 
@@ -672,9 +669,10 @@ const Blog = () => {
         href="/about-us"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-trumpTwo font-medium">Talent Solutions</h1>
+        <h1 className="text-[#1a1a1a] font-medium">Estore</h1>
         <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
+          Activate E-Store and we will share a percentage of our profits with
+          you.
         </p>
       </a>
 
@@ -682,135 +680,9 @@ const Blog = () => {
         href="/about-us"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-trumpTwo font-medium">Cloud Services</h1>
+        <h1 className="text-[#1a1a1a] font-medium">Grow</h1>
         <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-    </div>
-  );
-};
-
-const FinalOne = () => {
-  return (
-    <div className="grid grid-cols-2 gap-4 p-4 ">
-      <a
-        href="/application-management"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">Application Management</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/ecommerce&web"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">
-          E-Commerce & Web Development
-        </h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/custom-software"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">
-          Custom Software Development
-        </h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/about-us"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">Talent Solutions</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/about-us"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">Cloud Services</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-    </div>
-  );
-};
-
-const Homebar = () => {
-  return (
-    <div className="grid grid-cols-2 gap-4 p-4 ">
-      <a
-        href="/about-us"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">About CDN</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/contact-cdn#global_presence"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">Global Presence</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/our-vision"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">Our Vision 2028</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/about-us"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">COE Ecosystem</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/privacy-policy"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">Privacy Policy</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/about-us"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">Our Clients</h1>
-        <p className="text-gray-800 font-light">
-          Explore more about our clients and our achievements.
+          Enroll earn rewards for helping our community to expand. T & C apply.
         </p>
       </a>
     </div>
@@ -821,12 +693,22 @@ const ContactBar = () => {
   return (
     <div className="grid grid-cols-2 gap-4 p-4 ">
       <a
-        href="/about-us"
+        href="/contact-us"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-trumpTwo font-medium">API Management</h1>
+        <h1 className="text-[#1a1a1a] font-medium">Contact Us</h1>
         <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
+          Reach out to us for assistance
+        </p>
+      </a>
+
+      <a
+        href="/ecommerce&web"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <h1 className="text-[#1a1a1a] font-medium">Upcoming Events</h1>
+        <p className="text-gray-800 font-light">
+          Get to know more about upcoming events.
         </p>
       </a>
 
@@ -834,125 +716,101 @@ const ContactBar = () => {
         href="/about-us"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-trumpTwo font-medium">E-Commerce</h1>
+        <h1 className="text-[#1a1a1a] font-medium">Cart & Checkout</h1>
         <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/about-us"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">Internet of Things</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/about-us"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">Business Management</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/about-us"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">Oracle Middleware</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/about-us"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">SAP Services</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/about-us"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">Big Data & BI</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
-      </a>
-
-      <a
-        href="/about-us"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <h1 className="text-trumpTwo font-medium">Microsoft Services</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
+          Learn more about your list of favourite items.
         </p>
       </a>
     </div>
   );
 };
 
-const ProductsBar = () => {
+const Homebar = () => {
   return (
     <div className="grid grid-cols-2 gap-4 p-4 ">
       <a
-        href="/edukare"
+        href="/learn-about-us"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-trumpTwo font-medium">EduKare</h1>
+        <h1 className="text-[#1a1a1a] font-medium">About LM Club</h1>
         <p className="text-gray-800 font-light">
           Get to know more about our mision, vision and value.
         </p>
       </a>
 
       <a
-        href="/dentalkare"
+        href="/learn-about-us#global_presence"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-trumpTwo font-medium">DentalKare</h1>
+        <h1 className="text-[#1a1a1a] font-medium">Our Leadership</h1>
+        <p className="text-gray-800 font-light">
+          Know about our founders and their vision of networking.
+        </p>
+      </a>
+
+      <a
+        href="/terms-and-conditions"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <h1 className="text-[#1a1a1a] font-medium">Terms & Conditions</h1>
+        <p className="text-gray-800 font-light">
+          Reach out to us about terms & conditions.
+        </p>
+      </a>
+
+      <a
+        href="/privacy-policy"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <h1 className="text-[#1a1a1a] font-medium">Privacy Policy</h1>
+        <p className="text-gray-800 font-light">
+          Get to know more about privacy policy.
+        </p>
+      </a>
+    </div>
+  );
+};
+
+const Membership = () => {
+  return (
+    <div className="grid grid-cols-2 gap-4 p-4 ">
+      <a
+        href="/about-us"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <h1 className="text-[#1a1a1a] font-medium">Bronze</h1>
         <p className="text-gray-800 font-light">
           Get to know more about our mision, vision and value.
         </p>
       </a>
 
       <a
-        href="/logbucks"
+        href="/about-us"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-trumpTwo font-medium">LogBucks</h1>
+        <h1 className="text-[#1a1a1a] font-medium">Silver</h1>
         <p className="text-gray-800 font-light">
           Get to know more about our mision, vision and value.
         </p>
       </a>
 
       <a
-        href="https://www.rmahousing.com/"
+        href="/about-us"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-trumpTwo font-medium">RMA Housing</h1>
+        <h1 className="text-[#1a1a1a] font-medium">Gold</h1>
         <p className="text-gray-800 font-light">
-          Streamling rentals between landlords and tenants.
+          Get to know more about our mision, vision and value.
         </p>
       </a>
 
       <a
-        href="https://www.xn--syndo-7ra.com/"
+        href="/about-us"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-trumpTwo font-medium">Syndeo</h1>
+        <h1 className="text-[#1a1a1a] font-medium">Platinum</h1>
         <p className="text-gray-800 font-light">
-          Seamless scheduling software for individuals & organization.
+          Get to know more about our mision, vision and value.
         </p>
       </a>
     </div>
@@ -960,21 +818,17 @@ const ProductsBar = () => {
 };
 
 const TABS = [
-  { title: "Company", Component: Homebar },
+  { title: "Home", Component: Homebar },
   {
-    title: "Services",
-    Component: Blog,
+    title: "Our Widgets",
+    Component: WidgetsBar,
   },
   {
-    title: "Technologies",
+    title: "Membership Plans",
+    Component: Membership,
+  },
+  {
+    title: "Contact Us",
     Component: ContactBar,
-  },
-  {
-    title: "Products",
-    Component: ProductsBar,
-  },
-  {
-    title: "Final",
-    Component: FinalOne,
   },
 ].map((n, idx) => ({ ...n, id: idx + 1 }));

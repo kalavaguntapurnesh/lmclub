@@ -664,9 +664,12 @@ const AppDesc = () => {
           <div className="w-full mx-auto max-w-[1400px] ">
             <div className="p-4">
               <div>
-                <h2 className="lg:text-4xl text-2xl font-bold text-trumpTwo">
-                  Empowering Connections & Cultivating Success
-                </h2>
+                <div className="flex flex-wrap flex-col lg:items-start items-start pb-3">
+                  <div className="text-start leading-relaxed  font-bold text-black">
+                    <p className="lg:text-4xl text-2xl">Empowering Connections & Cultivating Success</p>
+                  </div>
+                  <div className="md:w-36 w-28 h-1 border-b-2 border-green-500 mt-[1px]"></div>
+                </div>
                 <p className="text-gray-600 pt-3">
                   Welcome to LM Club – where networking meets opportunity! Our
                   innovative widgets are designed to empower you, reward you,
