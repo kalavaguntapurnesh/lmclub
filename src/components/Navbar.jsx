@@ -538,188 +538,59 @@ const Nub = ({ selected }) => {
   );
 };
 
-const Blog = () => {
+const WidgetsBar = () => {
   return (
-    <div>
-      <div className="grid grid-cols-2 gap-2">
-        <a href="/pricing" className="w-full border-[1px] p-2 rounded">
-          <div className="flex justify-center items-center">
-            <img
-              className="mb-2 h-16 w-16 rounded "
-              src={premium}
-              alt="Placeholder image"
-            />
-          </div>
-          <h4 className="mb-0.5 text-sm font-medium text-center">
-            Premium Subscription
-          </h4>
-          <ul className="space-y-1 text-sm text-neutral-600 flex justify-center items-center flex-col">
-            <li>Platinum</li>
-            <li>Gold</li>
-            <li>Silver</li>
-            <li>Bronze</li>
-          </ul>
-        </a>
-        <a href="/pricing" className="w-full border-[1px] p-2 rounded">
-          <div className="flex justify-center items-center">
-            <img
-              className="mb-2 h-16 w-16 rounded "
-              src={free}
-              alt="Placeholder image"
-            />
-          </div>
-          <h4 className="mb-0.5 text-sm font-medium text-center">
-            Free Subscription
-          </h4>
-          <ul className="space-y-1 text-sm flex justify-center items-center flex-col text-neutral-600">
-            <li>Free Tier</li>
-            <li>Rewards Engage</li>
-          </ul>
-        </a>
-      </div>
-      <button className="ml-auto mt-4 flex items-center gap-1 text-sm text-mainColor font-semibold">
-        <span>View more</span>
-        <FiArrowRight />
-      </button>
-    </div>
-  );
-};
+    <div className="grid grid-cols-2 gap-4 p-4 ">
+      <a
+        href="/application-management"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <h1 className="text-[#1a1a1a] font-medium">Network</h1>
+        <p className="text-gray-800 font-light">
+          Activate Network today to connect with like-minded individuals
+        </p>
+      </a>
 
-const Homebar = () => {
-  return (
-    <div className="grid grid-cols-3 gap-4 ">
       <a
-        href="/learn-about-us"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+        href="/ecommerce&web"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <FiHome className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">About Us</span>
+        <h1 className="text-[#1a1a1a] font-medium">Beehive</h1>
+        <p className="text-gray-800 font-light">
+          Unlock the BEEHIVE. It will allow us to text / email great deals,
+          coupons,
+        </p>
       </a>
-      <a
-        href="/learn-about-us#logo_meaning"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiBarChart2 className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">
-          Logo Meaning
-        </span>
-      </a>
-      <a
-        href="/learn-about-us#about_founder"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <FiPieChart className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">Leadership</span>
-      </a>
-    </div>
-  );
-};
 
-const Subscription = () => {
-  return (
-    <div>
-      <div className="grid grid-cols-4 gap-2">
-        <a href="#">
-          <img
-            className="mb-2 h-14 w-full rounded object-cover"
-            src="https://lmclub.club/wp-content/uploads/2024/09/Picture2-300x300.png"
-            alt="Placeholder image"
-          />
-          <h4 className="mb-0.5 text-sm font-medium text-black">LM Beehive</h4>
-          <p className="text-xs text-neutral-400">
-            Coupons, information and opportunities from local restaurants hotel,
-            retailers.
-          </p>
-        </a>
-        <a href="#">
-          <img
-            className="mb-2 h-14 w-full rounded object-cover"
-            src="https://lmclub.club/wp-content/uploads/2024/09/Picture1-300x300.png"
-            alt="Placeholder image"
-          />
-          <h4 className="mb-0.5 text-sm font-medium text-black">
-            LM Broadcast
-          </h4>
-          <p className="text-xs text-neutral-400">
-            Advertise local businesses on your social media and we will pay you
-            a percentage of the revenue earned.
-          </p>
-        </a>
-        <a href="/enroll-rewards">
-          <img
-            className="mb-2 h-14 w-full rounded object-cover"
-            src="https://lmclub.club/wp-content/uploads/2024/09/Picture3-300x300.png"
-            alt="Placeholder image"
-          />
-          <h4 className="mb-0.5 text-sm font-medium text-black">
-            Enroll Rewards
-          </h4>
-          <p className="text-xs text-neutral-400">
-            Activate GROW & ENROLL to earn rewards for helping our community to
-            expand.
-          </p>
-        </a>
-        <a href="https://ecommerce-green-theta.vercel.app/">
-          <img
-            className="mb-2 h-14 w-full rounded object-cover"
-            src="https://cdn-icons-png.flaticon.com/512/3445/3445817.png"
-            alt="Placeholder image"
-          />
-          <h4 className="mb-0.5 text-sm font-medium text-black">
-            Ecommerce Platform
-          </h4>
-          <p className="text-xs text-neutral-400">
-            Ecommerce platform is the place where you can find customized
-            jerseys.
-          </p>
-        </a>
-      </div>
-      <button className="ml-auto mt-4 flex items-center font-semibold gap-1 text-sm text-mainColor">
-        <span>View more</span>
-        <FiArrowRight />
-      </button>
-    </div>
-  );
-};
+      <a
+        href="/custom-software"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <h1 className="text-[#1a1a1a] font-medium">Broadcast</h1>
+        <p className="text-gray-800 font-light">
+          Activate BROADCAST to advertise local businesses on your social media
+        </p>
+      </a>
 
-const Privacy = () => {
-  return (
-    <div className="grid grid-cols-4 gap-4">
       <a
-        href="/privacy-policy"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+        href="/about-us"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <RiCustomerService2Fill className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">
-          Privacy Policy
-        </span>
+        <h1 className="text-[#1a1a1a] font-medium">Estore</h1>
+        <p className="text-gray-800 font-light">
+          Activate E-Store and we will share a percentage of our profits with
+          you.
+        </p>
       </a>
+
       <a
-        href="/consumer-privacy"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+        href="/about-us"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <FaUsers className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">
-          Consumer Policy
-        </span>
-      </a>
-      <a
-        href="/privacy-report"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <SiAdguard className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">
-          Privacy Report
-        </span>
-      </a>
-      <a
-        href="/privacy-statement"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
-      >
-        <SiSecurityscorecard className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">
-          Privacy Statement
-        </span>
+        <h1 className="text-[#1a1a1a] font-medium">Grow</h1>
+        <p className="text-gray-800 font-light">
+          Enroll earn rewards for helping our community to expand. T & C apply.
+        </p>
       </a>
     </div>
   );
@@ -727,51 +598,127 @@ const Privacy = () => {
 
 const ContactBar = () => {
   return (
-    <div className="grid grid-cols-3 gap-4 ">
+    <div className="grid grid-cols-2 gap-4 p-4 ">
       <a
         href="/contact-us"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <FaGlobeAmericas className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">
-          Head Quarters
-        </span>
+        <h1 className="text-[#1a1a1a] font-medium">Contact Us</h1>
+        <p className="text-gray-800 font-light">
+          Reach out to us for assistance
+        </p>
       </a>
+
       <a
-        href="/contact-us"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+        href="/ecommerce&web"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <FaBuildingColumns className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">
-          Branch Offices
-        </span>
+        <h1 className="text-[#1a1a1a] font-medium">Upcoming Events</h1>
+        <p className="text-gray-800 font-light">
+          Get to know more about upcoming events.
+        </p>
       </a>
+
       <a
-        href="/contact-us"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+        href="/about-us"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <FaComputerMouse className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">
-          Contact by Email
-        </span>
+        <h1 className="text-[#1a1a1a] font-medium">Cart & Checkout</h1>
+        <p className="text-gray-800 font-light">
+          Learn more about your list of favourite items.
+        </p>
       </a>
+    </div>
+  );
+};
+
+const Homebar = () => {
+  return (
+    <div className="grid grid-cols-2 gap-4 p-4 ">
       <a
-        href="/contact-us"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+        href="/learn-about-us"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <MdComputer className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">
-          Contact by Chat
-        </span>
+        <h1 className="text-[#1a1a1a] font-medium">About LM Club</h1>
+        <p className="text-gray-800 font-light">
+          Get to know more about our mision, vision and value.
+        </p>
       </a>
+
       <a
-        href="/contact-us"
-        className="flex w-full flex-col items-center justify-center py-2 text-neutral-400 transition-colors hover:text-neutral-50"
+        href="/learn-about-us#about_founder"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <FaMicrophoneAlt className="mb-2 text-xl text-mainColor" />
-        <span className="text-xs font-semibold text-gray-700">
-          Contact by Phone
-        </span>
+        <h1 className="text-[#1a1a1a] font-medium">Our Leadership</h1>
+        <p className="text-gray-800 font-light">
+          Know about our founders and their vision of networking.
+        </p>
+      </a>
+
+      <a
+        href="/terms-and-conditions"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <h1 className="text-[#1a1a1a] font-medium">Terms & Conditions</h1>
+        <p className="text-gray-800 font-light">
+          Reach out to us about terms & conditions.
+        </p>
+      </a>
+
+      <a
+        href="/privacy-policy"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <h1 className="text-[#1a1a1a] font-medium">Privacy Policy</h1>
+        <p className="text-gray-800 font-light">
+          Get to know more about privacy policy.
+        </p>
+      </a>
+    </div>
+  );
+};
+
+const Membership = () => {
+  return (
+    <div className="grid grid-cols-2 gap-4 p-4 ">
+      <a
+        href="/about-us"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <h1 className="text-[#1a1a1a] font-medium">Bronze</h1>
+        <p className="text-gray-800 font-light">
+          Get to know more about our mision, vision and value.
+        </p>
+      </a>
+
+      <a
+        href="/about-us"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <h1 className="text-[#1a1a1a] font-medium">Silver</h1>
+        <p className="text-gray-800 font-light">
+          Get to know more about our mision, vision and value.
+        </p>
+      </a>
+
+      <a
+        href="/about-us"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <h1 className="text-[#1a1a1a] font-medium">Gold</h1>
+        <p className="text-gray-800 font-light">
+          Get to know more about our mision, vision and value.
+        </p>
+      </a>
+
+      <a
+        href="/about-us"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <h1 className="text-[#1a1a1a] font-medium">Platinum</h1>
+        <p className="text-gray-800 font-light">
+          Get to know more about our mision, vision and value.
+        </p>
       </a>
     </div>
   );
@@ -780,20 +727,15 @@ const ContactBar = () => {
 const TABS = [
   { title: "Home", Component: Homebar },
   {
-    title: "Products",
-    Component: Subscription,
+    title: "Our Widgets",
+    Component: WidgetsBar,
   },
   {
-    title: "Subscription",
-    Component: Blog,
-  },
-
-  {
-    title: "Privacy",
-    Component: Privacy,
+    title: "Membership Plans",
+    Component: Membership,
   },
   {
-    title: "Contact",
+    title: "Contact Us",
     Component: ContactBar,
   },
 ].map((n, idx) => ({ ...n, id: idx + 1 }));

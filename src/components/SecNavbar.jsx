@@ -739,7 +739,7 @@ const Homebar = () => {
       </a>
 
       <a
-        href="/learn-about-us#global_presence"
+        href="/learn-about-us#about_founder"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <h1 className="text-[#1a1a1a] font-medium">Our Leadership</h1>

@@ -3,7 +3,6 @@ import AboutTwo from "../components/AboutTwo";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
-import Final from "../components/Final";
 
 const About = () => {
   return (
@@ -12,7 +11,6 @@ const About = () => {
       <ScrollToTop />
       <AboutHero />
       <AboutTwo />
-      <Final />
       <Footer />
     </div>
   );
