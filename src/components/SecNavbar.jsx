@@ -5,6 +5,7 @@ import logo from "../assets/LM_Logo.webp";
 import { FiChevronDown } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaAngleDown } from "react-icons/fa";
+import phone from "../assets/NavPhone.png";
 
 const SecNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -93,7 +94,7 @@ const SecNavbar = () => {
           className={
             !isMobileMenuOpen
               ? "lg:hidden fixed left-[-100%] h-[100%] ease-in-out duration-1000 "
-              : "lg:hidden fixed left-0 top-0 w-[85%] h-[100%] bg-white ease-in-out duration-1000 rounded-b-lg z-10 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+              : "lg:hidden fixed left-0 top-0 w-[100%] h-[100%] bg-white ease-in-out duration-1000 rounded-b-lg z-10 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
           }
         >
           <a
@@ -101,16 +102,13 @@ const SecNavbar = () => {
             className="flex flex-row mt-6 justify-center items-center"
           >
             <img src={logo} className="w-20 h-auto " alt="logo" />
-            <h3 className="font-bold ml-2 sm:text-lg  text-trumpTwo">
-              Cloud Data Networks
-            </h3>
           </a>
 
           <ul className="p-4 mt-4">
             <li className="px-4 py-3">
               <div
                 onClick={() => toggleMobileDropdown("home")}
-                className="flex items-center justify-between cursor-pointer text-[#1a1a1a]"
+                className="flex items-center justify-between cursor-pointer text-[#1a1a1a] font-medium"
               >
                 About Company
                 <FaAngleDown
@@ -169,7 +167,7 @@ const SecNavbar = () => {
             <li className="px-4 py-3">
               <div
                 onClick={() => toggleMobileDropdown("services")}
-                className="flex items-center justify-between cursor-pointer text-[#1a1a1a]"
+                className="flex items-center justify-between cursor-pointer text-[#1a1a1a] font-medium"
               >
                 Our Products
                 <FaAngleDown
@@ -238,7 +236,7 @@ const SecNavbar = () => {
             <li className="px-4 py-3">
               <div
                 onClick={() => toggleMobileDropdown("products")}
-                className="flex items-center justify-between cursor-pointer text-navGray"
+                className="flex items-center justify-between cursor-pointer text-[#1a1a1a] font-medium"
               >
                 Services
                 <FaAngleDown
@@ -305,7 +303,7 @@ const SecNavbar = () => {
             <li className="px-4 py-3">
               <div
                 onClick={() => toggleMobileDropdown("technologies")}
-                className="flex items-center justify-between cursor-pointer text-[#1a1a1a]"
+                className="flex items-center justify-between cursor-pointer text-[#1a1a1a] font-medium"
               >
                 Technologies
                 <FaAngleDown
@@ -385,69 +383,16 @@ const SecNavbar = () => {
               </AnimatePresence>
             </li>
 
-            <li className="px-4 py-3">
-              <div
-                onClick={() => toggleMobileDropdown("Resources")}
-                className="flex items-center justify-between cursor-pointer text-[#1a1a1a]"
-              >
-                Useful Resources
-                <FaAngleDown
-                  className={`transition-transform ${
-                    openDropdownMobile === "Resources"
-                      ? "rotate-180 text-mainColor"
-                      : ""
-                  }`}
-                />
-              </div>
-              <AnimatePresence>
-                {openDropdownMobile === "Resources" && (
-                  <motion.ul
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="pl-4 mt-6 space-y-2"
-                  >
-                    <li className="text-navGray">
-                      <a
-                        href="/careers"
-                        className="block text-base text-gray-700"
-                      >
-                        CDN Careers
-                      </a>
-                    </li>
-                    <li className="text-navGray">
-                      <a
-                        href="/privacy-policy#terms_and_conditions"
-                        className="block text-base text-gray-700"
-                      >
-                        Terms & Conditions
-                      </a>
-                    </li>
-                    <li className="text-navGray">
-                      <a
-                        href="https://www.linkedin.com/company/cloud-data-networks"
-                        className="block text-base text-gray-700"
-                      >
-                        LinkedIn Page
-                      </a>
-                    </li>
-                  </motion.ul>
-                )}
-              </AnimatePresence>
-            </li>
+            <div className="h-[200px] flex justify-center">
+              <img src={phone} alt="phone" className="h-full" />
+            </div>
 
-            <li className="px-4 mt-10 flex flex-row gap-4 justify-center items-center">
+            <li className="px-4 mt-10 w-[100%] flex justify-center items-center">
               <a
-                href="/contact-cdn"
-                className="border-[1px] relative md:px-20 px-12 py-3 bg-trumpOne text-white  border-trumpOne flex justify-center items-center font-semibold overflow-hidden text-center text-xs"
+                href="/login"
+                className="border-[1px] relative py-[10px] bg-trumpOne text-white rounded-full border-green-500 text-sm bg-green-500 flex justify-center items-center font-semibold overflow-hidden text-center w-[90%]"
               >
-                <span className="relative z-10">Contact</span>
-              </a>
-              <a
-                href="/about-us"
-                className="border-[1px] relative md:px-20 px-12 py-3 bg-trumpTwo text-white  border-trumpTwo flex justify-center items-center font-semibold overflow-hidden transition-all text-center duration-1000 hover:border-trumpTwo hover:bg-trumpTwo text-xs"
-              >
-                <span className="relative z-10">About</span>
+                <span className="relative z-10">Login</span>
               </a>
             </li>
           </ul>

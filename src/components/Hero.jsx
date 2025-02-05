@@ -41,7 +41,7 @@ const Hero = () => {
               designed to empower, reward and make your life easier.
             </p>
           </div>
-          <div className="pt-4 flex items-center md:justify-end justify-center lg:gap-6 gap-4">
+          <div className="pt-4 flex items-center justify-end lg:gap-6 gap-4">
             <a
               href="/contact-cdn"
               className="group border-[1px] relative px-6 py-2 text-gray-50 text-sm rounded-full border-gray-50  font-semibold overflow-hidden flex items-center gap-2 w-[200px] "
