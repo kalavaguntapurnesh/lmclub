@@ -6,6 +6,7 @@ import { FiChevronDown } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaAngleDown } from "react-icons/fa";
 import phone from "../assets/NavPhone.png";
+import phoneTwo from "../assets/NavPhoneTwo.png";
 
 const SecNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -383,8 +384,9 @@ const SecNavbar = () => {
               </AnimatePresence>
             </li>
 
-            <div className="h-[200px] flex justify-center">
+            <div className="h-[200px] flex flex-row items-center justify-center">
               <img src={phone} alt="phone" className="h-full" />
+              <img src={phoneTwo} alt="phone" className="h-full" />
             </div>
 
             <li className="px-4 mt-10 w-[100%] flex justify-center items-center">
