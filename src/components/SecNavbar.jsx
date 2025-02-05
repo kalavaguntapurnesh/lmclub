@@ -7,6 +7,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaAngleDown } from "react-icons/fa";
 import phone from "../assets/NavPhone.png";
 import phoneTwo from "../assets/NavPhoneTwo.png";
+import network from "../assets/network.webp";
+import broadcast from "../assets/broadcast.webp";
+import beehive from "../assets/beehive.webp";
+import enroll from "../assets/enroll.webp";
+import estore from "../assets/estore.webp";
+import LMDark from "../assets/LMDark.webp";
 
 const SecNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -111,7 +117,7 @@ const SecNavbar = () => {
                 onClick={() => toggleMobileDropdown("home")}
                 className="flex items-center justify-between cursor-pointer text-[#1a1a1a] font-medium"
               >
-                About Company
+                About LM Club
                 <FaAngleDown
                   className={`transition-transform ${
                     openDropdownMobile === "home"
@@ -130,18 +136,18 @@ const SecNavbar = () => {
                   >
                     <li className="text-navGray">
                       <a
-                        href="/about-us"
+                        href="/learn-about-us"
                         className="block text-base text-gray-700"
                       >
-                        About CDN
+                        About Us
                       </a>
                     </li>
                     <li className="text-navGray">
                       <a
-                        href="/our-vision"
+                        href="/learn-about-us#about_founder"
                         className="block text-base text-gray-700"
                       >
-                        Vision 2028
+                        Our Leadership
                       </a>
                     </li>
                     <li className="text-navGray">
@@ -154,7 +160,7 @@ const SecNavbar = () => {
                     </li>
                     <li className="text-navGray">
                       <a
-                        href="/contact-cdn#global_presence"
+                        href="/privacy-policy#terms_and_conditions"
                         className="block text-base text-gray-700"
                       >
                         Global Presence
@@ -170,7 +176,7 @@ const SecNavbar = () => {
                 onClick={() => toggleMobileDropdown("services")}
                 className="flex items-center justify-between cursor-pointer text-[#1a1a1a] font-medium"
               >
-                Our Products
+                Our Widgets
                 <FaAngleDown
                   className={`transition-transform ${
                     openDropdownMobile === "services"
@@ -189,44 +195,44 @@ const SecNavbar = () => {
                   >
                     <li className="text-navGray">
                       <a
-                        href="/edukare"
+                        href="/widgets"
                         className="block text-base text-gray-700"
                       >
-                        EduKare
+                        Network
                       </a>
                     </li>
                     <li className="text-navGray">
                       <a
-                        href="/dentalkare"
+                        href="/widgets"
                         className="block text-base text-gray-700"
                       >
-                        DentalKare
+                        Beehive
                       </a>
                     </li>
                     <li className="text-navGray">
                       <a
-                        href="/logbucks"
+                        href="/widgets"
                         className="block text-base text-gray-700"
                       >
-                        LogBucks
-                      </a>
-                    </li>
-
-                    <li className="text-navGray">
-                      <a
-                        href="https://www.xn--syndo-7ra.com/"
-                        className="block text-base text-gray-700"
-                      >
-                        Syndeo
+                        Broadcast
                       </a>
                     </li>
 
                     <li className="text-navGray">
                       <a
-                        href="https://www.rmahousing.com/"
+                        href="/widgets"
                         className="block text-base text-gray-700"
                       >
-                        RMA Housing
+                        Estore
+                      </a>
+                    </li>
+
+                    <li className="text-navGray">
+                      <a
+                        href="/widgets"
+                        className="block text-base text-gray-700"
+                      >
+                        Grow
                       </a>
                     </li>
                   </motion.ul>
@@ -239,7 +245,7 @@ const SecNavbar = () => {
                 onClick={() => toggleMobileDropdown("products")}
                 className="flex items-center justify-between cursor-pointer text-[#1a1a1a] font-medium"
               >
-                Services
+                Pricing
                 <FaAngleDown
                   className={`transition-transform ${
                     openDropdownMobile === "products"
@@ -258,42 +264,34 @@ const SecNavbar = () => {
                   >
                     <li className="text-navGray">
                       <a
-                        href="/application-management"
+                        href="/pricing"
                         className="block text-base text-gray-700"
                       >
-                        Application Management
+                        Bronze
                       </a>
                     </li>
                     <li className="text-navGray">
                       <a
-                        href="/custom-software"
+                        href="/pricing"
                         className="block text-base text-gray-700"
                       >
-                        Software Development
+                        Silver
                       </a>
                     </li>
                     <li className="text-navGray">
                       <a
-                        href="/custom-software"
+                        href="/pricing"
                         className="block text-base text-gray-700"
                       >
-                        Cloud Services
+                        Gold
                       </a>
                     </li>
                     <li className="text-navGray">
                       <a
-                        href="/ecommerce&web"
+                        href="/pricing"
                         className="block text-base text-gray-700"
                       >
-                        E-com & Web Development
-                      </a>
-                    </li>
-                    <li className="text-navGray">
-                      <a
-                        href="/custom-software"
-                        className="block text-base text-gray-700"
-                      >
-                        Talent Solutions
+                        Platinum
                       </a>
                     </li>
                   </motion.ul>
@@ -306,7 +304,7 @@ const SecNavbar = () => {
                 onClick={() => toggleMobileDropdown("technologies")}
                 className="flex items-center justify-between cursor-pointer text-[#1a1a1a] font-medium"
               >
-                Technologies
+                Our Resources
                 <FaAngleDown
                   className={`transition-transform ${
                     openDropdownMobile === "technologies"
@@ -325,58 +323,26 @@ const SecNavbar = () => {
                   >
                     <li className="text-navGray">
                       <a
-                        href="/custom-software"
+                        href="/contact-us"
                         className="block text-base text-gray-700"
                       >
-                        API Management
+                        Contact Us
                       </a>
                     </li>
                     <li className="text-navGray">
                       <a
-                        href="/custom-software"
+                        href="/contact-us"
                         className="block text-base text-gray-700"
                       >
-                        Internet of Things
+                        Upcoming Events
                       </a>
                     </li>
                     <li className="text-navGray">
                       <a
-                        href="/custom-software"
+                        href="/contact-us"
                         className="block text-base text-gray-700"
                       >
-                        Oracle Middleware
-                      </a>
-                    </li>
-                    <li className="text-navGray">
-                      <a
-                        href="/custom-software"
-                        className="block text-base text-gray-700"
-                      >
-                        Oracle Middleware
-                      </a>
-                    </li>
-                    <li className="text-navGray">
-                      <a
-                        href="/custom-software"
-                        className="block text-base text-gray-700"
-                      >
-                        Big Data & BI
-                      </a>
-                    </li>
-                    <li className="text-navGray">
-                      <a
-                        href="/custom-software"
-                        className="block text-base text-gray-700"
-                      >
-                        Business Management
-                      </a>
-                    </li>
-                    <li className="text-navGray">
-                      <a
-                        href="/custom-software"
-                        className="block text-base text-gray-700"
-                      >
-                        SAP Services
+                        Blogs & Events
                       </a>
                     </li>
                   </motion.ul>
@@ -585,52 +551,79 @@ const WidgetsBar = () => {
         href="/widgets"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Network</h1>
-        <p className="text-gray-800 font-light">
-          Activate Network today to connect with like-minded individuals
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={network} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Network</h1>
+            <p className="text-gray-800 text-sm">
+              Activate Network today to connect with like-minded individuals
+            </p>
+          </div>
+        </div>
       </a>
 
       <a
         href="/widgets"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Beehive</h1>
-        <p className="text-gray-800 font-light">
-          Unlock the BEEHIVE. It will allow us to text / email great deals,
-          coupons,
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={beehive} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Beehive</h1>
+            <p className="text-gray-800 text-sm">
+              Unlock the Beehive. It will allow us to text / email great deals,
+              coupons,
+            </p>
+          </div>
+        </div>
       </a>
 
       <a
         href="/widgets"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Broadcast</h1>
-        <p className="text-gray-800 font-light">
-          Activate BROADCAST to advertise local businesses on your social media
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={broadcast} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Broadcast</h1>
+            <p className="text-gray-800 text-sm">
+              Activate Broadcast to advertise local businesses on your social
+              media
+            </p>
+          </div>
+        </div>
       </a>
 
       <a
         href="/widgets"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Estore</h1>
-        <p className="text-gray-800 font-light">
-          Activate E-Store and we will share a percentage of our profits with
-          you.
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={estore} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Estore</h1>
+            <p className="text-gray-800 text-sm">
+              Activate E-Store and we will share a percentage of our profits
+              with you.
+            </p>
+          </div>
+        </div>
       </a>
 
       <a
         href="/widgets"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Grow</h1>
-        <p className="text-gray-800 font-light">
-          Enroll earn rewards for helping our community to expand. T & C apply.
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={enroll} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Grow</h1>
+            <p className="text-gray-800 text-sm">
+              Enroll earn rewards for helping our community to expand. T & C
+              apply.
+            </p>
+          </div>
+        </div>
       </a>
     </div>
   );
@@ -643,30 +636,45 @@ const ContactBar = () => {
         href="/contact-us"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Contact Us</h1>
-        <p className="text-gray-800 font-light">
-          Reach out to us for assistance
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={LMDark} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Contact Us</h1>
+            <p className="text-gray-800 text-sm">
+              Reach out to us for assistance
+            </p>
+          </div>
+        </div>
       </a>
 
       <a
         href="/ecommerce&web"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Upcoming Events</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about upcoming events.
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={LMDark} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Upcoming Events</h1>
+            <p className="text-gray-800 text-sm">
+              Get to know more about upcoming events.
+            </p>
+          </div>
+        </div>
       </a>
 
       <a
         href="/about-us"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Cart & Checkout</h1>
-        <p className="text-gray-800 font-light">
-          Learn more about your list of favourite items.
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={LMDark} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Blogs & News</h1>
+            <p className="text-gray-800 text-sm">
+              Learn more about your list of favourite items.
+            </p>
+          </div>
+        </div>
       </a>
     </div>
   );
@@ -679,40 +687,60 @@ const Homebar = () => {
         href="/learn-about-us"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">About LM Club</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={LMDark} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">About LM Club</h1>
+            <p className="text-gray-800 text-sm">
+              Get to know more about our mision, vision and value.
+            </p>
+          </div>
+        </div>
       </a>
 
       <a
         href="/learn-about-us#about_founder"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Our Leadership</h1>
-        <p className="text-gray-800 font-light">
-          Know about our founders and their vision of networking.
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={LMDark} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Our Leadership</h1>
+            <p className="text-gray-800 text-sm">
+              Know about our founders and their vision of networking.
+            </p>
+          </div>
+        </div>
       </a>
 
       <a
         href="/privacy-policy#terms_and_conditions"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Terms & Conditions</h1>
-        <p className="text-gray-800 font-light">
-          Reach out to us about terms & conditions.
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={LMDark} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Terms & Conditions</h1>
+            <p className="text-gray-800 text-sm">
+              Reach out to us about terms & conditions.
+            </p>
+          </div>
+        </div>
       </a>
 
       <a
         href="/privacy-policy"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Privacy Policy</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about privacy policy.
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={LMDark} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Privacy Policy</h1>
+            <p className="text-gray-800 text-sm">
+              Get to know more about privacy policy.
+            </p>
+          </div>
+        </div>
       </a>
     </div>
   );
@@ -725,40 +753,60 @@ const Membership = () => {
         href="/pricing"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Bronze</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={LMDark} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Bronze</h1>
+            <p className="text-gray-800 text-sm">
+              Get to know more about our mision, vision and value.
+            </p>
+          </div>
+        </div>
       </a>
 
       <a
         href="/pricing"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Silver</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={LMDark} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Silver</h1>
+            <p className="text-gray-800 text-sm">
+              Get to know more about our mision, vision and value.
+            </p>
+          </div>
+        </div>
       </a>
 
       <a
         href="/pricing"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Gold</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={LMDark} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Gold</h1>
+            <p className="text-gray-800 text-sm">
+              Get to know more about our mision, vision and value.
+            </p>
+          </div>
+        </div>
       </a>
 
       <a
         href="/pricing"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
-        <h1 className="text-[#1a1a1a] font-medium">Platinum</h1>
-        <p className="text-gray-800 font-light">
-          Get to know more about our mision, vision and value.
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <img src={LMDark} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Platinum</h1>
+            <p className="text-gray-800 text-sm">
+              Get to know more about our mision, vision and value.
+            </p>
+          </div>
+        </div>
       </a>
     </div>
   );

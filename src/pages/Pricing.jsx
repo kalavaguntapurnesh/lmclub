@@ -5,6 +5,8 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 import Accordion from "../components/Accordion";
+import { fadeIn } from "../variants";
+import { motion } from "framer-motion";
 
 const Pricing = () => {
   const location = useLocation();
@@ -17,50 +19,54 @@ const Pricing = () => {
   const monthlyPlans = [
     {
       name: "Bronze",
-      description: "Best option for personal use & for your next project.",
-      price: 10,
+      description: "Registration fee is $20.00 / Yearly",
+      renewalFee: "Yearly renewal fee $20.00 / Yearly",
+      price: 5.99,
       points: [
-        "Individual configuration",
-        "No setup, or hidden fees",
-        "Team size: 1 developer",
-        "Premium support: 6 months",
-        "Free updates: 6 months",
+        "(LM) BeeHive - Make a post get 25 likes earn 5 points",
+        "(LM) Broadcast - Promote a business earn 5 points",
+        "(LM) Network - Complete (TFS) tasks for success earn 25 points",
+        "(LM) E-Store, Shares Its Online Store Profits With You! - Post our store on your social media get 20% percent of stores profit.",
+        "(LM) Grow, Enroll 35 Members get a $500.00 Gift Certificate",
       ],
     },
     {
       name: "Silver",
-      description: "Best option for personal use & for your next project.",
-      price: 20,
+      description: "Registration fee is $25.00 / Yearly",
+      renewalFee: "Yearly renewal fee $25.00 / Yearly",
+      price: 8.99,
       points: [
-        "Individual configuration",
-        "No setup, or hidden fees",
-        "Team size: 1 developer",
-        "Premium support: 6 months",
-        "Free updates: 6 months",
+        "(LM) BeeHive - Make a post get 25 likes earn 10 points",
+        "(LM) Broadcast - Promote a business earn 10 points",
+        "(LM) Network - Complete (TFS) tasks for success earn 50 points",
+        "(LM) E-Store, Shares Its Online Store Profits With You! - Post our store on your social media get 30% percent of stores profit.",
+        "(LM) Grow, Enroll 30 Members get a $500.00 Gift Certificate",
       ],
     },
     {
       name: "Gold",
-      description: "Best option for personal use & for your next project.",
-      price: 35,
+      description: "Registration fee is $30.00 / Yearly",
+      renewalFee: "Yearly renewal fee $30.00 / Yearly",
+      price: 11.99,
       points: [
-        "Individual configuration",
-        "No setup, or hidden fees",
-        "Team size: 1 developer",
-        "Premium support: 6 months",
-        "Free updates: 6 months",
+        "(LM) BeeHive - Make a post get 25 likes earn 15 points",
+        "(LM) Broadcast - Promote a business earn 15 points",
+        "(LM) Network - Complete (TFS) tasks for success earn 75 points",
+        "(LM) E-Store, Shares Its Online Store Profits With You! - Post our store on your social media get 40% percent of stores profit.",
+        "(LM) Grow, Enroll 25 Members get a $500.00 Gift Certificate",
       ],
     },
     {
       name: "Platinum",
-      description: "Best option for personal use & for your next project.",
-      price: 40,
+      description: "Registration fee is $35.00 / Yearly",
+      renewalFee: "Yearly renewal fee $35.00 / Yearly",
+      price: 14.99,
       points: [
-        "Individual configuration",
-        "No setup, or hidden fees",
-        "Team size: 1 developer",
-        "Premium support: 6 months",
-        "Free updates: 6 months",
+        "(LM) BeeHive - Make a post get 25 likes earn 20 points",
+        "(LM) Broadcast - Promote a business earn 20 points",
+        "(LM) Network - Complete (TFS) tasks for success earn 50 points",
+        "(LM) E-Store, Shares Its Online Store Profits With You! - Post our store on your social media get 70% percent of stores profit.",
+        "(LM) Grow, Enroll 20 Members get a $500.00 Gift Certificate",
       ],
     },
   ];
@@ -148,7 +154,7 @@ const Pricing = () => {
 
               <section className="bg-white ">
                 <div className="py-8 px-4 lg:px-6">
-                  <div className=" grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
+                  <div className=" grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4">
                     {monthlyPlans.map((plan) => (
                       <div
                         id="pricing_bronze"
@@ -197,6 +203,15 @@ const Pricing = () => {
                             </li>
                           ))}
                         </ul>
+                        <p className="font-light text-gray-500 sm:text-lg group relative overflow-hidden p-1 rounded-lg bg-gray-300 w-[80%] mx-auto rounded-full flex items-center justify-center hover:bg-gray-800">
+                          <h3
+                            className={`mb-4 text-2xl flex items-center justify-center font-bold group-hover:text-white group-hover:bg-transparent ${getButtonColor(
+                              plan.name
+                            )} transition-all duration-300`}
+                          >
+                            {plan.renewalFee}
+                          </h3>
+                        </p>
                         <a
                           href="/login"
                           className="text-white bg-mainColor font-medium rounded-full text-sm px-5 py-2.5 my-3 text-center "
