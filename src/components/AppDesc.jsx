@@ -123,7 +123,7 @@ const AppDesc = () => {
 
                       <div className="pt-12">
                         <a
-                          href="/contact-cdn"
+                          href="/contact-us"
                           className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
                         >
                           <span className="relative z-10 flex-[8] text-center">

@@ -194,7 +194,7 @@ const AboutTwo = () => {
 
                             <div className="flex lg:justify-start justify-center">
                               <a
-                                href="/contact"
+                                href="/contact-us"
                                 className="relative inline-flex items-center justify-center py-3 px-20 overflow-hidden font-semibold text-brand shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition duration-1000 ease-out bg-white hover:bg-brand rounded-3xl group"
                               >
                                 <span className="absolute inset-0 flex items-center justify-center w-full h-full text-colorOne duration-300 -translate-x-full group-hover:translate-x-0 ease-in-out"></span>
@@ -298,7 +298,7 @@ const AboutTwo = () => {
 
                     <div className="flex items-center lg:justify-start justify-center ">
                       <a
-                        href="/contact-cdn"
+                        href="/contact-us"
                         className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
                       >
                         <span className="relative z-10 flex-[8] text-center">
@@ -379,7 +379,7 @@ const AboutTwo = () => {
 
                     <div className="flex items-center lg:justify-start justify-center ">
                       <a
-                        href="/contact-cdn"
+                        href="/contact-us"
                         className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
                       >
                         <span className="relative z-10 flex-[8] text-center">

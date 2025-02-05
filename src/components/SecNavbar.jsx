@@ -163,7 +163,7 @@ const SecNavbar = () => {
                         href="/privacy-policy#terms_and_conditions"
                         className="block text-base text-gray-700"
                       >
-                        Global Presence
+                        Terms & Conditions
                       </a>
                     </li>
                   </motion.ul>
