@@ -15,6 +15,7 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import Dashboard from "./pages/Dashboard";
 import PrivacyStatement from "./pages/PrivacyStatement";
 import PrivacyReport from "./pages/PrivacyReport";
+import Widgets from "./pages/Widgets";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
 
         <Route path="/register" element={<Register />}></Route>
         <Route path="/register" element={<TermsAndConditions />}></Route>
+        <Route path="/widgets" element={<Widgets />}></Route>
 
         <Route path="/privacy-policy" element={<Privacy />}></Route>
         <Route

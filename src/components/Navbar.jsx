@@ -542,7 +542,7 @@ const WidgetsBar = () => {
   return (
     <div className="grid grid-cols-2 gap-4 p-4 ">
       <a
-        href="/application-management"
+        href="/widgets"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <h1 className="text-[#1a1a1a] font-medium">Network</h1>
@@ -552,7 +552,7 @@ const WidgetsBar = () => {
       </a>
 
       <a
-        href="/ecommerce&web"
+        href="/widgets"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <h1 className="text-[#1a1a1a] font-medium">Beehive</h1>
@@ -563,7 +563,7 @@ const WidgetsBar = () => {
       </a>
 
       <a
-        href="/custom-software"
+        href="/widgets"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <h1 className="text-[#1a1a1a] font-medium">Broadcast</h1>
@@ -573,7 +573,7 @@ const WidgetsBar = () => {
       </a>
 
       <a
-        href="/about-us"
+        href="/widgets"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <h1 className="text-[#1a1a1a] font-medium">Estore</h1>
@@ -584,7 +584,7 @@ const WidgetsBar = () => {
       </a>
 
       <a
-        href="/about-us"
+        href="/widgets"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <h1 className="text-[#1a1a1a] font-medium">Grow</h1>

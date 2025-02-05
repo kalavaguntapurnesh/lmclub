@@ -3,6 +3,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import Accordion from "../components/Accordion";
+import connection from "../assets/connection.svg";
+import MockOne from "../assets/MockOne.png";
+import MockTwo from "../assets/MockTwo.png";
+import MockThree from "../assets/MockThree.png";
+import lity from "../assets/lity.svg";
 
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
@@ -119,7 +124,108 @@ const Testimonial = () => {
         </div>
       </div>
 
-      <div className="pt-8 ">
+      <div className="pt-12 lg:pb-16 pb-8">
+        <div className="relative">
+          <div className="w-full">
+            <div className="w-full mx-auto max-w-[1400px] ">
+              <div className="p-4">
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-16">
+                  <div>
+                    <h2 className="lg:text-4xl text-2xl font-bold text-trumpTwo">
+                      A mission rooted for collaborative
+                      <br className="lg:block hidden" /> growth & earning.
+                    </h2>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-gray-600">
+                      LM Grow Rewards program allows you to earn redeemable
+                      points and achieve special milestones simply by inviting
+                      others to join our community. Help us grow, and in return,
+                      enjoy exclusive perks and rewards!.
+                    </p>
+                    <p className="text-gray-600">
+                      Together, we can build a vibrant community, sharing
+                      success and opportunities.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 pt-8">
+                  <div className="flex md:justify-start justify-center">
+                    <div className="w-full bg-white rounded p-6">
+                      <div className="space-y-3">
+                        <div className="flex justify-start items-center">
+                          <img
+                            src={connection}
+                            className="flex justify-center items-center w-12 h-12  "
+                          ></img>
+                        </div>
+
+                        <div className="flex justify-start items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                            Complete Your Profile
+                          </h1>
+                        </div>
+                        <div className="flex justify-start items-center text-gray-600 ">
+                          <p>
+                            Add a profile picture, list your professional
+                            interests to help us get to know you.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex md:justify-start justify-center">
+                    <div className="w-full bg-white rounded p-6">
+                      <div className="space-y-3">
+                        <div className="flex justify-start items-center">
+                          <img
+                            src={lity}
+                            className="flex justify-center items-center w-12 h-12  "
+                          ></img>
+                        </div>
+
+                        <div className="flex justify-start items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                            Explore the Directory
+                          </h1>
+                        </div>
+                        <div className="flex justify-start items-center text-gray-600 ">
+                          <p>
+                            Browse the member directory to find connections and
+                            start building your network.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-6 justify-center lg:col-span-2 ">
+                    <img
+                      src={MockOne}
+                      alt="mockone"
+                      className="lg:h-[380px] "
+                    />
+                    <img
+                      src={MockTwo}
+                      alt="mockone"
+                      className="lg:h-[380px] "
+                    />
+                    <img
+                      src={MockThree}
+                      alt="mockone"
+                      className="lg:h-[380px] "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="pt-12 ">
         <div className="relative">
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">
