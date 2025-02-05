@@ -2,8 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../variants.js";
+import Accordion from "../components/Accordion";
 
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
@@ -60,121 +59,183 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="pt-8 ">
-      <div className="relative">
-        <div className="w-full">
-          <div className="w-full mx-auto max-w-[1400px] ">
-            <div className="p-4">
-              <div className="flex items-center text-center justify-center ">
-                <div className="h-4 w-1 bg-mainColor"></div>
-                <h1 className="ml-2 font-bold text-mainColor uppercase">
-                  Trust our reviews
-                </h1>
-              </div>
-              <div className="mx-auto max-w-[1200px] text-center mt-4">
-                <h1 className="lg:text-4xl text-2xl font-bold text-headingColor">
-                  Real stories, real results
-                </h1>
-              </div>
-
-              <div className="mx-auto max-w-[1200px] text-gray-600 text-center mt-4">
-                <p>
-                  Laoe Maom embodies progress and adaptability, responding
-                  dynamically to the evolving relationships and interests in our
-                  global landscape. We are a collective of individuals and
-                  businesses worldwide, committed to mutual support and shared
-                  success. By joining forces, we breathe life into businesses
-                  and nurture them to thrive. Let’s achieve greatness together.
-                </p>
-              </div>
-
-              <Swiper
-                breakpoints={{
-                  340: {
-                    slidesPerView: 1,
-                    spaceBetween: 15,
-                  },
-                  1000: {
-                    slidesPerView: 3,
-                    spaceBetween: 18,
-                  },
-                }}
-                autoplay={{
-                  delay: 4000,
-                  disableOnInteraction: false,
-                }}
-                freeMode={true}
-                pagination={{
-                  clickable: true,
-                }}
-                navigation={true}
-                modules={[Autoplay, FreeMode]}
-                className="max-w-[90%] "
-              >
-                {ServiceData.map((item) => (
-                  <SwiperSlide key={item.title} className="pt-16 pb-12">
-                    <div className="bg-white border-[1px] rounded-lg overflow-visible">
-                      <div className="relative -mt-10 flex justify-center">
-                        <img
-                          className="rounded-full shadow-md h-20 w-20 object-cover "
-                          src={item.imageLink}
-                          alt="Profile"
-                        />
-                      </div>
-                      <div className="px-6 py-4 text-center">
-                        <h2 className="text-xl font-semibold text-gray-800">
-                          {item.name}
-                        </h2>
-                        <p className="text-gray-600">{item.designation}</p>
-
-                        <p className="mt-2 text-gray-600">
-                          John&apos;s review about the company and services is
-                          positive and detailed, explaining his experience
-                          clearly.
-                        </p>
-
-                        <div className="flex justify-center mt-4">
-                          <svg
-                            className="w-6 h-6 text-yellow-400 fill-current"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
-                          </svg>
-                          <svg
-                            className="w-6 h-6 text-yellow-400 fill-current"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
-                          </svg>
-                          <svg
-                            className="w-6 h-6 text-yellow-400 fill-current"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
-                          </svg>
-                          <svg
-                            className="w-6 h-6 text-yellow-400 fill-current"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
-                          </svg>
-                          <svg
-                            className="w-6 h-6 text-yellow-400 fill-current"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
-                          </svg>
-                        </div>
-                      </div>
+    <>
+      <div className="pt-12 pb-8">
+        <div className="relative">
+          <div className="w-full">
+            <div className="w-full mx-auto max-w-[1400px] ">
+              <div className="p-4">
+                <div>
+                  <div className="flex flex-wrap flex-col lg:items-start items-start pb-3">
+                    <div className="text-start leading-relaxed  font-bold text-black">
+                      <p className="lg:text-4xl text-2xl">
+                        Got Questions? We've got answers
+                      </p>
                     </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+                    <div className="md:w-36 w-28 h-1 border-b-2 border-green-500 mt-[1px]"></div>
+                  </div>
+                  <p className="text-gray-600 pt-3">
+                    Here are the questions frequently asked by our customers.
+                    And we've answered to the topics related to rewards,
+                    membership.
+                  </p>
+
+                  <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-4 gap-8 pt-12">
+                    <div className="flex flex-col justify-center space-y-3">
+                      <Accordion
+                        title="What is included with my LM Club membership access?"
+                        answer="All of our widgets, Broadcast, Grow, and Network are included! With access, you can access our e-store and a whole lot more."
+                      />
+                      <Accordion
+                        title="What are the enroll and rewards widget and the uses of it?"
+                        answer="We provide you reward points for being a member, buying products from our LM EStore, and more!"
+                      />
+                      <Accordion
+                        title="How do I redeem my reward points and how to use them?"
+                        answer="You will redeem points inside of our app!"
+                      />
+                      <Accordion
+                        title="How can a customer contact us for immediate guidance?"
+                        answer="You can contact us through mail on support@lmclub.com or go to the Contact page for further information. And we are always ready to help."
+                      />
+                      <Accordion
+                        title="How do I cancel my Silver or Gold or Platinum membership?"
+                        answer="You can cancel your paid Silver or Gold membership anytime. Simply log in to your LM Club account, go to the Manage My Account page, and click Cancel Auto-Renew."
+                      />
+                    </div>
+
+                    <div>
+                      <img
+                        src="https://lmclub.club/wp-content/uploads/2024/10/GettyImages-1490847054.webp"
+                        alt="image"
+                        className="rounded"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="pt-8 ">
+        <div className="relative">
+          <div className="w-full">
+            <div className="w-full mx-auto max-w-[1400px] ">
+              <div className="p-4">
+                <div className="flex items-center text-center justify-center ">
+                  <div className="h-4 w-1 bg-mainColor"></div>
+                  <h1 className="ml-2 font-bold text-mainColor uppercase">
+                    Trust our reviews
+                  </h1>
+                </div>
+                <div className="mx-auto max-w-[1200px] text-center mt-4">
+                  <h1 className="lg:text-4xl text-2xl font-bold text-headingColor">
+                    Real stories, real results
+                  </h1>
+                </div>
+
+                <div className="mx-auto max-w-[1200px] text-gray-600 text-center mt-4">
+                  <p>
+                    Laoe Maom embodies progress and adaptability, responding
+                    dynamically to the evolving relationships and interests in
+                    our global landscape. We are a collective of individuals and
+                    businesses worldwide, committed to mutual support and shared
+                    success. By joining forces, we breathe life into businesses
+                    and nurture them to thrive. Let’s achieve greatness
+                    together.
+                  </p>
+                </div>
+
+                <Swiper
+                  breakpoints={{
+                    340: {
+                      slidesPerView: 1,
+                      spaceBetween: 15,
+                    },
+                    1000: {
+                      slidesPerView: 3,
+                      spaceBetween: 18,
+                    },
+                  }}
+                  autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                  }}
+                  freeMode={true}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  navigation={true}
+                  modules={[Autoplay, FreeMode]}
+                  className="max-w-[90%] "
+                >
+                  {ServiceData.map((item) => (
+                    <SwiperSlide key={item.title} className="pt-16 pb-12">
+                      <div className="bg-white border-[1px] rounded-lg overflow-visible">
+                        <div className="relative -mt-10 flex justify-center">
+                          <img
+                            className="rounded-full shadow-md h-20 w-20 object-cover "
+                            src={item.imageLink}
+                            alt="Profile"
+                          />
+                        </div>
+                        <div className="px-6 py-4 text-center">
+                          <h2 className="text-xl font-semibold text-gray-800">
+                            {item.name}
+                          </h2>
+                          <p className="text-gray-600">{item.designation}</p>
+
+                          <p className="mt-2 text-gray-600">
+                            John&apos;s review about the company and services is
+                            positive and detailed, explaining his experience
+                            clearly.
+                          </p>
+
+                          <div className="flex justify-center mt-4">
+                            <svg
+                              className="w-6 h-6 text-yellow-400 fill-current"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
+                            </svg>
+                            <svg
+                              className="w-6 h-6 text-yellow-400 fill-current"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
+                            </svg>
+                            <svg
+                              className="w-6 h-6 text-yellow-400 fill-current"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
+                            </svg>
+                            <svg
+                              className="w-6 h-6 text-yellow-400 fill-current"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
+                            </svg>
+                            <svg
+                              className="w-6 h-6 text-yellow-400 fill-current"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
