@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-
+import money from "../assets/money.svg";
+import moneyTwo from "../assets/moneyTwo.svg";
 import { FaGlobe, FaHandshake, FaMedal } from "react-icons/fa";
 import { TiArrowRight } from "react-icons/ti";
 import intro from "../assets/Intro.mp4";
@@ -114,7 +115,7 @@ const AboutHero = () => {
               <div className="pt-16 grid lg:grid-cols-3 grid-cols-1 gap-4">
                 <div className="space-y-1 flex flex-col justify-center items-center text-center">
                   <div>
-                    <FaHandshake className="w-8 h-8 text-green-500" />
+                    <img src={money} className="w-8 h-8 text-green-500" />
                   </div>
                   <div>
                     <p className="text-gray-600">
@@ -125,7 +126,7 @@ const AboutHero = () => {
 
                 <div className="space-y-1 flex flex-col justify-center items-center text-center">
                   <div>
-                    <FaMedal className="w-8 h-8 text-green-500" />
+                    <img src={moneyTwo} className="w-8 h-8 text-green-500" />
                   </div>
                   <div>
                     <p className="text-gray-600">

@@ -417,7 +417,7 @@ const SecNavbar = () => {
                     </li>
                     <li className="text-navGray">
                       <a
-                        href="/privacy-policy"
+                        href="/privacy-policy#terms_and_conditions"
                         className="block text-base text-gray-700"
                       >
                         Terms & Conditions
@@ -749,7 +749,7 @@ const Homebar = () => {
       </a>
 
       <a
-        href="/terms-and-conditions"
+        href="/privacy-policy#terms_and_conditions"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <h1 className="text-[#1a1a1a] font-medium">Terms & Conditions</h1>
@@ -775,7 +775,7 @@ const Membership = () => {
   return (
     <div className="grid grid-cols-2 gap-4 p-4 ">
       <a
-        href="/about-us"
+        href="/pricing"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <h1 className="text-[#1a1a1a] font-medium">Bronze</h1>
@@ -785,7 +785,7 @@ const Membership = () => {
       </a>
 
       <a
-        href="/about-us"
+        href="/pricing"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <h1 className="text-[#1a1a1a] font-medium">Silver</h1>
@@ -795,7 +795,7 @@ const Membership = () => {
       </a>
 
       <a
-        href="/about-us"
+        href="/pricing"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <h1 className="text-[#1a1a1a] font-medium">Gold</h1>
@@ -805,7 +805,7 @@ const Membership = () => {
       </a>
 
       <a
-        href="/about-us"
+        href="/pricing"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <h1 className="text-[#1a1a1a] font-medium">Platinum</h1>
