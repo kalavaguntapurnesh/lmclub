@@ -22,7 +22,7 @@ const Contact = () => {
       <Navbar />
       <ScrollToTop />
 
-      <div className="pt-28">
+      <div className="lg:pt-28 pt-24">
         <div className="relative">
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">
@@ -67,19 +67,28 @@ const Contact = () => {
                       </div>
                     </a>
 
-                    <a href="https://x.com/RichardLMCLUB" className="flex justify-center items-center">
+                    <a
+                      href="https://x.com/RichardLMCLUB"
+                      className="flex justify-center items-center"
+                    >
                       <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
                         <FaXTwitter size={24} className="text-green-500" />
                       </div>
                     </a>
 
-                    <a href="https://www.instagram.com/laoemaomclub/" className="flex justify-center items-center">
+                    <a
+                      href="https://www.instagram.com/laoemaomclub/"
+                      className="flex justify-center items-center"
+                    >
                       <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
                         <FaInstagram size={24} className="text-green-500" />
                       </div>
                     </a>
 
-                    <a href="https://www.tiktok.com/@lmclub0" className="flex justify-center items-center">
+                    <a
+                      href="https://www.tiktok.com/@lmclub0"
+                      className="flex justify-center items-center"
+                    >
                       <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
                         <FaTiktok size={24} className="text-green-500" />
                       </div>
@@ -95,40 +104,40 @@ const Contact = () => {
                           href="https://www.bing.com/maps?where=7778%20McGinnis%20Ferry%20Rd%2C%20PMB%20162%2C%20Suwanee%2C%20Georgia%2030024%2C%20US"
                           className="flex justify-center items-center"
                         >
-                          <img src={us} alt="" className=" w-[100%]" />
+                          <img src={us} alt="usMap" className=" w-[100%]" />
                         </a>
 
                         <div className="flex flex-row mt-6 mb-8">
                           <a href="" className="w-[50%] ">
-                            <div className="flex flex-col space-y-2 items-center">
+                            <div className="flex flex-col space-y-1 items-center">
                               <p className="text-start text-xl font-bold text-black">
                                 <span className="text-mainColor">Head</span>{" "}
                                 Quarters:
                               </p>
-                              <p className="text-lg text-sideHeading">
+                              <p className=" text-sideHeading">
                                 7778 McGinnis Ferry Rd
                               </p>
-                              <p className="text-lg text-sideHeading">
+                              <p className=" text-sideHeading">
                                 PMB 162, Suwanee,
                               </p>
-                              <p className="text-lg text-sideHeading">
+                              <p className=" text-sideHeading">
                                 Georgia 30024, US
                               </p>
                             </div>
                           </a>
                           <a href="" className="w-[50%] ">
-                            <div className="flex flex-col space-y-2 items-center">
+                            <div className="flex flex-col space-y-1 items-center">
                               <p className="text-start text-xl font-semibold text-black">
                                 <span className="text-mainColor">Branch</span>{" "}
                                 Offices:
                               </p>
-                              <p className="text-lg text-sideHeading">
+                              <p className=" text-sideHeading">
                                 7778 McGinnis Ferry Rd
                               </p>
-                              <p className="text-lg text-sideHeading">
+                              <p className=" text-sideHeading">
                                 PMB 162, Suwanee,
                               </p>
-                              <p className="text-lg text-sideHeading">
+                              <p className=" text-sideHeading">
                                 Georgia 30024, US
                               </p>
                             </div>
@@ -153,7 +162,7 @@ const Contact = () => {
                             name="name"
                             id="name"
                             placeholder="Your Full Name"
-                            className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none  focus:shadow-md"
+                            className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base text-[#6B7280] outline-none  focus:shadow-md"
                           />
                         </div>
                       </div>
@@ -170,7 +179,7 @@ const Contact = () => {
                             name="email"
                             id="email"
                             placeholder="example@domain.com"
-                            className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none  focus:shadow-md"
+                            className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base text-[#6B7280] outline-none  focus:shadow-md"
                           />
                         </div>
                       </div>
@@ -188,7 +197,7 @@ const Contact = () => {
                             name="subject"
                             id="subject"
                             placeholder="Enter your subject"
-                            className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:shadow-md"
+                            className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base text-[#6B7280] outline-none focus:shadow-md"
                           />
                         </div>
                       </div>
@@ -206,7 +215,7 @@ const Contact = () => {
                             name="message"
                             id="message"
                             placeholder="Type your message"
-                            className="w-full resize-none rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none  focus:shadow-md"
+                            className="w-full resize-none rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base text-[#6B7280] outline-none  focus:shadow-md"
                           ></textarea>
                         </div>
                       </div>
