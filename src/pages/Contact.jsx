@@ -100,13 +100,6 @@ const Contact = () => {
                   <div className="flex flex-col space-y-4">
                     <div className="pt-2">
                       <div className="w-full ">
-                        {/* <div
-                          // href="https://www.bing.com/maps?where=7778%20McGinnis%20Ferry%20Rd%2C%20PMB%20162%2C%20Suwanee%2C%20Georgia%2030024%2C%20US"
-                          className="flex justify-center items-center"
-                        >
-                          <img src={us} alt="usMap" className=" w-[100%]" />
-                        </div> */}
-
                         <a
                           href="https://www.bing.com/maps?where=7778%20McGinnis%20Ferry%20Rd%2C%20PMB%20162%2C%20Suwanee%2C%20Georgia%2030024%2C%20US"
                           id="world-map"
