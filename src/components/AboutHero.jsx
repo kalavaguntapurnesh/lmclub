@@ -19,7 +19,7 @@ const AboutHero = () => {
   }, [location]);
 
   return (
-    <div className="lg:pt-36 pt-28">
+    <div className="lg:pt-36 pt-24">
       <div className="relative">
         <div className="w-full">
           <div className="w-full mx-auto max-w-[1400px] ">

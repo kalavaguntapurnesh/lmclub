@@ -9,13 +9,16 @@ import Consumer_Privacy from "./pages/Consumer_Privacy";
 import Enroll_Rewards from "./pages/Enroll_Rewards";
 import Rewards from "./pages/Rewards";
 import PageNotFound from "./pages/PageNotFound";
-import Products from "./pages/Products";
+// import Products from "./pages/Products";
 import Pricing from "./pages/Pricing";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Dashboard from "./pages/Dashboard";
 import PrivacyStatement from "./pages/PrivacyStatement";
 import PrivacyReport from "./pages/PrivacyReport";
 import Widgets from "./pages/Widgets";
+import Estore from "./pages/Estore";
+import Beehive from "./pages/Beehive";
+import Network from './pages/Network';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
         <Route path="/" element={<Home />}></Route>
 
         <Route path="/contact-us" element={<Contact />}></Route>
+        <Route path="/estore" element={<Estore />}></Route>
+        <Route path="/beehive" element={<Beehive />}></Route>
+        <Route path="/network" element={<Network />}></Route>
 
         <Route path="/learn-about-us" element={<About />}></Route>
 
@@ -46,7 +52,7 @@ function App() {
         <Route path="/enroll-rewards" element={<Enroll_Rewards />}></Route>
         <Route path="/rewards" element={<Rewards />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
-        <Route path="/products" element={<Products />}></Route>
+        {/* <Route path="/products" element={<Products />}></Route> */}
         <Route path="/pricing" element={<Pricing />}></Route>
         <Route path="/dashboard" element={<Dashboard />}></Route>
       </Routes>

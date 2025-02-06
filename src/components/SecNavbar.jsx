@@ -198,8 +198,13 @@ const SecNavbar = () => {
                     className="mt-6 grid grid-cols-2 gap-4"
                   >
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
+                      <a href="/estore" className="block text-sm text-gray-700">
+                        Estore
+                      </a>
+                    </li>
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
-                        href="/widgets"
+                        href="/network"
                         className="block text-sm text-gray-700"
                       >
                         Network
@@ -207,7 +212,7 @@ const SecNavbar = () => {
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
-                        href="/widgets"
+                        href="/beehive"
                         className="block text-sm text-gray-700"
                       >
                         Beehive
@@ -219,15 +224,6 @@ const SecNavbar = () => {
                         className="block text-sm text-gray-700"
                       >
                         Broadcast
-                      </a>
-                    </li>
-
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a
-                        href="/widgets"
-                        className="block text-sm text-gray-700"
-                      >
-                        Estore
                       </a>
                     </li>
 
@@ -552,7 +548,38 @@ const WidgetsBar = () => {
   return (
     <div className="grid grid-cols-2 gap-4 p-4 ">
       <a
-        href="/widgets"
+        href="/estore"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <div className="flex flex-col items-start gap-3">
+          <img src={estore} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Estore</h1>
+            <p className="text-gray-800 text-sm">
+              Activate E-Store and we will share a percentage of our profits
+              with you.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a
+        href="/beehive"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <div className="flex flex-col items-start gap-3">
+          <img src={beehive} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Beehive</h1>
+            <p className="text-gray-800 text-sm">
+              Unlock the Beehive. It will allow us to text / email great deals,
+              coupons,
+            </p>
+          </div>
+        </div>
+      </a>
+      <a
+        href="/network"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <div className="flex flex-col items-start gap-3">
@@ -571,44 +598,12 @@ const WidgetsBar = () => {
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <div className="flex flex-col items-start gap-3">
-          <img src={beehive} alt="network" className="w-10 h-10" />
-          <div className="flex flex-col">
-            <h1 className="text-[#1a1a1a] font-semibold">Beehive</h1>
-            <p className="text-gray-800 text-sm">
-              Unlock the Beehive. It will allow us to text / email great deals,
-              coupons,
-            </p>
-          </div>
-        </div>
-      </a>
-
-      <a
-        href="/widgets"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <div className="flex flex-col items-start gap-3">
           <img src={broadcast} alt="network" className="w-10 h-10" />
           <div className="flex flex-col">
             <h1 className="text-[#1a1a1a] font-semibold">Broadcast</h1>
             <p className="text-gray-800 text-sm">
               Activate Broadcast to advertise local businesses on your social
               media
-            </p>
-          </div>
-        </div>
-      </a>
-
-      <a
-        href="/widgets"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <div className="flex flex-col items-start gap-3">
-          <img src={estore} alt="network" className="w-10 h-10" />
-          <div className="flex flex-col">
-            <h1 className="text-[#1a1a1a] font-semibold">Estore</h1>
-            <p className="text-gray-800 text-sm">
-              Activate E-Store and we will share a percentage of our profits
-              with you.
             </p>
           </div>
         </div>

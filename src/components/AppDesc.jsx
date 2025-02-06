@@ -1,5 +1,4 @@
 import { Tabs, Tab } from "../components/Tabs";
-import success from "../assets/success.svg";
 import { TiArrowRight } from "react-icons/ti";
 import One from "../assets/One.svg";
 import Three from "../assets/Three.svg";
