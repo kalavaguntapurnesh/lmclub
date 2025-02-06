@@ -96,15 +96,31 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-8">
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-2">
                   <div className="flex flex-col space-y-4">
-                    <div className="pt-6">
+                    <div className="pt-2">
                       <div className="w-full ">
-                        <a
-                          href="https://www.bing.com/maps?where=7778%20McGinnis%20Ferry%20Rd%2C%20PMB%20162%2C%20Suwanee%2C%20Georgia%2030024%2C%20US"
+                        {/* <div
+                          // href="https://www.bing.com/maps?where=7778%20McGinnis%20Ferry%20Rd%2C%20PMB%20162%2C%20Suwanee%2C%20Georgia%2030024%2C%20US"
                           className="flex justify-center items-center"
                         >
                           <img src={us} alt="usMap" className=" w-[100%]" />
+                        </div> */}
+
+                        <a
+                          href="https://www.bing.com/maps?where=7778%20McGinnis%20Ferry%20Rd%2C%20PMB%20162%2C%20Suwanee%2C%20Georgia%2030024%2C%20US"
+                          id="world-map"
+                          className="relative"
+                        >
+                          <img
+                            src={us}
+                            alt="map"
+                            className="w-[100%] h-[100%] object-contain"
+                          />
+
+                          <div class="pin china">
+                            <span>Head Quarters</span>
+                          </div>
                         </a>
 
                         <div className="flex flex-row mt-6 mb-8">
