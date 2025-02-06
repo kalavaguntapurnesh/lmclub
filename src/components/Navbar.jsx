@@ -227,10 +227,7 @@ const NavBar = () => {
                     </li>
 
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a
-                        href="/grow"
-                        className="block text-sm text-gray-700"
-                      >
+                      <a href="/grow" className="block text-sm text-gray-700">
                         Grow
                       </a>
                     </li>
@@ -244,7 +241,7 @@ const NavBar = () => {
                 onClick={() => toggleMobileDropdown("products")}
                 className="flex items-center justify-between cursor-pointer text-[#1a1a1a] font-medium"
               >
-                Pricing
+                Membership Plans
                 <FaAngleDown
                   className={`transition-transform ${
                     openDropdownMobile === "products"
@@ -329,18 +326,12 @@ const NavBar = () => {
                       </a>
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a
-                        href="/events"
-                        className="block text-sm text-gray-700"
-                      >
+                      <a href="/events" className="block text-sm text-gray-700">
                         Upcoming Events
                       </a>
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a
-                        href="/events"
-                        className="block text-sm text-gray-700"
-                      >
+                      <a href="/events" className="block text-sm text-gray-700">
                         Blogs & Events
                       </a>
                     </li>

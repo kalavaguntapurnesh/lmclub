@@ -10,7 +10,6 @@ import Rewards from "./pages/Rewards";
 import PageNotFound from "./pages/PageNotFound";
 import Pricing from "./pages/Pricing";
 import Dashboard from "./pages/Dashboard";
-import Widgets from "./pages/Widgets";
 import Estore from "./pages/Estore";
 import Beehive from "./pages/Beehive";
 import Network from "./pages/Network";
@@ -36,7 +35,6 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
 
         <Route path="/register" element={<Register />}></Route>
-        <Route path="/widgets" element={<Widgets />}></Route>
         <Route path="/events" element={<Events />}></Route>
 
         <Route path="/privacy-policy" element={<Privacy />}></Route>
