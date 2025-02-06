@@ -32,7 +32,7 @@ const AboutTwo = () => {
 
                     <div className="mx-auto max-w-[1000px] text-center mt-4">
                       <h1 className="lg:text-4xl text-2xl font-semibold text-gray-50">
-                        One team, fire core values.
+                        One team, three core values.
                       </h1>
                     </div>
 
@@ -180,10 +180,10 @@ const AboutTwo = () => {
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
                 <div
-                  className="grid md:grid-cols-2 grid-cols-1 gap-4 pt-12"
+                  className="grid md:grid-cols-2 grid-cols-1 lg:gap-4 gap-6 pt-12"
                   id="logo_meaning"
                 >
-                  <div className="flex flex-col space-y-6 w-full md:justify-center">
+                  <div className="flex flex-col space-y-4 w-full md:justify-center">
                     <div className="flex items-center md:justify-start justify-center ">
                       <div className="h-4 w-1 bg-green-500"></div>
                       <h1 className="ml-2 font-bold text-green-500 uppercase">
@@ -230,7 +230,7 @@ const AboutTwo = () => {
                         src={Logo}
                         alt="logo"
                         height={400}
-                        className="rounded w-[50%]"
+                        className="rounded lg:w-[50%] w-[70%]"
                       />
                     </div>
                   </div>
@@ -246,7 +246,7 @@ const AboutTwo = () => {
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
-                <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+                <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-4 gap-6">
                   <div className="flex justify-center items-center">
                     <div className="w-full">
                       <img
@@ -256,7 +256,7 @@ const AboutTwo = () => {
                       />
                     </div>
                   </div>
-                  <div className="flex flex-col space-y-6 w-full md:justify-center">
+                  <div className="flex flex-col space-y-4 w-full md:justify-center">
                     <div className="flex items-center md:justify-start justify-center ">
                       <div className="h-4 w-1 bg-mainColor"></div>
                       <h1 className="ml-2 font-bold text-green-500 uppercase">
@@ -296,8 +296,8 @@ const AboutTwo = () => {
                         href="/contact-us"
                         className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
                       >
-                        <span className="relative   flex-[8] text-center">
-                          Contact Us
+                        <span className="relative flex-[8] text-center">
+                          Learn More
                         </span>
                         <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
                           <TiArrowRight className=" text-lg" />
