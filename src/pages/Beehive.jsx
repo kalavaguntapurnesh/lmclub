@@ -2,7 +2,6 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import { TiArrowRight } from "react-icons/ti";
-import PhoneBeehive from "../assets/PhoneBeehive.png";
 import LaptopBeehive from "../assets/LaptopBeehive.png";
 
 const Estore = () => {
@@ -55,19 +54,11 @@ const Estore = () => {
                     </div>
                   </div>
 
-                  <div className="lg:hidden flex justify-center items-center lg:pt-0 pt-4">
-                    <div>
-                      <img
-                        src={PhoneBeehive}
-                        className="rounded w-auto h-[320px]"
-                      />
-                    </div>
-                  </div>
-                  <div className="lg:flex hidden justify-center items-center lg:pt-0 pt-4">
+                  <div className="flex justify-center items-center lg:pt-0 pt-4">
                     <div>
                       <img
                         src={LaptopBeehive}
-                        className="rounded w-[auto] h-[340px]"
+                        className="rounded w-auto h-auto"
                       />
                     </div>
                   </div>

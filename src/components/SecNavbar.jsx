@@ -220,7 +220,7 @@ const SecNavbar = () => {
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
-                        href="/widgets"
+                        href="/broadcast"
                         className="block text-sm text-gray-700"
                       >
                         Broadcast
@@ -229,7 +229,7 @@ const SecNavbar = () => {
 
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
-                        href="/widgets"
+                        href="/grow"
                         className="block text-sm text-gray-700"
                       >
                         Grow
@@ -594,7 +594,7 @@ const WidgetsBar = () => {
       </a>
 
       <a
-        href="/widgets"
+        href="/broadcast"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <div className="flex flex-col items-start gap-3">
@@ -610,7 +610,7 @@ const WidgetsBar = () => {
       </a>
 
       <a
-        href="/widgets"
+        href="/grow"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <div className="flex flex-col items-start gap-3">

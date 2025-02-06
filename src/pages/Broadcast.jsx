@@ -2,9 +2,9 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import { TiArrowRight } from "react-icons/ti";
-import LaptopEStore from "../assets/LaptopEStore.png";
+import LaptopBroadcast from "../assets/LaptopBroadcast.png";
 
-const Estore = () => {
+const Broadcast = () => {
   return (
     <div>
       <Navbar />
@@ -20,27 +20,24 @@ const Estore = () => {
                     <div className="flex items-center md:justify-start justify-center ">
                       <div className="h-4 w-1 bg-green-500"></div>
                       <h1 className="ml-2 font-bold text-green-500 lg:uppercase">
-                        LM CLUB E-STORE
+                        LM CLUB Broadcast
                       </h1>
                     </div>
 
                     <div className="lg:text-4xl text-2xl md:text-start text-center font-bold text-headingColor">
-                      <h1>Unlock Your E-Store & Start Earning!</h1>
+                      <h1>Welcome to the LM Club Broadcast Widget!</h1>
                     </div>
 
                     <div className="text-gray-600 space-y-2 md:text-start text-center">
                       <p>
-                        Turn your network into income! Unlock the E-Store and
-                        start earning between 20% and 70% of the profit on
-                        purchases made through your shared link—based on your
-                        membership level. Help us spread the word, and in
-                        return, enjoy rewards while your friends save money on
-                        high-quality products.
+                        Unlock Broadcast to start earning points by sharing
+                        promotions from local businesses on your social media.
+                        Each time you share, you’ll earn points redeemable in
+                        our rewards center. It’s a win-win: you help promote
+                        local businesses, and we reward you for it!
                       </p>
                       <p>
-                        Activate E-Store and we will share a percentage of our
-                        profits with you. Why? Because you are helping our brand
-                        to grow. And in return we present you the profits.
+                      Easily enroll businesses with a marketing fillable template that generates a custom URL for their promotions.
                       </p>
                     </div>
 
@@ -62,12 +59,11 @@ const Estore = () => {
                   <div className="flex justify-center items-center lg:pt-0 pt-4">
                     <div>
                       <img
-                        src={LaptopEStore}
+                        src={LaptopBroadcast}
                         className="rounded w-auto h-auto"
                       />
                     </div>
                   </div>
-                
                 </div>
               </div>
             </div>
@@ -80,4 +76,4 @@ const Estore = () => {
   );
 };
 
-export default Estore;
+export default Broadcast;

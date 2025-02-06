@@ -18,7 +18,9 @@ import PrivacyReport from "./pages/PrivacyReport";
 import Widgets from "./pages/Widgets";
 import Estore from "./pages/Estore";
 import Beehive from "./pages/Beehive";
-import Network from './pages/Network';
+import Network from "./pages/Network";
+import Grow from "./pages/Grow";
+import Broadcast from "./pages/Broadcast";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path="/estore" element={<Estore />}></Route>
         <Route path="/beehive" element={<Beehive />}></Route>
         <Route path="/network" element={<Network />}></Route>
+        <Route path="/grow" element={<Grow />}></Route>
+        <Route path="/broadcast" element={<Broadcast />}></Route>
 
         <Route path="/learn-about-us" element={<About />}></Route>
 
