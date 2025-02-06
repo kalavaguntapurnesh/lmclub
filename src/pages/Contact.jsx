@@ -27,15 +27,23 @@ const Contact = () => {
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
-                <div className="space-y-2">
-                  <div className="md:text-4xl text-3xl font-bold text-headingColor text-center">
-                    <h1>Let's Start a Conservation</h1>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-center ">
+                    <div className="h-4 w-1 bg-green-500"></div>
+                    <h1 className="ml-2 font-bold text-green-500 lg:uppercase">
+                      Contact Us
+                    </h1>
                   </div>
 
-                  <div className="text-center">
-                    <p className="text-sideHeading">
+                  <div className="lg:text-4xl text-2xl text-center font-bold text-headingColor">
+                    <h1>Let&apos;s Start a Conservation</h1>
+                  </div>
+
+                  <div className="text-gray-600 text-center">
+                    <p>
                       We’re here to help and answer any questions you might
-                      have. We look forward to hearing from you!
+                      have. We look forward to hearing from you!. You can also
+                      reach out to us from the following social media links.
                     </p>
                   </div>
                 </div>
@@ -47,33 +55,33 @@ const Contact = () => {
                       className="flex justify-center items-center"
                     >
                       <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
-                        <FaLinkedin size={24} className="text-mainColor" />
+                        <FaLinkedin size={24} className="text-green-500" />
                       </div>
                     </a>
                     <a
-                      href="https://www.facebook.com/people/Laoe-Maom/100063772398711/"
+                      href="https://www.facebook.com/people/Laoe-Maom/100063772398711/#"
                       className="flex justify-center items-center"
                     >
                       <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
-                        <FaFacebook size={24} className="text-mainColor" />
+                        <FaFacebook size={24} className="text-green-500" />
                       </div>
                     </a>
 
-                    <a href="" className="flex justify-center items-center">
+                    <a href="https://x.com/RichardLMCLUB" className="flex justify-center items-center">
                       <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
-                        <FaXTwitter size={24} className="text-mainColor" />
+                        <FaXTwitter size={24} className="text-green-500" />
                       </div>
                     </a>
 
-                    <a href="" className="flex justify-center items-center">
+                    <a href="https://www.instagram.com/laoemaomclub/" className="flex justify-center items-center">
                       <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
-                        <FaInstagram size={24} className="text-mainColor" />
+                        <FaInstagram size={24} className="text-green-500" />
                       </div>
                     </a>
 
-                    <a href="" className="flex justify-center items-center">
+                    <a href="https://www.tiktok.com/@lmclub0" className="flex justify-center items-center">
                       <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
-                        <FaTiktok size={24} className="text-mainColor" />
+                        <FaTiktok size={24} className="text-green-500" />
                       </div>
                     </a>
                   </div>
@@ -136,7 +144,7 @@ const Contact = () => {
                         <div className="mb-5 md:w-10/12 w-full">
                           <label
                             htmlFor="email"
-                            className="mb-3 block text-base font-medium text-[#07074D]"
+                            className="mb-3 block text-base font-medium text-black"
                           >
                             Full Name
                           </label>
@@ -145,7 +153,7 @@ const Contact = () => {
                             name="name"
                             id="name"
                             placeholder="Your Full Name"
-                            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none  focus:shadow-md"
+                            className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none  focus:shadow-md"
                           />
                         </div>
                       </div>
@@ -153,7 +161,7 @@ const Contact = () => {
                         <div className="mb-5 md:w-10/12 w-full">
                           <label
                             htmlFor="email"
-                            className="mb-3 block text-base font-medium text-[#07074D]"
+                            className="mb-3 block text-base font-medium text-black"
                           >
                             Email Address
                           </label>
@@ -162,7 +170,7 @@ const Contact = () => {
                             name="email"
                             id="email"
                             placeholder="example@domain.com"
-                            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none  focus:shadow-md"
+                            className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none  focus:shadow-md"
                           />
                         </div>
                       </div>
@@ -171,7 +179,7 @@ const Contact = () => {
                         <div className="mb-5 md:w-10/12 w-full">
                           <label
                             htmlFor="subject"
-                            className="mb-3 block text-base font-medium text-[#07074D]"
+                            className="mb-3 block text-base font-medium text-black"
                           >
                             Subject
                           </label>
@@ -180,7 +188,7 @@ const Contact = () => {
                             name="subject"
                             id="subject"
                             placeholder="Enter your subject"
-                            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:shadow-md"
+                            className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:shadow-md"
                           />
                         </div>
                       </div>
@@ -189,7 +197,7 @@ const Contact = () => {
                         <div className="mb-5 md:w-10/12 w-full">
                           <label
                             htmlFor="message"
-                            className="mb-3 block text-base font-medium text-[#07074D]"
+                            className="mb-3 block text-base font-medium text-black"
                           >
                             Message
                           </label>
@@ -198,14 +206,14 @@ const Contact = () => {
                             name="message"
                             id="message"
                             placeholder="Type your message"
-                            className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none  focus:shadow-md"
+                            className="w-full resize-none rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none  focus:shadow-md"
                           ></textarea>
                         </div>
                       </div>
 
                       <div className="flex items-center justify-center pt-2 md:mx-0 mx-8">
                         <div className="mb-5 md:w-10/12 w-full">
-                          <button className="hover:shadow-form rounded-full bg-mainColor transition duration-1000 md:py-2 py-2.5 ease-in-out w-full text-base font-medium text-white outline-none">
+                          <button className="rounded bg-green-500 transition duration-1000 py-3 ease-in-out w-full text-base  text-white outline-none">
                             Submit
                           </button>
                         </div>
@@ -214,7 +222,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 pt-8 md:px-2 lg:px-1 px-4">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 pt-16">
                   <a
                     href="mailto:info@laoemaom.com"
                     className="flex md:justify-start justify-center"
@@ -272,7 +280,7 @@ const Contact = () => {
                         </div>
                         <div className="flex lg:justify-start justify-center items-center">
                           <h1 className="text-2xl text-headingColor font-bold text-center">
-                            Call us Now
+                            Make a call directly
                           </h1>
                         </div>
 
@@ -286,7 +294,7 @@ const Contact = () => {
                             className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
                           >
                             <span className="relative flex-[8] text-center">
-                              Contact Us
+                              Call us here
                             </span>
                             <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
                               <TiArrowRight className=" text-lg" />
@@ -310,7 +318,7 @@ const Contact = () => {
                         </div>
                         <div className="flex lg:justify-start justify-center items-center">
                           <h1 className="text-2xl text-headingColor font-bold text-center">
-                            Visit us Directly
+                            Plan for a visit
                           </h1>
                         </div>
 
@@ -324,7 +332,7 @@ const Contact = () => {
                             className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
                           >
                             <span className="relative flex-[8] text-center">
-                              Contact Us
+                              Visit our address
                             </span>
                             <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
                               <TiArrowRight className=" text-lg" />

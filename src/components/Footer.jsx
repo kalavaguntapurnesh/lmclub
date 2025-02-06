@@ -73,7 +73,7 @@ const Footer = () => {
                                   />
                                 </a>
                                 <a
-                                  href="https://www.linkedin.com/company/cloud-data-networks"
+                                  href="https://www.tiktok.com/@lmclub0"
                                   className="flex lg:justify-start justify-center items-center"
                                 >
                                   <FaTiktok
