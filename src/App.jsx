@@ -5,22 +5,18 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Privacy from "./pages/Privacy";
-import Consumer_Privacy from "./pages/Consumer_Privacy";
 import Enroll_Rewards from "./pages/Enroll_Rewards";
 import Rewards from "./pages/Rewards";
 import PageNotFound from "./pages/PageNotFound";
-// import Products from "./pages/Products";
 import Pricing from "./pages/Pricing";
-import TermsAndConditions from "./pages/TermsAndConditions";
 import Dashboard from "./pages/Dashboard";
-import PrivacyStatement from "./pages/PrivacyStatement";
-import PrivacyReport from "./pages/PrivacyReport";
 import Widgets from "./pages/Widgets";
 import Estore from "./pages/Estore";
 import Beehive from "./pages/Beehive";
 import Network from "./pages/Network";
 import Grow from "./pages/Grow";
 import Broadcast from "./pages/Broadcast";
+import Events from './pages/Events';
 
 function App() {
   return (
@@ -40,18 +36,10 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
 
         <Route path="/register" element={<Register />}></Route>
-        <Route path="/register" element={<TermsAndConditions />}></Route>
         <Route path="/widgets" element={<Widgets />}></Route>
+        <Route path="/events" element={<Events />}></Route>
 
         <Route path="/privacy-policy" element={<Privacy />}></Route>
-        <Route
-          path="/terms-and-conditions"
-          element={<TermsAndConditions />}
-        ></Route>
-
-        <Route path="/consumer-privacy" element={<Consumer_Privacy />}></Route>
-        <Route path="/privacy-statement" element={<PrivacyStatement />}></Route>
-        <Route path="/privacy-report" element={<PrivacyReport />}></Route>
 
         <Route path="/enroll-rewards" element={<Enroll_Rewards />}></Route>
         <Route path="/rewards" element={<Rewards />}></Route>

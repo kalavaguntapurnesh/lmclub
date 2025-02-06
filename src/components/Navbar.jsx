@@ -330,7 +330,7 @@ const NavBar = () => {
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
-                        href="/contact-us"
+                        href="/events"
                         className="block text-sm text-gray-700"
                       >
                         Upcoming Events
@@ -338,7 +338,7 @@ const NavBar = () => {
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
-                        href="/contact-us"
+                        href="/events"
                         className="block text-sm text-gray-700"
                       >
                         Blogs & Events
@@ -615,7 +615,7 @@ const ContactBar = () => {
       </a>
 
       <a
-        href="/contact-us"
+        href="/events"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <div className="flex flex-col items-start gap-3">

@@ -125,7 +125,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/ecommerce&web"
+                          href="/pricing"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Membership Plans
@@ -134,7 +134,7 @@ const Footer = () => {
 
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/custom-software"
+                          href="/privacy-policy"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Our Privacy Policy
@@ -143,7 +143,7 @@ const Footer = () => {
 
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/ecommerce&web"
+                          href="/privacy-policy#terms_and_conditions"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Terms & Conditions
@@ -161,7 +161,7 @@ const Footer = () => {
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/about-us"
+                          href="/network"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Network Widget
@@ -169,7 +169,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/contact-cdn#global_presence"
+                          href="/beehive"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Beehive Widget
@@ -177,7 +177,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/our-vision"
+                          href="/broadcast"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Broadcast Widget
@@ -185,7 +185,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/about-us"
+                          href="/estore"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           EStore Widget
@@ -193,7 +193,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/privacy-policy"
+                          href="/grow"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Grow Widget
@@ -220,15 +220,15 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/edukare"
+                          href="/register"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          User Testimonials
+                          Sign up to LM Club
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/logbucks"
+                          href="/events"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Upcoming Events
@@ -236,7 +236,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="https://play.google.com/store/apps/details?id=com.lm.lmclub&hl=en_US"
+                          href="https://apps.apple.com/us/app/lm-club/id6469708246"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           LM Club Mobile App
@@ -263,7 +263,7 @@ const Footer = () => {
                     <ul className="pl-0 mt-4 space-y-3 list-none">
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/consumer-privacy"
+                          href="/privacy-policy"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Our Cookie Policy
@@ -271,7 +271,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/careers"
+                          href="/privacy-policy"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           User Consent & Preference
@@ -280,7 +280,7 @@ const Footer = () => {
 
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/"
+                          href="/privacy-policy"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Data Protection & Security
@@ -288,7 +288,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="https://www.linkedin.com/company/cloud-data-networks"
+                          href="https://www.linkedin.com/company/laoe-maom/"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Contact for Legal Inquiries
@@ -296,7 +296,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="https://x.com/CloudDataNet"
+                          href="/privacy-policy"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Acceptable Use Policy
