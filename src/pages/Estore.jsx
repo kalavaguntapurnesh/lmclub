@@ -50,7 +50,7 @@ const Estore = () => {
                         className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
                       >
                         <span className="relative flex-[8] text-center">
-                          Learn More
+                          Activate E-Store
                         </span>
                         <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
                           <TiArrowRight className=" text-lg" />
