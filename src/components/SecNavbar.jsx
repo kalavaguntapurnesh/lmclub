@@ -104,12 +104,16 @@ const SecNavbar = () => {
               : "lg:hidden fixed left-0 top-0 w-[100%] h-[100%] bg-white ease-in-out duration-1000 rounded-b-lg z-10 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
           }
         >
-          <a
-            href="/"
-            className="flex flex-row mt-6 justify-center items-center"
-          >
-            <img src={logo} className="w-20 h-auto " alt="logo" />
-          </a>
+          <div className="flex flex-row w-[100%] px-5 mt-6 justify-between items-center">
+            <a href="/" className="w-[50%]">
+              <img src={logo} className="w-[70px] h-auto " alt="logo" />
+            </a>
+            <div className="mb-4 flex justify-end w-[50%]">
+              <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                <AiOutlineClose className="w-[22px] h-[22px] text-black" />
+              </button>
+            </div>
+          </div>
 
           <ul className="p-4 mt-4">
             <li className="px-4 py-3">
@@ -132,36 +136,36 @@ const SecNavbar = () => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="pl-4 mt-6 space-y-2"
+                    className="mt-6 grid grid-cols-2 gap-4"
                   >
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/learn-about-us"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         About Us
                       </a>
                     </li>
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/learn-about-us#about_founder"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Our Leadership
                       </a>
                     </li>
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/privacy-policy"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Privacy Policy
                       </a>
                     </li>
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/privacy-policy#terms_and_conditions"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Terms & Conditions
                       </a>
@@ -191,46 +195,46 @@ const SecNavbar = () => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="pl-4 mt-6 space-y-2"
+                    className="mt-6 grid grid-cols-2 gap-4"
                   >
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/widgets"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Network
                       </a>
                     </li>
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/widgets"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Beehive
                       </a>
                     </li>
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/widgets"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Broadcast
                       </a>
                     </li>
 
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/widgets"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Estore
                       </a>
                     </li>
 
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/widgets"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Grow
                       </a>
@@ -260,36 +264,36 @@ const SecNavbar = () => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="pl-4 mt-6 space-y-2"
+                    className="mt-6 grid grid-cols-2 gap-4"
                   >
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/pricing"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Bronze
                       </a>
                     </li>
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/pricing"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Silver
                       </a>
                     </li>
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/pricing"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Gold
                       </a>
                     </li>
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/pricing"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Platinum
                       </a>
@@ -319,28 +323,28 @@ const SecNavbar = () => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="pl-4 mt-6 space-y-2"
+                    className="mt-6 grid grid-cols-2 gap-4"
                   >
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/contact-us"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Contact Us
                       </a>
                     </li>
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/contact-us"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Upcoming Events
                       </a>
                     </li>
-                    <li className="text-navGray">
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/contact-us"
-                        className="block text-base text-gray-700"
+                        className="block text-sm text-gray-700"
                       >
                         Blogs & Events
                       </a>
