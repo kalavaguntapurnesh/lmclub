@@ -8,6 +8,7 @@ import MockOne from "../assets/MockOne.png";
 import MockTwo from "../assets/MockTwo.png";
 import MockThree from "../assets/MockThree.png";
 import lity from "../assets/lity.svg";
+import star from "../assets/star.svg";
 
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
@@ -17,49 +18,49 @@ const Testimonial = () => {
       name: "Marcel Bordon",
       imageLink:
         "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-      designation: "Working at One",
+      designation: "Business Manager",
       review:
-        "Lorem ipsum dolor sit amet consectetur,adipisicing elit. Neque quam at reprehenderit, cumque delectus maiores possimus quibusdam ",
+        "Thanks to LM Club, connecting with professionals is seamless, & I got rewarded with Amazon gift cards.",
     },
     {
       name: "Aaron Zander",
       imageLink:
         "https://screencloud.com/_next/static/media/marcel-bordon.dd451a32.webp",
-      designation: "Working at Two",
+      designation: "Software Architect",
       review:
-        "Lorem ipsum dolor sit amet consectetur,adipisicing elit. Neque quam at reprehenderit, cumque delectus maiores possimus quibusdam ",
+        "LM Club streamlined my networking experience, and I even got rewarded along the way with amazing rewards!",
     },
     {
       name: "Michael Fasbender",
       imageLink:
         "https://screencloud.com/_next/static/media/aaron-zander.74f76098.webp",
-      designation: "Working at Three",
+      designation: "Restaurant Chef",
       review:
-        "Lorem ipsum dolor sit amet consectetur,adipisicing elit. Neque quam at reprehenderit, cumque delectus maiores possimus quibusdam ",
+        "LM Club simplifies the process of networking and using this application really made me win rewards.",
     },
     {
       name: "Tulsa Fast",
       imageLink:
         "https://screencloud.com/_next/static/media/sharon-winning.cb6ceb06.webp",
-      designation: "Working at Four",
+      designation: "Garage Owner",
       review:
-        "Lorem ipsum dolor sit amet consectetur,adipisicing elit. Neque quam at reprehenderit, cumque delectus maiores possimus quibusdam ",
+        "Thanks to LM Club, connecting with professionals is seamless, and I got rewarded too with Amazon gift cards.",
     },
     {
       name: "Leaney Dawson",
       imageLink:
         "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-      designation: "Working at Five",
+      designation: "College Professor",
       review:
-        "Lorem ipsum dolor sit amet consectetur,adipisicing elit. Neque quam at reprehenderit, cumque delectus maiores possimus quibusdam ",
+        "LM Club simplifies the process of networking and using this application really made me win rewards.",
     },
     {
       name: "Myrcella Stark",
       imageLink:
         "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
-      designation: "Working at Six",
+      designation: "NGO Worker",
       review:
-        "Lorem ipsum dolor sit amet consectetur,adipisicing elit. Neque quam at reprehenderit, cumque delectus maiores possimus quibusdam ",
+        "LM Club streamlined my networking experience, and I even got rewarded along the way with amazing rewards!",
     },
   ];
 
@@ -293,43 +294,15 @@ const Testimonial = () => {
                           </h2>
                           <p className="text-gray-600">{item.designation}</p>
 
-                          <p className="mt-2 text-gray-600">
-                            John&apos;s review about the company and services is
-                            positive and detailed, explaining his experience
-                            clearly.
-                          </p>
+                          <p className="mt-2 text-gray-600">{item.review}</p>
 
-                          <div className="flex justify-center mt-4">
-                            <svg
-                              className="w-6 h-6 text-yellow-400 fill-current"
-                              viewBox="0 0 24 24"
-                            >
-                              <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
-                            </svg>
-                            <svg
-                              className="w-6 h-6 text-yellow-400 fill-current"
-                              viewBox="0 0 24 24"
-                            >
-                              <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
-                            </svg>
-                            <svg
-                              className="w-6 h-6 text-yellow-400 fill-current"
-                              viewBox="0 0 24 24"
-                            >
-                              <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
-                            </svg>
-                            <svg
-                              className="w-6 h-6 text-yellow-400 fill-current"
-                              viewBox="0 0 24 24"
-                            >
-                              <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
-                            </svg>
-                            <svg
-                              className="w-6 h-6 text-yellow-400 fill-current"
-                              viewBox="0 0 24 24"
-                            >
-                              <path d="M12 2L14.09 8.26L20.78 9.27L16 13.14L17.18 19.84L12 16.77L6.82 19.84L8 13.14L3.22 9.27L9.91 8.26L12 2Z" />
-                            </svg>
+                          <div className="flex flex-row gap-2 justify-center mt-4">
+                            <img src={star} alt="star" className="w-4 h-4" />
+
+                            <img src={star} alt="star" className="w-4 h-4" />
+                            <img src={star} alt="star" className="w-4 h-4" />
+                            <img src={star} alt="star" className="w-4 h-4" />
+                            <img src={star} alt="star" className="w-4 h-4" />
                           </div>
                         </div>
                       </div>

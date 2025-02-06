@@ -3,6 +3,10 @@ import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import { TiArrowRight } from "react-icons/ti";
 import LaptopNetwork from "../assets/LaptopNetwork.png";
+import Directory from "../assets/Directory.svg";
+import SupportTwo from "../assets/SupportTwo.svg";
+import Events from "../assets/Events.svg";
+import connection from "../assets/connection.svg";
 
 const Network = () => {
   return (
@@ -60,6 +64,119 @@ const Network = () => {
                         src={LaptopNetwork}
                         className="rounded w-auto h-auto"
                       />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-20">
+                  <div>
+                    <h2 className="lg:text-4xl text-2xl font-bold text-trumpTwo">
+                      Key Features of the LM Club
+                      <br className="lg:block hidden" /> Network
+                    </h2>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-gray-600">
+                      Browse the member directory to find connections and start
+                      building your LM Club network. RSVP to Events Check out
+                      the upcoming events and add them to your calendar.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 pt-8">
+                  <div className="flex md:justify-start justify-center">
+                    <div className="w-full bg-white rounded p-6">
+                      <div className="space-y-3">
+                        <div className="flex justify-start items-center">
+                          <img
+                            src={Directory}
+                            className="flex justify-center items-center w-12 h-12  "
+                          ></img>
+                        </div>
+
+                        <div className="flex justify-start items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                            Member Directory
+                          </h1>
+                        </div>
+                        <div className="flex justify-start items-center text-gray-600 ">
+                          <p>
+                            Lists all LM Club members available for networking.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex md:justify-start justify-center">
+                    <div className="w-full bg-white rounded p-6">
+                      <div className="space-y-3">
+                        <div className="flex justify-start items-center">
+                          <img
+                            src={Events}
+                            className="flex justify-center items-center w-12 h-12  "
+                          ></img>
+                        </div>
+
+                        <div className="flex justify-start items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                            Events Section
+                          </h1>
+                        </div>
+                        <div className="flex justify-start items-center text-gray-600 ">
+                          <p>Shows upcoming club events and RSVP options.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex md:justify-start justify-center">
+                    <div className="w-full bg-white rounded p-6">
+                      <div className="space-y-3">
+                        <div className="flex justify-start items-center">
+                          <img
+                            src={SupportTwo}
+                            className="flex justify-center items-center w-12 h-12  "
+                          ></img>
+                        </div>
+
+                        <div className="flex justify-start items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                            Messaging and Chats
+                          </h1>
+                        </div>
+                        <div className="flex justify-start items-center text-gray-600 ">
+                          <p>
+                            Enables direct messaging and group chats within the
+                            club.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex md:justify-start justify-center">
+                    <div className="w-full bg-white rounded p-6">
+                      <div className="space-y-3">
+                        <div className="flex justify-start items-center">
+                          <img
+                            src={connection}
+                            className="flex justify-center items-center w-12 h-12  "
+                          ></img>
+                        </div>
+
+                        <div className="flex justify-start items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                            Community Groups
+                          </h1>
+                        </div>
+                        <div className="flex justify-start items-center text-gray-600 ">
+                          <p>
+                            Provides interest-based groups where members can
+                            collaborate and discuss specific topics.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -3,6 +3,9 @@ import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import { TiArrowRight } from "react-icons/ti";
 import LaptopRewards from "../assets/LaptopRewards.png";
+import money from "../assets/money.svg";
+import profit from "../assets/Profits.svg";
+import RewardTwo from "../assets/RewardTwo.svg";
 
 const Grow = () => {
   return (
@@ -64,6 +67,102 @@ const Grow = () => {
                         src={LaptopRewards}
                         className="rounded w-auto h-auto"
                       />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-20">
+                  <div>
+                    <h2 className="lg:text-4xl text-2xl font-bold text-trumpTwo">
+                      Key Features of the LM Club
+                      <br className="lg:block hidden" /> Grow
+                    </h2>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-gray-600">
+                      Receive bonus points and a trophy for every tenth member
+                      you bring into the community and win exciting prizes,
+                      discounts.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 pt-8">
+                  <div className="flex md:justify-start justify-center">
+                    <div className="w-full bg-white rounded p-6">
+                      <div className="space-y-3">
+                        <div className="flex justify-start items-center">
+                          <img
+                            src={RewardTwo}
+                            className="flex justify-center items-center w-12 h-12  "
+                          ></img>
+                        </div>
+
+                        <div className="flex justify-start items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                            Earn Reward Points
+                          </h1>
+                        </div>
+                        <div className="flex justify-start items-center text-gray-600 ">
+                          <p>
+                            Gain points each time someone joins the LM Club
+                            using your referral link or code.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex md:justify-start justify-center">
+                    <div className="w-full bg-white rounded p-6">
+                      <div className="space-y-3">
+                        <div className="flex justify-start items-center">
+                          <img
+                            src={profit}
+                            className="flex justify-center items-center w-12 h-12  "
+                          ></img>
+                        </div>
+
+                        <div className="flex justify-start items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                            Trophy Achievement for Milestones
+                          </h1>
+                        </div>
+                        <div className="flex justify-start items-center text-gray-600 ">
+                          <p>
+                            For every tenth referral, receive bonus points and a
+                            prestigious trophy as a symbol of your dedication to
+                            growing the community.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex md:justify-start justify-center">
+                    <div className="w-full bg-white rounded p-6">
+                      <div className="space-y-3">
+                        <div className="flex justify-start items-center">
+                          <img
+                            src={money}
+                            className="flex justify-center items-center w-12 h-12  "
+                          ></img>
+                        </div>
+
+                        <div className="flex justify-start items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                            Redeeming Reward Points
+                          </h1>
+                        </div>
+                        <div className="flex justify-start items-center text-gray-600 ">
+                          <p>
+                            Accumulate points and redeem them for rewards such
+                            as gift cards, discounts, or exclusive offers. Once
+                            points have been redeemed the accumulated points
+                            reset to Zero.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -3,6 +3,10 @@ import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import { TiArrowRight } from "react-icons/ti";
 import LaptopBroadcast from "../assets/LaptopBroadcast.png";
+import lity from "../assets/lity.svg";
+import moneyTwo from "../assets/moneyTwo.svg";
+import Business from "../assets/Business.svg";
+import Reward from "../assets/Reward.svg";
 
 const Broadcast = () => {
   return (
@@ -37,7 +41,9 @@ const Broadcast = () => {
                         local businesses, and we reward you for it!
                       </p>
                       <p>
-                      Easily enroll businesses with a marketing fillable template that generates a custom URL for their promotions.
+                        Easily enroll businesses with a marketing fillable
+                        template that generates a custom URL for their
+                        promotions.
                       </p>
                     </div>
 
@@ -62,6 +68,101 @@ const Broadcast = () => {
                         src={LaptopBroadcast}
                         className="rounded w-auto h-auto"
                       />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-20">
+                  <div>
+                    <h2 className="lg:text-4xl text-2xl font-bold text-trumpTwo">
+                      Key Features of the LM Club
+                      <br className="lg:block hidden" /> Broadcast
+                    </h2>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-gray-600">
+                      Gain access to exclusive perks from participating local
+                      businesses while benefiting from LM Club rewards
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 pt-8">
+                  <div className="flex md:justify-start justify-center">
+                    <div className="w-full bg-white rounded p-6">
+                      <div className="space-y-3">
+                        <div className="flex justify-start items-center">
+                          <img
+                            src={Business}
+                            className="flex justify-center items-center w-12 h-12  "
+                          ></img>
+                        </div>
+
+                        <div className="flex justify-start items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                            Promote a Business
+                          </h1>
+                        </div>
+                        <div className="flex justify-start items-center text-gray-600 ">
+                          <p>
+                            Easily enroll businesses with a marketing fillable
+                            template that generates a custom URL for their
+                            promotions.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex md:justify-start justify-center">
+                    <div className="w-full bg-white rounded p-6">
+                      <div className="space-y-3">
+                        <div className="flex justify-start items-center">
+                          <img
+                            src={Reward}
+                            className="flex justify-center items-center w-12 h-12  "
+                          ></img>
+                        </div>
+
+                        <div className="flex justify-start items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                            Redeeming Reward Points
+                          </h1>
+                        </div>
+                        <div className="flex justify-start items-center text-gray-600 ">
+                          <p>
+                            Accumulate points and redeem them for rewards such
+                            as gift cards, discounts, or exclusive offers. Once
+                            points have been redeemed the accumulated points
+                            reset to Zero.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex md:justify-start justify-center">
+                    <div className="w-full bg-white rounded p-6">
+                      <div className="space-y-3">
+                        <div className="flex justify-start items-center">
+                          <img
+                            src={moneyTwo}
+                            className="flex justify-center items-center w-12 h-12  "
+                          ></img>
+                        </div>
+
+                        <div className="flex justify-start items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                            Exclusive Perks from Local Businesses
+                          </h1>
+                        </div>
+                        <div className="flex justify-start items-center text-gray-600 ">
+                          <p>
+                            Some participating businesses offer additional perks
+                            to members who help promote their brand.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
