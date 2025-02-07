@@ -220,10 +220,10 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/register"
+                          href="/rewards"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          Sign up to LM Club
+                          Widget Rewards
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
@@ -239,7 +239,7 @@ const Footer = () => {
                           href="https://apps.apple.com/us/app/lm-club/id6469708246"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
-                          LM Club Mobile App
+                          Mobile Application
                         </a>
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">

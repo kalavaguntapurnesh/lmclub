@@ -164,10 +164,10 @@ const SecNavbar = () => {
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
-                        href="/privacy-policy#terms_and_conditions"
+                        href="/rewards"
                         className="block text-sm text-gray-700"
                       >
-                        Terms & Conditions
+                        Widget Rewards
                       </a>
                     </li>
                   </motion.ul>
@@ -204,6 +204,14 @@ const SecNavbar = () => {
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
+                        href="/broadcast"
+                        className="block text-sm text-gray-700"
+                      >
+                        Broadcast
+                      </a>
+                    </li>
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
+                      <a
                         href="/network"
                         className="block text-sm text-gray-700"
                       >
@@ -216,14 +224,6 @@ const SecNavbar = () => {
                         className="block text-sm text-gray-700"
                       >
                         Beehive
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a
-                        href="/broadcast"
-                        className="block text-sm text-gray-700"
-                      >
-                        Broadcast
                       </a>
                     </li>
 
@@ -558,6 +558,22 @@ const WidgetsBar = () => {
       </a>
 
       <a
+        href="/broadcast"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <div className="flex flex-col items-start gap-3">
+          <img src={broadcast} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Broadcast</h1>
+            <p className="text-gray-800 text-sm">
+              Activate Broadcast to advertise local businesses on your social
+              media
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a
         href="/beehive"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
@@ -582,22 +598,6 @@ const WidgetsBar = () => {
             <h1 className="text-[#1a1a1a] font-semibold">Network</h1>
             <p className="text-gray-800 text-sm">
               Activate Network today to connect with like-minded individuals
-            </p>
-          </div>
-        </div>
-      </a>
-
-      <a
-        href="/broadcast"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <div className="flex flex-col items-start gap-3">
-          <img src={broadcast} alt="network" className="w-10 h-10" />
-          <div className="flex flex-col">
-            <h1 className="text-[#1a1a1a] font-semibold">Broadcast</h1>
-            <p className="text-gray-800 text-sm">
-              Activate Broadcast to advertise local businesses on your social
-              media
             </p>
           </div>
         </div>
@@ -707,15 +707,15 @@ const Homebar = () => {
       </a>
 
       <a
-        href="/privacy-policy#terms_and_conditions"
+        href="/rewards"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <div className="flex flex-col items-start gap-3">
           <img src={LMDark} alt="network" className="w-10 h-10" />
           <div className="flex flex-col">
-            <h1 className="text-[#1a1a1a] font-semibold">Terms & Conditions</h1>
+            <h1 className="text-[#1a1a1a] font-semibold">Widget Rewards</h1>
             <p className="text-gray-800 text-sm">
-              Reach out to us about terms & conditions.
+              Earn rewards for inviting new members
             </p>
           </div>
         </div>

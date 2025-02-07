@@ -3,74 +3,13 @@ import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
 import RedeemModal from "../components/RedeemModal";
 import { useState } from "react";
+import Amazon from "../assets/Amazon.jpg";
+import Card500 from "../assets/500.jpg";
+import ae from "../assets/ae.png";
+import { TiArrowRight } from "react-icons/ti";
 
 const Rewards = () => {
   const [showModal, setShowModal] = useState(false);
-  const services = [
-    {
-      id: 1,
-      image: "https://lmclub.club/wp-content/uploads/2024/07/gift-card.png",
-      heading: "Claim $500 Amazon Giftcard",
-      enroll: "Enroll 25 Members",
-      link: "/contact-us",
-    },
-    {
-      id: 2,
-      image: "https://lmclub.club/wp-content/uploads/2024/08/samsung-vr.png",
-      heading: "Claim Samsung VR",
-      enroll: "Enroll 50 Members",
-      link: "/contact-us",
-    },
-    {
-      id: 3,
-      image: "https://lmclub.club/wp-content/uploads/2024/08/sony-tv.png",
-      heading: "Claim Sony TV",
-      enroll: "Enroll 290 Members",
-      link: "/contact-us",
-    },
-    {
-      id: 4,
-      image: "https://lmclub.club/wp-content/uploads/2024/08/vacation.png",
-      heading: "Claim Vacation",
-      enroll: "Enroll 375 Members",
-      link: "/contact-us",
-    },
-    {
-      id: 5,
-      image: "https://lmclub.club/wp-content/uploads/2024/08/iphone.png",
-      heading: "Claim Android/iPhone",
-      enroll: "Enroll 250 Members",
-      link: "/contact-us",
-    },
-    {
-      id: 6,
-      image: "https://lmclub.club/wp-content/uploads/2024/08/playstation.png",
-      heading: "Claim Playstation",
-      enroll: "Enroll 100 Members",
-      link: "/contact-us",
-    },
-    {
-      id: 7,
-      image: "https://lmclub.club/wp-content/uploads/2024/08/xbox.png",
-      heading: "Claim x-Box",
-      enroll: "Enroll 100 Members",
-      link: "/contact-us",
-    },
-    {
-      id: 8,
-      image: "https://lmclub.club/wp-content/uploads/2024/08/tundra.png",
-      heading: "Claim Tundra",
-      enroll: "Enroll 1500 Members",
-      link: "/contact-us",
-    },
-    {
-      id: 9,
-      image: "https://lmclub.club/wp-content/uploads/2024/08/tesla.png",
-      heading: "Claim Tesla",
-      enroll: "Enroll 2000 Members",
-      link: "/contact-us",
-    },
-  ];
 
   const handleRedeemClick = () => {
     setShowModal(true);
@@ -84,55 +23,132 @@ const Rewards = () => {
     <div>
       <Navbar />
       <ScrollToTop />
-      <div className="mt-28">
+      <div className="lg:pt-28 pt-24">
         <div className="relative">
           <div className="w-full">
-            <div className="w-full px-4 mx-auto max-w-[1400px] pb-12">
-              <div className=" mt-8">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4">
-                  {services.map((service, index) => (
-                    <div
-                      key={index}
-                      class="flex md:justify-start justify-center"
-                    >
-                      <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 ">
-                        <div class="space-y-4">
-                          <div class="flex justify-center items-center">
-                            <p className="text-xl text-sideHeading font-medium">
-                              {service.enroll}
-                            </p>
-                          </div>
-                          <div class="flex justify-center items-center w-[100%]">
-                            <img
-                              src={service.image}
-                              alt=""
-                              class="w-full rounded"
-                            />
-                          </div>
-                          <div class="flex justify-center items-center">
-                            <h1 class="text-2xl text-headingColor font-semibold">
-                              {service.heading}
-                            </h1>
-                          </div>
+            <div className="w-full mx-auto max-w-[1400px] ">
+              <div className="p-4">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-center ">
+                    <div className="h-4 w-1 bg-green-500"></div>
+                    <h1 className="ml-2 font-bold text-green-500 lg:uppercase">
+                      Grow Rewards
+                    </h1>
+                  </div>
 
-                          <div className="flex justify-center">
-                            <button
-                              onClick={handleRedeemClick}
-                              class="hover:border-[1px] hover:border-mainColor hover:text-mainColor font-medium hover:bg-white text-white bg-mainColor transition duration-500 text-colorFour py-2 px-8 rounded-full"
-                            >
-                              Redeem Now
-                            </button>
-                          </div>
+                  <div className="lg:text-4xl text-2xl text-center font-bold text-headingColor">
+                    <h1>Earn rewards for inviting new members</h1>
+                  </div>
+
+                  <div className="text-gray-600 text-center">
+                    <p>
+                      Start earning rewards for enrolling other members into our
+                      thriving community! This exciting feature empowers you to
+                      expand your network while benefiting from your efforts.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 pt-8">
+                  <div className="flex justify-center items-center">
+                    <div className="max-w-md rounded overflow-hidden shadow md:mx-0 mx-2 border">
+                      <img
+                        className="w-full h-64"
+                        src={Amazon}
+                        alt="Sunset in the mountains"
+                      />
+                      <div className="px-6 pt-4">
+                        <div className="font-bold lg:text-start text-center text-headingColor text-2xl mb-2">
+                          Claim $500 Giftcard
                         </div>
+                        <p className="text-gray-700 text-lg lg:text-start text-center ">
+                          Enroll 15 Members
+                        </p>
+                      </div>
+                      <div className="px-6 pt-4 pb-4 flex lg:justify-start justify-center">
+                        <a
+                          href="/contact-us"
+                          className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
+                        >
+                          <span className="relative flex-[8] text-center">
+                            Redeem Now
+                          </span>
+                          <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
+                            <TiArrowRight className=" text-lg" />
+                          </span>
+                        </a>
                       </div>
                     </div>
-                  ))}
+                  </div>
+
+                  <div className="flex justify-center items-center">
+                    <div className="max-w-md rounded overflow-hidden shadow md:mx-0 mx-2 border">
+                      <img
+                        className="w-full h-64"
+                        src={Card500}
+                        alt="Sunset in the mountains"
+                      />
+                      <div className="px-6 pt-4">
+                        <div className="font-bold lg:text-start text-center  text-headingColor text-2xl mb-2">
+                          Claim $1000 Giftcard
+                        </div>
+                        <p className="text-gray-700 text-lg lg:text-start text-center ">
+                          Enroll 30 Members
+                        </p>
+                      </div>
+                      <div className="px-6 pt-4 pb-4 flex lg:justify-start justify-center">
+                        <a
+                          href="/contact-us"
+                          className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
+                        >
+                          <span className="relative flex-[8] text-center">
+                            Redeem Now
+                          </span>
+                          <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
+                            <TiArrowRight className=" text-lg" />
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-center items-center">
+                    <div className="max-w-md rounded overflow-hidden shadow md:mx-0 mx-2 border">
+                      <img
+                        className="w-full h-64"
+                        src={ae}
+                        alt="Sunset in the mountains"
+                      />
+                      <div className="px-6 pt-4">
+                        <div className="font-bold lg:text-start text-center  text-headingColor text-2xl mb-2">
+                          Claim $1500 Giftcard
+                        </div>
+                        <p className="text-gray-700 text-lg lg:text-start text-center ">
+                          Enroll 45 Members
+                        </p>
+                      </div>
+                      <div className="px-6 pt-4 pb-4 flex lg:justify-start justify-center">
+                        <a
+                          href="/contact-us"
+                          className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
+                        >
+                          <span className="relative flex-[8] text-center">
+                            Redeem Now
+                          </span>
+                          <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
+                            <TiArrowRight className=" text-lg" />
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <RedeemModal showModal={showModal} onClose={closeModal} />
       <Footer />
     </div>

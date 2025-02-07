@@ -163,10 +163,10 @@ const NavBar = () => {
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
-                        href="/privacy-policy#terms_and_conditions"
+                        href="/rewards"
                         className="block text-sm text-gray-700"
                       >
-                        Terms & Conditions
+                        Widget Rewards
                       </a>
                     </li>
                   </motion.ul>
@@ -203,6 +203,14 @@ const NavBar = () => {
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
+                        href="/broadcast"
+                        className="block text-sm text-gray-700"
+                      >
+                        Broadcast
+                      </a>
+                    </li>
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
+                      <a
                         href="/network"
                         className="block text-sm text-gray-700"
                       >
@@ -215,14 +223,6 @@ const NavBar = () => {
                         className="block text-sm text-gray-700"
                       >
                         Beehive
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a
-                        href="/broadcast"
-                        className="block text-sm text-gray-700"
-                      >
-                        Broadcast
                       </a>
                     </li>
 
@@ -408,7 +408,7 @@ const Tab = ({ children, tab, handleSetSelected, selected }) => {
       onMouseEnter={() => handleSetSelected(tab)}
       onClick={() => handleSetSelected(tab)}
       className={`flex items-center gap-1 rounded-full md:text-sm lg:text-base px-3 py-1.5 transition-colors ${
-        selected === tab ? " bg-mainColor text-neutral-100" : "text-gray-700"
+        selected === tab ? " bg-white text-gray-700" : "text-gray-700"
       }`}
     >
       <span>{children}</span>
@@ -498,7 +498,7 @@ const Nub = ({ selected }) => {
       }}
       animate={{ left }}
       transition={{ duration: 0.25, ease: "easeInOut" }}
-      className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl bg-mainColor"
+      className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-tl bg-white"
     />
   );
 };
@@ -517,6 +517,22 @@ const WidgetsBar = () => {
             <p className="text-gray-800 text-sm">
               Activate E-Store and we will share a percentage of our profits
               with you.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a
+        href="/broadcast"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <div className="flex flex-col items-start gap-3">
+          <img src={broadcast} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Broadcast</h1>
+            <p className="text-gray-800 text-sm">
+              Activate Broadcast to advertise local businesses on your social
+              media
             </p>
           </div>
         </div>
@@ -547,22 +563,6 @@ const WidgetsBar = () => {
             <h1 className="text-[#1a1a1a] font-semibold">Network</h1>
             <p className="text-gray-800 text-sm">
               Activate Network today to connect with like-minded individuals
-            </p>
-          </div>
-        </div>
-      </a>
-
-      <a
-        href="/broadcast"
-        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-      >
-        <div className="flex flex-col items-start gap-3">
-          <img src={broadcast} alt="network" className="w-10 h-10" />
-          <div className="flex flex-col">
-            <h1 className="text-[#1a1a1a] font-semibold">Broadcast</h1>
-            <p className="text-gray-800 text-sm">
-              Activate Broadcast to advertise local businesses on your social
-              media
             </p>
           </div>
         </div>
@@ -672,15 +672,15 @@ const Homebar = () => {
       </a>
 
       <a
-        href="/privacy-policy#terms_and_conditions"
+        href="/rewards"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <div className="flex flex-col items-start gap-3">
           <img src={LMDark} alt="network" className="w-10 h-10" />
           <div className="flex flex-col">
-            <h1 className="text-[#1a1a1a] font-semibold">Terms & Conditions</h1>
+            <h1 className="text-[#1a1a1a] font-semibold">Widget Rewards</h1>
             <p className="text-gray-800 text-sm">
-              Reach out to us about terms & conditions.
+              Earn rewards for inviting new members
             </p>
           </div>
         </div>
