@@ -331,8 +331,8 @@ const NavBar = () => {
                       </a>
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a href="/events" className="block text-sm text-gray-700">
-                        Blogs & Events
+                      <a href="/blogs" className="block text-sm text-gray-700">
+                        Blogs & News
                       </a>
                     </li>
                   </motion.ul>
@@ -621,7 +621,7 @@ const ContactBar = () => {
       </a>
 
       <a
-        href="/contact-us"
+        href="/blogs"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <div className="flex flex-col items-start gap-3">

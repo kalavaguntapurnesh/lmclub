@@ -16,6 +16,7 @@ import Network from "./pages/Network";
 import Grow from "./pages/Grow";
 import Broadcast from "./pages/Broadcast";
 import Events from './pages/Events';
+import Blogs from "./pages/Blogs";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/network" element={<Network />}></Route>
         <Route path="/grow" element={<Grow />}></Route>
         <Route path="/broadcast" element={<Broadcast />}></Route>
+        <Route path="/blogs" element={<Blogs />}></Route>
 
         <Route path="/learn-about-us" element={<About />}></Route>
 
