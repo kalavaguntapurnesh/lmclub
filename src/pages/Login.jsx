@@ -19,6 +19,11 @@ import React, { useEffect } from "react";
 import star from "../assets/star.svg";
 // import ReactGA from "react-ga4";
 
+import Swal from "sweetalert2";
+import success from "../assets/success.png";
+import Logo from "../assets/LM_Logo.jpeg";
+import Error from "../assets/error.png";
+
 const Login = () => {
   // useEffect(() => {
   //   ReactGA.send({ hitType: "pageview", page: window.location.pathname });
@@ -76,41 +81,153 @@ const Login = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // dispatch(showLoading());
-    axios
-      .post(
-        // "http://localhost:8080/api/v1/login",
-        "https://backend-syndeo.onrender.com/api/v1/login",
-        {
-          email,
-          password,
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+     const style = document.createElement('style');
+      style.innerHTML = `
+        .swal-custom-ok-button {
+          background-color:rgb(27, 202, 103); /* Custom color */
+          color:white;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          border-radius: 5px;
         }
-      )
-      .then((response) => {
-        window.location.reload();
-        // dispatch(hideLoading());
-        if (response.status === 200) {
-          localStorage.setItem("token", response.data.token);
-          console.log(response.data.token);
-          console.log("Login Success & now moving to dashboard");
-          // Swal.fire({
-          //   title: "Login Success",
-          //   icon: "success",
-          // });
-          navigate("/dashboard");
+
+        .swal-custom-ok-button:hover {
+          background-color:rgb(18, 91, 25); /* Hover color */
         }
-      })
-      .catch((error) => {
-        // dispatch(hideLoading());
+      `;
+      document.head.appendChild(style);
+
+    try {
+      const response = await axios.post("http://localhost:9090/api/login", {
+        email,
+        password
+      });
+  
+      if (response.status === 200) {
+        // Swal.fire({
+        //   title: "Login Success",
+        //   icon: "success",
+        // });
+        Swal.fire({
+                    html: `
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            
+                            <!-- Logo + Title -->
+                            <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                                <img src="${Logo}" alt="Logo" 
+                                    style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                                
+                                <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                                    <span style="color: black;">LM</span>
+                                    <span style="color: rgb(37, 218, 73);">Club</span>
+                                </h4>
+                            </div>
+                
+                            <!-- Success Image -->
+                            <div style="margin-bottom: 20px;">
+                                <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
+                            </div>
+                
+                            <!-- Registration Success Message -->
+                            <div style="width: 100%; text-align: center; ;">
+                                <h1 style="margin: 0; font-size: 25px;">Login Successful</h1>
+                            </div>
+                        </div>
+                    `,
+                    customClass: {
+                        confirmButton: 'swal-custom-ok-button'
+                    }
+                });
+        navigate("/");
+      }
+    } catch (error) {
+      if (error.response && error.response.status === 401) {
+        // Swal.fire({
+        //   title: 'Invalid credentials',
+        //   icon: 'error',
+        //   text: 'Please Try again! or else go with forgot password'
+        // });
+        Swal.fire({
+                  html: `
+                      <div style="display: flex; flex-direction: column; align-items: center;">
+                          
+                          <!-- Logo + Title -->
+                          <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                              <img src="${Logo}" alt="Logo" 
+                                  style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                              
+                              <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                                  <span style="color: black;">LM</span>
+                                  <span style="color: rgb(37, 218, 73);">Club</span>
+                              </h4>
+                          </div>
+              
+                          <!-- Success Image -->
+                          <div style="margin-bottom: 20px;">
+                              <img src="${Error}" alt="Error" style="width: 50px; height: 50px; margin: 0 10px;" />
+                          </div>
+              
+                          <!-- Registration Success Message -->
+                          <div style="width: 100%; text-align: center;;">
+                              <h1 style="margin: 0; font-size: 25px;"> Invalid credentials </h1>
+                              <p style="margin: 10px 0; font-size: 16px; color: #555;">
+                                  Please Try again! or else go with forgot password
+                              </p>
+                          </div>
+                      </div>
+                  `,
+                  customClass: {
+                      confirmButton: 'swal-custom-ok-button'
+                  }
+              });
+      } else {
         // Swal.fire({
         //   icon: "error",
         //   title: "Oops...",
-        //   text: "Check your username and password!!!",
+        //   text: "Something went wrong!",
         // });
-      });
+
+        Swal.fire({
+                  html: `
+                      <div style="display: flex; flex-direction: column; align-items: center;">
+                          
+                          <!-- Logo + Title -->
+                          <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                              <img src="${Logo}" alt="Logo" 
+                                  style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                              
+                              <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                                  <span style="color: black;">LM</span>
+                                  <span style="color: rgb(37, 218, 73);">Club</span>
+                              </h4>
+                          </div>
+              
+                          <!-- Success Image -->
+                          <div style="margin-bottom: 20px;">
+                              <img src="${Error}" alt="Error" style="width: 50px; height: 50px; margin: 0 10px;" />
+                          </div>
+              
+                          <!-- Registration Success Message -->
+                          <div style="width: 100%; text-align: center;;">
+                              <h1 style="margin: 0; font-size: 25px;"> Error! While Login</h1>
+                              <p style="margin: 10px 0; font-size: 16px; color: #555;">
+                                  Something went wrong!
+                              </p>
+                          </div>
+                      </div>
+                  `,
+                  customClass: {
+                      confirmButton: 'swal-custom-ok-button'
+                  }
+              });
+
+      }
+    }
   };
+  
 
   return (
     <div>

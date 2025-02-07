@@ -17,6 +17,8 @@ import Grow from "./pages/Grow";
 import Broadcast from "./pages/Broadcast";
 import Events from './pages/Events';
 import Blogs from "./pages/Blogs";
+import VerifyEmail from "./pages/VerifyEmail";
+import OtpAndEmailVerification from "./pages/OtpAndEmailVerification";
 
 function App() {
   return (
@@ -31,7 +33,9 @@ function App() {
         <Route path="/grow" element={<Grow />}></Route>
         <Route path="/broadcast" element={<Broadcast />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
-
+        <Route path="/verify-email/:token" element={<VerifyEmail />}/>
+        <Route path="/otp-verification" element={<OtpAndEmailVerification />}></Route>
+       
         <Route path="/learn-about-us" element={<About />}></Route>
 
         <Route path="/login" element={<Login />}></Route>

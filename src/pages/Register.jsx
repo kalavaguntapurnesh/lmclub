@@ -8,13 +8,72 @@ import google from "../assets/Google.svg";
 import React, { useEffect } from "react";
 import star from "../assets/star.svg";
 import { motion } from "framer-motion";
+import axios from "axios";
+import Swal from "sweetalert2";
+import success from "../assets/success.png";
+import Logo from "../assets/LM_Logo.jpeg";
+import Error from "../assets/error.png";
+import { useNavigate } from "react-router-dom";
+import Select from "react-select";
+import { Country, State, City } from "country-state-city";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [street, setStreet] = useState("");
+  const [referalcode, setReferalCode] = useState("");
+  const [confirmpassword, setConfirmPassword] = useState("");
+  const [state, setState] = useState("");
+  const [city, setCity] = useState("");
+  const [zipcode, setZipCode] = useState("");
   const [verified, setVerified] = useState(false);
-
+  const navigate = useNavigate();
   const [currentImage, setCurrentImage] = useState(0);
+
+  // automatically populating city, state, zip code 
+
+  const [states, setStates] = useState([]); // List of states
+  const [cities, setCities] = useState([]); // List of cities
+
+  const countryCode = "US"; // Assuming country is US
+  // Fetch states on component mount
+  useEffect(() => {
+    const statesData = State.getStatesOfCountry(countryCode);
+    console.log('Fetched States:', statesData);  // Log the states data
+    setStates(statesData);
+  }, []);
+
+  // Fetch cities based on selected state
+  useEffect(() => {
+    if (state) {
+      console.log('Selected State:', state);  // Log selected state
+      const citiesData = City.getCitiesOfState(countryCode, state);
+      console.log('Fetched Cities for State:', citiesData);  // Log fetched cities
+      setCities(citiesData);
+      setCity(''); // Reset city when state changes
+      setZipCode(''); // Reset zip code when state changes
+    }
+  }, [state]);
+
+  // Create select options for states
+  const stateOptions = states.map(state => ({
+    value: state.isoCode,
+    label: state.name
+  }));
+
+  // Create select options for cities
+  const cityOptions = cities.map(city => ({
+    value: city.id,
+    label: city.name
+  }));
+
+  // Handle city selection
+  const handleCityChange = (selectedOption) => {
+    console.log('Selected City:', selectedOption); // Log the selected city
+    setCity(selectedOption?.label || ''); // Set the selected city value
+  };
 
   const images = [
     {
@@ -55,15 +114,257 @@ const Register = () => {
     setVerified(true); // This will be true once reCAPTCHA is successfully completed
   };
 
-  const handleSubmit = (event) => {
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   if (verified) {
+  //     // Proceed with form submission
+  //     console.log("Form submitted!");
+  //   } else {
+  //     alert("Please complete the CAPTCHA!");
+  //   }
+  // };
+
+
+  
+  
+const sendOTP = async () => {
+  try {
+    // const response = await axios.post("http://localhost:9090/api/send-otp", { phone: phoneNumber });
+    const response = await axios.post("https://lmclub-backend.onrender.com/api/send-otp", { phone: phoneNumber });
+    if (response.status === 200) {
+      Swal.fire({
+        html: `
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                    <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                    <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                        <span style="color: black;">LM</span>
+                        <span style="color: rgb(37, 218, 73);">Club</span>
+                    </h4>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
+                    <h1 style="font-size: 25px;">OTP Sent!</h1>
+                </div>
+            </div>
+        `,
+        customClass: {
+          confirmButton: 'swal-custom-ok-button',
+        }
+      })
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'OTP Error',
+        text: 'Failed to send OTP, please try again.',
+      });
+    }
+  } catch (error) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Something went wrong while sending OTP.',
+    });
+  }
+};
+
+
+
+ const handleSubmit = async (event) => {
+  const style = document.createElement('style');
+  style.innerHTML = `
+    .swal-custom-ok-button {
+      background-color:rgb(27, 202, 103); /* Custom color */
+      color:white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .swal-custom-ok-button:hover {
+      background-color:rgb(18, 91, 25); /* Hover color */
+    }
+  `;
+  document.head.appendChild(style);
+
     event.preventDefault();
     if (verified) {
-      // Proceed with form submission
       console.log("Form submitted!");
+      console.log(email);
+      console.log(password);
+      console.log(username);
+      console.log(phoneNumber);
+      console.log(street);
+      console.log(referalcode);
+      console.log(confirmpassword);
+      console.log(state);
+      console.log(city);
+      console.log(zipcode);
+      // const response = await axios.post("http://localhost:9090/api/registerUser",{
+        const response = await axios.post("https://lmclub-backend.onrender.com/api/registerUser",{
+        email,
+        password,
+        username,
+        phoneNumber,
+        street,
+        referalcode,
+        confirmpassword,
+        state,
+        city,
+        zipcode
+      })
+      .then((response) => {
+        // dispatch(hideLoading());
+        if (response.status === 201) {
+          const verifyMail = response.data.newUser.email;
+          const partialEmail = verifyMail.replace(
+            /(\w{3})[\w.-]+@([\w.]+\w)/,
+            "$1***@$2"
+          );
+          // Swal.fire({
+          //   title: "Registration Success",
+          //   text:
+          //     "Check your email " +
+          //     partialEmail +
+          //     " and verify it to proceed further.",
+          //   icon: "success",
+          // });
+
+          Swal.fire({
+            html: `
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    
+                    <!-- Logo + Title -->
+                    <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                        <img src="${Logo}" alt="Logo" 
+                            style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                        
+                        <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                            <span style="color: black;">LM</span>
+                            <span style="color: rgb(37, 218, 73);">Club</span>
+                        </h4>
+                    </div>
+        
+                    <!-- Success Image -->
+                    <div style="margin-bottom: 20px;">
+                        <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
+                    </div>
+        
+                    <!-- Registration Success Message -->
+                    <div style="width: 100%; text-align: center; ">
+                        <h1 style="margin: 0; font-size: 25px;">Registration Successful</h1>
+                        <p style="margin: 10px 0; font-size: 16px; color: #555;">
+                            Check your email <b>${partialEmail}</b> and verify it to proceed further.
+                        </p>
+                    </div>
+                </div>
+            `,
+            customClass: {
+                confirmButton: 'swal-custom-ok-button'
+            }
+        });
+
+          sendOTP();
+          navigate("/otp-verification", { state: { email, phoneNumber } });
+        }else if(response.data.message === 'User Already Exists'){
+        //    Swal.fire({
+        //   icon: "error",
+        //   title: "Oops...",
+        //   text: "User already Exits. Please Login",
+        // });
+
+        Swal.fire({
+          html: `
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                  
+                  <!-- Logo + Title -->
+                  <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                      <img src="${Logo}" alt="Logo" 
+                          style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                      
+                      <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                          <span style="color: black;">LM</span>
+                          <span style="color: rgb(37, 218, 73);">Club</span>
+                      </h4>
+                  </div>
+      
+                  <!-- Success Image -->
+                  <div style="margin-bottom: 20px;">
+                      <img src="${Error}" alt="Error" style="width: 50px; height: 50px; margin: 0 10px;" />
+                  </div>
+      
+                 
+                  <div style="width: 100%; text-align: center; ">
+                      <h1 style="margin: 0; font-size: 25px;"> Error! While Creating Account</h1>
+                      <p style="margin: 10px 0; font-size: 16px; color: #555;">
+                          User already Exits. Please Login
+                      </p>
+                  </div>
+              </div>
+          `,
+          customClass: {
+              confirmButton: 'swal-custom-ok-button'
+          }
+      });
+        
+
+        }
+      })
+      .catch((error) => {
+        // dispatch(hideLoading());
+        console.log(error);
+        // Swal.fire({
+        //   icon: "error",
+        //   title: "Oops...",
+        //   text: "Something went wrong!",
+        // });
+
+        Swal.fire({
+          html: `
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                  
+                  <!-- Logo + Title -->
+                  <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                      <img src="${Logo}" alt="Logo" 
+                          style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                      
+                      <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                          <span style="color: black;">LM</span>
+                          <span style="color: rgb(37, 218, 73);">Club</span>
+                      </h4>
+                  </div>
+      
+                  <!-- Success Image -->
+                  <div style="margin-bottom: 20px;">
+                      <img src="${Error}" alt="Error" style="width: 50px; height: 50px; margin: 0 10px;" />
+                  </div>
+      
+                  <!-- Registration Success Message -->
+                  <div style="width: 100%; text-align: center;;">
+                      <h1 style="margin: 0; font-size: 25px;"> Error! While Creating Account</h1>
+                      <p style="margin: 10px 0; font-size: 16px; color: #555;">
+                          Something went wrong!
+                      </p>
+                  </div>
+              </div>
+          `,
+          customClass: {
+              confirmButton: 'swal-custom-ok-button'
+          }
+      });
+
+
+      });
+
+      console.log(response);
     } else {
       alert("Please complete the CAPTCHA!");
     }
+
+    
   };
+
+
 
   return (
     <div>
@@ -84,9 +385,9 @@ const Register = () => {
 
                         <form
                           className="space-y-4 md:space-y-6"
-                          // onSubmit={handleSubmit}
+                          onSubmit={handleSubmit}
                         >
-                          <div>
+                          <div className="w-full">
                             <label
                               htmlFor="email"
                               className="block mb-2 text-sm font-bold text-colorThree "
@@ -103,36 +404,192 @@ const Register = () => {
                               onChange={(e) => setEmail(e.target.value)}
                             ></input>
                           </div>
-                          <div>
+
+                          <div className="flex gap-5">
+                          <div className="w-full">
                             <label
-                              htmlFor="password"
+                              htmlFor="username"
                               className="block mb-2 text-sm font-bold text-colorThree "
                             >
-                              Password
+                              FullName
                             </label>
-                            <div className="flex flex-row">
+                            <input
+                              type="text"
+                              name="username"
+                              id="username"
+                              className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                              placeholder="Joe Root"
+                              required="true"
+                              onChange={(e) => setUsername(e.target.value)}
+                            ></input>
+                          </div>
+                          <div className="w-full">
+                              <label
+                                htmlFor="phoneNumber"
+                                className="block mb-2 text-sm font-bold text-colorThree "
+                              >
+                                PhoneNumber
+                              </label>
                               <input
-                                // type={type}
-                                name="password"
-                                value={password}
-                                id="password"
-                                placeholder="••••••••"
+                                type="text"
+                                name="phoneNumber"
+                                id="phoneNumber"
                                 className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                placeholder="+910976444563"
                                 required="true"
-                                onChange={(e) => setPassword(e.target.value)}
+                                onChange={(e) => setPhoneNumber(e.target.value)}
                               ></input>
-                              {/* <span
-                              onClick={handleToggle}
-                              className="cursor-pointer flex justify-center items-center"
-                            >
-                              <Icon
-                                className="absolute mr-10 text-black"
-                                icon={icon}
-                                size={20}
-                              ></Icon>
-                            </span> */}
+                            </div>
+                          
+                          </div>
+
+                          <div className="flex gap-5"> 
+                          
+                            <div>
+                              <label
+                                htmlFor="street"
+                                className="block mb-2 text-sm font-bold text-colorThree "
+                              >
+                                Street
+                              </label>
+                              <input
+                                type="text"
+                                name="street"
+                                id="street"
+                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                placeholder="street"
+                                required="true"
+                                onChange={(e) => setStreet(e.target.value)}
+                              ></input>
+                            </div>
+
+                            <div>
+                              <label
+                                htmlFor="referalcode"
+                                className="block mb-2 text-sm font-bold text-colorThree "
+                              >
+                                Referal Code
+                              </label>
+                              <input
+                                type="text"
+                                name="referalcode"
+                                id="referalcode"
+                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                placeholder="Referal Code"
+                                
+                                onChange={(e) => setReferalCode(e.target.value)}
+                              ></input>
                             </div>
                           </div>
+
+                          <div>
+        <label htmlFor="state" className="block mb-2 text-sm font-bold text-colorThree">
+          State/Province/Region
+        </label>
+        <Select
+          options={stateOptions}
+          onChange={(selectedOption) => setState(selectedOption?.value || "")}
+          value={stateOptions.find(option => option.value === state)}
+          placeholder="Select State"
+        />
+      </div>
+
+      <div className="flex gap-5">
+      <div className="w-full">
+          <label htmlFor="city" className="block mb-2 text-sm font-bold text-colorThree">
+            City/Town
+          </label>
+          <Select
+            options={cityOptions}
+            onChange={handleCityChange} // Log the selected city when changed
+            value={cityOptions.find(option => option.label === city)}
+            placeholder="Select City"
+            isDisabled={!state} // Disable city dropdown until state is selected
+          />
+        </div>
+
+        <div className="w-full">
+          <label htmlFor="zipcode" className="block mb-2 text-sm font-bold text-colorThree">
+            ZIP Code
+          </label>
+          <input
+            type="text"
+            name="zipcode"
+            id="zipcode"
+            className="border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+            placeholder="ZIP Code"
+            value={zipcode} // Bind the value of zip code
+            onChange={(e) => setZipCode(e.target.value)}
+          />
+        </div>
+      </div>
+
+
+                          <div className="flex gap-5">
+                            <div>
+                              <label
+                                htmlFor="password"
+                                className="block mb-2 text-sm font-bold text-colorThree "
+                              >
+                                Password
+                              </label>
+                              <div className="flex flex-row">
+                                <input
+                                  // type={type}
+                                  name="password"
+                                  value={password}
+                                  id="password"
+                                  placeholder="••••••••"
+                                  className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                  required="true"
+                                  onChange={(e) => setPassword(e.target.value)}
+                                ></input>
+                                {/* <span
+                                onClick={handleToggle}
+                                className="cursor-pointer flex justify-center items-center"
+                              >
+                                <Icon
+                                  className="absolute mr-10 text-black"
+                                  icon={icon}
+                                  size={20}
+                                ></Icon>
+                              </span> */}
+                              </div>
+                            </div>
+
+                            <div>
+                              <label
+                                htmlFor="confirmpassword"
+                                className="block mb-2 text-sm font-bold text-colorThree "
+                              >
+                                Confirm Password
+                              </label>
+                              <div className="flex flex-row">
+                                <input
+                                  // type={type}
+                                  name="confirmpassword"
+                                  value={confirmpassword}
+                                  id="confirmpassword"
+                                  placeholder="••••••••"
+                                  className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                  required="true"
+                                  onChange={(e) => setConfirmPassword(e.target.value)}
+                                ></input>
+                                {/* <span
+                                onClick={handleToggle}
+                                className="cursor-pointer flex justify-center items-center"
+                              >
+                                <Icon
+                                  className="absolute mr-10 text-black"
+                                  icon={icon}
+                                  size={20}
+                                ></Icon>
+                              </span> */}
+                              </div>
+                            </div>
+                          </div>
+
+                          
                           <div className="w-[100%] flex justify-center items-center">
                             <ReCAPTCHA
                               sitekey="6LchMmUqAAAAANKg1dNzYDXJnCMf-L6TjRsUVAfG"
@@ -203,7 +660,7 @@ const Register = () => {
                     </div>
                   </div>
 
-                  <div className="relative h-full w-full">
+                  <div className="relative lg:h-[60%] w-full">
                     <motion.div
                       key={currentImage}
                       // initial={{ opacity: 0, x: 50 }}
@@ -260,6 +717,8 @@ const Register = () => {
                       </div>
                     </motion.div>
                   </div>
+
+
                 </div>
               </div>
             </div>
