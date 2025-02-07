@@ -18,7 +18,7 @@ import google from "../assets/Google.svg";
 import React, { useEffect } from "react";
 import star from "../assets/star.svg";
 // import ReactGA from "react-ga4";
-
+import ReCAPTCHA from "react-google-recaptcha";
 import Swal from "sweetalert2";
 import success from "../assets/success.png";
 import Logo from "../assets/LM_Logo.jpeg";
@@ -33,6 +33,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [type, setType] = useState("password");
   // const [icon, setIcon] = useState(eyeOff);
+  const [verified, setVerified] = useState(false);
   const navigate = useNavigate();
   // const dispatch = useDispatch();
   // const handleToggle = () => {
@@ -101,7 +102,9 @@ const Login = () => {
       document.head.appendChild(style);
 
     try {
+      if (verified) {
       const response = await axios.post("http://localhost:9090/api/login", {
+        // const response = await axios.post("https://lmclub-backend.onrender.com/api/login", {
         email,
         password
       });
@@ -143,6 +146,9 @@ const Login = () => {
                 });
         navigate("/");
       }
+    } else {
+      alert("Please complete the CAPTCHA!");
+    }
     } catch (error) {
       if (error.response && error.response.status === 401) {
         // Swal.fire({
@@ -227,6 +233,11 @@ const Login = () => {
       }
     }
   };
+
+  const handleCaptcha = (value) => {
+    console.log("Captcha value:", value);
+    setVerified(true); // This will be true once reCAPTCHA is successfully completed
+  };
   
 
   return (
@@ -285,6 +296,14 @@ const Login = () => {
                               ></input>
                             </div>
                           </div>
+
+                          <div className="w-[100%] flex justify-center items-center">
+                            <ReCAPTCHA
+                              sitekey="6LchMmUqAAAAANKg1dNzYDXJnCMf-L6TjRsUVAfG"
+                              onChange={handleCaptcha}
+                            />
+                          </div>
+
                           <div className="flex items-center justify-between">
                             <div className="flex items-start">
                               <div className="flex items-center h-5">
