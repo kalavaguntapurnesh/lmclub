@@ -5,7 +5,8 @@ import { TiArrowRight } from "react-icons/ti";
 import LaptopEStore from "../assets/LaptopEStore.png";
 import connection from "../assets/connection.svg";
 import profit from "../assets/Profits.svg";
-import LInk from "../assets/LInk.svg"
+import LInk from "../assets/LInk.svg";
+import Check from "../assets/Check.svg";
 
 const Estore = () => {
   return (
@@ -161,6 +162,64 @@ const Estore = () => {
                             receive exclusive discounts on premium products.
                           </p>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-16">
+                  <div>
+                    <img
+                      src="https://images.pexels.com/photos/838413/pexels-photo-838413.jpeg?cs=srgb&dl=pexels-olly-838413.jpg&fm=jpg"
+                      alt="image"
+                      className="rounded"
+                    />
+                  </div>
+
+                  <div className="flex justify-center items-center lg:p-4">
+                    <div className="space-y-2">
+                      <h1 className="lg:text-4xl text-2xl font-bold text-trumpTwo">
+                        Amplify Your Local Businesses
+                      </h1>
+                      <p className="text-gray-600">
+                        Activate E-Store and we will share a percentage of our
+                        profits with you. Why? Because you are helping us brand.
+                        Terms and conditions apply.
+                      </p>
+
+                      <div className="pt-8 space-y-1">
+                        <p className="flex flex-row items-center text-xl font-bold text-[#1a1a1a] space-x-3">
+                          <img src={Check} alt="check" className="w-6 h-6" />
+                          <span>Earn 20% - 70% of profit</span>
+                        </p>
+                        <p className="lg:ml-10">
+                          Profit based on your membership level from purchases
+                          made through your unique E-Store link.
+                        </p>
+                      </div>
+
+                      <div className="pt-4 space-y-1">
+                        <p className="flex flex-row items-center text-xl font-bold text-[#1a1a1a] space-x-3">
+                          <img src={Check} alt="check" className="w-6 h-6" />
+                          <span>Exclusive Savings for Your Network </span>
+                        </p>
+                        <p className="lg:ml-10">
+                          Share top-quality products with your friends and
+                          followers while offering them exclusive discounts.
+                        </p>
+                      </div>
+
+                      <div className="pt-4 space-y-1">
+                        <p className="flex flex-row items-center text-xl font-bold text-[#1a1a1a] space-x-3">
+                          <img src={Check} alt="check" className="w-6 h-6" />
+                          <span>Effortless E-Store Ownership</span>
+                        </p>
+                        <p className="lg:ml-10">
+                          Enjoy the perks of having an online store without the
+                          hassle of setup or inventory management. Plus, receive
+                          additional discounts when purchasing from the Members
+                          Store.
+                        </p>
                       </div>
                     </div>
                   </div>

@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import { TiArrowRight } from "react-icons/ti";
 import LaptopBroadcast from "../assets/LaptopBroadcast.png";
-import lity from "../assets/lity.svg";
+import Check from "../assets/Check.svg";
 import moneyTwo from "../assets/moneyTwo.svg";
 import Business from "../assets/Business.svg";
 import Reward from "../assets/Reward.svg";
@@ -162,6 +162,61 @@ const Broadcast = () => {
                             to members who help promote their brand.
                           </p>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-16">
+                  <div>
+                    <img
+                      src="https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      alt="image"
+                      className="rounded"
+                    />
+                  </div>
+
+                  <div className="flex justify-center items-center lg:p-4">
+                    <div className="space-y-2">
+                      <h1 className="lg:text-4xl text-2xl font-bold text-trumpTwo">
+                        Build on trust, driven by excellence.
+                      </h1>
+                      <p className="text-gray-600">
+                        Stay updated on new broadcasts so you don’t miss any
+                        opportunities to earn points and perks.
+                      </p>
+
+                      <div className="pt-8 space-y-1">
+                        <p className="flex flex-row items-center text-xl font-bold text-[#1a1a1a] space-x-3">
+                          <img src={Check} alt="check" className="w-6 h-6" />
+                          <span>Check Notifications Regularly</span>
+                        </p>
+                        <p className="lg:ml-10">
+                          Stay updated on new broadcasts so you don’t miss any
+                          opportunities to earn points and perks.
+                        </p>
+                      </div>
+
+                      <div className="pt-4 space-y-1">
+                        <p className="flex flex-row items-center text-xl font-bold text-[#1a1a1a] space-x-3">
+                          <img src={Check} alt="check" className="w-6 h-6" />
+                          <span>Broadcast URL with Expiration</span>
+                        </p>
+                        <p className="lg:ml-10">
+                          Once you receive the URL, post it immediately. Be sure
+                          to post within 24 hours of receiving the URL.
+                        </p>
+                      </div>
+
+                      <div className="pt-4 space-y-1">
+                        <p className="flex flex-row items-center text-xl font-bold text-[#1a1a1a] space-x-3">
+                          <img src={Check} alt="check" className="w-6 h-6" />
+                          <span>Engage with Businesses</span>
+                        </p>
+                        <p className="lg:ml-10">
+                          Take advantage of special perks from local businesses
+                          to get the most out of the program.
+                        </p>
                       </div>
                     </div>
                   </div>
