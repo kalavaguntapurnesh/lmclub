@@ -176,7 +176,7 @@ const Estore = () => {
                     />
                   </div>
 
-                  <div className="flex justify-center items-center lg:p-4">
+                  <div className="flex justify-center items-center lg:px-4">
                     <div className="space-y-2">
                       <h1 className="lg:text-4xl text-2xl font-bold text-trumpTwo">
                         Amplify Your Local Businesses
