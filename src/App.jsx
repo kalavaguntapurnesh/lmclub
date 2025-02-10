@@ -19,9 +19,13 @@ import Events from './pages/Events';
 import Blogs from "./pages/Blogs";
 import VerifyEmail from "./pages/VerifyEmail";
 import OtpAndEmailVerification from "./pages/OtpAndEmailVerification";
-
+import SelectedPlan from "./pages/SelectedPlan";
+import Cart from "./pages/Cart";
+import CartProvider from "./context/CartContext";
+import HandlePayment from "./pages/HandlePayment";
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -51,8 +55,12 @@ function App() {
         {/* <Route path="/products" element={<Products />}></Route> */}
         <Route path="/pricing" element={<Pricing />}></Route>
         <Route path="/dashboard" element={<Dashboard />}></Route>
+        <Route path="/selected-plan" element={<SelectedPlan />}></Route>
+        <Route path="/selected-plan/cart" element={<Cart />} />
+        <Route path="/payment" element={<HandlePayment />} />
       </Routes>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 

@@ -10,13 +10,19 @@ import broadcast from "../assets/broadcast.webp";
 import estore from "../assets/estore.webp";
 import network from "../assets/network.webp";
 import enroll from "../assets/enroll.webp";
+import { useNavigate } from "react-router-dom";
 
 const Pricing = () => {
   const location = useLocation();
   const [isYearly, setYearly] = useState(false);
 
+  const navigate = useNavigate();
   const handleToggle = () => {
     setYearly((prev) => !prev);
+  };
+
+  const handleSelectedPlan = (plan) => {
+    navigate("/selected-plan", { state: { plan } });
   };
 
   const monthlyPlans = [
@@ -212,8 +218,8 @@ const Pricing = () => {
                             ))}
                           </ul>
                           <a
-                            href="/login"
-                            className="text-white bg-mainColor font-medium rounded-full text-sm px-5 py-3 my-3 text-center "
+                            onClick={() => handleSelectedPlan(plan)}
+                            className="text-white bg-mainColor font-medium rounded-full text-sm px-5 py-3 my-3 text-center cursor-pointer"
                           >
                             Get started
                           </a>
