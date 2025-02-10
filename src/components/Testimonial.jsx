@@ -66,21 +66,21 @@ const Testimonial = () => {
 
   return (
     <>
-      <div className="pt-12 pb-8">
+      <div className="pt-12 lg:pb-8">
         <div className="relative">
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
                 <div>
-                  <div className="flex flex-wrap flex-col lg:items-start items-start pb-3">
-                    <div className="text-start leading-relaxed  font-bold text-black">
+                  <div className="flex flex-wrap flex-col lg:items-start items-center pb-3">
+                    <div className="lg:text-start text-center  leading-relaxed  font-bold text-black">
                       <p className="lg:text-4xl text-2xl">
                         Got Questions? We've got answers
                       </p>
                     </div>
                     <div className="md:w-36 w-28 h-1 border-b-2 border-green-500 mt-[1px]"></div>
                   </div>
-                  <p className="text-gray-600 pt-3">
+                  <p className="text-gray-600 pt-3 lg:text-start text-center ">
                     Here are the questions frequently asked by our customers.
                     And we've answered to the topics related to rewards,
                     membership.
@@ -125,26 +125,26 @@ const Testimonial = () => {
         </div>
       </div>
 
-      <div className="pt-12 lg:pb-16 pb-8">
+      <div className="pt-8 lg:pb-16">
         <div className="relative">
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-16">
                   <div>
-                    <h2 className="lg:text-4xl text-2xl font-bold text-trumpTwo">
+                    <h2 className="lg:text-4xl text-2xl font-bold lg:text-start text-center ">
                       A mission rooted for collaborative
                       <br className="lg:block hidden" /> growth & earning.
                     </h2>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 lg:text-start text-center ">
                       LM Grow Rewards program allows you to earn redeemable
                       points and achieve special milestones simply by inviting
                       others to join our community. Help us grow, and in return,
                       enjoy exclusive perks and rewards!.
                     </p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 lg:text-start text-center ">
                       Together, we can build a vibrant community, sharing
                       success and opportunities.
                     </p>
@@ -155,19 +155,19 @@ const Testimonial = () => {
                   <div className="flex md:justify-start justify-center">
                     <div className="w-full bg-white rounded p-6">
                       <div className="space-y-3">
-                        <div className="flex justify-start items-center">
+                        <div className="flex lg:justify-start justify-center items-center">
                           <img
                             src={connection}
                             className="flex justify-center items-center w-12 h-12  "
                           ></img>
                         </div>
 
-                        <div className="flex justify-start items-center">
-                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                        <div className="flex lg:justify-start justify-center items-center">
+                          <h1 className="text-2xl text-trumpTwo font-bold lg:text-start text-center ">
                             Complete Your Profile
                           </h1>
                         </div>
-                        <div className="flex justify-start items-center text-gray-600 ">
+                        <div className="flex lg:justify-start justify-center items-center text-gray-600 lg:text-start text-center ">
                           <p>
                             Add a profile picture, list your professional
                             interests to help us get to know you.
@@ -180,19 +180,19 @@ const Testimonial = () => {
                   <div className="flex md:justify-start justify-center">
                     <div className="w-full bg-white rounded p-6">
                       <div className="space-y-3">
-                        <div className="flex justify-start items-center">
+                        <div className="flex lg:justify-start justify-center items-center">
                           <img
                             src={lity}
                             className="flex justify-center items-center w-12 h-12  "
                           ></img>
                         </div>
 
-                        <div className="flex justify-start items-center">
+                        <div className="flex lg:justify-start justify-center items-center">
                           <h1 className="text-2xl text-trumpTwo font-bold text-start">
                             Explore the Directory
                           </h1>
                         </div>
-                        <div className="flex justify-start items-center text-gray-600 ">
+                        <div className="flex lg:justify-start justify-center items-center lg:text-start text-center text-gray-600 ">
                           <p>
                             Browse the member directory to find connections and
                             start building your network.

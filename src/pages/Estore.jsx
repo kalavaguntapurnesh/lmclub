@@ -75,13 +75,13 @@ const Estore = () => {
 
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-20">
                   <div>
-                    <h2 className="lg:text-4xl text-2xl font-bold text-trumpTwo">
+                    <h2 className="lg:text-4xl text-2xl font-bold lg:text-start text-center">
                       Key Features of the LM Club
                       <br className="lg:block hidden" /> E-Store
                     </h2>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 lg:text-start text-center">
                       Let your network know that shopping through your link
                       unlocks special savings and deals available only through
                       the LM Club E-Store.
@@ -93,19 +93,19 @@ const Estore = () => {
                   <div className="flex md:justify-start justify-center">
                     <div className="w-full bg-white rounded p-6">
                       <div className="space-y-3">
-                        <div className="flex justify-start items-center">
+                        <div className="flex lg:justify-start justify-center items-center">
                           <img
                             src={profit}
                             className="flex justify-center items-center w-12 h-12  "
                           ></img>
                         </div>
 
-                        <div className="flex justify-start items-center">
+                        <div className="flex lg:justify-start justify-center items-center">
                           <h1 className="text-2xl text-trumpTwo font-bold text-start">
                             Profit Sharing on Purchases
                           </h1>
                         </div>
-                        <div className="flex justify-start items-center text-gray-600 ">
+                        <div className="flex lg:justify-start justify-center  items-center text-gray-600 lg:text-start text-center">
                           <p>
                             Earn 20% - 70% of the profit, depending on your
                             membership level, from every purchase made through
@@ -119,19 +119,19 @@ const Estore = () => {
                   <div className="flex md:justify-start justify-center">
                     <div className="w-full bg-white rounded p-6">
                       <div className="space-y-3">
-                        <div className="flex justify-start items-center">
+                        <div className="flex lg:justify-start justify-center items-center">
                           <img
                             src={LInk}
                             className="flex justify-center items-center w-12 h-12  "
                           ></img>
                         </div>
 
-                        <div className="flex justify-start items-center">
+                        <div className="flex lg:justify-start justify-center items-center">
                           <h1 className="text-2xl text-trumpTwo font-bold text-start">
                             Personalized E-Store Link
                           </h1>
                         </div>
-                        <div className="flex justify-start items-center text-gray-600 ">
+                        <div className="flex lg:justify-start justify-center  items-center text-gray-600 lg:text-start text-center">
                           <p>
                             Provides a unique, trackable URL that allows you to
                             share the E-Store with your friends and followers.
@@ -144,20 +144,20 @@ const Estore = () => {
                   <div className="flex md:justify-start justify-center">
                     <div className="w-full bg-white rounded p-6">
                       <div className="space-y-3">
-                        <div className="flex justify-start items-center">
+                        <div className="flex lg:justify-start justify-center items-center">
                           <img
                             src={connection}
                             className="flex justify-center items-center w-12 h-12  "
                           ></img>
                         </div>
 
-                        <div className="flex justify-start items-center">
-                          <h1 className="text-2xl text-trumpTwo font-bold text-start">
+                        <div className="flex lg:justify-start justify-center items-center">
+                          <h1 className="text-2xl font-bold lg:text-start text-center">
                             Exclusive Savings for Followers
                           </h1>
                         </div>
-                        <div className="flex justify-start items-center text-gray-600 ">
-                          <p>
+                        <div className="flex lg:justify-start justify-center items-center text-gray-600 ">
+                          <p className="lg:text-start text-center">
                             Shoppers who purchase through your E-Store link
                             receive exclusive discounts on premium products.
                           </p>
@@ -177,11 +177,11 @@ const Estore = () => {
                   </div>
 
                   <div className="flex justify-center items-center lg:px-4">
-                    <div className="space-y-2">
-                      <h1 className="lg:text-4xl text-2xl font-bold text-trumpTwo">
+                    <div className="lg:space-y-2 space-y-3">
+                      <h1 className="lg:text-4xl lg:text-start text-center text-2xl font-bold text-trumpTwo">
                         Amplify Your Local Businesses
                       </h1>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 lg:text-start text-center">
                         Activate E-Store and we will share a percentage of our
                         profits with you. Why? Because you are helping us brand.
                         Terms and conditions apply.

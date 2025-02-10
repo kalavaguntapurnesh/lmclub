@@ -7,7 +7,7 @@ import appStore from "../assets/AppStore.webp";
 const Banner = () => {
   return (
     <>
-      <div className="pt-8">
+      <div className="lg:pt-8">
         <div className="relative">
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">

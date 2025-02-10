@@ -20,7 +20,7 @@ const Footer = () => {
   }, [location]);
 
   return (
-    <div className=" p-15 select-none mt-20 lg:mx-4 lg:mb-4 ">
+    <div className="p-15 select-none mt-20 lg:mx-4 lg:mb-4 ">
       <div className="relative ">
         <div className="w-full">
           <div className="w-full px-4 mx-auto max-w-[1400px] ">
@@ -308,7 +308,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="text-center text-xs ">
+            <div className="text-center text-xs mb-4">
               <p>© 2025, Laoe Maom. All Rights Reserved.</p>
             </div>
           </div>

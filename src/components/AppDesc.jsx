@@ -34,15 +34,15 @@ const AppDesc = () => {
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
                 <div>
-                  <div className="flex flex-wrap flex-col lg:items-start items-start pb-3">
-                    <div className="text-start leading-relaxed  font-bold text-black">
+                  <div className="flex flex-wrap flex-col lg:items-start items-center pb-3">
+                    <div className="lg:text-start text-center leading-relaxed font-bold text-black">
                       <p className="lg:text-4xl text-2xl">
                         Empowering Connections & Cultivating Success
                       </p>
                     </div>
                     <div className="md:w-36 w-28 h-1 border-b-2 border-green-500 mt-[1px]"></div>
                   </div>
-                  <p className="text-gray-600 pt-3">
+                  <p className="text-gray-600 pt-3 lg:text-start text-center">
                     Welcome to LM Club – where networking meets opportunity! Our
                     innovative widgets are designed to empower you, reward you,
                     and make your life easier. Whether you&apos;re looking to
@@ -80,11 +80,11 @@ const AppDesc = () => {
 
                   <div className="lg:p-4">
                     <div>
-                      <div className="lg:text-3xl text-2xl font-bold">
+                      <div className="lg:text-3xl lg:text-start text-center text-2xl font-bold">
                         <h2>About LM Club</h2>
                       </div>
                       <div className="pt-4">
-                        <p className="text-gray-600">
+                        <p className="text-gray-600 lg:text-start text-center ">
                           Laoe Maom is more than a membership club; it’s a
                           community built on the principles of collaboration,
                           positivity, and shared success. Founded by Richard
@@ -95,8 +95,8 @@ const AppDesc = () => {
                         </p>
                       </div>
 
-                      <div className="pt-4">
-                        <p className="text-gray-600">
+                      <div className="pt-4 lg:block hidden">
+                        <p className="text-gray-600 lg:text-start text-center ">
                           At the heart of Laoe Maom lies the belief that
                           "Together Everyone Achieves More" – the power of
                           teamwork and human cooperation. Richard, alongside his
@@ -109,7 +109,7 @@ const AppDesc = () => {
                       </div>
 
                       <div className="pt-4">
-                        <p className="text-gray-600">
+                        <p className="text-gray-600 lg:text-start text-center ">
                           Built on the principle of "Least Amount of Effort,
                           Most Amount of Money" (LAOE MAOM), the organization
                           remains progressive and adaptable, evolving with the
@@ -120,7 +120,7 @@ const AppDesc = () => {
                         </p>
                       </div>
 
-                      <div className="pt-12">
+                      <div className="pt-12 flex lg:justify-start justify-center">
                         <a
                           href="/contact-us"
                           className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
@@ -148,15 +148,15 @@ const AppDesc = () => {
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
                 <div>
-                  <div className="flex flex-wrap flex-col lg:items-start items-start pb-3">
+                  <div className="flex flex-wrap flex-col lg:items-start items-center pb-3">
                     <div className="text-start leading-relaxed  font-bold text-black">
-                      <p className="lg:text-4xl text-2xl">
+                      <p className="lg:text-4xl text-2xl lg:text-start text-center ">
                         Simple steps get to start achieve more.
                       </p>
                     </div>
                     <div className="md:w-36 w-28 h-1 border-b-2 border-green-500 mt-[1px]"></div>
                   </div>
-                  <p className="text-gray-600 pt-3">
+                  <p className="text-gray-600 pt-3 lg:text-start text-center ">
                     By joining Laoe Maom, members and businesses gain access to
                     a supportive network that helps bring visions to life and
                     achieve success. Together, with the strength of family and
@@ -172,7 +172,7 @@ const AppDesc = () => {
                       >
                         <div className="w-full bg-white rounded p-6">
                           <div className="space-y-3">
-                            <div className="flex justify-start items-center">
+                            <div className="flex lg:justify-start justify-center items-center">
                               <img
                                 src={value.icon}
                                 className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full"
@@ -184,13 +184,13 @@ const AppDesc = () => {
                               </img>
                             </div>
 
-                            <div className="flex justify-start items-center">
+                            <div className="flex lg:justify-start justify-center items-center">
                               <h1 className="text-2xl text-trumpTwo font-bold text-start">
                                 {value.Title}
                               </h1>
                             </div>
-                            <div className="flex justify-start items-center text-gray-600 text-[14px] leading-[22px]">
-                              <p>{value.description}</p>
+                            <div className="flex lg:justify-start justify-center items-center text-gray-600 text-[14px] leading-[22px]">
+                              <p className="lg:text-start text-center ">{value.description}</p>
                             </div>
                           </div>
                         </div>

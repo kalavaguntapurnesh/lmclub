@@ -10,7 +10,7 @@ import appStore from "../assets/AppStore.webp";
 const AboutTwo = () => {
   return (
     <>
-      <div className="pb-8 mt-12">
+      <div className="lg:pb-8 mt-12">
         <div className="relative">
           <div className="relative inset-0 z-0 overflow-hidden">
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -174,65 +174,63 @@ const AboutTwo = () => {
         </div>
       </div>
 
-      <div>
-        <div className="relative">
-          <div className="w-full">
-            <div className="w-full mx-auto max-w-[1400px] ">
-              <div className="p-4">
-                <div
-                  className="grid md:grid-cols-2 grid-cols-1 lg:gap-4 gap-6 pt-12"
-                  id="logo_meaning"
-                >
-                  <div className="flex flex-col space-y-4 w-full md:justify-center">
-                    <div className="flex items-center md:justify-start justify-center ">
-                      <div className="h-4 w-1 bg-green-500"></div>
-                      <h1 className="ml-2 font-bold text-green-500 uppercase">
-                        About the Logo
-                      </h1>
-                    </div>
-
-                    <div className="lg:text-4xl text-2xl md:text-start text-center md:font-bold text-headingColor font-bold">
-                      <h1>
-                        Laoe Maom (LAOE MAOM): Least Amount of Effort, Most
-                        Amount of Money
-                      </h1>
-                    </div>
-
-                    <div className="text-sideHeading md:text-start text-center">
-                      <p>
-                        Laoe Maom embodies progress and adaptability, responding
-                        dynamically to the evolving relationships and interests
-                        in our global landscape. We are a collective of
-                        individuals and businesses worldwide, committed to
-                        mutual support and shared success. By joining forces, we
-                        breathe life into businesses and nurture them to thrive.
-                        Let’s achieve greatness together.
-                      </p>
-                    </div>
-
-                    <div className="flex items-center lg:justify-start justify-center ">
-                      <a
-                        href="/contact-us"
-                        className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
-                      >
-                        <span className="relative flex-[8] text-center">
-                          Contact Us
-                        </span>
-                        <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
-                          <TiArrowRight className=" text-lg" />
-                        </span>
-                      </a>
-                    </div>
+      <div className="relative">
+        <div className="w-full">
+          <div className="w-full mx-auto max-w-[1400px] ">
+            <div className="p-4">
+              <div
+                className="grid md:grid-cols-2 grid-cols-1 lg:gap-4 gap-8 pt-12"
+                id="logo_meaning"
+              >
+                <div className="flex flex-col space-y-4 w-full md:justify-center">
+                  <div className="flex items-center md:justify-start justify-center ">
+                    <div className="h-4 w-1 bg-green-500"></div>
+                    <h1 className="ml-2 font-bold text-green-500 uppercase">
+                      About the Logo
+                    </h1>
                   </div>
-                  <div className="flex justify-center items-center">
-                    <div className="w-full flex justify-center">
-                      <img
-                        src={Logo}
-                        alt="logo"
-                        height={400}
-                        className="rounded lg:w-[50%] w-[70%]"
-                      />
-                    </div>
+
+                  <div className="lg:text-4xl text-2xl md:text-start text-center md:font-bold text-headingColor font-bold">
+                    <h1>
+                      Laoe Maom (LAOE MAOM): Least Amount of Effort, Most Amount
+                      of Money
+                    </h1>
+                  </div>
+
+                  <div className="text-sideHeading md:text-start text-center">
+                    <p>
+                      Laoe Maom embodies progress and adaptability, responding
+                      dynamically to the evolving relationships and interests in
+                      our global landscape. We are a collective of individuals
+                      and businesses worldwide, committed to mutual support and
+                      shared success. By joining forces, we breathe life into
+                      businesses and nurture them to thrive. Let’s achieve
+                      greatness together.
+                    </p>
+                  </div>
+
+                  <div className="flex items-center lg:justify-start justify-center ">
+                    <a
+                      href="/contact-us"
+                      className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
+                    >
+                      <span className="relative flex-[8] text-center">
+                        Contact Us
+                      </span>
+                      <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
+                        <TiArrowRight className=" text-lg" />
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <div className="flex justify-center items-center">
+                  <div className="w-full flex justify-center">
+                    <img
+                      src={Logo}
+                      alt="logo"
+                      height={400}
+                      className="rounded lg:w-[50%] w-[70%]"
+                    />
                   </div>
                 </div>
               </div>
@@ -246,13 +244,13 @@ const AboutTwo = () => {
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
-                <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-4 gap-6">
+                <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-4 gap-8">
                   <div className="flex justify-center items-center">
                     <div className="w-full">
                       <img
-                        src={Founder}
+                        src="https://lmclub.club/wp-content/uploads/bb-plugin/cache/WhatsApp-Image-2024-12-24-at-09.18.08_9bad7354-1-circle.jpg"
                         alt="founder"
-                        className="rounded lg:h-[500px] h-auto md:w-[90%] w-full"
+                        className="rounded lg:h-[420px] h-auto md:w-[90%] w-full"
                       />
                     </div>
                   </div>
@@ -312,7 +310,7 @@ const AboutTwo = () => {
         </div>
       </div>
 
-      <div className="pt-8">
+      <div className="lg:pt-8">
         <div className="relative lg:block hidden">
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">

@@ -78,8 +78,8 @@
 .pin {
   background: #22c55e;
   position: absolute;
-  width: 0.8em;
-  height: 0.8em;
+  width: 1.0em;
+  height: 1.0em;
   border-radius: 50%;
   font-size: 14px;
 }
@@ -111,24 +111,9 @@
   font-weight: 600;
 }
 
-/* .usa {
-  top: 42%;
-  left: 24%;
-}
-
-.france {
-  top: 31%;
-  left: 45%;
-}
-
-.brazil {
-  top: 35%;
-  left: 26%;
-} */
-
 .china {
-  top: 67%;
-  left: 73%;
+  top: 53.5%;
+  left: 29.5%;
 }
 
 @media screen and (max-width: 600px) {
@@ -139,8 +124,8 @@
   .pin {
     background: #22c55e;
     position: absolute;
-    width: 0.7em;
-    height: 0.7em;
+    width: 2.0em;
+    height: 2.0em;
     border-radius: 50%;
     font-size: 14px;
   }
@@ -174,8 +159,8 @@
   }
 
   .china {
-    top: 67%;
-    left: 68%;
+    top: 52%;
+    left: 29%;
   }
 }
 
@@ -194,7 +179,7 @@
   line-height: 1.4;
 }
 
-.features__cell .widget_image{
+.features__cell .widget_image {
   display: flex;
   justify-content: center;
   align-items: center;

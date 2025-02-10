@@ -10,6 +10,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { TiArrowRight } from "react-icons/ti";
+import World from "../assets/WorldMap.svg";
 
 const Contact = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -96,70 +97,128 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-2">
-                  <div className="flex flex-col space-y-4">
-                    <div className="pt-2">
-                      <div className="w-full ">
-                        <a
-                          href="https://www.bing.com/maps?where=7778%20McGinnis%20Ferry%20Rd%2C%20PMB%20162%2C%20Suwanee%2C%20Georgia%2030024%2C%20US"
-                          id="world-map"
-                          className="relative"
-                        >
-                          <img
-                            src={us}
-                            alt="map"
-                            className="w-[100%] h-[100%] object-contain"
-                          />
+                <div>
+                  <div className="pt-2">
+                    <div className="w-full">
+                      <a
+                        href="https://www.bing.com/maps?where=7778%20McGinnis%20Ferry%20Rd%2C%20PMB%20162%2C%20Suwanee%2C%20Georgia%2030024%2C%20US"
+                        id="world-map"
+                        className="relative"
+                      >
+                        <img
+                          src={World}
+                          alt="map"
+                          className="w-[100%] h-[100%] object-contain"
+                        />
 
-                          <div class="pin china">
-                            <span>Head Quarters</span>
+                        <div class="pin china">
+                          <span>Head Quarters</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-16">
+                  <div className="flex flex-col space-y-4 pt-12">
+                    <div className="lg:text-start text-center">
+                      <p className="lg:text-4xl text-2xl font-bold text-trumpTwo">
+                        Have questions? Just fill out this form, and we&apos;ll
+                        respond soon!
+                      </p>
+                    </div>
+                    <div className="lg:text-start text-center">
+                      <p className=" text-base text-gray-600 md:text-start text-center">
+                        Have questions or need assistance? Share your queries
+                        here, and our dedicated team will provide a prompt
+                        response within 24 hours to ensure your needs are met
+                        seamlessly.
+                      </p>
+                    </div>
+
+                    <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-8">
+                      <div className="flex md:justify-start justify-center">
+                        <div className="w-full p-6 bg-white border border-gray-200 rounded shadow ">
+                          <div className="space-y-3">
+                            <div className="flex lg:justify-start justify-center items-center">
+                              <div className="flex lg:justify-start justify-center items-center">
+                                <FaHandshake
+                                  size={32}
+                                  className="text-[#22c55e]"
+                                />
+                              </div>
+                            </div>
+                            <div className="flex lg:justify-start justify-center items-center">
+                              <h1 className="text-xl text-headingColor font-bold text-center">
+                                Chat to friendly team
+                              </h1>
+                            </div>
+
+                            <div className="flex lg:justify-start justify-center items-center text-sideHeading lg:text-start text-center">
+                              <p>We will respond very soon.</p>
+                            </div>
+
+                            <div className="flex lg:justify-start justify-center pt-2">
+                              <a
+                                href="mailto:info@laoemaom.com"
+                                className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[160px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
+                              >
+                                <span className="relative flex-[8] text-center">
+                                  Chat with us
+                                </span>
+                                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
+                                  <TiArrowRight className=" text-lg" />
+                                </span>
+                              </a>
+                            </div>
                           </div>
-                        </a>
+                        </div>
+                      </div>
 
-                        <div className="flex flex-row mt-6 mb-8">
-                          <a href="" className="w-[50%] ">
-                            <div className="flex flex-col space-y-1 items-center">
-                              <p className="text-start text-xl font-bold text-black">
-                                <span className="text-mainColor">Head</span>{" "}
-                                Quarters:
-                              </p>
-                              <p className=" text-sideHeading">
-                                7778 McGinnis Ferry Rd
-                              </p>
-                              <p className=" text-sideHeading">
-                                PMB 162, Suwanee,
-                              </p>
-                              <p className=" text-sideHeading">
-                                Georgia 30024, US
-                              </p>
+                      <div className="flex md:justify-start justify-center">
+                        <div className="w-full p-6 bg-white border border-gray-200 rounded shadow ">
+                          <div className="space-y-3">
+                            <div className="flex lg:justify-start justify-center items-center">
+                              <div className="flex lg:justify-start justify-center items-center">
+                                <FaBlenderPhone
+                                  size={32}
+                                  className="text-[#22c55e]"
+                                />
+                              </div>
                             </div>
-                          </a>
-                          <a href="" className="w-[50%] ">
-                            <div className="flex flex-col space-y-1 items-center">
-                              <p className="text-start text-xl font-semibold text-black">
-                                <span className="text-mainColor">Branch</span>{" "}
-                                Offices:
-                              </p>
-                              <p className=" text-sideHeading">
-                                7778 McGinnis Ferry Rd
-                              </p>
-                              <p className=" text-sideHeading">
-                                PMB 162, Suwanee,
-                              </p>
-                              <p className=" text-sideHeading">
-                                Georgia 30024, US
-                              </p>
+                            <div className="flex lg:justify-start justify-center items-center">
+                              <h1 className="text-xl text-headingColor font-bold text-center">
+                                Make a call directly
+                              </h1>
                             </div>
-                          </a>
+
+                            <div className="flex lg:justify-start justify-center items-center text-sideHeading lg:text-start text-center">
+                              <p>Phone Number: (+1) 678-200-4524</p>
+                            </div>
+
+                            <div className="flex lg:justify-start justify-center pt-2">
+                              <a
+                                href="/contact-us"
+                                className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[160px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
+                              >
+                                <span className="relative flex-[8] text-center">
+                                  Contact Us
+                                </span>
+                                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
+                                  <TiArrowRight className=" text-lg" />
+                                </span>
+                              </a>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="mx-2">
-                    <form action="" method="POST" className="mt-8">
+                    <form action="" method="POST" className="lg:mt-8 mt-2">
                       <div className="w-full flex justify-center items-center">
-                        <div className="mb-5 md:w-10/12 w-full">
+                        <div className="mb-5 md:w-11/12 w-full">
                           <label
                             htmlFor="email"
                             className="mb-3 block text-base font-medium text-black"
@@ -176,7 +235,7 @@ const Contact = () => {
                         </div>
                       </div>
                       <div className="w-full flex justify-center items-center">
-                        <div className="mb-5 md:w-10/12 w-full">
+                        <div className="mb-5 md:w-11/12 w-full">
                           <label
                             htmlFor="email"
                             className="mb-3 block text-base font-medium text-black"
@@ -194,7 +253,7 @@ const Contact = () => {
                       </div>
 
                       <div className="w-full flex justify-center items-center">
-                        <div className="mb-5 md:w-10/12 w-full">
+                        <div className="mb-5 md:w-11/12 w-full">
                           <label
                             htmlFor="subject"
                             className="mb-3 block text-base font-medium text-black"
@@ -212,7 +271,7 @@ const Contact = () => {
                       </div>
 
                       <div className="w-full flex justify-center items-center">
-                        <div className="mb-5 md:w-10/12 w-full">
+                        <div className="mb-5 md:w-11/12 w-full">
                           <label
                             htmlFor="message"
                             className="mb-3 block text-base font-medium text-black"
@@ -230,7 +289,7 @@ const Contact = () => {
                       </div>
 
                       <div className="flex items-center justify-center pt-2 md:mx-0">
-                        <div className="mb-5 md:w-10/12 w-full">
+                        <div className="mb-5 md:w-11/12 w-full">
                           <button className="rounded bg-green-500 transition duration-1000 py-3 ease-in-out w-full text-base  text-white outline-none">
                             Submit
                           </button>
@@ -238,128 +297,6 @@ const Contact = () => {
                       </div>
                     </form>
                   </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 pt-16">
-                  <a
-                    href="mailto:info@laoemaom.com"
-                    className="flex md:justify-start justify-center"
-                  >
-                    <div className="w-full p-6 bg-white border border-gray-200 rounded shadow ">
-                      <div className="space-y-3">
-                        <div className="flex lg:justify-start justify-center items-center">
-                          <div className="flex lg:justify-start justify-center items-center">
-                            <FaHandshake size={32} className="text-[#22c55e]" />
-                          </div>
-                        </div>
-                        <div className="flex lg:justify-start justify-center items-center">
-                          <h1 className="text-2xl text-headingColor font-bold text-center">
-                            Chat to friendly team
-                          </h1>
-                        </div>
-
-                        <div className="flex lg:justify-start justify-center items-center text-sideHeading text-center">
-                          <p>
-                            Speak to our friendly team and we will try to
-                            respond
-                          </p>
-                        </div>
-
-                        <div className="flex lg:justify-start justify-center">
-                          <a
-                            href="/contact-us"
-                            className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
-                          >
-                            <span className="relative flex-[8] text-center">
-                              Contact Us
-                            </span>
-                            <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
-                              <TiArrowRight className=" text-lg" />
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a
-                    href="mailto:info@laoemaom.com"
-                    className="flex md:justify-start justify-center"
-                  >
-                    <div className="w-full p-6 bg-white border border-gray-200 rounded shadow ">
-                      <div className="space-y-3">
-                        <div className="flex lg:justify-start justify-center items-center">
-                          <div className="flex lg:justify-start justify-center items-center">
-                            <FaBlenderPhone
-                              size={32}
-                              className="text-[#22c55e]"
-                            />
-                          </div>
-                        </div>
-                        <div className="flex lg:justify-start justify-center items-center">
-                          <h1 className="text-2xl text-headingColor font-bold text-center">
-                            Make a call directly
-                          </h1>
-                        </div>
-
-                        <div className="flex lg:justify-start justify-center items-center text-sideHeading text-center">
-                          <p>Phone / Mobile Number: (+1) 678-200-4524</p>
-                        </div>
-
-                        <div className="flex lg:justify-start justify-center">
-                          <a
-                            href="/contact-us"
-                            className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
-                          >
-                            <span className="relative flex-[8] text-center">
-                              Call us here
-                            </span>
-                            <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
-                              <TiArrowRight className=" text-lg" />
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a
-                    href="mailto:info@laoemaom.com"
-                    className="flex md:justify-start justify-center"
-                  >
-                    <div className="w-full p-6 bg-white border border-gray-200 rounded shadow">
-                      <div className="space-y-3">
-                        <div className="flex lg:justify-start justify-center items-center">
-                          <div className="flex lg:justify-start justify-center items-center">
-                            <FaBuilding size={32} className="text-[#22c55e]" />
-                          </div>
-                        </div>
-                        <div className="flex lg:justify-start justify-center items-center">
-                          <h1 className="text-2xl text-headingColor font-bold text-center">
-                            Plan for a visit
-                          </h1>
-                        </div>
-
-                        <div className="flex lg:justify-start justify-center items-center text-sideHeading text-center">
-                          <p>Visit our office Head Quarters by this address.</p>
-                        </div>
-
-                        <div className="flex lg:justify-start justify-center">
-                          <a
-                            href="/contact-us"
-                            className="group border-[1px] relative px-6 py-2 text-green-500 text-sm rounded-full border-green-500 font-semibold overflow-hidden flex items-center gap-2 w-[200px] hover:bg-green-500 hover:text-white duration-1000 ease-in-out transition hover:font-medium"
-                          >
-                            <span className="relative flex-[8] text-center">
-                              Visit our address
-                            </span>
-                            <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-500 flex-[2] transition duration-1000 ease-in-out text-black group-hover:bg-white group-hover:text-green-500">
-                              <TiArrowRight className=" text-lg" />
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
                 </div>
               </div>
             </div>
