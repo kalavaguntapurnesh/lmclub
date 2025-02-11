@@ -6,6 +6,7 @@ import Logo from "../assets/LM_Logo.jpeg";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { FaTiktok } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   const location = useLocation();
@@ -43,8 +44,8 @@ const Footer = () => {
 
                         <div className="lg:w-[90%] w-[100%] mt-6">
                           <div className="w-[100%]">
-                            <div className="grid grid-cols-1 gap-8 lg:gap-4 w-full">
-                              <div className="grid grid-cols-5">
+                            <div className="grid grid-cols-1 lg:gap-4 gap-8 lg:gap-4 w-full">
+                              <div className="grid grid-cols-6">
                                 <a
                                   href="https://www.linkedin.com/company/laoe-maom"
                                   className="flex lg:justify-start justify-center items-center"
@@ -86,6 +87,15 @@ const Footer = () => {
                                   className="flex lg:justify-start justify-center items-center"
                                 >
                                   <FaFacebook
+                                    size={22}
+                                    className="cursor-pointer text-secondaryColor"
+                                  />
+                                </a>{" "}
+                                <a
+                                  href="https://www.youtube.com/watch?v=g16zVRWJpxA"
+                                  className="flex lg:justify-start justify-center items-center"
+                                >
+                                  <FaYoutube
                                     size={22}
                                     className="cursor-pointer text-secondaryColor"
                                   />

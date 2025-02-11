@@ -9,19 +9,13 @@ import { MdArrowRightAlt } from "react-icons/md";
 const HomeProducts = () => {
   const values2 = [
     {
-      icon: estore,
-      Title: "Estore",
+      icon: enroll,
+      Title: "Grow",
       description:
-        "Activate E-Store and we will share a percentage of our profits with you because you are helping our brand to grow.",
-      link: "/estore",
+        "Grow program allows you to earn redeemable points and milestones simply by inviting others to join our community.",
+      link: "/grow",
     },
-    {
-      icon: network,
-      Title: "Network",
-      description:
-        "Network guides your journey and connects you to fellow club members, events, and resources right from your dashboard. ",
-      link: "/network",
-    },
+
     {
       icon: beehive,
       Title: "Beehive",
@@ -36,13 +30,19 @@ const HomeProducts = () => {
         "Unlock Broadcast to start earning points by sharing promotions from local businesses on your social media will earn points.",
       link: "/broadcast",
     },
-
     {
-      icon: enroll,
-      Title: "Grow",
+      icon: estore,
+      Title: "Estore",
       description:
-        "Grow program allows you to earn redeemable points and milestones simply by inviting others to join our community.",
-      link: "/grow",
+        "Activate E-Store and we will share a percentage of our profits with you because you are helping our brand to grow.",
+      link: "/estore",
+    },
+    {
+      icon: network,
+      Title: "Network",
+      description:
+        "Network guides your journey and connects you to fellow club members, events, and resources right from your dashboard. ",
+      link: "/network",
     },
   ];
 

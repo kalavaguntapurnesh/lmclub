@@ -11,6 +11,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { TiArrowRight } from "react-icons/ti";
 import World from "../assets/WorldMap.svg";
+import { FaYoutube } from "react-icons/fa";
 
 const Contact = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -50,7 +51,7 @@ const Contact = () => {
                 </div>
 
                 <div className="max-w-[600px] mx-auto my-6">
-                  <div className="grid grid-cols-5 gap-4">
+                  <div className="grid grid-cols-6 gap-4">
                     <a
                       href="https://www.linkedin.com/company/laoe-maom/"
                       className="flex justify-center items-center"
@@ -92,6 +93,15 @@ const Contact = () => {
                     >
                       <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
                         <FaTiktok size={24} className="text-green-500" />
+                      </div>
+                    </a>
+
+                    <a
+                      href="https://www.youtube.com/watch?v=g16zVRWJpxA"
+                      className="flex justify-center items-center"
+                    >
+                      <div className="flex justify-center items-center w-12 h-12 border-2 border-green-50 bg-green-50 rounded-full">
+                        <FaYoutube size={24} className="text-green-500" />
                       </div>
                     </a>
                   </div>

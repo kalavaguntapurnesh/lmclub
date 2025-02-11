@@ -37,10 +37,7 @@ const AboutTwo = () => {
                     </div>
 
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 pt-8">
-                      <a
-                        href="/contact-us"
-                        className="flex md:justify-start justify-center"
-                      >
+                      <div className="flex md:justify-start justify-center">
                         <div className="w-full backdrop-blur-md p-6 rounded text-gray-50  bg-white/20">
                           <div className="space-y-3">
                             <div className="flex lg:justify-start justify-center items-center">
@@ -66,7 +63,7 @@ const AboutTwo = () => {
 
                             <div className="flex lg:justify-start justify-center pt-2">
                               <a
-                                href="/contact-us"
+                                href="/grow"
                                 className="group border-[1px] relative px-6 py-[6px] text-gray-50 text-sm rounded-full border-gray-50  font-semibold overflow-hidden flex items-center gap-2 w-[200px] "
                               >
                                 <span className="relative   flex-[8] text-center">
@@ -79,12 +76,9 @@ const AboutTwo = () => {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </div>
 
-                      <a
-                        href="/contact-us"
-                        className="flex md:justify-start justify-center"
-                      >
+                      <div className="flex md:justify-start justify-center">
                         <div className="w-full backdrop-blur-md p-6 rounded text-gray-50  bg-white/20">
                           <div className="space-y-3">
                             <div className="flex lg:justify-start justify-center items-center">
@@ -108,7 +102,7 @@ const AboutTwo = () => {
 
                             <div className="flex lg:justify-start justify-center pt-2">
                               <a
-                                href="/contact-us"
+                                href="/estore"
                                 className="group border-[1px] relative px-6 py-[6px] text-gray-50 text-sm rounded-full border-gray-50  font-semibold overflow-hidden flex items-center gap-2 w-[200px] "
                               >
                                 <span className="relative   flex-[8] text-center">
@@ -121,12 +115,9 @@ const AboutTwo = () => {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </div>
 
-                      <a
-                        href="/contact-us"
-                        className="lg:flex hidden md:justify-start justify-center"
-                      >
+                      <div className="lg:flex hidden md:justify-start justify-center">
                         <div className="w-full backdrop-blur-md p-6 rounded text-gray-50  bg-white/20">
                           <div className="space-y-3">
                             <div className="flex lg:justify-start justify-center items-center">
@@ -151,7 +142,7 @@ const AboutTwo = () => {
 
                             <div className="flex lg:justify-start justify-center pt-2">
                               <a
-                                href="/contact-us"
+                                href="/beehive"
                                 className="group border-[1px] relative px-6 py-[6px] text-gray-50 text-sm rounded-full border-gray-50  font-semibold overflow-hidden flex items-center gap-2 w-[200px] "
                               >
                                 <span className="relative   flex-[8] text-center">
@@ -164,7 +155,7 @@ const AboutTwo = () => {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </div>
                     </div>
                   </div>
                 </div>
