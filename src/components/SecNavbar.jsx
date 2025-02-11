@@ -13,6 +13,7 @@ import beehive from "../assets/beehive.webp";
 import enroll from "../assets/enroll.webp";
 import estore from "../assets/estore.webp";
 import LMDark from "../assets/LMDark.webp";
+import LMDarkLogo from "../assets/LMDarkLogo.webp";
 
 const SecNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,8 +55,8 @@ const SecNavbar = () => {
       <div className="max-w-[1400px] mx-auto flex justify-between items-center px-4">
         <a href="/" className="flex flex-row items-center md:ml-0 ml-1  ">
           <img
-            src={logo}
-            className={` ${isScrolled ? "w-12 h-12" : "w-12 h-12"}`}
+            src={LMDarkLogo}
+            className={` ${isScrolled ? "w-16 h-16" : "w-16 h-16"}`}
             alt="logo"
           />
         </a>

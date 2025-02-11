@@ -14,6 +14,7 @@ import estore from "../assets/estore.webp";
 import LMDark from "../assets/LMDark.webp";
 import phone from "../assets/NavPhone.png";
 import phoneTwo from "../assets/NavPhoneTwo.png";
+import LMDarkLogo from "../assets/LMDarkLogo.webp";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,7 +57,11 @@ const NavBar = () => {
     >
       <div className="max-w-[1400px] mx-auto flex justify-between items-center px-4">
         <a href="/" className="flex items-center">
-          <img src={logo} alt="" className="w-12 h-12" />
+          <img
+            src={LMDarkLogo}
+            className={` ${isScrolled ? "w-16 h-16" : "w-16 h-16"}`}
+            alt="logo"
+          />
         </a>
 
         {/* Desktop Nav Links */}
