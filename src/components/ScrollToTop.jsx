@@ -29,16 +29,16 @@ const ContactUsButton = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-4 right-5 z-20">
+    <div className="fixed bottom-4 left-5 z-20">
       <button
         type="button"
         onClick={scrollToTop}
         className={classNames(
           isVisible ? "opacity-100" : "opacity-0",
-          "bg-mainColor inline-flex items-center rounded-full p-3 text-white shadow-sm "
+          "bg-mainColor inline-flex items-center rounded-full md:p-3 p-[10px] text-white shadow-sm "
         )}
       >
-        <FaAngleUp className="h-5 w-5" aria-hidden="true" />
+        <FaAngleUp className="md:h-5 md:w-5 w-[18px] h-[18px]" aria-hidden="true" />
       </button>
     </div>
   );

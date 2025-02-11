@@ -29,15 +29,15 @@ const WhatsApp = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-4 lg:left-6 left-5 z-20">
+    <div className="fixed bottom-4 lg:right-6 right-5 z-20">
       <a
         href={whatsappUrl}
         className={classNames(
           isVisible ? "opacity-100" : "opacity-0",
-          "bg-mainColor inline-flex items-center rounded-full p-3 text-white "
+          "bg-mainColor inline-flex items-center rounded-full md:p-3 p-[10px] text-white "
         )}
       >
-        <SiWhatsapp className="h-[22px] w-[22px] text-white" aria-hidden="true" />
+        <SiWhatsapp className="md:h-[22px] md:w-[22px] w-[18px] h-[18px] text-white" aria-hidden="true" />
       </a>
     </div>
   );
