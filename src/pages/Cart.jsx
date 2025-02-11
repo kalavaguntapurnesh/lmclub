@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import Logo from "../assets/LM_Logo.jpeg";
+
 const Cart = () => {
 
   const { items, getTotalCost, removeOneFromCart, deleteFromCart, addOneToCart } = useContext(CartContext);
@@ -17,6 +19,7 @@ const location = useLocation();
 const CartPlan = location.state?.plan;
 console.log("cart page content", CartPlan);
   
+
   return (
     <div>
       <Navbar/>
@@ -40,33 +43,33 @@ console.log("cart page content", CartPlan);
                 >
               
                   <img
-                    src={item.image}
+                    src={Logo}
                     alt={item.name}
-                    className="w-16 h-16 object-cover rounded-md shadow-md"
+                    className="w-16 h-16 object-cover "
                   />
                   <div className="flex-1 ml-4">
-                    <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
+                    <h3 className="text-lg font-semibold text-gray-800">{item.name} Membership</h3>
                     <p className="text-gray-500 text-sm">Price: ${item.price}</p>
                     {/* <p className="text-gray-500 text-sm">Quantity: {item.quantity}</p> */}
                     <div className="flex justify-between gap-1 w-1/6">
                     <button
                       onClick={() => removeOneFromCart(item.id)}
-                      className="mt-4 w-1/4 bg-black text-white py-1 rounded-md  transition-colors"
+                      className="mt-4 w-1/4 bg-green-400 text-white py-1 rounded-md  transition-colors hover:bg-green-600"
                     >
                       -
                     </button>
                     <button
-                      className="mt-4 w-1/4 bg-black text-white py-1 rounded-md  transition-colors"
+                      className="mt-4 w-1/4 bg-green-400 text-white py-1 rounded-md  transition-colors"
                     >
                       {item.quantity}
                     </button>
                     <button
                       onClick={()=>addOneToCart(item.id,item.image, item.name, item.price,item.quantity+1)}
-                      className="mt-4 w-1/4 bg-black text-white py-1 rounded-md  transition-colors"
+                      className="mt-4 w-1/4 bg-green-400 text-white py-1 rounded-md  transition-colors hover:bg-green-600"
                     >
                       +
                     </button>
-
+                    {/* id, plan.name, plan.price, plan.description, quantity */}
 
                   </div>
                   </div>
@@ -101,7 +104,7 @@ console.log("cart page content", CartPlan);
                     
                     className="pay-button mt-4 w-1/3 bg-green-700 text-white py-2 rounded-md hover:bg-green-400 transition-colors"
                   >
-                    <Link to='/pricing'>Want to shop More</Link>
+                    <Link to='/selected-plan'>Would you like to explore more Plans</Link>
                   </button>
                   <button
                     // onClick={handlePaymentClick}

@@ -13,17 +13,30 @@ import { useNavigate } from "react-router-dom";
 import intro from "../assets/Intro.mp4";
 import { CartContext } from '../context/CartContext';
 import { useContext } from 'react';
+import { useEffect } from 'react';
+import Swal from 'sweetalert2';
+import Logo from "../assets/LM_Logo.jpeg";
 const SelectedPlan = () => {
+
+
     const location = useLocation();
-    const plan = location.state?.plan;
-    console.log(plan);
+    const [plan, setPlan] = useState(location.state?.plan || {});
+
+    useEffect(() => {
+      if (location.state?.plan) {
+        setPlan(location.state.plan);
+      }
+    }, [location.state?.plan]); 
+
+    console.log("origin Plan:", plan);
+    // const old_plan = localStorage.setItem('old_plan', plan.name);
+    // console.log("localStorage in getting Item : ", localStorage.getItem(old_plan));
+
+
     const navigate = useNavigate();
     const [quantity, setQuantity] = useState(1);
 
     const { addOneToCart } = useContext(CartContext);
-
-    // console.log(price);
-    // console.log(id);
     const handleAddToCart = () => {
         const id = plan.id || `${plan.name}-${plan.price}`; 
         console.log(id);
@@ -34,16 +47,72 @@ const SelectedPlan = () => {
         navigate("/selected-plan/cart", { state: { plan, quantity } });
     };
     
-    // const handleGotoPage = ()=>{
-    //     navigate('cart', {state: {plan, quantity}});
-    //   }
+    const style = document.createElement('style');
+  style.innerHTML = `
+    .swal-custom-ok-button {
+      background-color:rgb(27, 202, 103); /* Custom color */
+      color:white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .swal-custom-ok-button:hover {
+      background-color:rgb(18, 91, 25); /* Hover color */
+    }
+  `;
+  document.head.appendChild(style);
+
+    const updatePlanDetailsInSelectedPage = (newPlan) => {
+      const oldPlanName = plan.name;
+      const newPlanName = newPlan.name;
+      console.log("old one: ", oldPlanName);
+      console.log("new one: ",newPlanName)
+      setPlan(newPlan);
+      console.log("Updating Plan:", newPlan);
+      navigate('/selected-plan', { state: { ...plan } }); 
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      
+      if(oldPlanName && oldPlanName !== newPlanName)
+      {
+        const SwalMessage = getPlanUpgradeMessage(oldPlanName, newPlanName);
+        console.log(SwalMessage);
+        if(SwalMessage){
+           Swal.fire({
+                       html: `
+                           <div style="display: flex; flex-direction: column; align-items: center;">
+                                <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                                    <img src="${Logo}" alt="Logo" 
+                                         style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                                                       
+                                          <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                                              <span style="color: black;">LM</span>
+                                              <span style="color: rgb(37, 218, 73);">Club</span>
+                                          </h4>
+                                </div>
+                          
+                               <div style="text-align: center; font-size: 22px; font-weight: bold; color: #333; margin: 30px;">
+                                ${SwalMessage}
+                              </div> 
+                           </div>
+                       `,
+                       customClass: {
+                           confirmButton: 'swal-custom-ok-button'
+                       }
+                   });
+        }
+      }
+
+    };
+    
 
     const widgetImages = [
-        estore,
-        beehive,
         enroll,
-        network,
+        beehive,
         broadcast,
+        estore,
+        network,
       ];
     const extractRegistrationFee = plan.description;
     const priceMatch = extractRegistrationFee.match(/\$\d+(\.\d{2})?/);
@@ -120,7 +189,26 @@ const SelectedPlan = () => {
     }
   };
 
+
+  const getPlanUpgradeMessage = (oldPlan, newPlan) => {
+    const messages = {
+      "Bronze-Silver": "Congratulations! You've upgraded to Silver membership! 🎉 Now you earn more points and get 30% of the store’s profit!",
+      "Bronze-Gold": "Great choice! You’ve upgraded to Gold membership! 🚀 Enjoy even higher points and a 40% share in store profits!",
+      "Bronze-Platinum": "Welcome to the Platinum tier! 💎 You now earn maximum points and a 70% share in store profits!",
+      "Silver-Gold": "Level up! You’re now a Gold member! 🌟 More rewards, higher earnings, and better benefits await you!",
+      "Silver-Platinum": "You're now a Platinum member! 💎 Enjoy premium benefits, maximum points, and exclusive perks!",
+      "Gold-Platinum": "Top-tier unlocked! 🏆 Platinum membership gives you the best benefits, highest points, and maximum profit sharing!",
+      
+      "Platinum-Gold": "You downgraded to Gold membership. Some premium benefits are now limited, but you still earn great rewards!",
+      "Platinum-Silver": "You switched to Silver membership. You now get fewer points and a reduced profit share. Consider upgrading again!",
+      "Platinum-Bronze": "You moved to Bronze membership. You may lose access to some features. Upgrade anytime to unlock better benefits!",
+      "Gold-Silver": " You downgraded to Silver. Some rewards are now lower, but you can always upgrade again!",
+      "Gold-Bronze": "You switched to Bronze membership. You may lose some rewards and earnings. Upgrade to enjoy better perks!",
+      "Silver-Bronze": "You're now on Bronze membership. Your earning potential is lower. Upgrade anytime to get more benefits!",
+    };
   
+    return messages[`${oldPlan}-${newPlan}`] || null;
+  };
 
 
   return (
@@ -296,8 +384,8 @@ const SelectedPlan = () => {
                             ))}
                           </ul>
                           <a
-                            onClick={() => handleSelectedPlan(plan)}
-                            className="text-white bg-mainColor font-medium rounded-full text-sm px-5 py-3 my-3 text-center "
+                            onClick={() => updatePlanDetailsInSelectedPage(plan)}
+                            className="text-white bg-mainColor font-medium rounded-full text-sm px-5 py-3 my-3 text-center cursor-pointer"
                           >
                             Get started
                           </a>

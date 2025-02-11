@@ -23,6 +23,8 @@ import SelectedPlan from "./pages/SelectedPlan";
 import Cart from "./pages/Cart";
 import CartProvider from "./context/CartContext";
 import HandlePayment from "./pages/HandlePayment";
+import Success from "./pages/Success";
+import Failure from "./pages/Failure";
 function App() {
   return (
     <CartProvider>
@@ -58,6 +60,8 @@ function App() {
         <Route path="/selected-plan" element={<SelectedPlan />}></Route>
         <Route path="/selected-plan/cart" element={<Cart />} />
         <Route path="/payment" element={<HandlePayment />} />
+        <Route path="/payment-success" element={< Success/>} />
+        <Route path="/payment-failed" element={< Failure/>} />
       </Routes>
     </BrowserRouter>
     </CartProvider>
