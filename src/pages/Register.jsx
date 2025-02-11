@@ -15,7 +15,7 @@ import Logo from "../assets/LM_Logo.jpeg";
 import Error from "../assets/error.png";
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
-import { Country, State, City } from "country-state-city";
+// import { Country, State, City } from "country-state-city";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -25,55 +25,55 @@ const Register = () => {
   const [street, setStreet] = useState("");
   const [referalcode, setReferalCode] = useState("");
   const [confirmpassword, setConfirmPassword] = useState("");
-  const [state, setState] = useState("");
-  const [city, setCity] = useState("");
+  // const [state, setState] = useState("");
+  // const [city, setCity] = useState("");
   const [zipcode, setZipCode] = useState("");
   const [verified, setVerified] = useState(false);
   const navigate = useNavigate();
   const [currentImage, setCurrentImage] = useState(0);
 
-  // automatically populating city, state, zip code 
+  // automatically populating city, state, zip code
 
-  const [states, setStates] = useState([]); // List of states
-  const [cities, setCities] = useState([]); // List of cities
+  // const [states, setStates] = useState([]); // List of states
+  // const [cities, setCities] = useState([]); // List of cities
 
-  const countryCode = "US"; // Assuming country is US
-  // Fetch states on component mount
-  useEffect(() => {
-    const statesData = State.getStatesOfCountry(countryCode);
-    console.log('Fetched States:', statesData);  // Log the states data
-    setStates(statesData);
-  }, []);
+  // const countryCode = "US"; // Assuming country is US
+  // // Fetch states on component mount
+  // useEffect(() => {
+  //   const statesData = State.getStatesOfCountry(countryCode);
+  //   console.log("Fetched States:", statesData); // Log the states data
+  //   setStates(statesData);
+  // }, []);
 
   // Fetch cities based on selected state
-  useEffect(() => {
-    if (state) {
-      console.log('Selected State:', state);  // Log selected state
-      const citiesData = City.getCitiesOfState(countryCode, state);
-      console.log('Fetched Cities for State:', citiesData);  // Log fetched cities
-      setCities(citiesData);
-      setCity(''); // Reset city when state changes
-      setZipCode(''); // Reset zip code when state changes
-    }
-  }, [state]);
+  // useEffect(() => {
+  //   if (state) {
+  //     console.log("Selected State:", state); // Log selected state
+  //     const citiesData = City.getCitiesOfState(countryCode, state);
+  //     console.log("Fetched Cities for State:", citiesData); // Log fetched cities
+  //     setCities(citiesData);
+  //     setCity(""); // Reset city when state changes
+  //     setZipCode(""); // Reset zip code when state changes
+  //   }
+  // }, [state]);
 
   // Create select options for states
-  const stateOptions = states.map(state => ({
-    value: state.isoCode,
-    label: state.name
-  }));
+  // const stateOptions = states.map((state) => ({
+  //   value: state.isoCode,
+  //   label: state.name,
+  // }));
 
-  // Create select options for cities
-  const cityOptions = cities.map(city => ({
-    value: city.id,
-    label: city.name
-  }));
+  // // Create select options for cities
+  // const cityOptions = cities.map((city) => ({
+  //   value: city.id,
+  //   label: city.name,
+  // }));
 
-  // Handle city selection
-  const handleCityChange = (selectedOption) => {
-    console.log('Selected City:', selectedOption); // Log the selected city
-    setCity(selectedOption?.label || ''); // Set the selected city value
-  };
+  // // Handle city selection
+  // const handleCityChange = (selectedOption) => {
+  //   console.log("Selected City:", selectedOption); // Log the selected city
+  //   setCity(selectedOption?.label || ""); // Set the selected city value
+  // };
 
   const images = [
     {
@@ -124,16 +124,16 @@ const Register = () => {
   //   }
   // };
 
-
-  
-  
-const sendOTP = async () => {
-  try {
-    // const response = await axios.post("http://localhost:9090/api/send-otp", { phone: phoneNumber });
-    const response = await axios.post("https://lmclub-backend.onrender.com/api/send-otp", { phone: phoneNumber });
-    if (response.status === 200) {
-      Swal.fire({
-        html: `
+  const sendOTP = async () => {
+    try {
+      // const response = await axios.post("http://localhost:9090/api/send-otp", { phone: phoneNumber });
+      const response = await axios.post(
+        "https://lmclub-backend.onrender.com/api/send-otp",
+        { phone: phoneNumber }
+      );
+      if (response.status === 200) {
+        Swal.fire({
+          html: `
             <div style="display: flex; flex-direction: column; align-items: center;">
                 <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
                     <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
@@ -147,31 +147,29 @@ const sendOTP = async () => {
                 </div>
             </div>
         `,
-        customClass: {
-          confirmButton: 'swal-custom-ok-button',
-        }
-      })
-    } else {
+          customClass: {
+            confirmButton: "swal-custom-ok-button",
+          },
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "OTP Error",
+          text: "Failed to send OTP, please try again.",
+        });
+      }
+    } catch (error) {
       Swal.fire({
-        icon: 'error',
-        title: 'OTP Error',
-        text: 'Failed to send OTP, please try again.',
+        icon: "error",
+        title: "Error",
+        text: "Something went wrong while sending OTP.",
       });
     }
-  } catch (error) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Error',
-      text: 'Something went wrong while sending OTP.',
-    });
-  }
-};
+  };
 
-
-
- const handleSubmit = async (event) => {
-  const style = document.createElement('style');
-  style.innerHTML = `
+  const handleSubmit = async (event) => {
+    const style = document.createElement("style");
+    style.innerHTML = `
     .swal-custom-ok-button {
       background-color:rgb(27, 202, 103); /* Custom color */
       color:white;
@@ -185,7 +183,7 @@ const sendOTP = async () => {
       background-color:rgb(18, 91, 25); /* Hover color */
     }
   `;
-  document.head.appendChild(style);
+    document.head.appendChild(style);
 
     event.preventDefault();
     if (verified) {
@@ -201,37 +199,38 @@ const sendOTP = async () => {
       console.log(city);
       console.log(zipcode);
       // const response = await axios.post("http://localhost:9090/api/registerUser",{
-        const response = await axios.post("https://lmclub-backend.onrender.com/api/registerUser",{
-        email,
-        password,
-        username,
-        phoneNumber,
-        street,
-        referalcode,
-        confirmpassword,
-        state,
-        city,
-        zipcode
-      })
-      .then((response) => {
-        // dispatch(hideLoading());
-        if (response.status === 201) {
-          const verifyMail = response.data.newUser.email;
-          const partialEmail = verifyMail.replace(
-            /(\w{3})[\w.-]+@([\w.]+\w)/,
-            "$1***@$2"
-          );
-          // Swal.fire({
-          //   title: "Registration Success",
-          //   text:
-          //     "Check your email " +
-          //     partialEmail +
-          //     " and verify it to proceed further.",
-          //   icon: "success",
-          // });
+      const response = await axios
+        .post("https://lmclub-backend.onrender.com/api/registerUser", {
+          email,
+          password,
+          username,
+          phoneNumber,
+          street,
+          referalcode,
+          confirmpassword,
+          // state,
+          // city,
+          zipcode,
+        })
+        .then((response) => {
+          // dispatch(hideLoading());
+          if (response.status === 201) {
+            const verifyMail = response.data.newUser.email;
+            const partialEmail = verifyMail.replace(
+              /(\w{3})[\w.-]+@([\w.]+\w)/,
+              "$1***@$2"
+            );
+            // Swal.fire({
+            //   title: "Registration Success",
+            //   text:
+            //     "Check your email " +
+            //     partialEmail +
+            //     " and verify it to proceed further.",
+            //   icon: "success",
+            // });
 
-          Swal.fire({
-            html: `
+            Swal.fire({
+              html: `
                 <div style="display: flex; flex-direction: column; align-items: center;">
                     
                     <!-- Logo + Title -->
@@ -259,22 +258,22 @@ const sendOTP = async () => {
                     </div>
                 </div>
             `,
-            customClass: {
-                confirmButton: 'swal-custom-ok-button'
-            }
-        });
+              customClass: {
+                confirmButton: "swal-custom-ok-button",
+              },
+            });
 
-          sendOTP();
-          navigate("/otp-verification", { state: { email, phoneNumber } });
-        }else if(response.data.message === 'User Already Exists'){
-        //    Swal.fire({
-        //   icon: "error",
-        //   title: "Oops...",
-        //   text: "User already Exits. Please Login",
-        // });
+            sendOTP();
+            navigate("/otp-verification", { state: { email, phoneNumber } });
+          } else if (response.data.message === "User Already Exists") {
+            //    Swal.fire({
+            //   icon: "error",
+            //   title: "Oops...",
+            //   text: "User already Exits. Please Login",
+            // });
 
-        Swal.fire({
-          html: `
+            Swal.fire({
+              html: `
               <div style="display: flex; flex-direction: column; align-items: center;">
                   
                   <!-- Logo + Title -->
@@ -302,25 +301,23 @@ const sendOTP = async () => {
                   </div>
               </div>
           `,
-          customClass: {
-              confirmButton: 'swal-custom-ok-button'
+              customClass: {
+                confirmButton: "swal-custom-ok-button",
+              },
+            });
           }
-      });
-        
+        })
+        .catch((error) => {
+          // dispatch(hideLoading());
+          console.log(error);
+          // Swal.fire({
+          //   icon: "error",
+          //   title: "Oops...",
+          //   text: "Something went wrong!",
+          // });
 
-        }
-      })
-      .catch((error) => {
-        // dispatch(hideLoading());
-        console.log(error);
-        // Swal.fire({
-        //   icon: "error",
-        //   title: "Oops...",
-        //   text: "Something went wrong!",
-        // });
-
-        Swal.fire({
-          html: `
+          Swal.fire({
+            html: `
               <div style="display: flex; flex-direction: column; align-items: center;">
                   
                   <!-- Logo + Title -->
@@ -348,23 +345,17 @@ const sendOTP = async () => {
                   </div>
               </div>
           `,
-          customClass: {
-              confirmButton: 'swal-custom-ok-button'
-          }
-      });
-
-
-      });
+            customClass: {
+              confirmButton: "swal-custom-ok-button",
+            },
+          });
+        });
 
       console.log(response);
     } else {
       alert("Please complete the CAPTCHA!");
     }
-
-    
   };
-
-
 
   return (
     <div>
@@ -406,24 +397,24 @@ const sendOTP = async () => {
                           </div>
 
                           <div className="flex gap-5">
-                          <div className="w-full">
-                            <label
-                              htmlFor="username"
-                              className="block mb-2 text-sm font-bold text-colorThree "
-                            >
-                              FullName
-                            </label>
-                            <input
-                              type="text"
-                              name="username"
-                              id="username"
-                              className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                              placeholder="Joe Root"
-                              required="true"
-                              onChange={(e) => setUsername(e.target.value)}
-                            ></input>
-                          </div>
-                          <div className="w-full">
+                            <div className="w-full">
+                              <label
+                                htmlFor="username"
+                                className="block mb-2 text-sm font-bold text-colorThree "
+                              >
+                                FullName
+                              </label>
+                              <input
+                                type="text"
+                                name="username"
+                                id="username"
+                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                placeholder="Joe Root"
+                                required="true"
+                                onChange={(e) => setUsername(e.target.value)}
+                              ></input>
+                            </div>
+                            <div className="w-full">
                               <label
                                 htmlFor="phoneNumber"
                                 className="block mb-2 text-sm font-bold text-colorThree "
@@ -440,11 +431,9 @@ const sendOTP = async () => {
                                 onChange={(e) => setPhoneNumber(e.target.value)}
                               ></input>
                             </div>
-                          
                           </div>
 
-                          <div className="flex gap-5"> 
-                          
+                          <div className="flex gap-5">
                             <div>
                               <label
                                 htmlFor="street"
@@ -476,54 +465,67 @@ const sendOTP = async () => {
                                 id="referalcode"
                                 className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                                 placeholder="Referal Code"
-                                
                                 onChange={(e) => setReferalCode(e.target.value)}
                               ></input>
                             </div>
                           </div>
 
-                          <div>
-        <label htmlFor="state" className="block mb-2 text-sm font-bold text-colorThree">
-          State/Province/Region
-        </label>
-        <Select
-          options={stateOptions}
-          onChange={(selectedOption) => setState(selectedOption?.value || "")}
-          value={stateOptions.find(option => option.value === state)}
-          placeholder="Select State"
-        />
-      </div>
+                          {/* <div>
+                            <label
+                              htmlFor="state"
+                              className="block mb-2 text-sm font-bold text-colorThree"
+                            >
+                              State/Province/Region
+                            </label>
+                            <Select
+                              options={stateOptions}
+                              onChange={(selectedOption) =>
+                                setState(selectedOption?.value || "")
+                              }
+                              value={stateOptions.find(
+                                (option) => option.value === state
+                              )}
+                              placeholder="Select State"
+                            />
+                          </div>
 
-      <div className="flex gap-5">
-      <div className="w-full">
-          <label htmlFor="city" className="block mb-2 text-sm font-bold text-colorThree">
-            City/Town
-          </label>
-          <Select
-            options={cityOptions}
-            onChange={handleCityChange} // Log the selected city when changed
-            value={cityOptions.find(option => option.label === city)}
-            placeholder="Select City"
-            isDisabled={!state} // Disable city dropdown until state is selected
-          />
-        </div>
+                          <div className="flex gap-5">
+                            <div className="w-full">
+                              <label
+                                htmlFor="city"
+                                className="block mb-2 text-sm font-bold text-colorThree"
+                              >
+                                City/Town
+                              </label>
+                              <Select
+                                options={cityOptions}
+                                onChange={handleCityChange} // Log the selected city when changed
+                                value={cityOptions.find(
+                                  (option) => option.label === city
+                                )}
+                                placeholder="Select City"
+                                isDisabled={!state} // Disable city dropdown until state is selected
+                              />
+                            </div>
 
-        <div className="w-full">
-          <label htmlFor="zipcode" className="block mb-2 text-sm font-bold text-colorThree">
-            ZIP Code
-          </label>
-          <input
-            type="text"
-            name="zipcode"
-            id="zipcode"
-            className="border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-            placeholder="ZIP Code"
-            value={zipcode} // Bind the value of zip code
-            onChange={(e) => setZipCode(e.target.value)}
-          />
-        </div>
-      </div>
-
+                            <div className="w-full">
+                              <label
+                                htmlFor="zipcode"
+                                className="block mb-2 text-sm font-bold text-colorThree"
+                              >
+                                ZIP Code
+                              </label>
+                              <input
+                                type="text"
+                                name="zipcode"
+                                id="zipcode"
+                                className="border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                placeholder="ZIP Code"
+                                value={zipcode} // Bind the value of zip code
+                                onChange={(e) => setZipCode(e.target.value)}
+                              />
+                            </div>
+                          </div> */}
 
                           <div className="flex gap-5">
                             <div>
@@ -573,7 +575,9 @@ const sendOTP = async () => {
                                   placeholder="••••••••"
                                   className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                                   required="true"
-                                  onChange={(e) => setConfirmPassword(e.target.value)}
+                                  onChange={(e) =>
+                                    setConfirmPassword(e.target.value)
+                                  }
                                 ></input>
                                 {/* <span
                                 onClick={handleToggle}
@@ -589,7 +593,6 @@ const sendOTP = async () => {
                             </div>
                           </div>
 
-                          
                           <div className="w-[100%] flex justify-center items-center">
                             <ReCAPTCHA
                               sitekey="6LchMmUqAAAAANKg1dNzYDXJnCMf-L6TjRsUVAfG"
@@ -717,8 +720,6 @@ const sendOTP = async () => {
                       </div>
                     </motion.div>
                   </div>
-
-
                 </div>
               </div>
             </div>
