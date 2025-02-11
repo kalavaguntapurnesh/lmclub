@@ -202,8 +202,16 @@ const NavBar = () => {
                     className="mt-6 grid grid-cols-2 gap-4"
                   >
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a href="/estore" className="block text-sm text-gray-700">
-                        Estore
+                      <a href="/grow" className="block text-sm text-gray-700">
+                        Grow
+                      </a>
+                    </li>
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
+                      <a
+                        href="/beehive"
+                        className="block text-sm text-gray-700"
+                      >
+                        Beehive
                       </a>
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
@@ -215,25 +223,17 @@ const NavBar = () => {
                       </a>
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
+                      <a href="/estore" className="block text-sm text-gray-700">
+                        Estore
+                      </a>
+                    </li>
+
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/network"
                         className="block text-sm text-gray-700"
                       >
                         Network
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a
-                        href="/beehive"
-                        className="block text-sm text-gray-700"
-                      >
-                        Beehive
-                      </a>
-                    </li>
-
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a href="/grow" className="block text-sm text-gray-700">
-                        Grow
                       </a>
                     </li>
                   </motion.ul>
@@ -511,87 +511,85 @@ const Nub = ({ selected }) => {
 const WidgetsBar = () => {
   return (
     <div className="grid grid-cols-2 gap-4 p-4 ">
-    <a
-      href="/grow"
-      className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-    >
-      <div className="flex flex-col items-start gap-3">
-        <img src={enroll} alt="network" className="w-10 h-10" />
-        <div className="flex flex-col">
-          <h1 className="text-[#1a1a1a] font-semibold">Grow</h1>
-          <p className="text-gray-800 text-sm">
-            Enroll earn rewards for helping our community to expand. T & C
-            apply.
-          </p>
+      <a
+        href="/grow"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <div className="flex flex-col items-start gap-3">
+          <img src={enroll} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Grow</h1>
+            <p className="text-gray-800 text-sm">
+              Enroll earn rewards for helping our community to expand. T & C
+              apply.
+            </p>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
 
-    <a
-      href="/beehive"
-      className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-    >
-      <div className="flex flex-col items-start gap-3">
-        <img src={beehive} alt="network" className="w-10 h-10" />
-        <div className="flex flex-col">
-          <h1 className="text-[#1a1a1a] font-semibold">Beehive</h1>
-          <p className="text-gray-800 text-sm">
-            Unlock the Beehive. It will allow us to text / email great deals,
-            coupons,
-          </p>
+      <a
+        href="/beehive"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <div className="flex flex-col items-start gap-3">
+          <img src={beehive} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Beehive</h1>
+            <p className="text-gray-800 text-sm">
+              Unlock the Beehive. It will allow us to text / email great deals,
+              coupons,
+            </p>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
 
-    <a
-      href="/broadcast"
-      className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-    >
-      <div className="flex flex-col items-start gap-3">
-        <img src={broadcast} alt="network" className="w-10 h-10" />
-        <div className="flex flex-col">
-          <h1 className="text-[#1a1a1a] font-semibold">Broadcast</h1>
-          <p className="text-gray-800 text-sm">
-            Activate Broadcast to advertise local businesses on your social
-            media
-          </p>
+      <a
+        href="/broadcast"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <div className="flex flex-col items-start gap-3">
+          <img src={broadcast} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Broadcast</h1>
+            <p className="text-gray-800 text-sm">
+              Activate Broadcast to advertise local businesses on your social
+              media
+            </p>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
 
-  
-
-    <a
-      href="/estore"
-      className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-    >
-      <div className="flex flex-col items-start gap-3">
-        <img src={estore} alt="network" className="w-10 h-10" />
-        <div className="flex flex-col">
-          <h1 className="text-[#1a1a1a] font-semibold">Estore</h1>
-          <p className="text-gray-800 text-sm">
-            Activate E-Store and we will share a percentage of our profits
-            with you.
-          </p>
+      <a
+        href="/estore"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <div className="flex flex-col items-start gap-3">
+          <img src={estore} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Estore</h1>
+            <p className="text-gray-800 text-sm">
+              Activate E-Store and we will share a percentage of our profits
+              with you.
+            </p>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
 
-    <a
-      href="/network"
-      className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
-    >
-      <div className="flex flex-col items-start gap-3">
-        <img src={network} alt="network" className="w-10 h-10" />
-        <div className="flex flex-col">
-          <h1 className="text-[#1a1a1a] font-semibold">Network</h1>
-          <p className="text-gray-800 text-sm">
-            Activate Network today to connect with like-minded individuals
-          </p>
+      <a
+        href="/network"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <div className="flex flex-col items-start gap-3">
+          <img src={network} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Network</h1>
+            <p className="text-gray-800 text-sm">
+              Activate Network today to connect with like-minded individuals
+            </p>
+          </div>
         </div>
-      </div>
-    </a>
-  </div>
+      </a>
+    </div>
   );
 };
 

@@ -199,8 +199,16 @@ const SecNavbar = () => {
                     className="mt-6 grid grid-cols-2 gap-4"
                   >
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a href="/estore" className="block text-sm text-gray-700">
-                        Estore
+                      <a href="/grow" className="block text-sm text-gray-700">
+                        Grow
+                      </a>
+                    </li>
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
+                      <a
+                        href="/beehive"
+                        className="block text-sm text-gray-700"
+                      >
+                        Beehive
                       </a>
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
@@ -212,25 +220,17 @@ const SecNavbar = () => {
                       </a>
                     </li>
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
+                      <a href="/estore" className="block text-sm text-gray-700">
+                        Estore
+                      </a>
+                    </li>
+
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/network"
                         className="block text-sm text-gray-700"
                       >
                         Network
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a
-                        href="/beehive"
-                        className="block text-sm text-gray-700"
-                      >
-                        Beehive
-                      </a>
-                    </li>
-
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a href="/grow" className="block text-sm text-gray-700">
-                        Grow
                       </a>
                     </li>
                   </motion.ul>
@@ -586,8 +586,6 @@ const WidgetsBar = () => {
           </div>
         </div>
       </a>
-
-    
 
       <a
         href="/estore"
