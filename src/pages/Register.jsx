@@ -398,7 +398,7 @@ const sendOTP = async () => {
                               type="email"
                               name="email"
                               id="email"
-                              className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                              className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                               placeholder="name@domain.com"
                               required="true"
                               onChange={(e) => setEmail(e.target.value)}
@@ -417,7 +417,7 @@ const sendOTP = async () => {
                               type="text"
                               name="username"
                               id="username"
-                              className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                              className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                               placeholder="Joe Root"
                               required="true"
                               onChange={(e) => setUsername(e.target.value)}
@@ -434,7 +434,7 @@ const sendOTP = async () => {
                                 type="text"
                                 name="phoneNumber"
                                 id="phoneNumber"
-                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                                 placeholder="+910976444563"
                                 required="true"
                                 onChange={(e) => setPhoneNumber(e.target.value)}
@@ -456,7 +456,7 @@ const sendOTP = async () => {
                                 type="text"
                                 name="street"
                                 id="street"
-                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                                 placeholder="street"
                                 required="true"
                                 onChange={(e) => setStreet(e.target.value)}
@@ -474,7 +474,7 @@ const sendOTP = async () => {
                                 type="text"
                                 name="referalcode"
                                 id="referalcode"
-                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                                 placeholder="Referal Code"
                                 
                                 onChange={(e) => setReferalCode(e.target.value)}
@@ -516,7 +516,7 @@ const sendOTP = async () => {
             type="text"
             name="zipcode"
             id="zipcode"
-            className="border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+            className="border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
             placeholder="ZIP Code"
             value={zipcode} // Bind the value of zip code
             onChange={(e) => setZipCode(e.target.value)}
@@ -540,7 +540,7 @@ const sendOTP = async () => {
                                   value={password}
                                   id="password"
                                   placeholder="••••••••"
-                                  className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                  className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                                   required="true"
                                   onChange={(e) => setPassword(e.target.value)}
                                 ></input>
@@ -571,7 +571,7 @@ const sendOTP = async () => {
                                   value={confirmpassword}
                                   id="confirmpassword"
                                   placeholder="••••••••"
-                                  className=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                  className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                                   required="true"
                                   onChange={(e) => setConfirmPassword(e.target.value)}
                                 ></input>
