@@ -591,13 +591,13 @@ const ContactBar = () => {
   return (
     <div className="grid grid-cols-2 gap-4 p-4 ">
       <a
-        href="/contact-us"
+        href="/blogs"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <div className="flex flex-col items-start gap-3">
           <img src={LMDark} alt="network" className="w-10 h-10" />
           <div className="flex flex-col">
-            <h1 className="text-[#1a1a1a] font-semibold">Contact Us</h1>
+            <h1 className="text-[#1a1a1a] font-semibold">Blogs & News</h1>
             <p className="text-gray-800 text-sm">
               Reach out to us for assistance
             </p>
@@ -621,13 +621,13 @@ const ContactBar = () => {
       </a>
 
       <a
-        href="/blogs"
+        href="/videos"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <div className="flex flex-col items-start gap-3">
           <img src={LMDark} alt="network" className="w-10 h-10" />
           <div className="flex flex-col">
-            <h1 className="text-[#1a1a1a] font-semibold">Blogs & News</h1>
+            <h1 className="text-[#1a1a1a] font-semibold">Videos</h1>
             <p className="text-gray-800 text-sm">
               Learn more about your list of favourite items.
             </p>
@@ -664,6 +664,21 @@ const Homebar = () => {
           <img src={LMDark} alt="network" className="w-10 h-10" />
           <div className="flex flex-col">
             <h1 className="text-[#1a1a1a] font-semibold">Our Leadership</h1>
+            <p className="text-gray-800 text-sm">
+              Know about our founders and their vision of networking.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a
+        href="/contact-us"
+        className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
+      >
+        <div className="flex flex-col items-start gap-3">
+          <img src={LMDark} alt="network" className="w-10 h-10" />
+          <div className="flex flex-col">
+            <h1 className="text-[#1a1a1a] font-semibold">Contact Us</h1>
             <p className="text-gray-800 text-sm">
               Know about our founders and their vision of networking.
             </p>
@@ -781,7 +796,7 @@ const TABS = [
     Component: Membership,
   },
   {
-    title: "Contact Us",
+    title: "Our Blogs",
     Component: ContactBar,
   },
 ].map((n, idx) => ({ ...n, id: idx + 1 }));

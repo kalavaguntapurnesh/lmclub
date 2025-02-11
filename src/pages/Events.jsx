@@ -1,12 +1,15 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
+import WhatsApp from "../components/WhatsApp";
+
 
 const Events = () => {
   return (
     <>
       <Navbar />
       <ScrollToTop />
+      <WhatsApp />
 
       <div className="lg:pt-28 pt-24">
         <div className="relative">

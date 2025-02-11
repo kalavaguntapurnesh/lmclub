@@ -6,6 +6,8 @@ import LaptopNetwork from "../assets/LaptopNetwork.png";
 import Directory from "../assets/Directory.svg";
 import SupportTwo from "../assets/SupportTwo.svg";
 import Events from "../assets/Events.svg";
+import WhatsApp from "../components/WhatsApp";
+
 import connection from "../assets/connection.svg";
 
 const Network = () => {
@@ -13,6 +15,7 @@ const Network = () => {
     <div>
       <Navbar />
       <ScrollToTop />
+      <WhatsApp />
 
       <div className="lg:pt-36 pt-24">
         <div className="relative">

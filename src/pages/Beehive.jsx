@@ -7,12 +7,15 @@ import lity from "../assets/lity.svg";
 import moneyTwo from "../assets/moneyTwo.svg";
 import Business from "../assets/Business.svg";
 import Reward from "../assets/Reward.svg";
+import WhatsApp from "../components/WhatsApp";
+
 
 const Estore = () => {
   return (
     <div>
       <Navbar />
       <ScrollToTop />
+      <WhatsApp />
 
       <div className="lg:pt-36 pt-24">
         <div className="relative">

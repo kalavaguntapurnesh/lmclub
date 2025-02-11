@@ -25,6 +25,7 @@ import CartProvider from "./context/CartContext";
 import HandlePayment from "./pages/HandlePayment";
 import Success from "./pages/Success";
 import Failure from "./pages/Failure";
+import Videos from "./pages/Videos";
 function App() {
   return (
     <CartProvider>
@@ -45,6 +46,7 @@ function App() {
         <Route path="/learn-about-us" element={<About />}></Route>
 
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/videos" element={<Videos />}></Route>
 
         <Route path="/register" element={<Register />}></Route>
         <Route path="/events" element={<Events />}></Route>

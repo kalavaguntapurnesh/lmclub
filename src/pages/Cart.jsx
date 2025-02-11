@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import Logo from "../assets/LM_Logo.jpeg";
 
+
 const Cart = () => {
 
   const { items, getTotalCost, removeOneFromCart, deleteFromCart, addOneToCart } = useContext(CartContext);

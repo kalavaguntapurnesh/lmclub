@@ -7,12 +7,15 @@ import connection from "../assets/connection.svg";
 import profit from "../assets/Profits.svg";
 import LInk from "../assets/LInk.svg";
 import Check from "../assets/Check.svg";
+import WhatsApp from "../components/WhatsApp";
+
 
 const Estore = () => {
   return (
     <div>
       <Navbar />
       <ScrollToTop />
+      <WhatsApp />
 
       <div className="lg:pt-36 pt-24">
         <div className="relative">

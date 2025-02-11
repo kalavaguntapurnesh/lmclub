@@ -6,12 +6,15 @@ import LaptopRewards from "../assets/LaptopRewards.png";
 import money from "../assets/money.svg";
 import profit from "../assets/Profits.svg";
 import RewardTwo from "../assets/RewardTwo.svg";
+import WhatsApp from "../components/WhatsApp";
+
 
 const Grow = () => {
   return (
     <div>
       <Navbar />
       <ScrollToTop />
+      <WhatsApp />
 
       <div className="lg:pt-36 pt-24">
         <div className="relative">

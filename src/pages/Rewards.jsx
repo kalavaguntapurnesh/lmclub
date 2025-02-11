@@ -7,6 +7,8 @@ import Amazon from "../assets/Amazon.jpg";
 import Card500 from "../assets/500.jpg";
 import ae from "../assets/ae.png";
 import { TiArrowRight } from "react-icons/ti";
+import WhatsApp from "../components/WhatsApp";
+
 
 const Rewards = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,6 +25,7 @@ const Rewards = () => {
     <div>
       <Navbar />
       <ScrollToTop />
+      <WhatsApp />
       <div className="lg:pt-28 pt-24">
         <div className="relative">
           <div className="w-full">

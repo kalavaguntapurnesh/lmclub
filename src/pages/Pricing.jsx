@@ -10,6 +10,8 @@ import broadcast from "../assets/broadcast.webp";
 import estore from "../assets/estore.webp";
 import network from "../assets/network.webp";
 import enroll from "../assets/enroll.webp";
+import WhatsApp from "../components/WhatsApp";
+
 import { useNavigate } from "react-router-dom";
 
 const Pricing = () => {
@@ -107,6 +109,7 @@ const Pricing = () => {
     <>
       <Navbar />
       <ScrollToTop />
+      <WhatsApp />
       <div className="lg:pt-28 pt-24">
         <div className="relative">
           <div className="w-full">

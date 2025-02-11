@@ -35,7 +35,7 @@ const ContactUsButton = () => {
         onClick={scrollToTop}
         className={classNames(
           isVisible ? "opacity-100" : "opacity-0",
-          "bg-mainColor inline-flex items-center rounded-full md:p-3 p-[10px] text-white shadow-sm "
+          "bg-mainColor transition duration-1000 ease-in-out inline-flex items-center rounded-full md:p-3 p-[10px] text-white shadow-sm "
         )}
       >
         <FaAngleUp className="md:h-5 md:w-5 w-[18px] h-[18px]" aria-hidden="true" />

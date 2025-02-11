@@ -4,12 +4,15 @@ import Footer from "../components/Footer";
 import p1 from "../assets/p1.svg";
 import p2 from "../assets/p2.svg";
 import p3 from "../assets/p3.svg";
+import WhatsApp from "../components/WhatsApp";
+
 
 const Privacy = () => {
   return (
     <div>
       <Navbar />
       <ScrollToTop />
+      <WhatsApp />
 
       <div className="pt-24 pb-8">
         <div className="relative">

@@ -1,12 +1,15 @@
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
+import WhatsApp from "../components/WhatsApp";
+
 
 const Enroll_Rewards = () => {
   return (
     <div>
       <Navbar />
       <ScrollToTop />
+      <WhatsApp />
       <div className="mt-28">
         <div className="relative">
           <div className="w-full">
