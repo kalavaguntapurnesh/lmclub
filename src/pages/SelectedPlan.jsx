@@ -15,7 +15,7 @@ import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
-import Logo from "../assets/LM_Logo.jpeg";
+import Logo from "../assets/LMDark.webp";
 const SelectedPlan = () => {
   const location = useLocation();
   const [plan, setPlan] = useState(location.state?.plan || {});

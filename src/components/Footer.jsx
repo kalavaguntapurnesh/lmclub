@@ -2,7 +2,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import Logo from "../assets/LM_Logo.jpeg";
+import Logo from "../assets/LMDark.webp";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { FaTiktok } from "react-icons/fa";

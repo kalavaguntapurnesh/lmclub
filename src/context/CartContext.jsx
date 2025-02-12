@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import Swal from "sweetalert2";
-import Logo from "../assets/LM_Logo.jpeg";
+import Logo from "../assets/LMDark.webp";
 import Error from "../assets/error.png";
 import success from "../assets/success.png";
 export const CartContext = createContext({

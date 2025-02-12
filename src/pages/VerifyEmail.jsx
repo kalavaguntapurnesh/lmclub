@@ -3,7 +3,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useParams } from 'react-router-dom';
 import success from "../assets/success.png";
-import Logo from "../assets/LM_Logo.jpeg";
+import Logo from "../assets/LMDark.webp";
 
 const VerifyEmail = () => {
   const { token } = useParams();
@@ -35,8 +35,8 @@ const VerifyEmail = () => {
     document.head.appendChild(style);
 
     try {
-      // const response = await axios.get(`http://localhost:9090/api/confirm/${token}`);
-    const response = await axios.get(`https://lmclub-backend.onrender.com/api/confirm/${token}`);
+      const response = await axios.get(`http://localhost:9090/api/confirm/${token}`);
+    // const response = await axios.get(`https://lmclub-backend.onrender.com/api/confirm/${token}`);
       if (response.data && response.data.message === "Email Verified Successfully") {
         setIsVerified(true);
 

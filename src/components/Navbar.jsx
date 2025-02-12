@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { RiMenu3Fill } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/LM_Logo.webp";
+import logo from "../assets/LMDark.webp";
 import { FaAngleDown } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";

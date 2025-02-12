@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import axios from "axios";
 import Swal from "sweetalert2";
 import success from "../assets/success.png";
-import Logo from "../assets/LM_Logo.jpeg";
+import Logo from "../assets/LMDark.webp";
 import Error from "../assets/error.png";
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
@@ -126,11 +126,8 @@ const Register = () => {
 
   const sendOTP = async () => {
     try {
-      // const response = await axios.post("http://localhost:9090/api/send-otp", { phone: phoneNumber });
-      const response = await axios.post(
-        "https://lmclub-backend.onrender.com/api/send-otp",
-        { phone: phoneNumber }
-      );
+      const response = await axios.post("http://localhost:9090/api/send-otp", { phone: phoneNumber });
+      // const response = await axios.post("https://lmclub-backend.onrender.com/api/send-otp",{ phone: phoneNumber });
       if (response.status === 200) {
         Swal.fire({
           html: `
@@ -198,9 +195,8 @@ const Register = () => {
       console.log(state);
       console.log(city);
       console.log(zipcode);
-      // const response = await axios.post("http://localhost:9090/api/registerUser",{
-      const response = await axios
-        .post("https://lmclub-backend.onrender.com/api/registerUser", {
+      const response = await axios.post("http://localhost:9090/api/registerUser",{
+      // const response = await axios.post(/"https://lmclub-backend.onrender.com/api/registerUser", {
           email,
           password,
           username,

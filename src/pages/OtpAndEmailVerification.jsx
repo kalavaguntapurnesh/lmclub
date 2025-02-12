@@ -3,7 +3,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useNavigate, useLocation } from 'react-router-dom';
 import success from "../assets/success.png";
-import Logo from "../assets/LM_Logo.jpeg";
+import Logo from "../assets/LMDark.webp";
 import Error from "../assets/error.png";
 
 const OtpInput = ({ onOtpChange }) => {
@@ -91,8 +91,8 @@ const OtpAndEmailVerification = () => {
 
   const verifySMS = async () => {
     try {
-      // const response = await axios.post("http://localhost:9090/api/verify-otp", { phone: phoneNumber, otp });
-      const response = await axios.post("https://lmclub-backend.onrender.com/api/verify-otp", { phone: phoneNumber, otp });
+      const response = await axios.post("http://localhost:9090/api/verify-otp", { phone: phoneNumber, otp });
+      // const response = await axios.post("https://lmclub-backend.onrender.com/api/verify-otp", { phone: phoneNumber, otp });
       if (response.status === 200) {
         // Swal.fire({
         //   icon: 'success',
@@ -207,8 +207,8 @@ const OtpAndEmailVerification = () => {
   // Function to check email verification status
   const checkEmailVerification = async () => {
     try {
-      // const emailResponse = await axios.get(`http://localhost:9090/api/check-email-verification?email=${email}`);
-    const emailResponse = await axios.get(`https://lmclub-backend.onrender.com/api/check-email-verification?email=${email}`);
+      const emailResponse = await axios.get(`http://localhost:9090/api/check-email-verification?email=${email}`);
+    // const emailResponse = await axios.get(`https://lmclub-backend.onrender.com/api/check-email-verification?email=${email}`);
       setEmailVerified(emailResponse.data.verified);
       Swal.fire({
         html: `

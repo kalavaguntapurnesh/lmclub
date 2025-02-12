@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from "../assets/LM_Logo.jpeg";
+import Logo from "../assets/LMDark.webp";
 import Error from "../assets/error.png";
 import { Link } from 'react-router-dom';
 

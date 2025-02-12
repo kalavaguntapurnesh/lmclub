@@ -23,7 +23,7 @@ const HandlePayment = () => {
   
       console.log("Sending cart items:", JSON.stringify(cartItems, null, 2)); 
   
-      const response = await fetch("http://localhost:4242/create-stripe-session", {
+      const response = await fetch("http://localhost:9090/create-stripe-session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(cartItems),

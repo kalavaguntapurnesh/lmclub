@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { RiMenu3Fill } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
-import logo from "../assets/LM_Logo.webp";
+// import Logo from "../assets/LMDark.webp"
 import { FiChevronDown } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaAngleDown } from "react-icons/fa";
@@ -107,7 +107,7 @@ const SecNavbar = () => {
         >
           <div className="flex flex-row w-[100%] px-5 mt-6 justify-between items-center">
             <a href="/" className="w-[50%]">
-              <img src={logo} className="w-[70px] h-auto " alt="logo" />
+              <img src={LMDarkLogo} className="w-[70px] h-auto " alt="logo" />
             </a>
             <div className="mb-4 flex justify-end w-[50%]">
               <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>

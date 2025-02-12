@@ -21,7 +21,7 @@ import star from "../assets/star.svg";
 import ReCAPTCHA from "react-google-recaptcha";
 import Swal from "sweetalert2";
 import success from "../assets/success.png";
-import Logo from "../assets/LM_Logo.jpeg";
+import Logo from "../assets/LMDark.webp";
 import Error from "../assets/error.png";
 
 const Login = () => {
@@ -103,8 +103,8 @@ const Login = () => {
 
     try {
       if (verified) {
-      // const response = await axios.post("http://localhost:9090/api/login", {
-        const response = await axios.post("https://lmclub-backend.onrender.com/api/login", {
+      const response = await axios.post("http://localhost:9090/api/login", {
+        // const response = await axios.post("https://lmclub-backend.onrender.com/api/login", {
         email,
         password
       });

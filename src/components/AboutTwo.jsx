@@ -2,7 +2,7 @@ import { FaGlobe, FaHandshake, FaMedal } from "react-icons/fa";
 import Founder from "../assets/Founder.jpeg";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { TiArrowRight } from "react-icons/ti";
-import Logo from "../assets/LM_Logo.jpeg";
+import Logo from "../assets/LMDark.webp";
 import globalThree from "../assets/globeThree.jpg";
 import gPay from "../assets/GPlay.webp";
 import appStore from "../assets/AppStore.webp";

@@ -1,4 +1,4 @@
-import Logo from "../assets/LM_Logo.jpeg";
+import Logo from "../assets/LMDark.webp";
 
 const RedeemModal = ({ showModal, onClose }) => {
   if (!showModal) return null;
