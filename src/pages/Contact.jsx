@@ -17,6 +17,19 @@ import WhatsApp from "../components/WhatsApp";
 
 const Contact = () => {
   const [isChecked, setIsChecked] = useState(false);
+
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [meassage, setMessage] = useState("");
+
+  const handleSubmit = (e)=>{
+      e.preventDefault();
+      console.log(fullName);
+      console.log(email);
+      console.log(subject);
+      console.log(meassage);
+  }
   const handleCheckboxChange = (event) => {
     setIsChecked(event.target.checked);
   };
@@ -245,7 +258,7 @@ const Contact = () => {
                   </div>
 
                   <div className="mx-2">
-                    <form action="" method="POST" className="lg:mt-8 mt-2">
+                    <form onSubmit={handleSubmit} method="POST" className="lg:mt-8 mt-2">
                       <div className="w-full flex justify-center items-center">
                         <div className="mb-5 md:w-11/12 w-full">
                           <label
@@ -258,6 +271,7 @@ const Contact = () => {
                             type="text"
                             name="name"
                             id="name"
+                            onChange={(e)=>{setFullName(e.target.value)}}
                             placeholder="Your Full Name"
                             className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base text-[#6B7280] outline-none  focus:shadow-md"
                           />
@@ -275,6 +289,7 @@ const Contact = () => {
                             type="email"
                             name="email"
                             id="email"
+                            onChange={(e)=>{setEmail(e.target.value)}}
                             placeholder="example@domain.com"
                             className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base text-[#6B7280] outline-none  focus:shadow-md"
                           />
@@ -293,6 +308,7 @@ const Contact = () => {
                             type="text"
                             name="subject"
                             id="subject"
+                            onChange={(e)=>{setSubject(e.target.value)}}
                             placeholder="Enter your subject"
                             className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base text-[#6B7280] outline-none focus:shadow-md"
                           />
@@ -311,6 +327,7 @@ const Contact = () => {
                             rows="4"
                             name="message"
                             id="message"
+                            onChange={(e)=>{setMessage(e.target.value)}}
                             placeholder="Type your message"
                             className="w-full resize-none rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base text-[#6B7280] outline-none  focus:shadow-md"
                           ></textarea>
@@ -319,7 +336,7 @@ const Contact = () => {
 
                       <div className="flex items-center justify-center pt-2 md:mx-0">
                         <div className="mb-5 md:w-11/12 w-full">
-                          <button className="rounded bg-green-500 transition duration-1000 py-3 ease-in-out w-full text-base  text-white outline-none">
+                          <button  className="rounded bg-green-500 transition duration-1000 py-3 ease-in-out w-full text-base  text-white outline-none">
                             Submit
                           </button>
                         </div>

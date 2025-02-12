@@ -9,13 +9,18 @@ const HandlePayment = () => {
   const navigate = useNavigate();
   console.log("handle payment page : ", items);
 
-  const cartItems = items.map(item => ({
+  const cartItems = items.map(item => {
+    const registrationFee = parseFloat(
+      item.description.match(/\$\d+(\.\d{2})?/)?.[0].replace("$", "") || "0"
+    );
+    return {
     id: item.id,  
     name: item.name,
     description: item.description || "No description available",
     quantity: item.quantity || 1,
-    price: item.price, 
-  }));
+    price: (item.price * item.quantity) + registrationFee, 
+    }
+  });
   
   const handleCheckout = async () => {
     try {
@@ -41,6 +46,12 @@ const HandlePayment = () => {
     }
   };
   
+  // extracting registration fee from description 
+
+  const registrationFee = items.length > 0 ? 
+  (items[0].description.match(/\$\d+(\.\d{2})?/)?.[0] || "$0") 
+  : "$0";
+
 
   return (
     <div className="flex items-center justify-center min-h-screen px-4">
@@ -48,7 +59,7 @@ const HandlePayment = () => {
       <h1 className="lg:text-4xl text-3xl font-semibold">Your Payment Details</h1>
 
       <div className="w-full overflow-x-auto mt-6">
-        <table className="w-full border-collapse border border-gray-300 min-w-[600px]">
+      <table className="w-full border-collapse border border-gray-300 min-w-[600px]">
           <thead>
             <tr className="bg-gray-800 text-white text-center">
               <th className="p-3 text-left">Plan</th>
@@ -58,22 +69,72 @@ const HandlePayment = () => {
             </tr>
           </thead>
           <tbody>
+            {/* Mapping Through Plan Items */}
             {items.map((item) => (
-              <tr key={item.id} className="border border-gray-300 text-center bg-blue-300">
+              <tr key={item.id} className="border border-gray-300 text-center bg-blue-200">
                 <td className="p-3 text-left">{item.name} Membership</td>
                 <td className="p-3 text-left">${item.price}</td>
                 <td className="p-3 text-left">{item.quantity}</td>
-                <td className="p-3 text-left">${item.price * item.quantity}</td>
+                <td className="p-3 text-left">${(item.price * item.quantity).toFixed(2)}</td>
               </tr>
             ))}
+
+            {/* Registration Fee Row */}
+            <tr className="border border-gray-300 text-center bg-gray-200">
+              <td className="p-3 text-left ">Registration Fee</td>
+              <td className="p-3"></td>
+              <td className="p-3"></td>
+              <td className="p-3 text-left font-semibold text-red-600 font-semibold">${items[0].description.match(/\$\d+(\.\d{2})?/)[0].replace("$", "")}</td>
+            </tr>
+
+            {/* Net Amount Row */}
+            <tr className="border border-gray-300 text-center bg-blue-200 ">
+              <td className="p-3 text-left">Net Amount</td>
+              <td className="p-3"></td>
+              <td className="p-3"></td>
+              <td className="p-3 text-left text-green-700 font-bold">${(
+                                getTotalCost() +
+                                parseFloat(items[0].description.match(/\$\d+(\.\d{2})?/)[0].replace("$", ""))
+                              ).toFixed(2)}</td>
+            </tr>
           </tbody>
         </table>
+
       </div>
 
       {items.length > 0 && (
         <div className="cart-summary mt-4 text-center">
-          <p className="text-lg font-semibold text-gray-800">
-            Total Payable Amount: ${getTotalCost()}
+          <div className="flex items-start items-center mb-3">
+              <div className="flex items-center h-5">
+                <input
+                  id="terms"
+                  aria-describedby="terms"
+                  type="checkbox"
+                  className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300  cursor-pointer"
+                  required
+                ></input>
+              </div>
+              <div className="ml-3 text-sm">
+                <label
+                  htmlFor="terms"
+                  className="font-light text-gray-500 text-lg"
+                >
+                  I accept the payment{" "} 
+                  <a
+                    className="font-medium text-green-600 hover:underline dark:text-primary-500"
+                    href="/privacy"
+                  >
+                    Terms and Conditions
+                  </a>
+                </label>
+              </div>
+            </div>
+
+          <p className="text-2xl  font-semibold text-gray-800">
+            Total Payable Amount: ${(
+                        getTotalCost() +
+                        parseFloat(items[0].description.match(/\$\d+(\.\d{2})?/)[0].replace("$", ""))
+                      ).toFixed(2)}
           </p>
         </div>
       )}

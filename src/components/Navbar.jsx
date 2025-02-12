@@ -15,6 +15,7 @@ import LMDark from "../assets/LMDark.webp";
 import phone from "../assets/NavPhone.png";
 import phoneTwo from "../assets/NavPhoneTwo.png";
 import LMDarkLogo from "../assets/LMDarkLogo.webp";
+import { CiShoppingCart } from "react-icons/ci";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,6 +31,13 @@ const NavBar = () => {
       setIsScrolled(false);
     }
   };
+
+  const [cartItemsCount, setCartItemsCount] = useState(0);
+			  useEffect(()=>{
+				  const storedCartItems = JSON.parse(localStorage.getItem('cart')) || [];
+				  const totalQuantity = storedCartItems.reduce((total, item) => total + item.quantity, 0);
+				  setCartItemsCount(totalQuantity);
+				}, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -69,6 +77,15 @@ const NavBar = () => {
           <Tabs />
         </ul>
 
+        <div className="lg:flex hidden relative mr-5">
+            <a href="/selected-plan/cart" className="cursor-pointer">
+              <CiShoppingCart className="w-10 h-10"></CiShoppingCart>
+            </a>
+            <div className="absolute top-[-8px] right-[-8px] text-[10px] bg-red-500 text-white rounded-full px-2 py-1">
+              <h1>{cartItemsCount}</h1>
+            </div>
+         </div>
+
         {/* Login Button */}
         <div className="hidden lg:flex space-x-4">
           <a
@@ -83,7 +100,19 @@ const NavBar = () => {
           </a>
         </div>
 
-        <div className="lg:hidden">
+        
+
+        <div className="lg:hidden lg:hidden flex gap-6">
+
+        <div className="relative">
+                <a href="/selected-plan/cart" className="cursor-pointer">
+                  <CiShoppingCart className="w-10 h-10"></CiShoppingCart>
+                </a>
+                <div className="absolute top-[-8px] right-[-8px] text-[10px] bg-red-500 text-white rounded-full px-2 py-1">
+                  <h1>{cartItemsCount}</h1>
+                </div>
+              </div>
+
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
               <AiOutlineClose
@@ -344,6 +373,8 @@ const NavBar = () => {
                 )}
               </AnimatePresence>
             </li>
+
+            
 
             <div className="h-[200px] flex flex-row items-center justify-center">
               <img src={phone} alt="phone" className="h-full" />

@@ -102,6 +102,9 @@ const SelectedPlan = () => {
   };
 
   const widgetImages = [enroll, beehive, broadcast, estore, network];
+
+  // extracting registration fee from description 
+
   const extractRegistrationFee = plan.description;
   const priceMatch = extractRegistrationFee.match(/\$\d+(\.\d{2})?/);
   const RegistrationFee = priceMatch ? priceMatch[0] : null;
@@ -253,8 +256,8 @@ const SelectedPlan = () => {
                  ${plan.description}.
               </p> */}
 
-                    <div className="w-[80%]  mt-10">
-                      <table className="w-full border-collapse border border-gray-300">
+                    <div className="w-[80%] lg:mx-0 mx-auto mt-10 flex lg:justify-start justify-center">
+                      <table className="w-full border-collapse border border-gray-300 ">
                         <thead>
                           <tr className="bg-gray-800 text-white text-center">
                             <th className="p-3 text-left">Title</th>
@@ -291,7 +294,7 @@ const SelectedPlan = () => {
                     </div>
 
                     {/* Quantity and Cart Button */}
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-4 lg:ml-0 ml-[50px]">
                       <input
                         type="number"
                         min="1"

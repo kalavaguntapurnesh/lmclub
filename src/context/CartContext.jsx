@@ -43,18 +43,17 @@ export function CartProvider({ children }) {
         const product = cartProducts.find((product) => product.id === id);
         return product ? product.quantity : 0;
     }
-
-    function addOneToCart(id, name, price, description, quantity) {
+    function addOneToCart(id, name, price, description, quantity, image) {
         console.log("addOneToCart triggered with id:", id);
+        
         setCartProducts((prevCartProducts) => {
-            const existingProduct = prevCartProducts.find((product) => product.id === id);
-
-            if (existingProduct) {
-                // Swal.fire({
-                //     icon: "success",
-                //     text: "Item updated successfully! Check your cart!",
-                // });
-                Swal.fire({
+            // Check if there is already a membership in the cart
+            if (prevCartProducts.length > 0) {
+                const existingProduct = prevCartProducts[0]; // Since only one membership is allowed
+    
+                if (existingProduct.id === id) {
+                    
+                    Swal.fire({
                         html: `
                             <div style="display: flex; flex-direction: column; align-items: center;">
                                 <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
@@ -64,31 +63,69 @@ export function CartProvider({ children }) {
                                         <span style="color: rgb(37, 218, 73);">Club</span>
                                     </h4>
                                 </div>
-
-                                <!-- Success Image -->
+        
                                 <div style="margin-bottom: 20px;">
                                     <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
                                 </div>
-
+        
                                 <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
-                                    <h1 style="font-size: 25px;">Item updated successfully! Check your cart!</h1>
+                                    <h1 style="font-size: 25px;"> One More Membership added successfully!</h1>
                                 </div>
                             </div>
                         `,
                         customClass: {
-                          confirmButton: 'swal-custom-ok-button',
+                            confirmButton: 'swal-custom-ok-button',
                         }
-                      })
-                return prevCartProducts.map((product) =>
-                    product.id === id ? { ...product, quantity:  quantity } : product
-                );
+                    });
+             
+        
+            
+                    return [
+                        {
+                            ...existingProduct,
+                            quantity: existingProduct.quantity + 1,
+                        },
+                    ];
+                } else {
+                    // If a different membership is added, replace the old one
+                    Swal.fire({
+                        html: `
+                            <div style="display: flex; flex-direction: column; align-items: center;">
+                                <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                                    <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                                    <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                                        <span style="color: black;">LM</span>
+                                        <span style="color: rgb(37, 218, 73);">Club</span>
+                                    </h4>
+                                </div>
+    
+                                <div style="margin-bottom: 20px;">
+                                    <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
+                                </div>
+    
+                                <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
+                                    <h1 style="font-size: 25px;">Membership updated successfully! Check your cart!</h1>
+                                </div>
+                            </div>
+                        `,
+                        customClass: {
+                            confirmButton: 'swal-custom-ok-button',
+                        }
+                    });
+    
+                    return [
+                        {
+                            id,
+                            name,
+                            image,
+                            price,
+                            quantity: 1, // Reset quantity when replacing
+                            description,
+                        },
+                    ];
+                }
             } else {
-                console.log("entered into addtocart has been added successfuly!")
-                // Swal.fire({
-                //     icon: "success",
-                //     text: "Item added successfully! Check your cart!",
-                // });
-
+                // If cart is empty, add the new membership
                 Swal.fire({
                     html: `
                         <div style="display: flex; flex-direction: column; align-items: center;">
@@ -99,82 +136,75 @@ export function CartProvider({ children }) {
                                     <span style="color: rgb(37, 218, 73);">Club</span>
                                 </h4>
                             </div>
-
-                            <!-- Success Image -->
+    
                             <div style="margin-bottom: 20px;">
                                 <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
                             </div>
-
+    
                             <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
-                                <h1 style="font-size: 25px;">Item updated successfully! Check your cart!</h1>
+                                <h1 style="font-size: 25px;">Membership added successfully! </h1>
                             </div>
                         </div>
                     `,
                     customClass: {
-                      confirmButton: 'swal-custom-ok-button',
+                        confirmButton: 'swal-custom-ok-button',
                     }
-                  })
-
+                });
+    
                 return [
-                    ...prevCartProducts,
                     {
-                        id, // Ensure each item has a unique ID
+                        id,
                         name,
+                        image,
                         price,
+                        quantity: 1, // Start with quantity 1
                         description,
-                        quantity,
                     },
                 ];
             }
         });
     }
+    
+
 
     function removeOneFromCart(id) {
-        // Swal.fire({
-        //     icon: "success",
-        //     text: "One item removed successfully! Check your cart!",
-        // });
-        Swal.fire({
-            html: `
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
-                        <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
-                        <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
-                            <span style="color: black;">LM</span>
-                            <span style="color: rgb(37, 218, 73);">Club</span>
-                        </h4>
-                    </div>
-
-                    <!-- Success Image -->
-                    <div style="margin-bottom: 20px;">
-                        <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
-                    </div>
-
-                    <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
-                        <h1 style="font-size: 25px;">One item removed successfully! Check your cart!</h1>
-                    </div>
-                </div>
-            `,
-            customClass: {
-              confirmButton: 'swal-custom-ok-button',
-            }
-          })
-
-
-        setCartProducts((prevCartProducts) =>
-            prevCartProducts.map((product) =>
-                product.id === id && product.quantity > 1
-                    ? { ...product, quantity: product.quantity - 1 }
+          setCartProducts((prevCartProducts) => {
+            const updatedCart = prevCartProducts.map((product) =>
+                product.id === id
+                    ? { ...product, quantity: Math.max(1, product.quantity - 1) } 
                     : product
-            )
-        );
+            );
+
+            // Swal.fire({
+            //         html: `
+            //             <div style="display: flex; flex-direction: column; align-items: center;">
+            //                 <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+            //                     <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+            //                     <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+            //                         <span style="color: black;">LM</span>
+            //                         <span style="color: rgb(37, 218, 73);">Club</span>
+            //                     </h4>
+            //                 </div>
+    
+            //                 <div style="margin-bottom: 20px;">
+            //                     <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
+            //                 </div>
+    
+            //                 <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
+            //                     <h1 style="font-size: 25px;"> One Membership removed successfully!</h1>
+            //                 </div>
+            //             </div>
+            //         `,
+            //         customClass: {
+            //             confirmButton: 'swal-custom-ok-button',
+            //         }
+            //     });
+                return updatedCart;
+        });
+        
     }
 
     function deleteFromCart(id) {
-        // Swal.fire({
-        //     icon: "success",
-        //     text: "Item deleted successfully! Check your cart!",
-        // });
         Swal.fire({
             html: `
                 <div style="display: flex; flex-direction: column; align-items: center;">
@@ -192,7 +222,7 @@ export function CartProvider({ children }) {
                     </div>
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
-                        <h1 style="font-size: 25px;">Item deleted successfully! Check your cart!</h1>
+                        <h1 style="font-size: 25px;">Membership deleted successfully!</h1>
                     </div>
                 </div>
             `,
@@ -201,7 +231,9 @@ export function CartProvider({ children }) {
             }
           })
 
-        setCartProducts((prevCartProducts) => prevCartProducts.filter((product) => product.id !== id));
+          setCartProducts((prevCartProducts) => {
+            return prevCartProducts.filter((product) => product.id !== id);
+        });
     }
 
     function getTotalCost() {

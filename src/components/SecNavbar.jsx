@@ -14,6 +14,7 @@ import enroll from "../assets/enroll.webp";
 import estore from "../assets/estore.webp";
 import LMDark from "../assets/LMDark.webp";
 import LMDarkLogo from "../assets/LMDarkLogo.webp";
+import { CiShoppingCart } from "react-icons/ci";
 
 const SecNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,6 +29,14 @@ const SecNavbar = () => {
       setIsScrolled(false);
     }
   };
+
+   const [cartItemsCount, setCartItemsCount] = useState(0);
+          useEffect(()=>{
+            const storedCartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalQuantity = storedCartItems.reduce((total, item) => total + item.quantity, 0);
+            setCartItemsCount(totalQuantity);
+          }, []);
+
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -66,6 +75,15 @@ const SecNavbar = () => {
           <Tabs />
         </ul>
 
+        <div className="hidden lg:flex relative mr-5">
+            <a href="/selected-plan/cart" className="cursor-pointer">
+              <CiShoppingCart className="w-10 h-10 text-green-700 text-2xl"></CiShoppingCart>
+            </a>
+            <div className="absolute top-[-8px] right-[-8px] text-[10px] bg-red-500 text-white rounded-full px-2 py-1">
+              <h1>{cartItemsCount}</h1>
+            </div>
+        </div>
+
         {/* Login Button */}
         <div className="hidden lg:flex space-x-4">
           <a
@@ -80,7 +98,17 @@ const SecNavbar = () => {
           </a>
         </div>
 
-        <div className="lg:hidden">
+        
+
+        <div className="lg:hidden flex gap-6">
+          <div className="relative">
+              <a href="/selected-plan/cart" className="cursor-pointer">
+                <CiShoppingCart className="w-10 h-10 text-green-800"></CiShoppingCart>
+              </a>
+              <div className="absolute top-[-8px] right-[-8px] text-[10px] bg-red-500 text-white rounded-full px-2 py-1">
+                <h1>{cartItemsCount}</h1>
+              </div>
+           </div>
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
               <AiOutlineClose
@@ -341,6 +369,8 @@ const SecNavbar = () => {
                 )}
               </AnimatePresence>
             </li>
+
+              
 
             <div className="h-[200px] flex flex-row items-center justify-center">
               <img src={phone} alt="phone" className="h-full" />
@@ -833,4 +863,5 @@ const TABS = [
     title: "Our Blogs",
     Component: ContactBar,
   },
+  
 ].map((n, idx) => ({ ...n, id: idx + 1 }));
