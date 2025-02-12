@@ -11,6 +11,8 @@ import estore from "../assets/estore.webp";
 import network from "../assets/network.webp";
 import enroll from "../assets/enroll.webp";
 import WhatsApp from "../components/WhatsApp";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants.js";
 
 import { useNavigate } from "react-router-dom";
 
@@ -115,7 +117,13 @@ const Pricing = () => {
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
-                <div className="space-y-3">
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="space-y-3"
+                >
                   <div className="flex items-center justify-center ">
                     <div className="h-4 w-1 bg-green-500"></div>
                     <h1 className="ml-2 font-bold text-green-500 lg:uppercase">
@@ -135,9 +143,15 @@ const Pricing = () => {
                       exclusively for you.
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="text-center my-6">
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="text-center my-6"
+                >
                   <div className="flex items-center justify-center gap-4">
                     <span
                       className={`font-semibold ${
@@ -168,9 +182,15 @@ const Pricing = () => {
                       Yearly
                     </span>
                   </div>
-                </div>
+                </motion.div>
 
-                <section className="bg-white">
+                <motion.section
+                  variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.2 }}
+                  className="bg-white"
+                >
                   <div className="py-2">
                     <div className=" grid lg:grid-cols-3 xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
                       {monthlyPlans.map((plan) => (
@@ -186,9 +206,7 @@ const Pricing = () => {
                           >
                             {plan.name}
                           </h3>
-                          <p className="text-gray-600">
-                            {plan.description}
-                          </p>
+                          <p className="text-gray-600">{plan.description}</p>
                           <div className="flex justify-center items-baseline my-8">
                             <span className="mr-2 text-4xl font-bold">
                               ${isYearly ? plan.price * 12 : plan.price}
@@ -230,7 +248,7 @@ const Pricing = () => {
                       ))}
                     </div>
                   </div>
-                </section>
+                </motion.section>
 
                 <div className="overflow-x-auto lg:flex justify-center items-center hidden pt-8">
                   <table class="features" className="w-[90%]">

@@ -5,6 +5,8 @@ import enroll from "../assets/enroll.webp";
 import network from "../assets/network.webp";
 import broadcast from "../assets/broadcast.webp";
 import { MdArrowRightAlt } from "react-icons/md";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants.js";
 
 const HomeProducts = () => {
   const values2 = [
@@ -53,18 +55,36 @@ const HomeProducts = () => {
           <div className="w-full mx-auto max-w-[1400px] ">
             <div className="p-4">
               <div className="flex flex-col space-y-3 w-full lg:pt-8">
-                <div className="flex items-center justify-center ">
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="flex items-center justify-center "
+                >
                   <div className="h-4 w-1 bg-green-500"></div>
                   <h1 className="ml-2 font-bold text-green-500 lg:uppercase">
                     Our Widgets
                   </h1>
-                </div>
+                </motion.div>
 
-                <div className="lg:text-4xl text-2xl text-center font-bold text-headingColor">
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="lg:text-4xl text-2xl text-center font-bold text-headingColor"
+                >
                   <h1>Earn rewards for inviting new members</h1>
-                </div>
+                </motion.div>
 
-                <div className="text-gray-600 text-center">
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="text-gray-600 text-center"
+                >
                   <p>
                     At Laoe Maom, we are dedicated to fostering a vibrant
                     culture that propels our members and businesses to connect,
@@ -73,9 +93,15 @@ const HomeProducts = () => {
                     harness the power of human cooperation to accomplish
                     significant goals incrementally.
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-4 pt-8">
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.2 }}
+                  className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-4 pt-8"
+                >
                   {values2.map((value, index) => (
                     <div
                       key={index}
@@ -115,7 +141,7 @@ const HomeProducts = () => {
                       </div>
                     </div>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

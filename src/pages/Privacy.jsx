@@ -5,7 +5,8 @@ import p1 from "../assets/p1.svg";
 import p2 from "../assets/p2.svg";
 import p3 from "../assets/p3.svg";
 import WhatsApp from "../components/WhatsApp";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants.js";
 
 const Privacy = () => {
   return (
@@ -20,34 +21,58 @@ const Privacy = () => {
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
                 <div className="flex flex-col space-y-3 w-full lg:pt-8">
-                  <div className="flex items-center justify-center ">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="flex items-center justify-center "
+                  >
                     <div className="h-4 w-1 bg-green-500"></div>
                     <h1 className="ml-2 font-bold text-green-500 lg:uppercase">
                       Privacy Policy
                     </h1>
-                  </div>
+                  </motion.div>
 
-                  <div className="lg:text-4xl text-2xl text-center font-bold text-headingColor">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="lg:text-4xl text-2xl text-center font-bold text-headingColor"
+                  >
                     <h1>LM Club Privacy Statement</h1>
-                  </div>
+                  </motion.div>
 
-                  <div className="text-gray-600 text-center pb-4">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="text-gray-600 text-center pb-4"
+                  >
                     <p>
                       Information on this site may contain technical
                       inaccuracies or typographical errors. Information,
                       including product pricing and availability, may be changed
                       or updated without notice.
                     </p>
-                  </div>
+                  </motion.div>
 
-                  <div className="relative w-[100%] ">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="relative w-[100%] "
+                  >
                     <img
                       src="https://images.pexels.com/photos/4152513/pexels-photo-4152513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                       alt="privacy_policy"
                       className="rounded lg:h-[400px] object-cover w-[100%] "
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-40 rounded"></div>
-                  </div>
+                  </motion.div>
 
                   <div className="lg:text-4xl text-2xl font-bold text-center text-headingColor pt-8">
                     <h1>Discover and control your data</h1>
@@ -203,7 +228,10 @@ const Privacy = () => {
                     </p>
                   </div>
 
-                  <div id="terms_and_conditions" className="font-bold text-2xl pt-4">
+                  <div
+                    id="terms_and_conditions"
+                    className="font-bold text-2xl pt-4"
+                  >
                     <h1>Terms of Use</h1>
                   </div>
 

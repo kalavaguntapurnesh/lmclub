@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import globalThree from "../assets/globeThree.jpg";
 import gPay from "../assets/GPlay.webp";
 import appStore from "../assets/AppStore.webp";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants.js";
 
 const Banner = () => {
   return (
@@ -13,7 +15,13 @@ const Banner = () => {
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
                 <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-4 gap-6">
-                  <div className="relative inset-0 z-0 overflow-hidden rounded aspect-[16/9]">
+                  <motion.div
+                    variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="relative inset-0 z-0 overflow-hidden rounded aspect-[16/9]"
+                  >
                     {/* Image with full overlay */}
                     <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                     <img
@@ -31,14 +39,20 @@ const Banner = () => {
                         <div className="md:w-36 w-28 h-1 border-b-2 border-green-500 mt-[1px]"></div>
                       </div>
                       <p className="font-medium">
-                        At LM Club, we are more than just a networking
-                        platform; we are a community. Whether you’re a business
-                        owner or someone looking to connect, we invite you.
+                        At LM Club, we are more than just a networking platform;
+                        we are a community. Whether you’re a business owner or
+                        someone looking to connect, we invite you.
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <div className="relative inset-0 z-0 overflow-hidden rounded aspect-[16/9]">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="relative inset-0 z-0 overflow-hidden rounded aspect-[16/9]"
+                  >
                     {/* Image with full overlay */}
                     <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                     <img
@@ -61,7 +75,7 @@ const Banner = () => {
                         receive a percentage of our profits.
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>

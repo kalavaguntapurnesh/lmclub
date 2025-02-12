@@ -5,6 +5,8 @@ import moneyTwo from "../assets/moneyTwo.svg";
 import { FaGlobe, FaHandshake, FaMedal } from "react-icons/fa";
 import { TiArrowRight } from "react-icons/ti";
 import intro from "../assets/Intro.mp4";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants.js";
 
 const AboutHero = () => {
   const location = useLocation();
@@ -25,7 +27,13 @@ const AboutHero = () => {
           <div className="w-full mx-auto max-w-[1400px] ">
             <div className="p-4">
               <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
-                <div className="flex flex-col space-y-3 w-full">
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="flex flex-col space-y-3 w-full"
+                >
                   <div className="flex items-center md:justify-start justify-center ">
                     <div className="h-4 w-1 bg-green-500"></div>
                     <h1 className="ml-2 font-bold text-green-500 lg:uppercase">
@@ -95,9 +103,15 @@ const AboutHero = () => {
                       </div>
                     </div>
                   </div> */}
-                </div>
+                </motion.div>
 
-                <div className="flex justify-center items-center lg:pt-0 pt-4">
+                <motion.div
+                  variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="flex justify-center items-center lg:pt-0 pt-4"
+                >
                   <div>
                     <video
                       src={intro}
@@ -109,7 +123,7 @@ const AboutHero = () => {
                       controls
                     />
                   </div>
-                </div>
+                </motion.div>
               </div>
 
               <div className="pt-16 grid lg:grid-cols-3 grid-cols-1 gap-4">
@@ -148,7 +162,13 @@ const AboutHero = () => {
               </div>
 
               <div className="grid md:grid-cols-2 grid-cols-1 gap-4 pt-16">
-                <div className="bg-[#f8f9fa] rounded p-8 ">
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.2 }}
+                  className="bg-[#f8f9fa] rounded p-8 "
+                >
                   <div className="space-y-2 md:text-start text-center md:mx-4">
                     <div className="flex items-center md:justify-start justify-center ">
                       <div className="h-4 w-1 bg-mainColor"></div>
@@ -167,8 +187,14 @@ const AboutHero = () => {
                       </h1>
                     </div>
                   </div>
-                </div>
-                <div className="bg-[#f8f9fa] rounded p-8 ">
+                </motion.div>
+                <motion.div
+                  variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.2 }}
+                  className="bg-[#f8f9fa] rounded p-8 "
+                >
                   <div className="space-y-2 md:text-start text-center md:mx-4">
                     <div className="flex items-center md:justify-start justify-center ">
                       <div className="h-4 w-1 bg-mainColor"></div>
@@ -187,7 +213,7 @@ const AboutHero = () => {
                       </h1>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

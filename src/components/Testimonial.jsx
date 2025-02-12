@@ -9,6 +9,8 @@ import MockTwo from "../assets/MockTwo.png";
 import MockThree from "../assets/MockThree.png";
 import lity from "../assets/lity.svg";
 import star from "../assets/star.svg";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants.js";
 
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
@@ -72,22 +74,40 @@ const Testimonial = () => {
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
                 <div>
-                  <div className="flex flex-wrap flex-col lg:items-start items-center pb-3">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="flex flex-wrap flex-col lg:items-start items-center pb-3"
+                  >
                     <div className="lg:text-start text-center  leading-relaxed  font-bold text-black">
                       <p className="lg:text-4xl text-2xl">
                         Got Questions? We've got answers
                       </p>
                     </div>
                     <div className="md:w-36 w-28 h-1 border-b-2 border-green-500 mt-[1px]"></div>
-                  </div>
-                  <p className="text-gray-600 pt-3 lg:text-start text-center ">
+                  </motion.div>
+                  <motion.p
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="text-gray-600 pt-3 lg:text-start text-center "
+                  >
                     Here are the questions frequently asked by our customers.
                     And we've answered to the topics related to rewards,
                     membership.
-                  </p>
+                  </motion.p>
 
                   <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-4 gap-8 pt-12">
-                    <div className="flex flex-col justify-center space-y-3">
+                    <motion.div
+                      variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: true, amount: 0.2 }}
+                      className="flex flex-col justify-center space-y-3"
+                    >
                       <Accordion
                         title="What is included with my LM Club membership access?"
                         answer="All of our widgets, Broadcast, Grow, and Network are included! With access, you can access our e-store and a whole lot more."
@@ -108,15 +128,20 @@ const Testimonial = () => {
                         title="How do I cancel my Silver or Gold or Platinum membership?"
                         answer="You can cancel your paid Silver or Gold membership anytime. Simply log in to your LM Club account, go to the Manage My Account page, and click Cancel Auto-Renew."
                       />
-                    </div>
+                    </motion.div>
 
-                    <div>
+                    <motion.div
+                      variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: true, amount: 0.5 }}
+                    >
                       <img
                         src="https://lmclub.club/wp-content/uploads/2024/10/GettyImages-1490847054.webp"
                         alt="image"
                         className="rounded"
                       />
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>
@@ -131,13 +156,24 @@ const Testimonial = () => {
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-16">
-                  <div>
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                  >
                     <h2 className="lg:text-4xl text-2xl font-bold lg:text-start text-center ">
                       A mission rooted for collaborative
                       <br className="lg:block hidden" /> growth & earning.
                     </h2>
-                  </div>
-                  <div className="space-y-3">
+                  </motion.div>
+                  <motion.div
+                    variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="space-y-3"
+                  >
                     <p className="text-gray-600 lg:text-start text-center ">
                       LM Grow Rewards program allows you to earn redeemable
                       points and achieve special milestones simply by inviting
@@ -148,11 +184,17 @@ const Testimonial = () => {
                       Together, we can build a vibrant community, sharing
                       success and opportunities.
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
 
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 pt-8">
-                  <div className="flex md:justify-start justify-center">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="flex md:justify-start justify-center"
+                  >
                     <div className="w-full bg-white rounded p-6">
                       <div className="space-y-3">
                         <div className="flex lg:justify-start justify-center items-center">
@@ -175,9 +217,15 @@ const Testimonial = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <div className="flex md:justify-start justify-center">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="flex md:justify-start justify-center"
+                  >
                     <div className="w-full bg-white rounded p-6">
                       <div className="space-y-3">
                         <div className="flex lg:justify-start justify-center items-center">
@@ -200,9 +248,15 @@ const Testimonial = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <div className="grid grid-cols-3 gap-6 justify-center lg:col-span-2 ">
+                  <motion.div
+                    variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="grid grid-cols-3 gap-6 justify-center lg:col-span-2 "
+                  >
                     <img
                       src={MockOne}
                       alt="mockone"
@@ -218,7 +272,7 @@ const Testimonial = () => {
                       alt="mockone"
                       className="lg:h-[380px] "
                     />
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
@@ -231,19 +285,37 @@ const Testimonial = () => {
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
-                <div className="flex items-center text-center justify-center ">
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="flex items-center text-center justify-center "
+                >
                   <div className="h-4 w-1 bg-mainColor"></div>
                   <h1 className="ml-2 font-bold text-mainColor uppercase">
                     Trust our reviews
                   </h1>
-                </div>
-                <div className="mx-auto max-w-[1200px] text-center mt-4">
+                </motion.div>
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="mx-auto max-w-[1200px] text-center mt-4"
+                >
                   <h1 className="lg:text-4xl text-2xl font-bold text-headingColor">
                     Real stories, real results
                   </h1>
-                </div>
+                </motion.div>
 
-                <div className="mx-auto max-w-[1200px] text-gray-600 text-center mt-4">
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="mx-auto max-w-[1200px] text-gray-600 text-center mt-4"
+                >
                   <p>
                     Laoe Maom embodies progress and adaptability, responding
                     dynamically to the evolving relationships and interests in
@@ -253,7 +325,7 @@ const Testimonial = () => {
                     and nurture them to thrive. Let’s achieve greatness
                     together.
                   </p>
-                </div>
+                </motion.div>
 
                 <Swiper
                   breakpoints={{

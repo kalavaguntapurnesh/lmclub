@@ -3,6 +3,8 @@ import { TiArrowRight } from "react-icons/ti";
 import One from "../assets/One.svg";
 import Three from "../assets/Three.svg";
 import Two from "../assets/Two.svg";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants.js";
 
 const AppDesc = () => {
   const values2 = [
@@ -34,25 +36,43 @@ const AppDesc = () => {
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
                 <div>
-                  <div className="flex flex-wrap flex-col lg:items-start items-center pb-3">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="flex flex-wrap flex-col lg:items-start items-center pb-3"
+                  >
                     <div className="lg:text-start text-center leading-relaxed font-bold text-black">
                       <p className="lg:text-4xl text-2xl">
                         Empowering Connections & Cultivating Success
                       </p>
                     </div>
                     <div className="md:w-36 w-28 h-1 border-b-2 border-green-500 mt-[1px]"></div>
-                  </div>
-                  <p className="text-gray-600 pt-3 lg:text-start text-center">
+                  </motion.div>
+                  <motion.p
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="text-gray-600 pt-3 lg:text-start text-center"
+                  >
                     Welcome to LM Club – where networking meets opportunity! Our
                     innovative widgets are designed to empower you, reward you,
                     and make your life easier. Whether you&apos;re looking to
                     grow your network, share valuable insights, or promote your
                     business, LM Club has the tools to make it happen.
-                  </p>
+                  </motion.p>
                 </div>
 
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-12">
-                  <div className="grid grid-cols-2 grid-rows-2 gap-4">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="grid grid-cols-2 grid-rows-2 gap-4"
+                  >
                     <div className="col-span-2 row-span-1">
                       <img
                         src="https://lmclub.club/wp-content/uploads/2024/10/GettyImages-1360197604.webp"
@@ -76,9 +96,15 @@ const AppDesc = () => {
                         className="rounded"
                       />
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <div className="lg:p-4">
+                  <motion.div
+                    variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="lg:p-4"
+                  >
                     <div>
                       <div className="lg:text-3xl lg:text-start text-center text-2xl font-bold">
                         <h2>About LM Club</h2>
@@ -134,7 +160,7 @@ const AppDesc = () => {
                         </a>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
@@ -148,23 +174,41 @@ const AppDesc = () => {
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
                 <div>
-                  <div className="flex flex-wrap flex-col lg:items-start items-center pb-3">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="flex flex-wrap flex-col lg:items-start items-center pb-3"
+                  >
                     <div className="text-start leading-relaxed  font-bold text-black">
                       <p className="lg:text-4xl text-2xl lg:text-start text-center ">
                         Simple steps get to start achieve more.
                       </p>
                     </div>
                     <div className="md:w-36 w-28 h-1 border-b-2 border-green-500 mt-[1px]"></div>
-                  </div>
-                  <p className="text-gray-600 pt-3 lg:text-start text-center ">
+                  </motion.div>
+                  <motion.p
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="text-gray-600 pt-3 lg:text-start text-center "
+                  >
                     By joining Laoe Maom, members and businesses gain access to
                     a supportive network that helps bring visions to life and
                     achieve success. Together, with the strength of family and
                     community, let’s work towards greatness and make our goals a
                     reality.
-                  </p>
+                  </motion.p>
 
-                  <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 pt-8">
+                  <motion.div
+                    variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 pt-8"
+                  >
                     {values2.map((value, index) => (
                       <div
                         key={index}
@@ -190,13 +234,15 @@ const AppDesc = () => {
                               </h1>
                             </div>
                             <div className="flex lg:justify-start justify-center items-center text-gray-600 text-[14px] leading-[22px]">
-                              <p className="lg:text-start text-center ">{value.description}</p>
+                              <p className="lg:text-start text-center ">
+                                {value.description}
+                              </p>
                             </div>
                           </div>
                         </div>
                       </div>
                     ))}
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>

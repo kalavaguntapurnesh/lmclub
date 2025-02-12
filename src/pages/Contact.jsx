@@ -3,7 +3,7 @@ import us from "../assets/us.svg";
 import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import { useState } from "react";
-import { FaBlenderPhone, FaBuilding, FaHandshake } from "react-icons/fa";
+import { FaBlenderPhone, FaHandshake } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
@@ -14,6 +14,8 @@ import World from "../assets/WorldMap.svg";
 import { FaYoutube } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import WhatsApp from "../components/WhatsApp";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants.js";
 
 const Contact = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -23,13 +25,13 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [meassage, setMessage] = useState("");
 
-  const handleSubmit = (e)=>{
-      e.preventDefault();
-      console.log(fullName);
-      console.log(email);
-      console.log(subject);
-      console.log(meassage);
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(fullName);
+    console.log(email);
+    console.log(subject);
+    console.log(meassage);
+  };
   const handleCheckboxChange = (event) => {
     setIsChecked(event.target.checked);
   };
@@ -46,14 +48,20 @@ const Contact = () => {
       <Navbar />
       <ScrollToTop />
 
-      <WhatsApp/>
+      <WhatsApp />
 
       <div className="lg:pt-28 pt-24">
         <div className="relative">
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
-                <div className="space-y-3">
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="space-y-3"
+                >
                   <div className="flex items-center justify-center ">
                     <div className="h-4 w-1 bg-green-500"></div>
                     <h1 className="ml-2 font-bold text-green-500 lg:uppercase">
@@ -72,9 +80,15 @@ const Contact = () => {
                       reach out to us from the following social media links.
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="max-w-[600px] mx-auto my-6">
+                <motion.div
+                  variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="max-w-[600px] mx-auto my-6"
+                >
                   <div className="grid grid-cols-7 gap-4">
                     <a
                       href={whatsappUrl}
@@ -137,9 +151,14 @@ const Contact = () => {
                       </div>
                     </a>
                   </div>
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div
+                  variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                >
                   <div className="pt-2">
                     <div className="w-full">
                       <a
@@ -159,10 +178,16 @@ const Contact = () => {
                       </a>
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 pt-16">
-                  <div className="flex flex-col space-y-4 pt-12">
+                  <motion.div
+                    variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="flex flex-col space-y-4 pt-12"
+                  >
                     <div className="lg:text-start text-center">
                       <p className="lg:text-4xl text-2xl font-bold text-trumpTwo">
                         Have questions? Just fill out this form, and we&apos;ll
@@ -255,10 +280,20 @@ const Contact = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <div className="mx-2">
-                    <form onSubmit={handleSubmit} method="POST" className="lg:mt-8 mt-2">
+                  <motion.div
+                    variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.5 }}
+                    className="mx-2"
+                  >
+                    <form
+                      onSubmit={handleSubmit}
+                      method="POST"
+                      className="lg:mt-8 mt-2"
+                    >
                       <div className="w-full flex justify-center items-center">
                         <div className="mb-5 md:w-11/12 w-full">
                           <label
@@ -271,7 +306,9 @@ const Contact = () => {
                             type="text"
                             name="name"
                             id="name"
-                            onChange={(e)=>{setFullName(e.target.value)}}
+                            onChange={(e) => {
+                              setFullName(e.target.value);
+                            }}
                             placeholder="Your Full Name"
                             className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base text-[#6B7280] outline-none  focus:shadow-md"
                           />
@@ -289,7 +326,9 @@ const Contact = () => {
                             type="email"
                             name="email"
                             id="email"
-                            onChange={(e)=>{setEmail(e.target.value)}}
+                            onChange={(e) => {
+                              setEmail(e.target.value);
+                            }}
                             placeholder="example@domain.com"
                             className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base text-[#6B7280] outline-none  focus:shadow-md"
                           />
@@ -308,7 +347,9 @@ const Contact = () => {
                             type="text"
                             name="subject"
                             id="subject"
-                            onChange={(e)=>{setSubject(e.target.value)}}
+                            onChange={(e) => {
+                              setSubject(e.target.value);
+                            }}
                             placeholder="Enter your subject"
                             className="w-full rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base text-[#6B7280] outline-none focus:shadow-md"
                           />
@@ -327,7 +368,9 @@ const Contact = () => {
                             rows="4"
                             name="message"
                             id="message"
-                            onChange={(e)=>{setMessage(e.target.value)}}
+                            onChange={(e) => {
+                              setMessage(e.target.value);
+                            }}
                             placeholder="Type your message"
                             className="w-full resize-none rounded border border-[#e0e0e0] bg-white py-3 px-6 text-base text-[#6B7280] outline-none  focus:shadow-md"
                           ></textarea>
@@ -336,13 +379,13 @@ const Contact = () => {
 
                       <div className="flex items-center justify-center pt-2 md:mx-0">
                         <div className="mb-5 md:w-11/12 w-full">
-                          <button  className="rounded bg-green-500 transition duration-1000 py-3 ease-in-out w-full text-base  text-white outline-none">
+                          <button className="rounded bg-green-500 transition duration-1000 py-3 ease-in-out w-full text-base  text-white outline-none">
                             Submit
                           </button>
                         </div>
                       </div>
                     </form>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>

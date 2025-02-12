@@ -8,7 +8,8 @@ import Card500 from "../assets/500.jpg";
 import ae from "../assets/ae.png";
 import { TiArrowRight } from "react-icons/ti";
 import WhatsApp from "../components/WhatsApp";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants.js";
 
 const Rewards = () => {
   const [showModal, setShowModal] = useState(false);
@@ -31,7 +32,13 @@ const Rewards = () => {
           <div className="w-full">
             <div className="w-full mx-auto max-w-[1400px] ">
               <div className="p-4">
-                <div className="space-y-3">
+                <motion.div
+                  variants={fadeIn("down", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.5 }}
+                  className="space-y-3"
+                >
                   <div className="flex items-center justify-center ">
                     <div className="h-4 w-1 bg-green-500"></div>
                     <h1 className="ml-2 font-bold text-green-500 lg:uppercase">
@@ -50,9 +57,15 @@ const Rewards = () => {
                       expand your network while benefiting from your efforts.
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 pt-8">
+                <motion.div
+                  variants={fadeIn("up", 0.1)} // Fade in from top to bottom
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.2 }}
+                  className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 pt-8"
+                >
                   <div className="flex justify-center items-center">
                     <div className="max-w-md rounded overflow-hidden shadow md:mx-0 mx-2 border">
                       <img
@@ -145,7 +158,7 @@ const Rewards = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
