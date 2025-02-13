@@ -37,7 +37,7 @@ const SelectedPlan = () => {
   const handleAddToCart = () => {
     const id = plan.id || `${plan.name}-${plan.price}`;
     console.log(id);
-    addOneToCart(id, plan.name, plan.price, plan.description, quantity);
+    addOneToCart(id, plan.name, plan.price, plan.description);
     console.log("Adding item:", plan.name);
     console.log("Adding item:", plan.price);
     console.log("Adding item:", plan.description);

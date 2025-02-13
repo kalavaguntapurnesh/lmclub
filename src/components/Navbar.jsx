@@ -33,13 +33,10 @@ const NavBar = () => {
   };
 
   const [cartItemsCount, setCartItemsCount] = useState(0);
+
   useEffect(() => {
     const storedCartItems = JSON.parse(localStorage.getItem("cart")) || [];
-    const totalQuantity = storedCartItems.reduce(
-      (total, item) => total + item.quantity,
-      0
-    );
-    setCartItemsCount(totalQuantity);
+    setCartItemsCount(storedCartItems.length > 0 ? 1 : 0);
   }, []);
 
   useEffect(() => {
@@ -70,11 +67,7 @@ const NavBar = () => {
         <a href="/" className="flex items-center">
           <img
             src={LMDarkLogo}
-            className={` ${
-              isScrolled
-                ? "md:w-[56px] md:h-[56px] w-[52px] h-[52px]"
-                : "md:w-[56px] md:h-[56px] w-[52px] h-[52px]"
-            }`}
+            className={` ${isScrolled ? "w-16 h-16" : "w-16 h-16"}`}
             alt="logo"
           />
         </a>
@@ -85,13 +78,13 @@ const NavBar = () => {
         </ul>
 
         <div className="lg:flex hidden relative mr-5">
-          <a href="/selected-plan/cart" className="cursor-pointer">
-            <CiShoppingCart className="md:w-8 md:h-8 w-4 h-4"></CiShoppingCart>
-          </a>
-          <div className="absolute top-[-8px] right-[-8px] text-[10px] bg-red-500 text-white rounded-full px-2 py-1">
-            <h1>{cartItemsCount}</h1>
-          </div>
-        </div>
+            <a href="/selected-plan/cart" className="cursor-pointer">
+              <CiShoppingCart className="w-10 h-10"></CiShoppingCart>
+            </a>
+            <div className="absolute top-[-8px] right-[-8px] text-[10px] bg-red-500 text-white rounded-full px-2 py-1">
+              <h1>{cartItemsCount}</h1>
+            </div>
+         </div>
 
         {/* Login Button */}
         <div className="hidden lg:flex space-x-4">
@@ -107,15 +100,18 @@ const NavBar = () => {
           </a>
         </div>
 
-        <div className="lg:hidden flex gap-6">
-          <div className="relative">
-            <a href="/selected-plan/cart" className="cursor-pointer">
-              <CiShoppingCart className="w-7 h-7"></CiShoppingCart>
-            </a>
-            <div className="absolute top-[-8px] right-[-8px] text-[8px] bg-red-500 text-white rounded-full px-2 py-1">
-              <h1>{cartItemsCount}</h1>
-            </div>
-          </div>
+        
+
+        <div className="lg:hidden lg:hidden flex gap-6">
+
+        <div className="relative">
+                <a href="/selected-plan/cart" className="cursor-pointer">
+                  <CiShoppingCart className="w-10 h-10"></CiShoppingCart>
+                </a>
+                <div className="absolute top-[-8px] right-[-8px] text-[10px] bg-red-500 text-white rounded-full px-2 py-1">
+                  <h1>{cartItemsCount}</h1>
+                </div>
+              </div>
 
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
@@ -377,6 +373,8 @@ const NavBar = () => {
                 )}
               </AnimatePresence>
             </li>
+
+            
 
             <div className="h-[200px] flex flex-row items-center justify-center">
               <img src={phone} alt="phone" className="h-full" />

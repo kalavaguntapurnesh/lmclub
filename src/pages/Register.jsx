@@ -192,9 +192,9 @@ const Register = () => {
       console.log(street);
       console.log(referalcode);
       console.log(confirmpassword);
-      console.log(state);
-      console.log(city);
-      console.log(zipcode);
+      // console.log(state);
+      // console.log(city);
+      // console.log(zipcode);
       const response = await axios.post("http://localhost:9090/api/registerUser",{
       // const response = await axios.post(/"https://lmclub-backend.onrender.com/api/registerUser", {
           email,
@@ -206,7 +206,7 @@ const Register = () => {
           confirmpassword,
           // state,
           // city,
-          zipcode,
+          // zipcode,
         })
         .then((response) => {
           // dispatch(hideLoading());

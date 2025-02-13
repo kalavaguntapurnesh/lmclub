@@ -43,16 +43,18 @@ export function CartProvider({ children }) {
         const product = cartProducts.find((product) => product.id === id);
         return product ? product.quantity : 0;
     }
-    function addOneToCart(id, name, price, description, quantity, image) {
-        console.log("addOneToCart triggered with id:", id);
-        
+
+    // function addOneToCart(id, name, price, description, quantity, image) {
+    //     console.log("addOneToCart triggered with id:", id);
+    // id, plan.name, plan.price, plan.description
+    const addOneToCart = (id, name, price, description) => {
         setCartProducts((prevCartProducts) => {
             // Check if there is already a membership in the cart
             if (prevCartProducts.length > 0) {
-                const existingProduct = prevCartProducts[0]; // Since only one membership is allowed
+                const existingProduct = prevCartProducts[0]; // Only one membership allowed
     
                 if (existingProduct.id === id) {
-                    
+                    // Show alert: Membership already in cart
                     Swal.fire({
                         html: `
                             <div style="display: flex; flex-direction: column; align-items: center;">
@@ -63,13 +65,11 @@ export function CartProvider({ children }) {
                                         <span style="color: rgb(37, 218, 73);">Club</span>
                                     </h4>
                                 </div>
-        
                                 <div style="margin-bottom: 20px;">
                                     <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
                                 </div>
-        
                                 <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
-                                    <h1 style="font-size: 25px;"> One More Membership added successfully!</h1>
+                                    <h1 style="font-size: 25px;"> This membership is already added to your cart! </h1>
                                 </div>
                             </div>
                         `,
@@ -77,17 +77,10 @@ export function CartProvider({ children }) {
                             confirmButton: 'swal-custom-ok-button',
                         }
                     });
-             
-        
-            
-                    return [
-                        {
-                            ...existingProduct,
-                            quantity: existingProduct.quantity + 1,
-                        },
-                    ];
+    
+                    return prevCartProducts; // Do not change cart
                 } else {
-                    // If a different membership is added, replace the old one
+                    // Replace the existing membership with the new one
                     Swal.fire({
                         html: `
                             <div style="display: flex; flex-direction: column; align-items: center;">
@@ -98,13 +91,11 @@ export function CartProvider({ children }) {
                                         <span style="color: rgb(37, 218, 73);">Club</span>
                                     </h4>
                                 </div>
-    
                                 <div style="margin-bottom: 20px;">
                                     <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
                                 </div>
-    
                                 <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
-                                    <h1 style="font-size: 25px;">Membership updated successfully! Check your cart!</h1>
+                                    <h1 style="font-size: 25px;"> Membership updated successfully! Check your cart! </h1>
                                 </div>
                             </div>
                         `,
@@ -117,11 +108,9 @@ export function CartProvider({ children }) {
                         {
                             id,
                             name,
-                            image,
                             price,
-                            quantity: 1, // Reset quantity when replacing
-                            description,
-                        },
+                            description
+                        }
                     ];
                 }
             } else {
@@ -136,13 +125,11 @@ export function CartProvider({ children }) {
                                     <span style="color: rgb(37, 218, 73);">Club</span>
                                 </h4>
                             </div>
-    
                             <div style="margin-bottom: 20px;">
                                 <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
                             </div>
-    
                             <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
-                                <h1 style="font-size: 25px;">Membership added successfully! </h1>
+                                <h1 style="font-size: 25px;"> Membership added successfully! </h1>
                             </div>
                         </div>
                     `,
@@ -155,15 +142,13 @@ export function CartProvider({ children }) {
                     {
                         id,
                         name,
-                        image,
                         price,
-                        quantity: 1, // Start with quantity 1
-                        description,
-                    },
+                        description
+                    }
                 ];
             }
         });
-    }
+    };
     
 
 
@@ -237,7 +222,7 @@ export function CartProvider({ children }) {
     }
 
     function getTotalCost() {
-        return cartProducts.reduce((total, cartItem) => total + cartItem.price * cartItem.quantity, 0);
+        return cartProducts.reduce((total, cartItem) => total + cartItem.price, 0);
     }
 
     const contextValue = {

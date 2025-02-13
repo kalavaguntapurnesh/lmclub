@@ -30,15 +30,13 @@ const SecNavbar = () => {
     }
   };
 
-  const [cartItemsCount, setCartItemsCount] = useState(0);
-  useEffect(() => {
-    const storedCartItems = JSON.parse(localStorage.getItem("cart")) || [];
-    const totalQuantity = storedCartItems.reduce(
-      (total, item) => total + item.quantity,
-      0
-    );
-    setCartItemsCount(totalQuantity);
-  }, []);
+   const [cartItemsCount, setCartItemsCount] = useState(0);
+   
+     useEffect(() => {
+       const storedCartItems = JSON.parse(localStorage.getItem("cart")) || [];
+       setCartItemsCount(storedCartItems.length > 0 ? 1 : 0);
+     }, []);
+
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -60,18 +58,14 @@ const SecNavbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-20 transition-all duration-300 ease-in-out select-none  ${
-        isScrolled ? "bg-white shadow-md lg:py-5 py-4" : "bg-transparent py-6"
+        isScrolled ? "bg-white shadow-md lg:py-5 py-6" : "bg-transparent py-6"
       }`}
     >
       <div className="max-w-[1400px] mx-auto flex justify-between items-center px-4">
-        <a href="/" className="flex flex-row items-center md:ml-0 ml-1">
+        <a href="/" className="flex flex-row items-center md:ml-0 ml-1  ">
           <img
             src={LMDarkLogo}
-            className={` ${
-              isScrolled
-                ? "md:w-[56px] md:h-[56px] w-[52px] h-[52px]"
-                : "md:w-[56px] md:h-[56px] w-[52px] h-[52px]"
-            }`}
+            className={` ${isScrolled ? "w-16 h-16" : "w-16 h-16"}`}
             alt="logo"
           />
         </a>
@@ -82,12 +76,12 @@ const SecNavbar = () => {
         </ul>
 
         <div className="hidden lg:flex relative mr-5">
-          <a href="/selected-plan/cart" className="cursor-pointer">
-            <CiShoppingCart className="md:w-8 md:h-8 w-4 h-4 text-green-700"></CiShoppingCart>
-          </a>
-          <div className="absolute top-[-8px] right-[-8px] text-[10px] bg-red-500 text-white rounded-full px-2 py-1">
-            <h1>{cartItemsCount}</h1>
-          </div>
+            <a href="/selected-plan/cart" className="cursor-pointer">
+              <CiShoppingCart className="w-10 h-10 text-green-700 text-2xl"></CiShoppingCart>
+            </a>
+            <div className="absolute top-[-8px] right-[-8px] text-[10px] bg-red-500 text-white rounded-full px-2 py-1">
+              <h1>{cartItemsCount}</h1>
+            </div>
         </div>
 
         {/* Login Button */}
@@ -104,15 +98,17 @@ const SecNavbar = () => {
           </a>
         </div>
 
+        
+
         <div className="lg:hidden flex gap-6">
           <div className="relative">
-            <a href="/selected-plan/cart" className="cursor-pointer">
-              <CiShoppingCart className="w-7 h-7 text-green-800"></CiShoppingCart>
-            </a>
-            <div className="absolute top-[-8px] right-[-8px] text-[8px] bg-red-500 text-white rounded-full px-2 py-1">
-              <h1>{cartItemsCount}</h1>
-            </div>
-          </div>
+              <a href="/selected-plan/cart" className="cursor-pointer">
+                <CiShoppingCart className="w-10 h-10 text-green-800"></CiShoppingCart>
+              </a>
+              <div className="absolute top-[-8px] right-[-8px] text-[10px] bg-red-500 text-white rounded-full px-2 py-1">
+                <h1>{cartItemsCount}</h1>
+              </div>
+           </div>
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
               <AiOutlineClose
@@ -374,6 +370,8 @@ const SecNavbar = () => {
               </AnimatePresence>
             </li>
 
+              
+
             <div className="h-[200px] flex flex-row items-center justify-center">
               <img src={phone} alt="phone" className="h-full" />
               <img src={phoneTwo} alt="phone" className="h-full" />
@@ -473,7 +471,7 @@ const Tab = ({ children, tab, handleSetSelected, selected }) => {
       onMouseEnter={() => handleSetSelected(tab)}
       onClick={() => handleSetSelected(tab)}
       className={`flex items-center gap-1 rounded-full md:text-sm lg:text-base px-3 py-1.5 transition-colors  ${
-        isScrolled ? "text-trumpTwo" : ""
+        isScrolled ? "text-trumpTwo font-medium" : ""
       } ${selected === tab ? "  text-trumpOne" : "text-trumpTwo"}`}
     >
       <span>{children}</span>
@@ -865,4 +863,5 @@ const TABS = [
     title: "Our Blogs",
     Component: ContactBar,
   },
+  
 ].map((n, idx) => ({ ...n, id: idx + 1 }));

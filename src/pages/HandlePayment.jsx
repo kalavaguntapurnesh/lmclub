@@ -2,6 +2,9 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext"; 
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Swal from "sweetalert2";
+import Logo from "../assets/LMDark.webp";
 const public_stripe_key = "pk_test_51QMcn82NPQsjFaoTZ90xF9ORG1Gj4EdmGPiQAmSGbvVomOdnWBrwJV3BR9mCFbmQPFZPEsOZgqOglMvKR1Bff5ju00HjRNjRhp";
 
 const HandlePayment = () => {
@@ -18,11 +21,57 @@ const HandlePayment = () => {
     name: item.name,
     description: item.description || "No description available",
     quantity: item.quantity || 1,
-    price: (item.price * item.quantity) + registrationFee, 
+    price: (item.price) + registrationFee, 
     }
   });
   
+  const [isChecked, setIsChecked] = useState(false);
+  const style = document.createElement("style");
+  style.innerHTML = `
+    .swal-custom-ok-button {
+      background-color:rgb(27, 202, 103); /* Custom color */
+      color:white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .swal-custom-ok-button:hover {
+      background-color:rgb(18, 91, 25); /* Hover color */
+    }
+  `;
+  document.head.appendChild(style);
+
   const handleCheckout = async () => {
+
+    if (!isChecked) {
+      // alert("Please accept the terms before proceeding to payment.");
+       Swal.fire({
+                html: `
+                                 <div style="display: flex; flex-direction: column; align-items: center;">
+                                      <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                                          <img src="${Logo}" alt="Logo" 
+                                               style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                                                             
+                                                <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                                                    <span style="color: black;">LM</span>
+                                                    <span style="color: rgb(37, 218, 73);">Club</span>
+                                                </h4>
+                                      </div>
+                                
+                                     <div style="text-align: center; font-size: 22px; font-weight: bold; color: #333; margin: 30px;">
+                                      <p>Please accept the terms before proceeding to payment.</p>
+                                    </div> 
+                                 </div>
+                             `,
+                customClass: {
+                  confirmButton: "swal-custom-ok-button",
+                },
+              });
+      return;
+    }
+
     try {
       const stripe = await loadStripe(public_stripe_key);
   
@@ -63,8 +112,7 @@ const HandlePayment = () => {
           <thead>
             <tr className="bg-gray-800 text-white text-center">
               <th className="p-3 text-left">Plan</th>
-              <th className="p-3 text-left">Price</th>
-              <th className="p-3 text-left">Quantity</th>
+              {/* <th className="p-3 text-left">Price</th> */}
               <th className="p-3 text-left">Payable Amount</th>
             </tr>
           </thead>
@@ -73,25 +121,24 @@ const HandlePayment = () => {
             {items.map((item) => (
               <tr key={item.id} className="border border-gray-300 text-center bg-blue-200">
                 <td className="p-3 text-left">{item.name} Membership</td>
-                <td className="p-3 text-left">${item.price}</td>
-                <td className="p-3 text-left">{item.quantity}</td>
-                <td className="p-3 text-left">${(item.price * item.quantity).toFixed(2)}</td>
+                {/* <td className="p-3 text-left">${item.price}</td> */}
+                <td className="p-3 text-left">${(item.price).toFixed(2)}</td>
               </tr>
             ))}
 
             {/* Registration Fee Row */}
             <tr className="border border-gray-300 text-center bg-gray-200">
               <td className="p-3 text-left ">Registration Fee</td>
-              <td className="p-3"></td>
-              <td className="p-3"></td>
+              {/* <td className="p-3"></td> */}
+           
               <td className="p-3 text-left font-semibold text-red-600 font-semibold">${items[0].description.match(/\$\d+(\.\d{2})?/)[0].replace("$", "")}</td>
             </tr>
 
             {/* Net Amount Row */}
             <tr className="border border-gray-300 text-center bg-blue-200 ">
-              <td className="p-3 text-left">Net Amount</td>
-              <td className="p-3"></td>
-              <td className="p-3"></td>
+              <td className="p-3 text-left">Total Amount</td>
+              {/* <td className="p-3"></td> */}
+           
               <td className="p-3 text-left text-green-700 font-bold">${(
                                 getTotalCost() +
                                 parseFloat(items[0].description.match(/\$\d+(\.\d{2})?/)[0].replace("$", ""))
@@ -110,6 +157,8 @@ const HandlePayment = () => {
                   id="terms"
                   aria-describedby="terms"
                   type="checkbox"
+                  checked={isChecked}
+                  onChange={() => setIsChecked(!isChecked)}
                   className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300  cursor-pointer"
                   required
                 ></input>
@@ -149,6 +198,7 @@ const HandlePayment = () => {
           
           <button
             onClick={() => handleCheckout()}
+            
             className="px-6 py-3 bg-green-600 text-white rounded-lg cursor-pointer hover:bg-green-700 transition"
           >
             Pay
