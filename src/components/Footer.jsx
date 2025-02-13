@@ -153,7 +153,7 @@ const Footer = () => {
 
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="/privacy-policy#terms_and_conditions"
+                          href="/terms-and-conditions"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Terms & Conditions

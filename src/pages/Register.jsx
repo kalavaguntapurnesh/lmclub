@@ -164,6 +164,7 @@ const Register = () => {
     }
   };
 
+  const [isChecked, setIsChecked] = useState(false);
   const handleSubmit = async (event) => {
     const style = document.createElement("style");
     style.innerHTML = `
@@ -184,6 +185,32 @@ const Register = () => {
 
     event.preventDefault();
     if (verified) {
+      if (!isChecked) {
+          
+             Swal.fire({
+                      html: `
+                          <div style="display: flex; flex-direction: column; align-items: center;">
+                               <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                                   <img src="${Logo}" alt="Logo" 
+                                        style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                                                      
+                                         <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                                             <span style="color: black;">LM</span>
+                                             <span style="color: rgb(37, 218, 73);">Club</span>
+                                         </h4>
+                               </div>
+                        
+                              <div style="text-align: center; font-size: 22px; font-weight: bold; color: #333; margin: 30px;">
+                               <p>Please accept the terms before proceeding ...</p>
+                             </div> 
+                          </div>
+                                   `,
+                      customClass: {
+                        confirmButton: "swal-custom-ok-button",
+                      },
+                    });
+            return;
+          }
       console.log("Form submitted!");
       console.log(email);
       console.log(password);
@@ -192,6 +219,7 @@ const Register = () => {
       console.log(street);
       console.log(referalcode);
       console.log(confirmpassword);
+
       // console.log(state);
       // console.log(city);
       // console.log(zipcode);
@@ -595,6 +623,43 @@ const Register = () => {
                               onChange={handleCaptcha}
                             />
                           </div>
+
+                          <div className="flex items-start">
+                              <div className="flex items-center h-5">
+                                <input
+                                  id="terms"
+                                  aria-describedby="terms"
+                                  type="checkbox"
+                                  checked={isChecked}
+                                  onChange={() => setIsChecked(!isChecked)}
+                                  className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300  cursor-pointer"
+                                  required
+                                ></input>
+                              </div>
+                              <div className="ml-3 text-sm">
+                                <label
+                                  htmlFor="terms"
+                                  className="font-light text-gray-500 "
+                                >
+                                  I accept the{" "}
+                                  <a
+                                    className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                                    href="/terms-and-conditions"
+                                  >
+                                    Terms and Conditions
+                                  </a>
+                                  {" "} And {" "}
+                                  <a
+                                    className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                                    href="/privacy-policy"
+                                  >
+                                    Privacy Policy
+                                  </a>
+                                </label>
+                              </div>
+                            </div>
+
+
                           <div className="flex items-center justify-between">
                             <div className="flex items-start">
                               <div className="flex items-center h-5">

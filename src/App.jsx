@@ -26,6 +26,8 @@ import HandlePayment from "./pages/HandlePayment";
 import Success from "./pages/Success";
 import Failure from "./pages/Failure";
 import Videos from "./pages/Videos";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import RefundAndReturnPolicy from "./pages/RefundAndReturnPolicy";
 function App() {
   return (
     <CartProvider>
@@ -64,6 +66,8 @@ function App() {
         <Route path="/payment" element={<HandlePayment />} />
         <Route path="/payment-success" element={< Success/>} />
         <Route path="/payment-failed" element={< Failure/>} />
+        <Route path="/terms-and-conditions" element={< TermsAndConditions/>} />
+        <Route path="/refund-and-return-policy" element={<RefundAndReturnPolicy />} />
       </Routes>
     </BrowserRouter>
     </CartProvider>

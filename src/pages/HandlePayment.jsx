@@ -170,11 +170,19 @@ const HandlePayment = () => {
                 >
                   I accept the payment{" "} 
                   <a
-                    className="font-medium text-green-600 hover:underline dark:text-primary-500"
-                    href="/privacy"
+                    className="font-medium text-gray-600 hover:underline hover:text-green-600 dark:text-primary-500"
+                    href="/terms-and-conditions"
                   >
                     Terms and Conditions
                   </a>
+                  {" "} and {" "}
+                  <a
+                    className="font-medium text-gray-600 hover:underline hover:text-green-600 dark:text-primary-500"
+                    href="/refund-and-return-policy"
+                  >
+                   Refund and Returns Policy
+                  </a>
+
                 </label>
               </div>
             </div>
