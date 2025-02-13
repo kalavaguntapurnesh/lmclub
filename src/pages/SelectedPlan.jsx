@@ -186,26 +186,26 @@ const SelectedPlan = () => {
       "Bronze-Gold":
         "Great choice! You’ve upgraded to Gold membership! 🚀 Enjoy even higher points and a 40% share in store profits!",
       "Bronze-Platinum":
-        "Welcome to the Platinum tier! 💎 You now earn maximum points and a 70% share in store profits!",
+        "You’ve upgraded to Platinum tier! 💎 You now earn maximum points and a 70% share in store profits!",
       "Silver-Gold":
-        "Level up! You’re now a Gold member! 🌟 More rewards, higher earnings, and better benefits await you!",
+        "You’ve upgraded to Gold member! 🌟 More rewards, higher earnings, and better benefits await you!",
       "Silver-Platinum":
-        "You're now a Platinum member! 💎 Enjoy premium benefits, maximum points, and exclusive perks!",
+        "You’ve upgrade to Platinum member! 💎 Enjoy premium benefits, maximum points, and exclusive perks!",
       "Gold-Platinum":
-        "Top-tier unlocked! 🏆 Platinum membership gives you the best benefits, highest points, and maximum profit sharing!",
+        "You’ve upgrade to 🏆 Platinum membership gives you the best benefits, highest points, and maximum profit sharing!",
 
       "Platinum-Gold":
         "You downgraded to Gold membership. Some premium benefits are now limited, but you still earn great rewards!",
       "Platinum-Silver":
-        "You switched to Silver membership. You now get fewer points and a reduced profit share. Consider upgrading again!",
+        "You downgraded to Silver membership. You now get fewer points and a reduced profit share. Consider upgrading again!",
       "Platinum-Bronze":
-        "You moved to Bronze membership. You may lose access to some features. Upgrade anytime to unlock better benefits!",
+        "You downgraded to Bronze membership. You may lose access to some features. Upgrade anytime to unlock better benefits!",
       "Gold-Silver":
         " You downgraded to Silver. Some rewards are now lower, but you can always upgrade again!",
       "Gold-Bronze":
-        "You switched to Bronze membership. You may lose some rewards and earnings. Upgrade to enjoy better perks!",
+        "You downgraded to Bronze membership. You may lose some rewards and earnings. Upgrade to enjoy better perks!",
       "Silver-Bronze":
-        "You're now on Bronze membership. Your earning potential is lower. Upgrade anytime to get more benefits!",
+        "You're downgraded on Bronze membership. Your earning potential is lower. Upgrade anytime to get more benefits!",
     };
 
     return messages[`${oldPlan}-${newPlan}`] || null;
@@ -318,7 +318,7 @@ const SelectedPlan = () => {
                       <video
                         src={intro}
                         className="rounded w-auto h-auto"
-                        autoPlay
+                        // autoPlay
                         muted
                         controls
                       />
