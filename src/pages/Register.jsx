@@ -125,45 +125,45 @@ const Register = () => {
   //   }
   // };
 
-  const sendOTP = async () => {
-    try {
-      // const response = await axios.post("http://localhost:9090/api/send-otp", { phone: phoneNumber });
-      const response = await axios.post("https://lmclub-backend.onrender.com/api/send-otp",{ phone: phoneNumber });
-      if (response.status === 200) {
-        Swal.fire({
-          html: `
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
-                    <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
-                    <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
-                        <span style="color: black;">LM</span>
-                        <span style="color: rgb(37, 218, 73);">Club</span>
-                    </h4>
-                </div>
-                <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
-                    <h1 style="font-size: 25px;">OTP Sent!</h1>
-                </div>
-            </div>
-        `,
-          customClass: {
-            confirmButton: "swal-custom-ok-button",
-          },
-        });
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "OTP Error",
-          text: "Failed to send OTP, please try again.",
-        });
-      }
-    } catch (error) {
-      Swal.fire({
-        icon: "error",
-        title: "Error",
-        text: "Something went wrong while sending OTP.",
-      });
-    }
-  };
+  // const sendOTP = async () => {
+  //   try {
+  //     // const response = await axios.post("http://localhost:9090/api/send-otp", { phone: phoneNumber });
+  //     const response = await axios.post("https://lmclub-backend.onrender.com/api/send-otp",{ phone: phoneNumber });
+  //     if (response.status === 200) {
+  //       Swal.fire({
+  //         html: `
+  //           <div style="display: flex; flex-direction: column; align-items: center;">
+  //               <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+  //                   <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+  //                   <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+  //                       <span style="color: black;">LM</span>
+  //                       <span style="color: rgb(37, 218, 73);">Club</span>
+  //                   </h4>
+  //               </div>
+  //               <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
+  //                   <h1 style="font-size: 25px;">OTP Sent!</h1>
+  //               </div>
+  //           </div>
+  //       `,
+  //         customClass: {
+  //           confirmButton: "swal-custom-ok-button",
+  //         },
+  //       });
+  //     } else {
+  //       Swal.fire({
+  //         icon: "error",
+  //         title: "OTP Error",
+  //         text: "Failed to send OTP, please try again.",
+  //       });
+  //     }
+  //   } catch (error) {
+  //     Swal.fire({
+  //       icon: "error",
+  //       title: "Error",
+  //       text: "Something went wrong while sending OTP.",
+  //     });
+  //   }
+  // };
 
   const [isChecked, setIsChecked] = useState(false);
   const handleSubmit = async (event) => {
@@ -288,7 +288,7 @@ const Register = () => {
               },
             });
 
-            sendOTP();
+            // sendOTP();
             navigate("/otp-verification", { state: { email, phoneNumber } });
           } else if (response.data.message === "User Already Exists") {
             //    Swal.fire({
