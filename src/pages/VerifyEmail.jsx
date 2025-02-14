@@ -35,8 +35,8 @@ const VerifyEmail = () => {
     document.head.appendChild(style);
 
     try {
-      const response = await axios.get(`http://localhost:9090/api/confirm/${token}`);
-    // const response = await axios.get(`https://lmclub-backend.onrender.com/api/confirm/${token}`);
+      // const response = await axios.get(`http://localhost:9090/api/confirm/${token}`);
+    const response = await axios.get(`https://lmclub-backend.onrender.com/api/confirm/${token}`);
       if (response.data && response.data.message === "Email Verified Successfully") {
         setIsVerified(true);
 
@@ -77,8 +77,8 @@ const VerifyEmail = () => {
           },
           confirmButtonText: 'Login Here',
           willClose: () => {
-            window.location.href = 'http://localhost:5173/login';
-            // window.location.href = 'https://lmclub.vercel.app/login';
+            // window.location.href = 'http://localhost:5173/login';
+            window.location.href = 'https://lmclub.vercel.app/login';
             
           }
         });
