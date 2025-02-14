@@ -91,8 +91,8 @@ const OtpAndEmailVerification = () => {
 
   const verifySMS = async () => {
     try {
-      const response = await axios.post("http://localhost:9090/api/verify-otp", { phone: phoneNumber, otp });
-      // const response = await axios.post("https://lmclub-backend.onrender.com/api/verify-otp", { phone: phoneNumber, otp });
+      // const response = await axios.post("http://localhost:9090/api/verify-otp", { phone: phoneNumber, otp });
+      const response = await axios.post("https://lmclub-backend.onrender.com/api/verify-otp", { phone: phoneNumber, otp });
       if (response.status === 200) {
         // Swal.fire({
         //   icon: 'success',
@@ -207,8 +207,8 @@ const OtpAndEmailVerification = () => {
   // Function to check email verification status
   const checkEmailVerification = async () => {
     try {
-      const emailResponse = await axios.get(`http://localhost:9090/api/check-email-verification?email=${email}`);
-    // const emailResponse = await axios.get(`https://lmclub-backend.onrender.com/api/check-email-verification?email=${email}`);
+      // const emailResponse = await axios.get(`http://localhost:9090/api/check-email-verification?email=${email}`);
+    const emailResponse = await axios.get(`https://lmclub-backend.onrender.com/api/check-email-verification?email=${email}`);
       setEmailVerified(emailResponse.data.verified);
       Swal.fire({
         html: `
