@@ -77,8 +77,8 @@ const VerifyEmail = () => {
           },
           confirmButtonText: 'Login Here',
           willClose: () => {
-            // window.location.href = 'http://localhost:5173/login';
-            window.location.href = 'https://lmclub.vercel.app/login';
+            window.location.href = 'http://localhost:5173/login';
+            // window.location.href = 'https://lmclub.vercel.app/login';
             
           }
         });
