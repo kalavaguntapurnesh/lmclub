@@ -168,7 +168,7 @@ const TermsAndConditions = () => {
                                    </h1>
                                    <div className='ml-4'>
                                      <h1 className="mx-3 lg:text-lg text-sm text-[#43474e]">
-                                     Personal information collected through the APP / Website is subject to The Laoe Maom Group/ LM CLUB’s online privacy policy (the “Online Privacy Policy”), accessible here. By accessing the APP / Website, you consent to the collection, use, retention, disclosure and destruction of personal information as described in the Online Privacy Policy, as such policy may be amended from time to time in <a  className='hover:text-green-600 underline font-bold text-green-600' href='http://localhost:5173/privacy'> privacy</a> sole discretion.
+                                     Personal information collected through the APP / Website is subject to The Laoe Maom Group/ LM CLUB’s online privacy policy (the “Online Privacy Policy”), accessible here. By accessing the APP / Website, you consent to the collection, use, retention, disclosure and destruction of personal information as described in the Online Privacy Policy, as such policy may be amended from time to time in <a  className='hover:text-green-600 underline font-bold text-green-600' href='http://localhost:5173/privacy-policy'> privacy</a> sole discretion.
                                      </h1>
                                     </div>
                                 </div>

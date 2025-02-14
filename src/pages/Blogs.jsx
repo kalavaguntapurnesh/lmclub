@@ -59,14 +59,15 @@ const Blogs = () => {
 
                       <div className="text-xl font-bold">
                         <p>
-                        Tips for Maximizing Your Beehive Experience
+                        Handshake Button and its usage in Broadcast Widget
                         </p>
                       </div>
 
                       <div className="text-gray-500">
                         <p>
-                        Share more deals to earn points and help the community. 
-                        Stay updated, engage with others, and post your experiences!
+                        Use the Handshake Button to enroll businesses with a custom promo URL. 
+                        Share it online and build rapport with a Beehive compliment first!
+                        
                         </p>
                       </div>
                     </div>
@@ -87,14 +88,15 @@ const Blogs = () => {
 
                       <div className="text-xl font-bold">
                         <p>
-                        Handshake Button and its usage in Broadcast Widget
+                        
+                        Tips for Maximizing Your Beehive Experience
                         </p>
                       </div>
 
                       <div className="text-gray-500">
                         <p>
-                        Use the Handshake Button to enroll businesses with a custom promo URL. 
-                        Share it online and build rapport with a Beehive compliment first!
+                        Share more deals to earn points and help the community. 
+                        Stay updated, engage with others, and post your experiences!
                         </p>
                       </div>
                     </div>
