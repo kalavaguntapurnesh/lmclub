@@ -6,12 +6,20 @@ const RewardsTerms = () => {
   <div className="lg:pt-28 pt-16">
       <Navbar />
     <div className="max-w-6xl mx-auto p-6 text-gray-600">
-      
+    <section className="my-8 border border-gray-300 rounded p-6">
       <div className="flex flex-col items-center text-center mb-6">
         <img src="https://lmclub.club/wp-content/uploads/2024/11/6723ea8a67641_Image20241031153214.png" alt="Enroll Rewards" className="w-40 h-40 mb-4" />
-        <h1 className="text-3xl font-bold">Terms and Conditions</h1>
+        <h1 className="text-3xl font-bold"> Grow Terms and Conditions</h1>
       </div>
       
+      <div className="relative flex my-2 items-center mx-4">
+          <div className="flex-grow border-t border-gray-400"></div>
+          <span className="flex-shrink mx-4 text-gray-400 text-sm">
+              Effective from January 2023
+          </span>
+          <div className="flex-grow border-t border-gray-400"></div>
+       </div>
+
       <div className="text-left">
         <h2 className="text-2xl font-bold mb-4  text-green-600">LM Club Grow Rewards Terms and Conditions</h2>
         <p className="mb-6">
@@ -106,6 +114,8 @@ const RewardsTerms = () => {
 
         <p className="mt-4">For questions or support, contact us at <a href="mailto:support@lmclub.com" className="text-blue-600">support@lmclub.com</a>.</p>
       </div>
+      </section>
+
     </div>
     <Footer />
     </div>

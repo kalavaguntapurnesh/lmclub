@@ -39,11 +39,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/GrowTAC" element={<GrowTAC />}></Route>
-          <Route path="/NetworkTAC" element={<NetworkTAC />}></Route>
-          <Route path="/BeehiveTAC" element={<BeehiveTAC />}></Route>
-          <Route path="/EstoreTAC" element={<EstoreTAC />}></Route>
-          <Route path="/BroadcastTAC" element={<BroadcastTAC />}></Route>
+          <Route path="/grow-terms-and-conditions" element={<GrowTAC />}></Route>
+          <Route path="/network-terms-and-conditions" element={<NetworkTAC />}></Route>
+          <Route path="/beehive-terms-and-conditions" element={<BeehiveTAC />}></Route>
+          <Route path="/e-store-terms-and-conditions" element={<EstoreTAC />}></Route>
+          <Route path="/broadcast-terms-and-conditions" element={<BroadcastTAC />}></Route>
           <Route path="/contact-us" element={<Contact />}></Route>
           <Route path="/estore" element={<Estore />}></Route>
           <Route path="/beehive" element={<Beehive />}></Route>
