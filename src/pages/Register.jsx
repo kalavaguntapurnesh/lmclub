@@ -16,6 +16,7 @@ import Error from "../assets/error.png";
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
 // import { Country, State, City } from "country-state-city";
+import WhatsApp from "../components/WhatsApp";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -384,7 +385,7 @@ const Register = () => {
   return (
     <div>
       <Navbar />
-
+      <WhatsApp />
       <div className="pt-16">
         <div className="relative ">
           <div className="w-full">

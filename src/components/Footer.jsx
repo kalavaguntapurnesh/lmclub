@@ -298,7 +298,7 @@ const Footer = () => {
                       </li>
                       <li className=" flex items-start md:justify-start justify-center">
                         <a
-                          href="https://www.linkedin.com/company/laoe-maom/"
+                          href="/contact-us"
                           className="hover:text-footerHeading font-[400] text-secondaryColor no-underline text-[14px] leading-6 text-footerLinks text-center transition duration-300 ease-in-out"
                         >
                           Contact for Legal Inquiries

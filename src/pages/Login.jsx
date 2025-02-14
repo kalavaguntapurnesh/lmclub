@@ -23,6 +23,7 @@ import Swal from "sweetalert2";
 import success from "../assets/success.png";
 import Logo from "../assets/LMDark.webp";
 import Error from "../assets/error.png";
+import WhatsApp from "../components/WhatsApp";
 
 const Login = () => {
   // useEffect(() => {
@@ -243,6 +244,7 @@ const Login = () => {
   return (
     <div>
       <Navbar />
+      <WhatsApp/>
       <div className="pt-16">
         <div className="relative ">
           <div className="w-full">
