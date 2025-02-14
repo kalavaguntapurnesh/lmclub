@@ -15,7 +15,7 @@ import Beehive from "./pages/Beehive";
 import Network from "./pages/Network";
 import Grow from "./pages/Grow";
 import Broadcast from "./pages/Broadcast";
-import Events from './pages/Events';
+import Events from "./pages/Events";
 import Blogs from "./pages/Blogs";
 import VerifyEmail from "./pages/VerifyEmail";
 import OtpAndEmailVerification from "./pages/OtpAndEmailVerification";
@@ -26,50 +26,68 @@ import HandlePayment from "./pages/HandlePayment";
 import Success from "./pages/Success";
 import Failure from "./pages/Failure";
 import Videos from "./pages/Videos";
+import GrowTAC from "./pages/GrowTAC";
+import NetworkTAC from "./pages/NetworkTAC";
+import BeehiveTAC from "./pages/BeehiveTAC";
+import EstoreTAC from "./pages/EstoreTAC";
+import BroadcastTAC from "./pages/BroadcastTAC";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import RefundAndReturnPolicy from "./pages/RefundAndReturnPolicy";
 function App() {
   return (
     <CartProvider>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/GrowTAC" element={<GrowTAC />}></Route>
+          <Route path="/NetworkTAC" element={<NetworkTAC />}></Route>
+          <Route path="/BeehiveTAC" element={<BeehiveTAC />}></Route>
+          <Route path="/EstoreTAC" element={<EstoreTAC />}></Route>
+          <Route path="/BroadcastTAC" element={<BroadcastTAC />}></Route>
+          <Route path="/contact-us" element={<Contact />}></Route>
+          <Route path="/estore" element={<Estore />}></Route>
+          <Route path="/beehive" element={<Beehive />}></Route>
+          <Route path="/network" element={<Network />}></Route>
+          <Route path="/grow" element={<Grow />}></Route>
+          <Route path="/broadcast" element={<Broadcast />}></Route>
+          <Route path="/blogs" element={<Blogs />}></Route>
+          <Route path="/verify-email/:token" element={<VerifyEmail />} />
+          <Route
+            path="/otp-verification"
+            element={<OtpAndEmailVerification />}
+          ></Route>
 
-        <Route path="/contact-us" element={<Contact />}></Route>
-        <Route path="/estore" element={<Estore />}></Route>
-        <Route path="/beehive" element={<Beehive />}></Route>
-        <Route path="/network" element={<Network />}></Route>
-        <Route path="/grow" element={<Grow />}></Route>
-        <Route path="/broadcast" element={<Broadcast />}></Route>
-        <Route path="/blogs" element={<Blogs />}></Route>
-        <Route path="/verify-email/:token" element={<VerifyEmail />}/>
-        <Route path="/otp-verification" element={<OtpAndEmailVerification />}></Route>
-       
-        <Route path="/learn-about-us" element={<About />}></Route>
+          <Route path="/learn-about-us" element={<About />}></Route>
 
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/videos" element={<Videos />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/videos" element={<Videos />}></Route>
 
-        <Route path="/register" element={<Register />}></Route>
-        <Route path="/events" element={<Events />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/events" element={<Events />}></Route>
 
-        <Route path="/privacy-policy" element={<Privacy />}></Route>
+          <Route path="/privacy-policy" element={<Privacy />}></Route>
 
-        <Route path="/enroll-rewards" element={<Enroll_Rewards />}></Route>
-        <Route path="/rewards" element={<Rewards />}></Route>
-        <Route path="*" element={<PageNotFound />}></Route>
-        {/* <Route path="/products" element={<Products />}></Route> */}
-        <Route path="/pricing" element={<Pricing />}></Route>
-        <Route path="/dashboard" element={<Dashboard />}></Route>
-        <Route path="/selected-plan" element={<SelectedPlan />}></Route>
-        <Route path="/selected-plan/cart" element={<Cart />} />
-        <Route path="/payment" element={<HandlePayment />} />
-        <Route path="/payment-success" element={< Success/>} />
-        <Route path="/payment-failed" element={< Failure/>} />
-        <Route path="/terms-and-conditions" element={< TermsAndConditions/>} />
-        <Route path="/refund-and-return-policy" element={<RefundAndReturnPolicy />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path="/enroll-rewards" element={<Enroll_Rewards />}></Route>
+          <Route path="/rewards" element={<Rewards />}></Route>
+          <Route path="*" element={<PageNotFound />}></Route>
+          {/* <Route path="/products" element={<Products />}></Route> */}
+          <Route path="/pricing" element={<Pricing />}></Route>
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/selected-plan" element={<SelectedPlan />}></Route>
+          <Route path="/selected-plan/cart" element={<Cart />} />
+          <Route path="/payment" element={<HandlePayment />} />
+          <Route path="/payment-success" element={<Success />} />
+          <Route path="/payment-failed" element={<Failure />} />
+          <Route
+            path="/terms-and-conditions"
+            element={<TermsAndConditions />}
+          />
+          <Route
+            path="/refund-and-return-policy"
+            element={<RefundAndReturnPolicy />}
+          />
+        </Routes>
+      </BrowserRouter>
     </CartProvider>
   );
 }
