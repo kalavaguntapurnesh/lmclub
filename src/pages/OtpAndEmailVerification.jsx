@@ -89,130 +89,126 @@ const OtpAndEmailVerification = () => {
     setOtp(newOtp);
   };
 
-  // const verifySMS = async () => {
-  //   try {
-  //     // const response = await axios.post("http://localhost:9090/api/verify-otp", { phone: phoneNumber, otp });
-  //     const response = await axios.post("https://lmclub-backend.onrender.com/api/verify-otp", { phone: phoneNumber, otp });
-  //     if (response.status === 200) {
-  //       // Swal.fire({
-  //       //   icon: 'success',
-  //       //   title: 'Phone Verified',
-  //       //   text: 'Your phone number has been successfully verified.',
-  //       // })
-  //         Swal.fire({
-  //               html: `
-  //                   <div style="display: flex; flex-direction: column; align-items: center;">
-  //                       <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
-  //                           <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
-  //                           <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
-  //                               <span style="color: black;">LM</span>
-  //                               <span style="color: rgb(37, 218, 73);">Club</span>
-  //                           </h4>
-  //                       </div>
+  const verifySMS = async () => {
+    try {
+      const response = await axios.post("http://localhost:9090/api/verify-otp", { phone: phoneNumber, otp });
+      // const response = await axios.post("https://lmclub-backend.onrender.com/api/verify-otp", { phone: phoneNumber, otp });
+      if (response.status === 200) {
+        // Swal.fire({
+        //   icon: 'success',
+        //   title: 'Phone Verified',
+        //   text: 'Your phone number has been successfully verified.',
+        // })
+          Swal.fire({
+                html: `
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                            <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                            <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                                <span style="color: black;">LM</span>
+                                <span style="color: rgb(37, 218, 73);">Club</span>
+                            </h4>
+                        </div>
 
-  //                           <!-- Success Image -->
-  //                       <div style="margin-bottom: 20px;">
-  //                           <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
-  //                       </div>
+                            <!-- Success Image -->
+                        <div style="margin-bottom: 20px;">
+                            <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
+                        </div>
                                 
 
-  //                       <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
-  //                           <h1 style="font-size: 25px;">Your phone number has been successfully verified.</h1>
-  //                       </div>
-  //                   </div>
-  //               `,
-  //               customClass: {
-  //                 confirmButton: 'swal-custom-ok-button',
-  //               }
-  //             })
-  //       .then(() => {
-  //         setSmsVerified(true);
-  //       });
-  //     } else {
-  //       // Swal.fire({
-  //       //   icon: 'error',
-  //       //   title: 'Invalid OTP',
-  //       //   text: 'The OTP you entered is incorrect.',
-  //       // });
+                        <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
+                            <h1 style="font-size: 25px;">Your phone number has been successfully verified.</h1>
+                        </div>
+                    </div>
+                `,
+                customClass: {
+                  confirmButton: 'swal-custom-ok-button',
+                }
+              })
+        .then(() => {
+          setSmsVerified(true);
+        });
+      } else {
+        // Swal.fire({
+        //   icon: 'error',
+        //   title: 'Invalid OTP',
+        //   text: 'The OTP you entered is incorrect.',
+        // });
 
-  //       Swal.fire({
-  //           html: `
-  //               <div style="display: flex; flex-direction: column; align-items: center;">
-  //                   <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
-  //                       <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
-  //                       <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
-  //                           <span style="color: black;">LM</span>
-  //                           <span style="color: rgb(37, 218, 73);">Club</span>
-  //                       </h4>
-  //                   </div>
+        Swal.fire({
+            html: `
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                        <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                        <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                            <span style="color: black;">LM</span>
+                            <span style="color: rgb(37, 218, 73);">Club</span>
+                        </h4>
+                    </div>
 
-  //                       <!-- Success Image -->
-  //                   <div style="margin-bottom: 20px;">
-  //                       <img src="${Error}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
-  //                   </div>
+                        <!-- Success Image -->
+                    <div style="margin-bottom: 20px;">
+                        <img src="${Error}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
+                    </div>
                             
 
-  //                   <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
-  //                       <h1 style="font-size: 25px;">The OTP you entered is incorrect.</h1>
-  //                   </div>
-  //               </div>
-  //           `,
-  //           customClass: {
-  //             confirmButton: 'swal-custom-ok-button',
-  //           }
-  //         })
-  //     }
-  //   } catch (error) {
-  //   //   Swal.fire({
-  //   //     icon: 'error',
-  //   //     title: 'Error',
-  //   //     text: 'Something went wrong while verifying OTP.',
-  //   //   });
-  //   Swal.fire({
-  //       html: `
-  //           <div style="display: flex; flex-direction: column; align-items: center;">
-  //               <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
-  //                   <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
-  //                   <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
-  //                       <span style="color: black;">LM</span>
-  //                       <span style="color: rgb(37, 218, 73);">Club</span>
-  //                   </h4>
-  //               </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
+                        <h1 style="font-size: 25px;">The OTP you entered is incorrect.</h1>
+                    </div>
+                </div>
+            `,
+            customClass: {
+              confirmButton: 'swal-custom-ok-button',
+            }
+          })
+      }
+    } catch (error) {
+    //   Swal.fire({
+    //     icon: 'error',
+    //     title: 'Error',
+    //     text: 'Something went wrong while verifying OTP.',
+    //   });
+    Swal.fire({
+        html: `
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                    <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                    <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                        <span style="color: black;">LM</span>
+                        <span style="color: rgb(37, 218, 73);">Club</span>
+                    </h4>
+                </div>
 
-  //                   <!-- Success Image -->
-  //               <div style="margin-bottom: 20px;">
-  //                   <img src="${Error}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
-  //               </div>
+                    <!-- Success Image -->
+                <div style="margin-bottom: 20px;">
+                    <img src="${Error}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
+                </div>
                         
 
-  //               <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
-  //                   <h1 style="font-size: 25px;">Something went wrong while verifying OTP.</h1>
-  //               </div>
-  //           </div>
-  //       `,
-  //       customClass: {
-  //         confirmButton: 'swal-custom-ok-button',
-  //       }
-  //     })
-  //   }
-  // };
+                <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
+                    <h1 style="font-size: 25px;">Something went wrong while verifying OTP.</h1>
+                </div>
+            </div>
+        `,
+        customClass: {
+          confirmButton: 'swal-custom-ok-button',
+        }
+      })
+    }
+  };
 
   // Function to check both email and OTP verification status
   const checkVerificationStatus = () => {
-    // if (smsVerified && emailVerified) {
-    //   setIsLoginEnabled(true);  // Enable login button once both verifications are done
-    // }
-    if (emailVerified) {
-        setIsLoginEnabled(true);  // Enable login button once both verifications are done
-      }
-    
+    if (smsVerified && emailVerified) {
+      setIsLoginEnabled(true);  // Enable login button once both verifications are done
+    }
   };
 
   // Function to check email verification status
   const checkEmailVerification = async () => {
     try {
-      // const emailResponse = await axios.get(`http://localhost:9090/api/check-email-verification?email=${email}`);
-    const emailResponse = await axios.get(`https://lmclub-backend.onrender.com/api/check-email-verification?email=${email}`);
+      const emailResponse = await axios.get(`http://localhost:9090/api/check-email-verification?email=${email}`);
+    // const emailResponse = await axios.get(`https://lmclub-backend.onrender.com/api/check-email-verification?email=${email}`);
       setEmailVerified(emailResponse.data.verified);
       Swal.fire({
         html: `
@@ -278,13 +274,9 @@ const OtpAndEmailVerification = () => {
     checkEmailVerification();
   }, [email]);
 
-  // useEffect(() => {
-  //   checkVerificationStatus();  
-  // }, [smsVerified, emailVerified]); 
-
   useEffect(() => {
     checkVerificationStatus();  
-  }, [emailVerified]); 
+  }, [smsVerified, emailVerified]); 
 
 
   // 6 boxes 
@@ -305,14 +297,21 @@ const OtpAndEmailVerification = () => {
 
         <div className="space-y-4">
 
-          {/* <div className='w-[90%] mx-auto shadow-lg p-5 rounded-lg bg-gray-300'>
+          <div className='w-[90%] mx-auto shadow-lg p-5 rounded-lg bg-gray-300'>
             <h3 className="text-2xl font-semibold text-center ">SMS Verification</h3>
             <p className={`text-center text-lg ${smsVerified ? 'text-green-500' : 'text-red-500'}`}>
             <span className='text-gray-800 text-2xl font-bold'>Status : </span> {smsVerified ? 'Verified' : 'Pending'}
             </p>
             {!smsVerified && (
               <div className="mt-3">
-                
+                {/* <input
+                  type="text"
+                  value={otp}
+                  onChange={(e) => setOtp(e.target.value)}
+                  placeholder="Enter OTP"
+                  className="w-full p-3 mt-2 border border-gray-300 rounded-md"
+                /> */}
+                 {/* OTP Input */}
                 <OtpInput onOtpChange={handleOtpChange} />  
                 <div className='flex justify-end'>
                     <button
@@ -324,7 +323,7 @@ const OtpAndEmailVerification = () => {
                 </div>
               </div>
             )}
-          </div> */}
+          </div>
 
           {/* Email Verification */}
           <div className='w-[90%] mx-auto shadow-lg p-5 rounded-lg bg-gray-300'>

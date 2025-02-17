@@ -59,7 +59,7 @@ const VideoPlayer = () => {
                 <div className="flex justify-center items-center w-full">
                   <video
                     className="rounded-lg shadow-md w-[350px] h-[220px]"
-                    autoPlay
+                    // autoPlay
                     muted
                     loop
                     playsInline
@@ -133,7 +133,7 @@ const VideoPlayer = () => {
                 <div className="flex justify-center items-center w-full">
                   <video
                     className="rounded-lg shadow-md w-[350px] h-[220px]"
-                    autoPlay
+                    // autoPlay
                     muted
                     controls
                   >
