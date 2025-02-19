@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import Logo from "../assets/LMDark.webp";
+import { Link } from "react-router-dom";
 const public_stripe_key = "pk_test_51QMcn82NPQsjFaoTZ90xF9ORG1Gj4EdmGPiQAmSGbvVomOdnWBrwJV3BR9mCFbmQPFZPEsOZgqOglMvKR1Bff5ju00HjRNjRhp";
 
 const HandlePayment = () => {
@@ -206,11 +207,11 @@ const HandlePayment = () => {
           </button>
           
           <button
-            onClick={() => handleCheckout()}
+            // onClick={() => handleCheckout()}
             
             className="px-6 py-3 bg-green-600 text-white rounded-lg cursor-pointer hover:bg-green-700 transition"
           >
-            Pay
+           <Link to='/select-payment-method'>Pay</Link> 
           </button>
         </div>
     </div>

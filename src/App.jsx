@@ -33,6 +33,7 @@ import EstoreTAC from "./pages/EstoreTAC";
 import BroadcastTAC from "./pages/BroadcastTAC";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import RefundAndReturnPolicy from "./pages/RefundAndReturnPolicy";
+import PaymentMethods from "./pages/PaymentMethods";
 function App() {
   return (
     <CartProvider>
@@ -85,6 +86,10 @@ function App() {
           <Route
             path="/refund-and-return-policy"
             element={<RefundAndReturnPolicy />}
+          />
+          <Route
+            path="/select-payment-method"
+            element={<PaymentMethods />}
           />
         </Routes>
       </BrowserRouter>
