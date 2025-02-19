@@ -34,6 +34,8 @@ import BroadcastTAC from "./pages/BroadcastTAC";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import RefundAndReturnPolicy from "./pages/RefundAndReturnPolicy";
 import PaymentMethods from "./pages/PaymentMethods";
+import PayPalSuccessPage from "./pages/PayPalSuccessPage";
+
 function App() {
   return (
     <CartProvider>
@@ -90,6 +92,10 @@ function App() {
           <Route
             path="/select-payment-method"
             element={<PaymentMethods />}
+          />
+          <Route
+            path="/complete-order"
+            element={<PayPalSuccessPage />}
           />
         </Routes>
       </BrowserRouter>

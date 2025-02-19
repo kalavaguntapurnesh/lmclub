@@ -96,7 +96,7 @@ const NavBar = () => {
                 : "font-semibold text-green-500"
             }`}
           >
-            <span className="relative z-10">Join Now</span>
+            <span className="relative z-10">Sign Up / Sign In </span>
           </a>
         </div>
 

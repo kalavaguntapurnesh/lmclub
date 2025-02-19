@@ -120,23 +120,12 @@ const PaymentMethods = () => {
             </button>  
             <button onClick={handleCheckout}>
                 <div className='flex border border-gray-400 border-1 rounded-md  cursor-pointer hover:border-green-600 hover:border-2 items-center gap-6'>
-                    <img src={mastercard} alt="mastercard" className='w-[100px] h-[100px]'/> 
-                    <h1 className='text-2xl font-semibold'>MasterCard</h1>
+                    <img src="https://st.depositphotos.com/1980975/2010/v/450/depositphotos_20105985-stock-illustration-vector-credit-cards-isolated.jpg" alt="mastercard" className='w-[100px] h-[100px]'/> 
+                    <h1 className='text-2xl font-semibold'>Credit/Debit Cards</h1>
                     
                 </div>   
             </button>
-            <button onClick={handleCheckout}>
-                <div className='flex border border-gray-400 border-1 rounded-md cursor-pointer hover:border-green-600 hover:border-2 items-center gap-6'>
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/020/975/567/small/visa-logo-visa-icon-transparent-free-png.png" alt="paypal" className='w-[100px] h-[100px]'/> 
-                    <h1 className='text-2xl font-semibold'>VisaCard</h1>
-                </div>   
-            </button>
-            <button onClick={handleCheckout}>
-                <div className='flex border border-gray-400 border-1 rounded-md cursor-pointer hover:border-green-600 hover:border-2 items-center gap-6'>
-                    <img src="https://www.pngplay.com/wp-content/uploads/9/American-Express-Logo-PNG-Pic-Background.png" alt="paypal" className='w-[100px] h-[100px] ml-3'/> 
-                    <h1 className='text-2xl font-semibold'> American Express</h1>
-                </div> 
-            </button>   
+            
         </div>
         <div className="flex justify-between w-full mt-6">
           <button

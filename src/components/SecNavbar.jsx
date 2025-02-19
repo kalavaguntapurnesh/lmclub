@@ -94,7 +94,7 @@ const SecNavbar = () => {
                 : "font-semibold text-white"
             }`}
           >
-            <span className="relative z-10">Join Now</span>
+            <span className="relative z-10">Sign Up / Sign In </span>
           </a>
         </div>
 
