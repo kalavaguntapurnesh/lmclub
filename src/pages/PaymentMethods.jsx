@@ -55,8 +55,8 @@ const PaymentMethods = () => {
       
           console.log("Sending cart items:", JSON.stringify(cartItems, null, 2)); 
       
-          const response = await fetch("http://localhost:9090/create-stripe-session", {
-            // const response = await fetch("https://lmclub-backend.onrender.com/create-stripe-session", {
+          // const response = await fetch("http://localhost:9090/create-stripe-session", {
+            const response = await fetch("https://lmclub-backend.onrender.com/create-stripe-session", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(cartItems),
@@ -84,7 +84,8 @@ const PaymentMethods = () => {
         try {
           console.log("Sending cartItems:", cartItems);
       
-          const response = await fetch("http://localhost:9090/pay", {
+          // const response = await fetch("http://localhost:9090/pay", {
+            const response = await fetch("https://lmclub-backend.onrender.com/pay", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ line_items: cartItems }), 

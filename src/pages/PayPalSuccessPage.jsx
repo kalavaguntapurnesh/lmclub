@@ -19,7 +19,8 @@ const PayPalSuccessPage = () => {
     const fetchPaymentDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:9090/complete-order?token=${token}&PayerID=${payerID}`
+        //   `http://localhost:9090/complete-order?token=${token}&PayerID=${payerID}`
+          `https://lmclub-backend.onrender.com/complete-order?token=${token}&PayerID=${payerID}`
         );
         setPaymentDetails(response.data);
       } catch (error) {

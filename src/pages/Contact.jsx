@@ -59,8 +59,8 @@ const Contact = () => {
     console.log("Sending Data:", formData);
     
     try {
-      const response = await axios.post("http://localhost:9090/api/contact-details", formData, {
-        // const response = await axios.post("https://lmclub-backend.onrender.com/api/contact-details", formData, {
+      // const response = await axios.post("http://localhost:9090/api/contact-details", formData, {
+        const response = await axios.post("https://lmclub-backend.onrender.com/api/contact-details", formData, {
         headers: {
           "Content-Type": "application/json",
         },
