@@ -226,33 +226,7 @@ const SecNavbar = () => {
                     exit={{ opacity: 0, height: 0 }}
                     className="mt-6 grid grid-cols-2 gap-4"
                   >
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a href="/grow" className="block text-sm text-gray-700">
-                        Grow
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a
-                        href="/beehive"
-                        className="block text-sm text-gray-700"
-                      >
-                        Beehive
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a
-                        href="/broadcast"
-                        className="block text-sm text-gray-700"
-                      >
-                        Broadcast
-                      </a>
-                    </li>
-                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
-                      <a href="/estore" className="block text-sm text-gray-700">
-                        Estore
-                      </a>
-                    </li>
-
+                    
                     <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
                       <a
                         href="/network"
@@ -261,6 +235,37 @@ const SecNavbar = () => {
                         Network
                       </a>
                     </li>
+
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
+                      <a
+                        href="/beehive"
+                        className="block text-sm text-gray-700"
+                      >
+                        Beehive
+                      </a>
+                    </li>
+
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
+                      <a
+                        href="/broadcast"
+                        className="block text-sm text-gray-700"
+                      >
+                        Broadcast
+                      </a>
+                    </li>
+
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
+                      <a href="/estore" className="block text-sm text-gray-700">
+                        Estore
+                      </a>
+                    </li>
+
+                    <li className="text-navGray p-2 rounded bg-[#e6e6e6] text-center">
+                      <a href="/grow" className="block text-sm text-gray-700">
+                        Grow
+                      </a>
+                    </li>
+                    
                   </motion.ul>
                 )}
               </AnimatePresence>
@@ -569,22 +574,22 @@ const Nub = ({ selected }) => {
 const WidgetsBar = () => {
   return (
     <div className="grid grid-cols-2 gap-4 p-4 ">
+      
       <a
-        href="/grow"
+        href="/network"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <div className="flex flex-col items-start gap-3">
-          <img src={enroll} alt="network" className="w-10 h-10" />
+          <img src={network} alt="network" className="w-10 h-10" />
           <div className="flex flex-col">
-            <h1 className="text-[#1a1a1a] font-semibold">Grow</h1>
+            <h1 className="text-[#1a1a1a] font-semibold">Network</h1>
             <p className="text-gray-800 text-sm">
-              Enroll earn rewards for helping our community to expand. T & C
-              apply.
+              Activate Network today to connect with like-minded individuals
             </p>
           </div>
         </div>
       </a>
-
+      
       <a
         href="/beehive"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
@@ -633,20 +638,23 @@ const WidgetsBar = () => {
         </div>
       </a>
 
+    
       <a
-        href="/network"
+        href="/grow"
         className="space-y-1 transition duration-1000 ease-in-out p-2 hover:bg-[#e6e6e6] rounded-lg"
       >
         <div className="flex flex-col items-start gap-3">
-          <img src={network} alt="network" className="w-10 h-10" />
+          <img src={enroll} alt="network" className="w-10 h-10" />
           <div className="flex flex-col">
-            <h1 className="text-[#1a1a1a] font-semibold">Network</h1>
+            <h1 className="text-[#1a1a1a] font-semibold">Grow</h1>
             <p className="text-gray-800 text-sm">
-              Activate Network today to connect with like-minded individuals
+              Enroll earn rewards for helping our community to expand. T & C
+              apply.
             </p>
           </div>
         </div>
       </a>
+
     </div>
   );
 };
