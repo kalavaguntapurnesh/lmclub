@@ -46,7 +46,12 @@ const Login = () => {
   //     setType("password");
   //   }
   // };
-
+  const [userType, setUserType] = useState("consumer");
+  const handleUserTypeChange = (type) => {
+    setUserType(type);
+    navigate(type === "consumer" ? "/login" : "/organisation-login");
+  };
+  console.log(userType);
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
@@ -82,6 +87,7 @@ const Login = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -254,9 +260,29 @@ const Login = () => {
                   <div className="flex justify-center items-start">
                     <div className="w-[100%] bg-white rounded shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] max-w-md">
                       <div className="p-6 space-y-4 md:space-y-4">
+                        
                         <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-footerLinks md:text-2xl ">
                           Log in to LM Club
                         </h1>
+                         {/* User Type Selection Buttons */}
+                         <div className="flex justify-between gap-4 m-2">
+                          <button
+                            className={`px-4 py-2 rounded-md ${
+                              userType === "consumer" ? "bg-green-500 text-white" : "bg-gray-300"
+                            }`}
+                            onClick={() => handleUserTypeChange("consumer")}
+                          >
+                            Consumer
+                          </button>
+                          <button
+                            className={`px-4 py-2 rounded-md ${
+                              userType === "organization" ? "bg-green-500 text-white" : "bg-gray-300"
+                            }`}
+                            onClick={() => handleUserTypeChange("organization")}
+                          >
+                            Organization User
+                          </button>
+                        </div>
                         <form
                           className="space-y-4 md:space-y-6"
                           onSubmit={handleSubmit}
@@ -367,6 +393,7 @@ const Login = () => {
                             </a>
                           </p>
                         </form>
+
                       </div>
                     </div>
                   </div>

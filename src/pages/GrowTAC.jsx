@@ -1,6 +1,9 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import LaptopRewards from "../assets/LaptopRewards.png";
+import enroll from "../assets/enroll.webp";
+
 const RewardsTerms = () => {
   return (
   <div className="lg:pt-28 pt-16">
@@ -8,7 +11,7 @@ const RewardsTerms = () => {
     <div className="max-w-6xl mx-auto p-6 text-gray-600">
     <section className="my-8 border border-gray-300 rounded p-6">
       <div className="flex flex-col items-center text-center mb-6">
-        <img src="https://lmclub.club/wp-content/uploads/2024/11/6723ea8a67641_Image20241031153214.png" alt="Enroll Rewards" className="w-40 h-40 mb-4" />
+        <img src={enroll} alt="Enroll Rewards" className="w-24 h-24 mb-4" />
         <h1 className="text-3xl font-bold"> Grow Terms and Conditions</h1>
       </div>
       

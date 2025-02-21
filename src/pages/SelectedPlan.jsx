@@ -101,7 +101,7 @@ const SelectedPlan = () => {
     }
   };
 
-  const widgetImages = [enroll, beehive, broadcast, estore, network];
+  const widgetImages = [network, beehive, broadcast,  estore , enroll ];
 
   // extracting registration fee from description 
 

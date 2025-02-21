@@ -18,7 +18,9 @@ import Broadcast from "./pages/Broadcast";
 import Events from "./pages/Events";
 import Blogs from "./pages/Blogs";
 import VerifyEmail from "./pages/VerifyEmail";
+import VerifyEmailForBussinessUser from "./pages/VerifyEmailForBussinessUser";
 import OtpAndEmailVerification from "./pages/OtpAndEmailVerification";
+import OtpAndEmailVerificationForBussinessUser from "./pages/OtpAndEmailVerificationForBussinessUser";
 import SelectedPlan from "./pages/SelectedPlan";
 import Cart from "./pages/Cart";
 import CartProvider from "./context/CartContext";
@@ -35,7 +37,8 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import RefundAndReturnPolicy from "./pages/RefundAndReturnPolicy";
 import PaymentMethods from "./pages/PaymentMethods";
 import PayPalSuccessPage from "./pages/PayPalSuccessPage";
-
+import OrganisationRegister from "./pages/OrganisationRegister";
+import OrganisationLogin from "./pages/OrganisationLogin";
 function App() {
   return (
     <CartProvider>
@@ -55,10 +58,17 @@ function App() {
           <Route path="/broadcast" element={<Broadcast />}></Route>
           <Route path="/blogs" element={<Blogs />}></Route>
           <Route path="/verify-email/:token" element={<VerifyEmail />} />
+          <Route path="/verify-bussiness-email/:token" element={<VerifyEmailForBussinessUser />} />
           <Route
             path="/otp-verification"
             element={<OtpAndEmailVerification />}
           ></Route>
+
+          <Route
+            path="/otp-verification-for-bussiness"
+            element={<OtpAndEmailVerificationForBussinessUser />}
+          ></Route>
+
 
           <Route path="/learn-about-us" element={<About />}></Route>
 
@@ -97,6 +107,15 @@ function App() {
             path="/complete-order"
             element={<PayPalSuccessPage />}
           />
+          <Route
+            path="/organisation-register"
+            element={<OrganisationRegister />}
+          />
+          <Route
+            path="/organisation-login"
+            element={<OrganisationLogin />}
+          />
+          
         </Routes>
       </BrowserRouter>
     </CartProvider>

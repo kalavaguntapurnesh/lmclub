@@ -18,251 +18,344 @@ import Select from "react-select";
 // import { Country, State, City } from "country-state-city";
 import WhatsApp from "../components/WhatsApp";
 
-const Register = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [street, setStreet] = useState("");
-  const [referalcode, setReferalCode] = useState("");
-  const [confirmpassword, setConfirmPassword] = useState("");
-  // const [state, setState] = useState("");
-  // const [city, setCity] = useState("");
-  const [zipcode, setZipCode] = useState("");
-  const [verified, setVerified] = useState(false);
-  const navigate = useNavigate();
-  const [currentImage, setCurrentImage] = useState(0);
+const OrganisationRegister = () => {
 
-
-   const [userType, setUserType] = useState("consumer");
-    const handleUserTypeChange = (type) => {
-      setUserType(type);
-      navigate(type === "consumer" ? "/register" : "/organisation-register");
+    const [bussinessEmail, setBussinessEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [username, setUsername] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [street, setStreet] = useState("");
+    const [referalcode, setReferalCode] = useState("");
+    const [confirmpassword, setConfirmPassword] = useState("");
+    const [bussinessName, setBussinessName] = useState("");
+    const [bussinessType, setBussinessType] = useState("");
+    // const [state, setState] = useState("");
+    // const [city, setCity] = useState("");
+    const [zipcode, setZipCode] = useState("");
+    const [verified, setVerified] = useState(false);
+    const navigate = useNavigate();
+    const [currentImage, setCurrentImage] = useState(0);
+  
+  
+    const [userType, setUserType] = useState("organization");
+        const handleUserTypeChange = (type) => {
+          setUserType(type);
+          navigate(type === "consumer" ? "/register" : "/organisation-register");
+        };
+        console.log(userType);
+  
+    // automatically populating city, state, zip code
+  
+    // const [states, setStates] = useState([]); // List of states
+    // const [cities, setCities] = useState([]); // List of cities
+  
+    // const countryCode = "US"; // Assuming country is US
+    // // Fetch states on component mount
+    // useEffect(() => {
+    //   const statesData = State.getStatesOfCountry(countryCode);
+    //   console.log("Fetched States:", statesData); // Log the states data
+    //   setStates(statesData);
+    // }, []);
+  
+    // Fetch cities based on selected state
+    // useEffect(() => {
+    //   if (state) {
+    //     console.log("Selected State:", state); // Log selected state
+    //     const citiesData = City.getCitiesOfState(countryCode, state);
+    //     console.log("Fetched Cities for State:", citiesData); // Log fetched cities
+    //     setCities(citiesData);
+    //     setCity(""); // Reset city when state changes
+    //     setZipCode(""); // Reset zip code when state changes
+    //   }
+    // }, [state]);
+  
+    // Create select options for states
+    // const stateOptions = states.map((state) => ({
+    //   value: state.isoCode,
+    //   label: state.name,
+    // }));
+  
+    // // Create select options for cities
+    // const cityOptions = cities.map((city) => ({
+    //   value: city.id,
+    //   label: city.name,
+    // }));
+  
+    // // Handle city selection
+    // const handleCityChange = (selectedOption) => {
+    //   console.log("Selected City:", selectedOption); // Log the selected city
+    //   setCity(selectedOption?.label || ""); // Set the selected city value
+    // };
+  
+    const images = [
+      {
+        src: "https://images.pexels.com/photos/4484075/pexels-photo-4484075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        label: "Image One",
+        name: "Jonathan Kite",
+        role: "Business Manager",
+        review:
+          "LM Club simplifies the process of networking and using this application really made me win rewards.",
+      },
+      {
+        src: "https://images.pexels.com/photos/8101727/pexels-photo-8101727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        label: "Image Three",
+        name: "Hugh Jackman",
+        role: "Restaurant Chef",
+        review:
+          "Thanks to LM Club, connecting with professionals is seamless, and I got rewarded too with Amazon gift cards.",
+      },
+      {
+        src: "https://images.pexels.com/photos/936043/pexels-photo-936043.jpeg?cs=srgb&dl=pexels-nappy-936043.jpg&fm=jpg",
+        label: "Image Two",
+        name: "Kate Dennings",
+        role: "Software Architect",
+        review:
+          "LM Club streamlined my networking experience, and I even got rewarded along the way!",
+      },
+    ];
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentImage((prev) => (prev + 1) % images.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }, []);
+  
+    const handleCaptcha = (value) => {
+      console.log("Captcha value:", value);
+      setVerified(true); // This will be true once reCAPTCHA is successfully completed
     };
-    console.log(userType);
-
-
-  // automatically populating city, state, zip code
-
-  // const [states, setStates] = useState([]); // List of states
-  // const [cities, setCities] = useState([]); // List of cities
-
-  // const countryCode = "US"; // Assuming country is US
-  // // Fetch states on component mount
-  // useEffect(() => {
-  //   const statesData = State.getStatesOfCountry(countryCode);
-  //   console.log("Fetched States:", statesData); // Log the states data
-  //   setStates(statesData);
-  // }, []);
-
-  // Fetch cities based on selected state
-  // useEffect(() => {
-  //   if (state) {
-  //     console.log("Selected State:", state); // Log selected state
-  //     const citiesData = City.getCitiesOfState(countryCode, state);
-  //     console.log("Fetched Cities for State:", citiesData); // Log fetched cities
-  //     setCities(citiesData);
-  //     setCity(""); // Reset city when state changes
-  //     setZipCode(""); // Reset zip code when state changes
-  //   }
-  // }, [state]);
-
-  // Create select options for states
-  // const stateOptions = states.map((state) => ({
-  //   value: state.isoCode,
-  //   label: state.name,
-  // }));
-
-  // // Create select options for cities
-  // const cityOptions = cities.map((city) => ({
-  //   value: city.id,
-  //   label: city.name,
-  // }));
-
-  // // Handle city selection
-  // const handleCityChange = (selectedOption) => {
-  //   console.log("Selected City:", selectedOption); // Log the selected city
-  //   setCity(selectedOption?.label || ""); // Set the selected city value
-  // };
-
-  const images = [
-    {
-      src: "https://images.pexels.com/photos/4484075/pexels-photo-4484075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      label: "Image One",
-      name: "Jonathan Kite",
-      role: "Business Manager",
-      review:
-        "LM Club simplifies the process of networking and using this application really made me win rewards.",
-    },
-    {
-      src: "https://images.pexels.com/photos/8101727/pexels-photo-8101727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      label: "Image Three",
-      name: "Hugh Jackman",
-      role: "Restaurant Chef",
-      review:
-        "Thanks to LM Club, connecting with professionals is seamless, and I got rewarded too with Amazon gift cards.",
-    },
-    {
-      src: "https://images.pexels.com/photos/936043/pexels-photo-936043.jpeg?cs=srgb&dl=pexels-nappy-936043.jpg&fm=jpg",
-      label: "Image Two",
-      name: "Kate Dennings",
-      role: "Software Architect",
-      review:
-        "LM Club streamlined my networking experience, and I even got rewarded along the way!",
-    },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleCaptcha = (value) => {
-    console.log("Captcha value:", value);
-    setVerified(true); // This will be true once reCAPTCHA is successfully completed
-  };
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   if (verified) {
-  //     // Proceed with form submission
-  //     console.log("Form submitted!");
-  //   } else {
-  //     alert("Please complete the CAPTCHA!");
-  //   }
-  // };
-
-  const sendOTP = async () => {
-    try {
-      // const response = await axios.post("http://localhost:9090/api/send-otp", { phone: phoneNumber });
-      const response = await axios.post("https://lmclub-backend.onrender.com/api/send-otp",{ phone: phoneNumber });
-      if (response.status === 200) {
-        Swal.fire({
-          html: `
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
-                    <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
-                    <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
-                        <span style="color: black;">LM</span>
-                        <span style="color: rgb(37, 218, 73);">Club</span>
-                    </h4>
-                </div>
-                <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
-                    <h1 style="font-size: 25px;">OTP Sent!</h1>
-                </div>
-            </div>
-        `,
-          customClass: {
-            confirmButton: "swal-custom-ok-button",
-          },
-        });
-      } else {
+  
+    // const handleSubmit = (event) => {
+    //   event.preventDefault();
+    //   if (verified) {
+    //     // Proceed with form submission
+    //     console.log("Form submitted!");
+    //   } else {
+    //     alert("Please complete the CAPTCHA!");
+    //   }
+    // };
+  
+    const sendOTP = async () => {
+      try {
+        // const response = await axios.post("http://localhost:9090/api/send-otp", { phone: phoneNumber });
+        const response = await axios.post("https://lmclub-backend.onrender.com/api/send-otp",{ phone: phoneNumber });
+        if (response.status === 200) {
+          Swal.fire({
+            html: `
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                  <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                      <img src="${Logo}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                      <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                          <span style="color: black;">LM</span>
+                          <span style="color: rgb(37, 218, 73);">Club</span>
+                      </h4>
+                  </div>
+                  <div style="display: flex; flex-direction: column; align-items: center; gap:20px">     
+                      <h1 style="font-size: 25px;">OTP Sent!</h1>
+                  </div>
+              </div>
+          `,
+            customClass: {
+              confirmButton: "swal-custom-ok-button",
+            },
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "OTP Error",
+            text: "Failed to send OTP, please try again.",
+          });
+        }
+      } catch (error) {
         Swal.fire({
           icon: "error",
-          title: "OTP Error",
-          text: "Failed to send OTP, please try again.",
+          title: "Error",
+          text: "Something went wrong while sending OTP.",
         });
       }
-    } catch (error) {
-      Swal.fire({
-        icon: "error",
-        title: "Error",
-        text: "Something went wrong while sending OTP.",
-      });
-    }
-  };
-
-  const [isChecked, setIsChecked] = useState(false);
-  const handleSubmit = async (event) => {
-    const style = document.createElement("style");
-    style.innerHTML = `
-    .swal-custom-ok-button {
-      background-color:rgb(27, 202, 103); /* Custom color */
-      color:white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-    }
-
-    .swal-custom-ok-button:hover {
-      background-color:rgb(18, 91, 25); /* Hover color */
-    }
-  `;
-    document.head.appendChild(style);
-
-    event.preventDefault();
-    if (verified) {
-      if (!isChecked) {
+    };
+  
+    const [isChecked, setIsChecked] = useState(false);
+    const handleSubmit = async (event) => {
+      const style = document.createElement("style");
+      style.innerHTML = `
+      .swal-custom-ok-button {
+        background-color:rgb(27, 202, 103); /* Custom color */
+        color:white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+  
+      .swal-custom-ok-button:hover {
+        background-color:rgb(18, 91, 25); /* Hover color */
+      }
+    `;
+      document.head.appendChild(style);
+  
+      event.preventDefault();
+      if (verified) {
+        if (!isChecked) {
+            
+               Swal.fire({
+                        html: `
+                            <div style="display: flex; flex-direction: column; align-items: center;">
+                                 <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                                     <img src="${Logo}" alt="Logo" 
+                                          style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                                                        
+                                           <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                                               <span style="color: black;">LM</span>
+                                               <span style="color: rgb(37, 218, 73);">Club</span>
+                                           </h4>
+                                 </div>
+                          
+                                <div style="text-align: center; font-size: 22px; font-weight: bold; color: #333; margin: 30px;">
+                                 <p>Please accept the terms before proceeding ...</p>
+                               </div> 
+                            </div>
+                                     `,
+                        customClass: {
+                          confirmButton: "swal-custom-ok-button",
+                        },
+                      });
+              return;
+            }
+        console.log("Form submitted!");
+        console.log(bussinessEmail);
+        console.log(password);
+        console.log(username);
+        console.log(phoneNumber);
+        console.log(street);
+        console.log(referalcode);
+        console.log(confirmpassword);
+  
+        console.log(bussinessName);
+        console.log(bussinessType);
+        // console.log(city);
+        // console.log(zipcode);
+        // const response = await axios.post("http://localhost:9090/api/bussinessUserRegistration",{
+        const response = await axios.post("https://lmclub-backend.onrender.com/api/bussinessUserRegistration", {
+            bussinessEmail,
+            password,
+            username,
+            phoneNumber,
+            street,
+            referalcode,
+            confirmpassword,
+            bussinessName,
+            bussinessType
+            // state,
+            // city,
+            // zipcode,
+          })
+          .then((response) => {
+            // dispatch(hideLoading());
+            if (response.status === 201) {
+              const verifyMail = response.data.newUser.bussinessEmail;
+              const partialEmail = verifyMail.replace(
+                /(\w{3})[\w.-]+@([\w.]+\w)/,
+                "$1***@$2"
+              );
+              // Swal.fire({
+              //   title: "Registration Success",
+              //   text:
+              //     "Check your email " +
+              //     partialEmail +
+              //     " and verify it to proceed further.",
+              //   icon: "success",
+              // });
+  
+              Swal.fire({
+                html: `
+                  <div style="display: flex; flex-direction: column; align-items: center;">
+                      
+                      <!-- Logo + Title -->
+                      <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                          <img src="${Logo}" alt="Logo" 
+                              style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                          
+                          <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                              <span style="color: black;">LM</span>
+                              <span style="color: rgb(37, 218, 73);">Club</span>
+                          </h4>
+                      </div>
           
-             Swal.fire({
-                      html: `
-                          <div style="display: flex; flex-direction: column; align-items: center;">
-                               <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
-                                   <img src="${Logo}" alt="Logo" 
-                                        style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
-                                                      
-                                         <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
-                                             <span style="color: black;">LM</span>
-                                             <span style="color: rgb(37, 218, 73);">Club</span>
-                                         </h4>
-                               </div>
+                      <!-- Success Image -->
+                      <div style="margin-bottom: 20px;">
+                          <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
+                      </div>
+          
+                      <!-- Registration Success Message -->
+                      <div style="width: 100%; text-align: center; ">
+                          <h1 style="margin: 0; font-size: 25px;">Registration Successful</h1>
+                          <p style="margin: 10px 0; font-size: 16px; color: #555;">
+                              Check your email <b>${partialEmail}</b> and verify it to proceed further.
+                          </p>
+                      </div>
+                  </div>
+              `,
+                customClass: {
+                  confirmButton: "swal-custom-ok-button",
+                },
+              });
+  
+            //   sendOTP();
+            //   navigate("/otp-verification-for-bussiness", { state: { bussinessEmail, phoneNumber } });
+              navigate("/login");
+            } else if (response.data.message === "User Already Exists") {
+              //    Swal.fire({
+              //   icon: "error",
+              //   title: "Oops...",
+              //   text: "User already Exits. Please Login",
+              // });
+  
+              Swal.fire({
+                html: `
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    
+                    <!-- Logo + Title -->
+                    <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                        <img src="${Logo}" alt="Logo" 
+                            style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
                         
-                              <div style="text-align: center; font-size: 22px; font-weight: bold; color: #333; margin: 30px;">
-                               <p>Please accept the terms before proceeding ...</p>
-                             </div> 
-                          </div>
-                                   `,
-                      customClass: {
-                        confirmButton: "swal-custom-ok-button",
-                      },
-                    });
-            return;
-          }
-      console.log("Form submitted!");
-      console.log(email);
-      console.log(password);
-      console.log(username);
-      console.log(phoneNumber);
-      console.log(street);
-      console.log(referalcode);
-      console.log(confirmpassword);
-
-      // console.log(state);
-      // console.log(city);
-      // console.log(zipcode);
-      // const response = await axios.post("http://localhost:9090/api/registerUser",{
-      const response = await axios.post("https://lmclub-backend.onrender.com/api/registerUser", {
-          email,
-          password,
-          username,
-          phoneNumber,
-          street,
-          referalcode,
-          confirmpassword,
-          // state,
-          // city,
-          // zipcode,
-        })
-        .then((response) => {
-          // dispatch(hideLoading());
-          if (response.status === 201) {
-            const verifyMail = response.data.newUser.email;
-            const partialEmail = verifyMail.replace(
-              /(\w{3})[\w.-]+@([\w.]+\w)/,
-              "$1***@$2"
-            );
+                        <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                            <span style="color: black;">LM</span>
+                            <span style="color: rgb(37, 218, 73);">Club</span>
+                        </h4>
+                    </div>
+        
+                    <!-- Success Image -->
+                    <div style="margin-bottom: 20px;">
+                        <img src="${Error}" alt="Error" style="width: 50px; height: 50px; margin: 0 10px;" />
+                    </div>
+        
+                   
+                    <div style="width: 100%; text-align: center; ">
+                        <h1 style="margin: 0; font-size: 25px;"> Error! While Creating Account</h1>
+                        <p style="margin: 10px 0; font-size: 16px; color: #555;">
+                            User already Exits. Please Login
+                        </p>
+                    </div>
+                </div>
+            `,
+                customClass: {
+                  confirmButton: "swal-custom-ok-button",
+                },
+              });
+            }
+          })
+          .catch((error) => {
+            // dispatch(hideLoading());
+            console.log(error);
             // Swal.fire({
-            //   title: "Registration Success",
-            //   text:
-            //     "Check your email " +
-            //     partialEmail +
-            //     " and verify it to proceed further.",
-            //   icon: "success",
+            //   icon: "error",
+            //   title: "Oops...",
+            //   text: "Something went wrong!",
             // });
-
+  
             Swal.fire({
               html: `
                 <div style="display: flex; flex-direction: column; align-items: center;">
@@ -280,14 +373,14 @@ const Register = () => {
         
                     <!-- Success Image -->
                     <div style="margin-bottom: 20px;">
-                        <img src="${success}" alt="Success" style="width: 50px; height: 50px; margin: 0 10px;" />
+                        <img src="${Error}" alt="Error" style="width: 50px; height: 50px; margin: 0 10px;" />
                     </div>
         
                     <!-- Registration Success Message -->
-                    <div style="width: 100%; text-align: center; ">
-                        <h1 style="margin: 0; font-size: 25px;">Registration Successful</h1>
+                    <div style="width: 100%; text-align: center;;">
+                        <h1 style="margin: 0; font-size: 25px;"> Error! While Creating Account</h1>
                         <p style="margin: 10px 0; font-size: 16px; color: #555;">
-                            Check your email <b>${partialEmail}</b> and verify it to proceed further.
+                            Something went wrong!
                         </p>
                     </div>
                 </div>
@@ -296,100 +389,14 @@ const Register = () => {
                 confirmButton: "swal-custom-ok-button",
               },
             });
-
-            sendOTP();
-            navigate("/otp-verification", { state: { email, phoneNumber } });
-          } else if (response.data.message === "User Already Exists") {
-            //    Swal.fire({
-            //   icon: "error",
-            //   title: "Oops...",
-            //   text: "User already Exits. Please Login",
-            // });
-
-            Swal.fire({
-              html: `
-              <div style="display: flex; flex-direction: column; align-items: center;">
-                  
-                  <!-- Logo + Title -->
-                  <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
-                      <img src="${Logo}" alt="Logo" 
-                          style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
-                      
-                      <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
-                          <span style="color: black;">LM</span>
-                          <span style="color: rgb(37, 218, 73);">Club</span>
-                      </h4>
-                  </div>
-      
-                  <!-- Success Image -->
-                  <div style="margin-bottom: 20px;">
-                      <img src="${Error}" alt="Error" style="width: 50px; height: 50px; margin: 0 10px;" />
-                  </div>
-      
-                 
-                  <div style="width: 100%; text-align: center; ">
-                      <h1 style="margin: 0; font-size: 25px;"> Error! While Creating Account</h1>
-                      <p style="margin: 10px 0; font-size: 16px; color: #555;">
-                          User already Exits. Please Login
-                      </p>
-                  </div>
-              </div>
-          `,
-              customClass: {
-                confirmButton: "swal-custom-ok-button",
-              },
-            });
-          }
-        })
-        .catch((error) => {
-          // dispatch(hideLoading());
-          console.log(error);
-          // Swal.fire({
-          //   icon: "error",
-          //   title: "Oops...",
-          //   text: "Something went wrong!",
-          // });
-
-          Swal.fire({
-            html: `
-              <div style="display: flex; flex-direction: column; align-items: center;">
-                  
-                  <!-- Logo + Title -->
-                  <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
-                      <img src="${Logo}" alt="Logo" 
-                          style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
-                      
-                      <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
-                          <span style="color: black;">LM</span>
-                          <span style="color: rgb(37, 218, 73);">Club</span>
-                      </h4>
-                  </div>
-      
-                  <!-- Success Image -->
-                  <div style="margin-bottom: 20px;">
-                      <img src="${Error}" alt="Error" style="width: 50px; height: 50px; margin: 0 10px;" />
-                  </div>
-      
-                  <!-- Registration Success Message -->
-                  <div style="width: 100%; text-align: center;;">
-                      <h1 style="margin: 0; font-size: 25px;"> Error! While Creating Account</h1>
-                      <p style="margin: 10px 0; font-size: 16px; color: #555;">
-                          Something went wrong!
-                      </p>
-                  </div>
-              </div>
-          `,
-            customClass: {
-              confirmButton: "swal-custom-ok-button",
-            },
           });
-        });
+  
+        console.log(response);
+      } else {
+        alert("Please complete the CAPTCHA!");
+      }
+    };
 
-      console.log(response);
-    } else {
-      alert("Please complete the CAPTCHA!");
-    }
-  };
 
   return (
     <div>
@@ -407,8 +414,8 @@ const Register = () => {
                         <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-footerLinks md:text-2xl ">
                           Sign up to your account
                         </h1>
-                             {/* User Type Selection Buttons */}
-                             <div className="flex justify-between gap-4 m-2">
+                          {/* User Type Selection Buttons */}
+                          <div className="flex justify-between gap-4 m-2">
                           <button
                             className={`px-4 py-2 rounded-md ${
                               userType === "consumer" ? "bg-green-500 text-white" : "bg-gray-300"
@@ -435,7 +442,7 @@ const Register = () => {
                               htmlFor="email"
                               className="block mb-2 text-sm font-bold text-colorThree "
                             >
-                              Email
+                              Bussiness Email
                             </label>
                             <input
                               type="email"
@@ -444,8 +451,45 @@ const Register = () => {
                               className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                               placeholder="name@domain.com"
                               required="true"
-                              onChange={(e) => setEmail(e.target.value)}
+                              onChange={(e) => setBussinessEmail(e.target.value)}
                             ></input>
+                          </div>
+
+                          <div className="flex gap-5">
+                            <div className="w-full">
+                              <label
+                                htmlFor="bussinessname"
+                                className="block mb-2 text-sm font-bold text-colorThree "
+                              >
+                                Business Name
+                              </label>
+                              <input
+                                type="text"
+                                name="bussinessname"
+                                id="bussinessname"
+                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                placeholder="Enter Business Name"
+                                required="true"
+                                onChange={(e) => setBussinessName(e.target.value)}
+                              ></input>
+                            </div>
+                            <div className="w-full">
+                              <label
+                                htmlFor="bussinessType"
+                                className="block mb-2 text-sm font-bold text-colorThree "
+                              >
+                                Bussiness Type
+                              </label>
+                              <input
+                                type="text"
+                                name="bussinessType"
+                                id="bussinessType"
+                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                placeholder="Enter Business Tyoe"
+                                required="true"
+                                onChange={(e) => setBussinessType(e.target.value)}
+                              ></input>
+                            </div>
                           </div>
 
                           <div className="flex gap-5">
@@ -471,7 +515,7 @@ const Register = () => {
                                 htmlFor="phoneNumber"
                                 className="block mb-2 text-sm font-bold text-colorThree "
                               >
-                                PhoneNumber
+                                BusinessPhoneNumber
                               </label>
                               <input
                                 type="text"
@@ -819,7 +863,7 @@ const Register = () => {
       <ScrollToTop />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Register;
+export default OrganisationRegister

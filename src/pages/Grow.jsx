@@ -45,7 +45,7 @@ const Grow = () => {
                         Keep track of your referrals in the LM Grow Rewards
                         dashboard. Each time you reach ten referrals, you’ll
                         earn extra points and a trophy to celebrate your
-                        achievement. <a className="text-blue-500 underline cursor-pointer font-semibold hover:font-bold" href="/grow-terms-and-conditions"> Terms and conditions apply. </a>
+                        achievement. <a className="text-blue-500 underline cursor-pointer  hover:font-bold" href="/grow-terms-and-conditions">Please read Terms and conditions. </a>
                       </p>
 
                     </div>

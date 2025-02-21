@@ -15,6 +15,7 @@ const VerifyEmail = () => {
     }
   }, [token, isVerified]);
 
+  console.log("token :", token);
   const verifyEmail = async (token) => {
     // Handle success response
     const style = document.createElement('style');
@@ -37,6 +38,7 @@ const VerifyEmail = () => {
     try {
       // const response = await axios.get(`http://localhost:9090/api/confirm/${token}`);
     const response = await axios.get(`https://lmclub-backend.onrender.com/api/confirm/${token}`);
+      console.log("response from token ",response);
       if (response.data && response.data.message === "Email Verified Successfully") {
         setIsVerified(true);
 
@@ -77,8 +79,8 @@ const VerifyEmail = () => {
           },
           confirmButtonText: 'Login Here',
           willClose: () => {
-            // window.location.href = 'http://localhost:5173/login';
-            window.location.href = 'https://lmclub.vercel.app/login';
+            window.location.href = 'http://localhost:5173/login';
+            // window.location.href = 'https://lmclub.vercel.app/login';
             
           }
         });
@@ -92,7 +94,7 @@ const VerifyEmail = () => {
       console.error('Error during email verification:', error);
       setTimeout(() => {
         Swal.fire('Error', 'This verification link is invalid or has expired.', 'error');
-      }, 60000); // Delay error message by 1 minute
+      }, 600000); // Delay error message by 1 minute
     }
   };
 
