@@ -254,14 +254,14 @@ const Pricing = () => {
                   <table className="features w-[90%] border-collapse shadow-2xl rounded-lg overflow-hidden">
                  <thead>
                   <tr className="bg-gradient-to-r from-green-400 to-green-600 text-white shadow-md">
-                  <th className="p-4 border border-gray-300"></th>
+                  <th className="p-4 border border-gray-300"> Reward Cards</th>
                   <th className="p-4 border border-gray-300 font-bold text-xl">Bronze</th>
                   <th className="p-4 border border-gray-300 font-bold text-xl">Silver</th>
                   <th className="p-4 border border-gray-300 font-bold text-xl">Gold</th>
                   <th className="p-4 border border-gray-300 font-bold text-xl">Platinum</th>
                   </tr>
                  <tr className="bg-gray-100 shadow">
-                  <th className="p-4 border border-gray-300"></th>
+                  <th className="p-4 border border-gray-300">Amazon Gift Card Worth $500 </th>
                  <th className="p-4 border border-gray-300 text-lg text-gray-700">$5.99/mo</th>
                 <th className="p-4 border border-gray-300 text-lg text-gray-700">$8.99/mo</th>
                 <th className="p-4 border border-gray-300 text-lg text-gray-700">$11.99/mo</th>
@@ -270,7 +270,7 @@ const Pricing = () => {
               </thead>
               <tbody>
                 {/* Make a Post */}
-                  <tr className="bg-green-50 hover:scale-105 transition-transform duration-200">
+                  <tr className="bg-green-50 ">
                    <td colSpan={5} className="p-4 font-medium text-green-500 border border-gray-300 shadow-lg">Make a post & get 25 likes</td>
                   </tr>
               <tr className="hover:bg-gray-100 transition-all duration-300 shadow-md">
@@ -282,7 +282,7 @@ const Pricing = () => {
              </tr>
 
               {/* Promote a Business */}
-              <tr className="bg-green-50 hover:scale-105 transition-transform duration-200">
+              <tr className="bg-green-50 ">
                    <td colSpan={5} className="p-4 font-medium text-green-500 border border-gray-300 shadow-lg">Promote a business</td>
              </tr>
              <tr className="hover:bg-gray-100 transition-all duration-300 shadow-md">
@@ -294,7 +294,7 @@ const Pricing = () => {
            </tr>
 
            {/* Complete (TFS) Tasks */}
-           <tr className="bg-green-50 hover:scale-105 transition-transform duration-200">
+           <tr className="bg-green-50 ">
               <td colSpan={5} className="p-4 font-medium text-green-500 border border-gray-300 shadow-lg">Complete (TFS) tasks</td>
           </tr>
          <tr className="hover:bg-gray-100 transition-all duration-300 shadow-md">
@@ -306,7 +306,7 @@ const Pricing = () => {
           </tr>
 
           {/* Promote e-Store Online */}
-            <tr className="bg-green-50 hover:scale-105 transition-transform duration-200">
+            <tr className="bg-green-50 ">
                <td colSpan={5} className="p-4 font-medium text-green-500 border border-gray-300 shadow-lg">Promote e-Store Online</td>
             </tr>
            <tr className="hover:bg-gray-100 transition-all duration-300 shadow-md">
@@ -318,7 +318,7 @@ const Pricing = () => {
       </tr>
 
                {/* Enroll Members */}
-               <tr className="bg-green-50 hover:scale-105 transition-transform duration-200">
+               <tr className="bg-green-50 ">
                  <td colSpan={5} className="p-4 font-medium text-green-500 border border-gray-300 shadow-lg">Enroll Members</td>
                </tr>
                           <tr className="hover:bg-gray-100 transition-all duration-300 shadow-md">

@@ -115,7 +115,7 @@ function App() {
             path="/organisation-login"
             element={<OrganisationLogin />}
           />
-          
+          <Route path="/cancel-order/:token" element={<Failure />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>

@@ -272,7 +272,7 @@ const Login = () => {
                             }`}
                             onClick={() => handleUserTypeChange("consumer")}
                           >
-                            Consumer
+                            Consumer User
                           </button>
                           <button
                             className={`px-4 py-2 rounded-md ${

@@ -422,7 +422,7 @@ const OrganisationRegister = () => {
                             }`}
                             onClick={() => handleUserTypeChange("consumer")}
                           >
-                            Consumer
+                            Consumer User
                           </button>
                           <button
                             className={`px-4 py-2 rounded-md ${
@@ -515,7 +515,7 @@ const OrganisationRegister = () => {
                                 htmlFor="phoneNumber"
                                 className="block mb-2 text-sm font-bold text-colorThree "
                               >
-                                BusinessPhoneNumber
+                                Business Phone Number
                               </label>
                               <input
                                 type="text"
