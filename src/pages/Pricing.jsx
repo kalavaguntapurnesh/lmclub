@@ -25,16 +25,24 @@ const Pricing = () => {
     setYearly((prev) => !prev);
   };
 
+  
   const handleSelectedPlan = (plan) => {
-    navigate("/selected-plan", { state: { plan } });
+    navigate("/selected-plan", { state: { plan, isYearly  } });
   };
+
+  useEffect(() => {
+    if (location.state?.isYearly !== undefined) {
+      setYearly(location.state.isYearly);
+    }
+  }, [location.state?.isYearly]);
+  
 
   const monthlyPlans = [
     {
       name: "Bronze",
       description: "Registration fee is $20.00 / Yearly",
       renewalFee: "Yearly renewal fee $20.00 / Yearly",
-      price: 5.99,
+      price: isYearly ? 12 * 5.99 : 5.99,
       points: [
         "Make a post get 25 likes and earn 5 points",
         "Promote a business earn 5 points",
@@ -47,7 +55,7 @@ const Pricing = () => {
       name: "Silver",
       description: "Registration fee is $25.00 / Yearly",
       renewalFee: "Yearly renewal fee $25.00 / Yearly",
-      price: 8.99,
+      price: isYearly ? 12 * 8.99 : 8.99,
       points: [
         "Make a post get 25 likes earn 10 points",
         "Promote a business earn 10 points",
@@ -60,7 +68,7 @@ const Pricing = () => {
       name: "Gold",
       description: "Registration fee is $30.00 / Yearly",
       renewalFee: "Yearly renewal fee $30.00 / Yearly",
-      price: 11.99,
+      price: isYearly ? 12 * 11.99 : 11.99,
       points: [
         "Make a post get 25 likes earn 15 points",
         "Promote a business earn 15 points",
@@ -73,7 +81,7 @@ const Pricing = () => {
       name: "Platinum",
       description: "Registration fee is $35.00 / Yearly",
       renewalFee: "Yearly renewal fee $35.00 / Yearly",
-      price: 14.99,
+      price: isYearly ? 12 * 14.99 : 14.99,
       points: [
         "Make a post get 25 likes earn 20 points",
         "Promote a business earn 20 points",
@@ -209,7 +217,8 @@ const Pricing = () => {
                           <p className="text-gray-600">{plan.description}</p>
                           <div className="flex justify-center items-baseline my-8">
                             <span className="mr-2 text-4xl font-bold">
-                              ${isYearly ? plan.price * 12 : plan.price}
+                              {/* ${isYearly ? plan.price * 12 : plan.price} */}
+                              {plan.price}
                             </span>
                             <span className="text-gray-500 ">
                               /{isYearly ? "year" : "month"}

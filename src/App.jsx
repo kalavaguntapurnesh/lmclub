@@ -39,6 +39,9 @@ import PaymentMethods from "./pages/PaymentMethods";
 import PayPalSuccessPage from "./pages/PayPalSuccessPage";
 import OrganisationRegister from "./pages/OrganisationRegister";
 import OrganisationLogin from "./pages/OrganisationLogin";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+
 function App() {
   return (
     <CartProvider>
@@ -116,6 +119,8 @@ function App() {
             element={<OrganisationLogin />}
           />
           <Route path="/cancel-order/:token" element={<Failure />} />
+          <Route path="/forgotPassword" element={<ForgotPassword />} />
+          <Route path="/resetPassword/:id/:token" element={<ResetPassword />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>

@@ -96,8 +96,11 @@ const OtpAndEmailVerificationForBussinessUser = () => {
   
   const verifySMS = async () => {
     try {
-    //   const response = await axios.post("http://localhost:9090/api/verify-otp", { phone: phoneNumber, otp });
+      // const response = await axios.post("http://localhost:9090/api/verify-otp", { phone: phoneNumber, otp });
       const response = await axios.post("https://lmclub-backend.onrender.com/api/verify-otp", { phone: phoneNumber, otp });
+      console.log(response);
+      console.log(phoneNumber);
+      console.log(otp);
       if (response.status === 200) {
         // Swal.fire({
         //   icon: 'success',
@@ -212,7 +215,7 @@ const OtpAndEmailVerificationForBussinessUser = () => {
   // Function to check email verification status
   const checkEmailVerification = async () => {
     try {
-    //   const emailResponse = await axios.get(`http://localhost:9090/api/check-email-verification-for-bussiness?email=${bussinessEmail}`);
+      // const emailResponse = await axios.get(`http://localhost:9090/api/check-email-verification-for-bussiness?bussinessEmail=${bussinessEmail}`);
     const emailResponse = await axios.get(`https://lmclub-backend.onrender.com/api/check-email-verification-for-bussiness?email=${email}`);
       setEmailVerified(emailResponse.data.verified);
       Swal.fire({

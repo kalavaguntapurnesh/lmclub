@@ -10,6 +10,7 @@ export const CartContext = createContext({
     removeOneFromCart: () => {},
     deleteFromCart: () => {},
     getTotalCost: () => {},
+    clearCart: () => {}
 });
 
 const style = document.createElement('style');
@@ -225,6 +226,11 @@ export function CartProvider({ children }) {
         return cartProducts.reduce((total, cartItem) => total + cartItem.price, 0);
     }
 
+    function clearCart(){
+        setCartProducts([]); 
+        localStorage.removeItem("cart"); 
+      };
+
     const contextValue = {
         items: cartProducts,
         getProductQuantity,
@@ -232,6 +238,7 @@ export function CartProvider({ children }) {
         removeOneFromCart,
         deleteFromCart,
         getTotalCost,
+        clearCart
     };
 
     return <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>;

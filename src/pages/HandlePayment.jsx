@@ -78,8 +78,8 @@ const HandlePayment = () => {
   
       console.log("Sending cart items:", JSON.stringify(cartItems, null, 2)); 
   
-      // const response = await fetch("http://localhost:9090/create-stripe-session", {
-        const response = await fetch("https://lmclub-backend.onrender.com/create-stripe-session", {
+      const response = await fetch("http://localhost:9090/create-stripe-session", {
+        // const response = await fetch("https://lmclub-backend.onrender.com/create-stripe-session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(cartItems),
@@ -96,6 +96,37 @@ const HandlePayment = () => {
       alert("There was an issue with the payment. Please try again later.");
     }
   };
+
+  const handleNavigateToSelectPaymentMethod = ()=>{
+    if (!isChecked) {
+      // alert("Please accept the terms before proceeding to payment.");
+       Swal.fire({
+                html: `
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                         <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                             <img src="${Logo}" alt="Logo" 
+                                  style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                                                
+                                   <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                                       <span style="color: black;">LM</span>
+                                       <span style="color: rgb(37, 218, 73);">Club</span>
+                                   </h4>
+                         </div>
+                  
+                        <div style="text-align: center; font-size: 22px; font-weight: bold; color: #333; margin: 30px;">
+                         <p>Please accept the terms before proceeding to payment.</p>
+                       </div> 
+                    </div>
+                 `,
+                customClass: {
+                  confirmButton: "swal-custom-ok-button",
+                },
+              });
+      return;
+    }
+
+    navigate('/select-payment-method')
+  }
   
   // extracting registration fee from description 
 
@@ -207,11 +238,12 @@ const HandlePayment = () => {
           </button>
           
           <button
-            // onClick={() => handleCheckout()}
+            onClick={() => handleNavigateToSelectPaymentMethod()}
             
             className="px-6 py-3 bg-green-600 text-white rounded-lg cursor-pointer hover:bg-green-700 transition"
           >
-           <Link to='/select-payment-method'>Pay</Link> 
+           {/* <Link to='/select-payment-method'>Pay</Link>  */}
+           Pay
           </button>
         </div>
     </div>

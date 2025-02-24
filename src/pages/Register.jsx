@@ -21,7 +21,9 @@ import WhatsApp from "../components/WhatsApp";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
+  // const [username, setUsername] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [street, setStreet] = useState("");
   const [referalcode, setReferalCode] = useState("");
@@ -224,7 +226,8 @@ const Register = () => {
       console.log("Form submitted!");
       console.log(email);
       console.log(password);
-      console.log(username);
+      console.log(firstName);
+        console.log(lastName),
       console.log(phoneNumber);
       console.log(street);
       console.log(referalcode);
@@ -237,7 +240,8 @@ const Register = () => {
       const response = await axios.post("https://lmclub-backend.onrender.com/api/registerUser", {
           email,
           password,
-          username,
+          firstName,
+          lastName,
           phoneNumber,
           street,
           referalcode,
@@ -300,12 +304,6 @@ const Register = () => {
             sendOTP();
             navigate("/otp-verification", { state: { email, phoneNumber } });
           } else if (response.data.message === "User Already Exists") {
-            //    Swal.fire({
-            //   icon: "error",
-            //   title: "Oops...",
-            //   text: "User already Exits. Please Login",
-            // });
-
             Swal.fire({
               html: `
               <div style="display: flex; flex-direction: column; align-items: center;">
@@ -334,12 +332,48 @@ const Register = () => {
                       </p>
                   </div>
               </div>
-          `,
+           `,
               customClass: {
                 confirmButton: "swal-custom-ok-button",
               },
             });
           }
+          else if (response.data.message === "User Already Registered as Organization User!") {
+            Swal.fire({
+              html: `
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                  
+                  <!-- Logo + Title -->
+                  <div style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 20px;">
+                      <img src="${Logo}" alt="Logo" 
+                          style="position: absolute; top: 0; left: 0; width: 50px; height: 50px; margin: 10px;" />
+                      
+                      <h4 style="margin: 0; font-size: 30px; font-weight: bold;">
+                          <span style="color: black;">LM</span>
+                          <span style="color: rgb(37, 218, 73);">Club</span>
+                      </h4>
+                  </div>
+      
+                  <!-- Success Image -->
+                  <div style="margin-bottom: 20px;">
+                      <img src="${Error}" alt="Error" style="width: 50px; height: 50px; margin: 0 10px;" />
+                  </div>
+      
+                 
+                  <div style="width: 100%; text-align: center; ">
+                      <h1 style="margin: 0; font-size: 25px;"> Error! While Creating Account</h1>
+                      <p style="margin: 10px 0; font-size: 16px; color: #555;">
+                          User Already Registered as Organization User, Please Login
+                      </p>
+                  </div>
+              </div>
+           `,
+              customClass: {
+                confirmButton: "swal-custom-ok-button",
+              },
+            });
+          }
+
         })
         .catch((error) => {
           // dispatch(hideLoading());
@@ -408,7 +442,7 @@ const Register = () => {
                           Sign up to your account
                         </h1>
                              {/* User Type Selection Buttons */}
-                             <div className="flex justify-between gap-4 m-2">
+                             <div className="flex justify-between gap-4 m-4">
                           <button
                             className={`px-4 py-2 rounded-md ${
                               userType === "consumer" ? "bg-green-500 text-white" : "bg-gray-300"
@@ -430,6 +464,7 @@ const Register = () => {
                           className="space-y-4 md:space-y-6"
                           onSubmit={handleSubmit}
                         >
+                          
                           <div className="w-full">
                             <label
                               htmlFor="email"
@@ -447,25 +482,65 @@ const Register = () => {
                               onChange={(e) => setEmail(e.target.value)}
                             ></input>
                           </div>
-
+                          
                           <div className="flex gap-5">
                             <div className="w-full">
+                                <label
+                                  htmlFor="firstname"
+                                  className="block mb-2 text-sm font-bold text-colorThree "
+                                >
+                                  First Name
+                                </label>
+                                <input
+                                  type="text"
+                                  name="firstname"
+                                  id="firstname"
+                                  className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                  placeholder="Allen"
+                                  required="true"
+                                  onChange={(e) => setFirstName(e.target.value)}
+                                ></input>
+                              </div>
+
+                            <div className="w-full">
                               <label
-                                htmlFor="username"
+                                htmlFor="lastname"
                                 className="block mb-2 text-sm font-bold text-colorThree "
                               >
-                                FullName
+                                Last Name
                               </label>
                               <input
                                 type="text"
-                                name="username"
-                                id="username"
+                                name="lastname"
+                                id="lastname"
                                 className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                placeholder="Joe Root"
+                                placeholder="Joe"
                                 required="true"
-                                onChange={(e) => setUsername(e.target.value)}
+                                onChange={(e) => setLastName(e.target.value)}
                               ></input>
                             </div>
+                          </div>
+                          
+                          
+                          <div className="flex gap-5">
+                            <div className="w-full">
+                              <label
+                                htmlFor="street"
+                                className="block mb-2 text-sm font-bold text-colorThree "
+                              >
+                                Street
+                              </label>
+                              <input
+                                type="text"
+                                name="street"
+                                id="street"
+                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                placeholder="street"
+                                required="true"
+                                onChange={(e) => setStreet(e.target.value)}
+                              ></input>
+                            </div>
+
                             <div className="w-full">
                               <label
                                 htmlFor="phoneNumber"
@@ -485,26 +560,8 @@ const Register = () => {
                             </div>
                           </div>
 
-                          <div className="flex gap-5">
-                            <div>
-                              <label
-                                htmlFor="street"
-                                className="block mb-2 text-sm font-bold text-colorThree "
-                              >
-                                Street
-                              </label>
-                              <input
-                                type="text"
-                                name="street"
-                                id="street"
-                                className=" border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                placeholder="street"
-                                required="true"
-                                onChange={(e) => setStreet(e.target.value)}
-                              ></input>
-                            </div>
 
-                            <div>
+                          <div>
                               <label
                                 htmlFor="referalcode"
                                 className="block mb-2 text-sm font-bold text-colorThree "
@@ -520,7 +577,8 @@ const Register = () => {
                                 onChange={(e) => setReferalCode(e.target.value)}
                               ></input>
                             </div>
-                          </div>
+                            
+                         
 
                           {/* <div>
                             <label

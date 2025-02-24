@@ -16,6 +16,7 @@ const PAYPAL_API = "https://api-m.sandbox.paypal.com";
 const PaymentMethods = () => {
 
     const { items, getProductQuantity, getTotalCost } = useContext(CartContext);
+
     const navigate = useNavigate();
     console.log("handle payment page : ", items);
   
@@ -111,41 +112,38 @@ const PaymentMethods = () => {
     <div className="flex items-center justify-center min-h-screen px-4 p-6">
     <div className="w-full max-w-3xl md:w-[50%] h-auto flex flex-col items-center justify-center shadow-xl text-center gap-4 bg-gray-300 p-8 rounded-lg">
       <h1 className="lg:text-4xl text-3xl font-semibold space-y-8 mb-12">Select Payment Method</h1>
-
-        <div className='flex flex-col w-[80%] gap-2 h-[30%] '>
-            <button onClick={handlePaypalCheckout}>
-                <div className='flex border border-gray-400 border-1 rounded-md cursor-pointer hover:border-green-600 hover:border-2 items-center gap-6'>
-                    <img src={paypal} alt="paypal" className='w-[100px] h-[100px]'/> 
-                    <h1 className='text-2xl font-semibold'>Paypal</h1>
-                </div>     
-            </button>  
-            <button onClick={handleCheckout}>
-                <div className='flex border border-gray-400 border-1 rounded-md  cursor-pointer hover:border-green-600 hover:border-2 items-center gap-6'>
-                    <img src="https://st.depositphotos.com/1980975/2010/v/450/depositphotos_20105985-stock-illustration-vector-credit-cards-isolated.jpg" alt="mastercard" className='w-[100px] h-[100px]'/> 
-                    <h1 className='text-2xl font-semibold'>Credit/Debit Cards</h1>
-                    
-                </div>   
-            </button>
-            
-        </div>
-        <div className="flex justify-between w-full mt-6">
-          <button
-            onClick={() => navigate(-1)} 
-            className="px-6 py-3 bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-gray-700 transition"
-          >
-            Back
-          </button>
-          
-          {/* <button
-            onClick={() => handleCheckout()}
-            
-            className="px-6 py-3 bg-green-600 text-white rounded-lg cursor-pointer hover:bg-green-700 transition"
-          >
-            Pay
-          </button> */}
-        </div>
+  
+      {/* Payment Methods */}
+      <div className="flex w-full gap-4">
+        {/* PayPal Option */}
+        <button onClick={handlePaypalCheckout} className="p-4 w-full">
+          <div className="flex flex-col items-center justify-center border border-gray-400 rounded-md cursor-pointer hover:border-green-600 hover:border-2 p-6 text-center gap-4 w-full">
+            <img src={paypal} alt="paypal" className="w-24 h-24" />
+            <h1 className="text-2xl font-semibold">Paypal</h1>
+          </div>     
+        </button>
+  
+        {/* Credit/Debit Card Option */}
+        <button onClick={handleCheckout} className="p-4 w-full">
+          <div className="flex flex-col items-center justify-center border border-gray-400 rounded-md cursor-pointer hover:border-green-600 hover:border-2 p-6 text-center gap-4 w-full">
+            <img src="https://media.istockphoto.com/id/1137376687/photo/stacked-credit-cards.jpg?s=612x612&w=0&k=20&c=tERuCGoC9Xfg7XwuFJ9rvhJ6u_zHIdLVoxqB8Eut_nc=" alt="cards" className="w-24 h-24 bg-transparent" />
+            <h1 className="text-2xl font-semibold">Credit/Debit Cards</h1>
+          </div>   
+        </button>
+      </div>
+  
+      {/* Back Button */}
+      <div className="flex justify-between w-full mt-6">
+        <button
+          onClick={() => navigate(-1)} 
+          className="px-6 py-3 bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-gray-700 transition"
+        >
+          Back
+        </button>
+      </div>
     </div>
   </div>
+  
   )
 }
 

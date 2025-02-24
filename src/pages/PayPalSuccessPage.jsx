@@ -5,8 +5,11 @@ import Swal from "sweetalert2";
 import Logo from "../assets/LMDark.webp";
 import success from "../assets/success.png";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext"; 
+import { useContext } from "react";
 
 const PayPalSuccessPage = () => {
+  const { items, getProductQuantity, getTotalCost, addOneToCart,deleteFromCart, clearCart} = useContext(CartContext);
   const [searchParams] = useSearchParams();
   const token = searchParams.get("token");
   const payerID = searchParams.get("PayerID");
@@ -19,10 +22,12 @@ const PayPalSuccessPage = () => {
     const fetchPaymentDetails = async () => {
       try {
         const response = await axios.get(
-        //   `http://localhost:9090/complete-order?token=${token}&PayerID=${payerID}`
+          // `http://localhost:9090/complete-order?token=${token}&PayerID=${payerID}`
           `https://lmclub-backend.onrender.com/complete-order?token=${token}&PayerID=${payerID}`
         );
         setPaymentDetails(response.data);
+         clearCart();
+        
       } catch (error) {
         console.error("Error fetching payment details:", error);
       } finally {
@@ -32,6 +37,7 @@ const PayPalSuccessPage = () => {
 
     fetchPaymentDetails();
   }, [token, payerID]);
+
 
   console.log("payment details : ",paymentDetails);
   return (

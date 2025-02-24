@@ -3,9 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import estore from "../assets/estore.webp";
 import beehive from "../assets/beehive.webp";
-import enroll from "../assets/enroll.webp";
-import network from "../assets/network.webp";
-import broadcast from "../assets/broadcast.webp";
+
 const RewardsTerms = () => {
   return (
   <div className="lg:pt-28 pt-16">

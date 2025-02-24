@@ -19,7 +19,10 @@ import Logo from "../assets/LMDark.webp";
 const SelectedPlan = () => {
   const location = useLocation();
   const [plan, setPlan] = useState(location.state?.plan || {});
+  const isYearly = location.state?.isYearly;
 
+  console.log(isYearly);
+  
   useEffect(() => {
     if (location.state?.plan) {
       setPlan(location.state.plan);
@@ -267,8 +270,8 @@ const SelectedPlan = () => {
                         <tbody>
                           {[
                             {
-                              title: "Monthly Price",
-                              price: `$${plan.price} / month`,
+                              title: `${isYearly ? "Yearly" : "Monthly"} Price`,
+                              price: `$${plan.price} / ${isYearly ? "Year" : "Month"}`,
                             },
                             {
                               title: "Registration Fee",
