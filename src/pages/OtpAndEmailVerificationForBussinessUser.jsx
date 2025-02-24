@@ -216,7 +216,7 @@ const OtpAndEmailVerificationForBussinessUser = () => {
   const checkEmailVerification = async () => {
     try {
       // const emailResponse = await axios.get(`http://localhost:9090/api/check-email-verification-for-bussiness?bussinessEmail=${bussinessEmail}`);
-    const emailResponse = await axios.get(`https://lmclub-backend.onrender.com/api/check-email-verification-for-bussiness?email=${email}`);
+    const emailResponse = await axios.get(`https://lmclub-backend.onrender.com/api/check-email-verification-for-bussiness?bussinessEmail=${bussinessEmail}`);
       setEmailVerified(emailResponse.data.verified);
       Swal.fire({
         html: `

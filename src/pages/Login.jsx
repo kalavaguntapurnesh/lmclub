@@ -110,8 +110,8 @@ const Login = () => {
 
     try {
       if (verified) {
-      const response = await axios.post("http://localhost:9090/api/login", {
-        // const response = await axios.post("https://lmclub-backend.onrender.com/api/login", {
+      // const response = await axios.post("http://localhost:9090/api/login", {
+        const response = await axios.post("https://lmclub-backend.onrender.com/api/login", {
         email,
         password
       });
@@ -280,7 +280,7 @@ const Login = () => {
                             }`}
                             onClick={() => handleUserTypeChange("organization")}
                           >
-                            Organization User
+                            Bussiness User 
                           </button>
                         </div>
                         <form

@@ -457,7 +457,7 @@ const Register = () => {
                             }`}
                             onClick={() => handleUserTypeChange("organization")}
                           >
-                            Organization User
+                            Bussiness User
                           </button>
                         </div>
                         <form
