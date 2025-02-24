@@ -15,7 +15,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     // dispatch(showLoading());
     // axios.post("http://localhost:9090/api/forgotPassword", {
-    axios.post("https://www.lmclub.club/api/forgotPassword", {
+    axios.post("https://lmclub-backend.onrender.com/api/forgotPassword", {
         email,
       })
       .then((response) => {
